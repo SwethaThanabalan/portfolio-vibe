@@ -1,202 +1,195 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface InteractiveBlobFieldProps {
   className?: string
   onStroke?: () => void
 }
 
-// Vibrant palette for brush strokes - warm editorial colors
-const PAINT_COLORS = [
-  'rgba(255,186,73,0.9)',    // bright amber
-  'rgba(255,145,77,0.85)',   // bright coral
-  'rgba(244,208,160,0.8)',   // warm sand
-  'rgba(148,163,184,0.75)'   // cool neutral
+// Coral palette - soft and warm (increased opacity for better visibility)
+const colors = [
+  'rgba(255, 146, 112, 0.35)',  // Soft coral
+  'rgba(255, 186, 150, 0.30)',  // Light peach
+  'rgba(255, 210, 170, 0.25)',  // Warm sand
+  'rgba(148, 163, 184, 0.20)'   // Neutral slate
 ]
 
+interface Blob {
+  id: number
+  x: number
+  y: number
+  size: number
+  color: string
+  opacity: number
+  createdAt: number
+}
+
 const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobFieldProps) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-  const ctxRef = useRef<CanvasRenderingContext2D | null>(null)
-  const lastPaintPosRef = useRef({ x: -100, y: -100 })
-  const canvasSizeRef = useRef({ width: 0, height: 0 })
-  const isInitializedRef = useRef(false)
+  const [blobs, setBlobs] = useState<Blob[]>([])
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const lastSpawnRef = useRef(0)
+  const blobIdRef = useRef(0)
+  const cursorRef = useRef({ x: 0, y: 0, active: false })
+  const lastPosRef = useRef({ x: 0, y: 0 })
 
+  // Check for reduced motion preference
   useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) {
-      console.error('Canvas ref is null')
-      return
-    }
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setPrefersReducedMotion(mediaQuery.matches)
 
-    const ctx = canvas.getContext('2d', { alpha: true })
-    if (!ctx) {
-      console.error('Could not get canvas context')
-      return
-    }
+    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches)
+    mediaQuery.addEventListener('change', handler)
+    return () => mediaQuery.removeEventListener('change', handler)
+  }, [])
 
-    ctxRef.current = ctx
-
-    // Setup canvas with device pixel ratio
-    const setupCanvas = () => {
-      try {
-        const rect = canvas.getBoundingClientRect()
-        const dpr = window.devicePixelRatio || 1
-        
-        // Save current canvas content before resizing
-        const imageData = isInitializedRef.current ? ctx.getImageData(0, 0, canvas.width, canvas.height) : null
-        
-        canvas.width = rect.width * dpr
-        canvas.height = rect.height * dpr
-        
-        canvasSizeRef.current = { width: rect.width, height: rect.height }
-        
-        ctx.scale(dpr, dpr)
-        
-        // Apply base wash ONLY on initial setup, not on resize
-        if (!isInitializedRef.current) {
-          ctx.fillStyle = 'rgba(255,255,255,1)'
-          ctx.fillRect(0, 0, rect.width, rect.height)
-          isInitializedRef.current = true
-          console.log('Canvas initialized with white background')
-        } else if (imageData) {
-          // Restore previous canvas content after resize
-          ctx.putImageData(imageData, 0, 0)
-          console.log('Canvas content restored after resize')
+  // Static blobs for reduced motion
+  useEffect(() => {
+    if (prefersReducedMotion && containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect()
+      const staticBlobs: Blob[] = [
+        {
+          id: 0,
+          x: rect.width * 0.3,
+          y: rect.height * 0.4,
+          size: 480,
+          color: colors[0],
+          opacity: 1,
+          createdAt: Date.now()
+        },
+        {
+          id: 1,
+          x: rect.width * 0.7,
+          y: rect.height * 0.5,
+          size: 520,
+          color: colors[1],
+          opacity: 1,
+          createdAt: Date.now()
         }
-      } catch (error) {
-        console.error('Error in setupCanvas:', error)
-      }
+      ]
+      setBlobs(staticBlobs)
     }
+  }, [prefersReducedMotion])
 
-    // Paint LOCALIZED brush stroke at cursor position
-    const paintBrush = (x: number, y: number) => {
-      if (!ctx) return
-
-      try {
-        console.log('Painting at:', x, y)
-        
-        // Save context state
-        ctx.save()
-
-        // No jitter - paint exactly at cursor position for smooth flow
-        const jitterX = x
-        const jitterY = y
-
-        // Use source-over (normal) blend mode for vibrant colors
-        ctx.globalCompositeOperation = 'source-over'
-
-        // Random color from palette
-        const color = PAINT_COLORS[Math.floor(Math.random() * PAINT_COLORS.length)]
-        
-        // Brush size: 50-80px for smooth continuous strokes
-        const radius = 50 + Math.random() * 30
-
-        // Create radial gradient centered at cursor - SMOOTH falloff
-        const gradient = ctx.createRadialGradient(jitterX, jitterY, 0, jitterX, jitterY, radius)
-        
-        // Parse color to adjust alpha for gradient stops
-        const colorMatch = color.match(/rgba\((\d+),(\d+),(\d+),([\d.]+)\)/)
-        if (colorMatch) {
-          const [, r, g, b, a] = colorMatch
-          const alpha = parseFloat(a)
-          
-          // Smoother gradient with more stops for better blending
-          gradient.addColorStop(0, `rgba(${r},${g},${b},${alpha})`)
-          gradient.addColorStop(0.4, `rgba(${r},${g},${b},${alpha * 0.7})`)
-          gradient.addColorStop(0.7, `rgba(${r},${g},${b},${alpha * 0.3})`)
-          gradient.addColorStop(1, `rgba(${r},${g},${b},0)`)
-        }
-
-        // Brush opacity: 0.15-0.3 for smooth layered blending
-        ctx.globalAlpha = 0.15 + Math.random() * 0.15
-
-        // Draw LOCALIZED brush stroke (only at cursor position)
-        ctx.fillStyle = gradient
-        ctx.beginPath()
-        ctx.arc(jitterX, jitterY, radius, 0, Math.PI * 2)
-        ctx.fill()
-
-        // Restore context state
-        ctx.restore()
-      } catch (error) {
-        console.error('Error in paintBrush:', error)
-      }
+  // Spawn blobs on cursor movement
+  const spawnBlob = (x: number, y: number) => {
+    const now = Date.now()
+    const timeSinceLastSpawn = now - lastSpawnRef.current
+    
+    // Throttle spawn rate (80-120ms)
+    if (timeSinceLastSpawn < 100) return
+    
+    lastSpawnRef.current = now
+    
+    // Random size between 380-560px
+    const size = 380 + Math.random() * 180
+    
+    // Create new blob centered on cursor
+    const newBlob: Blob = {
+      id: blobIdRef.current++,
+      x: x - size / 2,
+      y: y - size / 2,
+      size,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      opacity: 0,
+      createdAt: now
     }
+    
+    setBlobs(prev => {
+      const updated = [...prev, newBlob]
+      // Cap at 26 blobs, remove oldest
+      if (updated.length > 26) {
+        return updated.slice(-26)
+      }
+      return updated
+    })
+  }
 
-    // Handle pointer move - LOCALIZED stamping + stroke counting
+  // Handle pointer move
+  useEffect(() => {
+    if (prefersReducedMotion) return
+
     const handlePointerMove = (e: PointerEvent) => {
-      try {
-        const rect = canvas.getBoundingClientRect()
-        const x = e.clientX - rect.left
-        const y = e.clientY - rect.top
-
-        // Calculate distance from last paint position
-        const distance = Math.sqrt(
-          Math.pow(x - lastPaintPosRef.current.x, 2) +
-          Math.pow(y - lastPaintPosRef.current.y, 2)
-        )
-
-        // Smoother stroke: paint every 1px for continuous flow
-        const paintThreshold = 1
-        
-        if (distance > paintThreshold) {
-          // Interpolate between last position and current position for smooth stroke
-          const steps = Math.ceil(distance / paintThreshold)
-          
-          for (let i = 0; i <= steps; i++) {
-            const t = i / steps
-            const interpX = lastPaintPosRef.current.x + (x - lastPaintPosRef.current.x) * t
-            const interpY = lastPaintPosRef.current.y + (y - lastPaintPosRef.current.y) * t
-            
-            // Paint single brush stroke per position for smooth flow
-            paintBrush(interpX, interpY)
-          }
-          
-          lastPaintPosRef.current = { x, y }
-          
-          // Increment stroke count less frequently (every 12px of actual movement)
-          if (distance > 12 && onStroke) {
-            onStroke()
-          }
-        }
-      } catch (error) {
-        console.error('Error in handlePointerMove:', error)
+      if (!containerRef.current) return
+      
+      const rect = containerRef.current.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      
+      cursorRef.current = { x, y, active: true }
+      
+      // Spawn blob at cursor position
+      spawnBlob(x, y)
+      
+      // Track movement distance for stroke count
+      const dx = x - lastPosRef.current.x
+      const dy = y - lastPosRef.current.y
+      const distance = Math.sqrt(dx * dx + dy * dy)
+      
+      if (distance > 30) {
+        if (onStroke) onStroke()
+        lastPosRef.current = { x, y }
       }
     }
 
-    setupCanvas()
+    const handlePointerLeave = () => {
+      cursorRef.current.active = false
+    }
 
-    window.addEventListener('resize', setupCanvas)
-    canvas.addEventListener('pointermove', handlePointerMove)
+    window.addEventListener('pointermove', handlePointerMove)
+    window.addEventListener('pointerleave', handlePointerLeave)
 
     return () => {
-      window.removeEventListener('resize', setupCanvas)
-      canvas.removeEventListener('pointermove', handlePointerMove)
+      window.removeEventListener('pointermove', handlePointerMove)
+      window.removeEventListener('pointerleave', handlePointerLeave)
     }
-  }, [onStroke])
+  }, [prefersReducedMotion, onStroke])
 
-  // Handle reset - reapply base wash ONLY
+  // Animate blob opacity and remove old blobs
+  useEffect(() => {
+    if (prefersReducedMotion) return
+
+    const interval = setInterval(() => {
+      const now = Date.now()
+      
+      setBlobs(prev => {
+        return prev
+          .map(blob => {
+            const age = now - blob.createdAt
+            
+            // Fade in over 200ms
+            if (age < 200) {
+              return { ...blob, opacity: age / 200 }
+            }
+            
+            // Hold at full opacity until 2800ms
+            if (age < 2800) {
+              return { ...blob, opacity: 1 }
+            }
+            
+            // Fade out over 800ms (2800-3600ms)
+            const fadeOutDuration = 800
+            const fadeOutProgress = (age - 2800) / fadeOutDuration
+            
+            if (fadeOutProgress < 1) {
+              return { ...blob, opacity: 1 - fadeOutProgress }
+            }
+            
+            // Mark for removal
+            return null
+          })
+          .filter((blob): blob is Blob => blob !== null)
+      })
+    }, 16) // ~60fps
+
+    return () => clearInterval(interval)
+  }, [prefersReducedMotion])
+
+  // Handle reset
   useEffect(() => {
     const handleReset = () => {
-      const canvas = canvasRef.current
-      const ctx = ctxRef.current
-      if (!canvas || !ctx) return
-
-      const { width, height } = canvasSizeRef.current
-      
-      // Clear canvas completely
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-      
-      // Reapply base wash ONCE - start with WHITE canvas
-      ctx.fillStyle = 'rgba(255,255,255,1)'
-      ctx.fillRect(0, 0, width, height)
-      
-      // Reset initialization flag
-      isInitializedRef.current = true
-      
-      // Reset last paint position
-      lastPaintPosRef.current = { x: -100, y: -100 }
-      
-      console.log('Canvas reset')
+      setBlobs([])
+      lastSpawnRef.current = 0
+      lastPosRef.current = { x: 0, y: 0 }
     }
 
     window.addEventListener('resetBackground', handleReset)
@@ -204,11 +197,24 @@ const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobField
   }, [])
 
   return (
-    <canvas
-      ref={canvasRef}
-      className={className}
-      style={{ width: '100%', height: '100%', display: 'block' }}
-    />
+    <div ref={containerRef} className={className}>
+      {blobs.map(blob => (
+        <div
+          key={blob.id}
+          className="absolute rounded-full blur-[120px] will-change-transform"
+          style={{
+            width: `${blob.size}px`,
+            height: `${blob.size}px`,
+            left: `${blob.x}px`,
+            top: `${blob.y}px`,
+            background: `radial-gradient(circle at 30% 30%, ${blob.color} 0%, transparent 70%)`,
+            opacity: blob.opacity,
+            transition: 'opacity 200ms ease-out',
+            pointerEvents: 'none'
+          }}
+        />
+      ))}
+    </div>
   )
 }
 
