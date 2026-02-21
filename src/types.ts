@@ -12,4 +12,54 @@ export interface Project {
   challenge: string;
   solution: string;
   images: string[];
+  
+  // Strategic case study fields
+  scope?: string;
+  methods?: string;
+  impact?: string;
+  openingHook?: string;
+  problem?: string;
+  researchInsights?: Array<{
+    activity: string;
+    insight: string;
+    why: string;
+  }>;
+  strategicDecision?: {
+    title: string;
+    context: string;
+    options: string[];
+    tradeoffs: string;
+    decision: string;
+    reasoning: string;
+    impact: string;
+  };
+  additionalDecisions?: Array<{
+    title: string;
+    context: string;
+    decision: string;
+    impact: string;
+  }>;
+  designExecution?: {
+    changes: Array<{
+      title: string;
+      before: string;
+      after: string;
+      rationale: string;
+    }>;
+    removed: string[];
+  };
+  outcome?: {
+    metrics: string[];
+    validation: string[];
+    marketValidation: string;
+    limitations: string;
+  };
+  reflection?: {
+    title: string;
+    worked: string;
+    improve: string;
+    learned: string;
+  };
+  figmaPrototype?: string;
+  figmaFile?: string;
 }
