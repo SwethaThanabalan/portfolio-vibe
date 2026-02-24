@@ -16,11 +16,11 @@ export const projects: Project[] = [
     methods: 'User interviews, heuristic evaluation, usability testing',
     impact: 'Map-first navigation, biometric login, accessible design system',
     
-    openingHook: `I live in Philly. I use SEPTA. I've felt the frustration when the app logs you out right when you need to figure out where you're going.
+    openingHook: `I used SEPTA when I lived in Philadelphia. I remember the frustration of being logged out at the exact moment I needed directions.
 
-When we were asked to redesign a real app, I knew this had to be the one. Not because it was broken—but because it mattered. Public transit isn't just an app. It's how people get to work, get home, get to the doctor. When the app fails, real people are stuck.
+When we were asked to redesign a real app, this felt personal. Not because it was broken, but because it mattered. Public transit is how people get to work, get home, and get to medical appointments. When the app fails, the consequences are real.
 
-This project taught me what product design actually is: making systems work for the people who depend on them.`,
+This project clarified what product design means to me: building systems that work for the people who rely on them.`,
     
     problem: `**The Trust Gap**
 
