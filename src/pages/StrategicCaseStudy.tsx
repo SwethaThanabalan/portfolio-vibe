@@ -32,6 +32,11 @@ const StrategicCaseStudy = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Scroll to top when component mounts or project changes
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id])
+
   // Audio player handlers
   const togglePlayPause = () => {
     if (audioRef.current) {
