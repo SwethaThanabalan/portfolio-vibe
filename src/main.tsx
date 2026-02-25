@@ -8,7 +8,6 @@ if (window.location.protocol === 'http:' && window.location.hostname !== 'localh
   window.location.href = window.location.href.replace('http:', 'https:')
 }
 
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />

@@ -18,13 +18,13 @@ export const projects: Project[] = [
     
     openingHook: `I used SEPTA when I lived in Philadelphia. I remember the frustration of being logged out at the exact moment I needed directions.
 
-When we were asked to redesign a real app, this felt personal. Not because it was broken, but because it mattered. Public transit is how people get to work, get home, and get to medical appointments. When the app fails, the consequences are real.
+When I was asked to redesign a real app, this felt personal. Not because it was broken, but because it mattered. Public transit is how people get to work, get home, and get to medical appointments. When the app fails, the consequences are real.
 
 This project clarified what product design means to me: building systems that work for the people who rely on them.`,
     
     problem: `**The Trust Gap**
 
-Through user interviews and testing, we uncovered something deeper than usability issues. People didn't just find the app frustrating—they didn't trust it.
+Through user interviews and testing, I uncovered something deeper than usability issues. People didn't just find the app frustrating. They didn't trust it.
 
 **Login loops:**
 
@@ -42,7 +42,7 @@ Finding a route required hunting through nested menus with unclear labels.
 
 No font controls, poor contrast, no consideration for users with disabilities.
 
-The insight that hit hardest: *every single user* used Google Maps alongside SEPTA. Not by choice—by necessity. The app didn't have an integrated map, so planning a trip meant bouncing between two apps.
+The insight that hit hardest: every single user used Google Maps alongside SEPTA. Not by choice, by necessity. The app didn't have an integrated map, so planning a trip meant bouncing between two apps.
 
 This wasn't just a missing feature. It was a signal that the app wasn't designed around how people actually plan trips.`,
     
@@ -139,16 +139,16 @@ This wasn't just a missing feature. It was a signal that the app wasn't designed
         'Usability testing: Users could plan trips without leaving the app',
         'Design decisions aligned with real user mental models, not organizational structure'
       ],
-      marketValidation: `Shortly after our project, SEPTA launched a revamped mobile app with the exact features we identified: biometric authentication, map integration, predictive search, and improved accessibility controls.
+      marketValidation: `Shortly after my project, SEPTA launched a revamped mobile app with the exact features I identified: biometric authentication, map integration, predictive search, and improved accessibility controls.
 
-This wasn't coincidence. It was confirmation that our research uncovered real needs.`,
+This wasn't coincidence. It was confirmation that my research uncovered real needs.`,
       limitations: 'This was a student project without access to SEPTA\'s backend systems or usage analytics. In a real-world rollout, I\'d prioritize inclusive research from day one—especially with users who have disabilities.'
     },
     
     reflection: {
       title: 'What This Project Changed About How I Design',
       worked: 'Challenging my own assumptions. If users miss something, that\'s on the design, not them. That mindset shift changed everything.',
-      improve: 'I wish we\'d included more diverse users, especially people with disabilities. Accessibility has to be baked in from the start.',
+      improve: 'I wish I\'d included more diverse users, especially people with disabilities. Accessibility has to be baked in from the start.',
       learned: `**Trust is infrastructure.**
 
 Good design isn't about making things look cool—it's about making systems dependable. Public transit apps aren't just interfaces. They're promises.
@@ -156,10 +156,10 @@ Good design isn't about making things look cool—it's about making systems depe
 I learned that:
 - **Trust is built through reliability, not features.** Biometric login mattered more than any visual redesign.
 - **Infrastructure UX is invisible until it breaks.** Authentication, real-time data, and map integration aren't "nice-to-haves"—they're the foundation.
-- **Designing under constraints forces clarity.** We couldn't rebuild SEPTA's backend, so we focused on what we could control: the interface, the flow, and the mental model.
+- **Designing under constraints forces clarity.** I couldn't rebuild SEPTA's backend, so I focused on what I could control: the interface, the flow, and the mental model.
 - **Empathy isn't enough—you have to challenge assumptions.** Including your own.
 
-Seeing SEPTA launch similar features confirmed everything we worked on. It reminded me that listening to users and designing with empathy really do matter.`
+Seeing SEPTA launch similar features confirmed everything I worked on. It reminded me that listening to users and designing with empathy really do matter.`
     },
     
     overview: 'Led the complete redesign of SEPTA\'s mobile app, focusing on the core rider journey: planning trips and tracking transit in real-time.',

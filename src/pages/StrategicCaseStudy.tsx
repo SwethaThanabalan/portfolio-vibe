@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import AnimatedSection from '../components/AnimatedSection'
 import { projects } from '../data/projects'
@@ -13,6 +13,9 @@ const StrategicCaseStudy = () => {
   const [quickSummaryMode] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const [showQuickSummary, setShowQuickSummary] = useState(false)
+  const [currentTime, setCurrentTime] = useState(0)
+  const [duration, setDuration] = useState(0)
+  const audioRef = useRef<HTMLAudioElement>(null)
   
   // Check for reduced motion preference
   const prefersReducedMotion = typeof window !== 'undefined' 
@@ -29,6 +32,45 @@ const StrategicCaseStudy = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Audio player handlers
+  const togglePlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause()
+      } else {
+        audioRef.current.play()
+      }
+      setIsPlaying(!isPlaying)
+    }
+  }
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime)
+    }
+  }
+
+  const handleLoadedMetadata = () => {
+    if (audioRef.current) {
+      setDuration(audioRef.current.duration)
+    }
+  }
+
+  const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (audioRef.current) {
+      const rect = e.currentTarget.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const percentage = x / rect.width
+      audioRef.current.currentTime = percentage * duration
+    }
+  }
+
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60)
+    const seconds = Math.floor(time % 60)
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`
+  }
 
   if (!project) {
     return (
@@ -82,7 +124,7 @@ const StrategicCaseStudy = () => {
           {/* Recruiter Utilities */}
           <AnimatedSection animation="fade-up" delay={150}>
             <div className="flex flex-wrap items-center gap-6  text-sm text-gray-600" style={{ marginBottom: '50px' }}>
-              {/* 60-sec Overview */}
+              {/* 67-sec Overview */}
               <button
                 onClick={() => {
                   setShowAudioPlayer(!showAudioPlayer)
@@ -93,7 +135,7 @@ const StrategicCaseStudy = () => {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                 </svg>
-                60-sec overview
+                67-sec overview
               </button>
 
               {/* Quick Summary */}
@@ -115,7 +157,7 @@ const StrategicCaseStudy = () => {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                3 min read
+                2 min read
               </div>
             </div>
 
@@ -131,7 +173,7 @@ const StrategicCaseStudy = () => {
             >
               <div style={{ paddingBottom: '32px' }}>
                 <p className="text-base text-gray-700 leading-relaxed" style={{ maxWidth: '65ch' }}>
-                  SEPTA's mobile app was widely used for ticketing and trip planning, yet purchasing a ticket required seven steps and reflected internal navigation categories rather than rider intent, creating confusion and reduced trust. Research showed that sixty-eight percent of sessions involved ticketing, but usability testing revealed only a forty-five percent task success rate. To address the structural misalignment, I reduced primary navigation from five tabs to three, merged overlapping trip functions, elevated ticketing as a persistent primary action, introduced biometric login with persistent sessions, and integrated a map-first interaction model. These prioritization decisions reduced ticket steps by fifty-seven percent, improved task success from forty-five to ninety-two percent, and resulted in all eight usability participants completing ticket purchase unassisted. Reframing the information architecture around rider intent rebuilt trust and reduced cognitive load in a system people depend on daily.
+                  SEPTA's mobile app was widely used for ticketing and trip planning, yet purchasing a ticket required seven steps and reflected internal navigation categories rather than rider intent, creating confusion and reduced trust. Research showed that 68% of sessions involved ticketing, but usability testing revealed only a 45% task success rate. To address the structural misalignment, I reduced primary navigation from five tabs to three, merged overlapping trip functions, elevated ticketing as a persistent primary action, introduced biometric login with persistent sessions, and integrated a map first interaction model. These prioritization decisions reduced ticket steps by 57%, improved task success from 45% to 92%, and resulted in all eight usability participants completing ticket purchase unassisted. Reframing the information architecture around rider intent rebuilt trust and reduced cognitive load in a system people depend on daily.
                 </p>
               </div>
             </div>
@@ -140,14 +182,23 @@ const StrategicCaseStudy = () => {
             <div 
               className="overflow-hidden transition-all duration-260"
               style={{ 
-                maxHeight: showAudioPlayer ? '200px' : '0',
+                maxHeight: showAudioPlayer ? '300px' : '0',
                 opacity: showAudioPlayer ? 1 : 0
               }}
             >
               <div className="border border-gray-200 rounded-lg p-6 " style={{ marginBottom: '50px' }}>
+                {/* Hidden audio element */}
+                <audio
+                  ref={audioRef}
+                  src="/SeptaProjectAudioSummary.mp3"
+                  onTimeUpdate={handleTimeUpdate}
+                  onLoadedMetadata={handleLoadedMetadata}
+                  onEnded={() => setIsPlaying(false)}
+                />
+                
                 <div className="flex items-center gap-4 mb-4">
                   <button
-                    onClick={() => setIsPlaying(!isPlaying)}
+                    onClick={togglePlayPause}
                     className="w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center hover:bg-indigo-800 transition-colors"
                   >
                     {isPlaying ? (
@@ -162,42 +213,21 @@ const StrategicCaseStudy = () => {
                   </button>
                   
                   <div className="flex-1">
-                    <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
-                      <div className="h-full bg-indigo-700 w-0" />
+                    <div 
+                      className="h-1 bg-gray-200 rounded-full overflow-hidden cursor-pointer"
+                      onClick={handleSeek}
+                    >
+                      <div 
+                        className="h-full bg-indigo-700 transition-all"
+                        style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
+                      />
                     </div>
                     <div className="flex justify-between text-xs text-gray-500 mt-1">
-                      <span>0:00</span>
-                      <span>1:00</span>
+                      <span>{formatTime(currentTime)}</span>
+                      <span>{formatTime(duration)}</span>
                     </div>
                   </div>
                 </div>
-
-                <button
-                  onClick={() => setShowTranscript(!showTranscript)}
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors hover:underline"
-                >
-                  {showTranscript ? 'Hide' : 'Show'} transcript
-                </button>
-
-                {showTranscript && (
-                  <div className="mt-4 text-sm text-gray-700 leading-relaxed border-t border-gray-200 pt-4">
-                    <p className="mb-3">
-                      SEPTA's mobile app served thousands of daily commuters, but riders didn't trust it. The core issue wasn't visual design—it was prioritization.
-                    </p>
-                    <p className="mb-3">
-                      Ticketing, the most critical action, required seven steps and was buried three levels deep. Meanwhile, 68% of sessions involved buying tickets. Navigation reflected internal org structure, not how people actually plan trips. Every user we tested relied on Google Maps alongside SEPTA because the app lacked integrated spatial planning.
-                    </p>
-                    <p className="mb-3">
-                      We made three strategic moves. First, we restructured navigation from five tabs to three and elevated ticketing as a persistent action. Second, we made the map the primary interaction layer—not a secondary feature. Third, we implemented biometric login to make authentication invisible.
-                    </p>
-                    <p className="mb-3">
-                      Results: task success jumped from 45% to 92%. Ticket purchase dropped from seven steps to three. All eight usability participants completed purchases unassisted.
-                    </p>
-                    <p>
-                      The lesson: trust is infrastructure. Good information architecture reflects user intent, not organizational charts.
-                    </p>
-                  </div>
-                )}
               </div>
             </div>
           </AnimatedSection>
