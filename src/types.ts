@@ -55,6 +55,9 @@ export interface Project {
     limitations: string;
   };
   reflection?: {
+    title: string;
+    worked: string;
+    improve: string;
     learned: string;
   };
   figmaPrototype?: string;

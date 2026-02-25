@@ -594,23 +594,8 @@ const StrategicCaseStudy = () => {
             </AnimatedSection>
 
             <div className="space-y-6">
-              <AnimatedSection animation="fade-up" delay={100}>
-                <div>
-                  <div className="font-semibold text-gray-900 mb-2">What worked:</div>
-                  <p className="text-gray-700 leading-relaxed">{project.reflection.worked}</p>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection animation="fade-up" delay={200}>
-                <div>
-                  <div className="font-semibold text-gray-900 mb-2">What I'd improve:</div>
-                  <p className="text-gray-700 leading-relaxed">{project.reflection.improve}</p>
-                </div>
-              </AnimatedSection>
-
               <AnimatedSection animation="fade-up" delay={300}>
                 <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
-                  <div className="font-semibold text-gray-900 mb-4 text-lg">What I learned:</div>
                   <div className="prose prose-lg max-w-none">
                     {project.reflection.learned.split('\n\n').map((paragraph, i) => {
                       if (paragraph.startsWith('- **')) {
