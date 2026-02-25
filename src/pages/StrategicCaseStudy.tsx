@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import AnimatedSection from '../components/AnimatedSection'
+import FlipCard from '../components/FlipCard'
 import { projects } from '../data/projects'
 
 const StrategicCaseStudy = () => {
@@ -311,20 +312,38 @@ const StrategicCaseStudy = () => {
                     </div>
                   </div>
                 ) : (
-                  // Full content
-                  project.problem.split('\n\n').map((paragraph, i) => {
-                  if (paragraph.startsWith('**')) {
-                    const title = paragraph.match(/\*\*(.*?)\*\*/)?.[1]
-                    const content = paragraph.replace(/\*\*(.*?)\*\*/, '').trim()
-                    return (
-                      <div key={i} className="" style={{ marginBottom: '50px' }}>
-                        {title && <h2 className="text-3xl font-bold text-gray-900 mb-6">{title}</h2>}
-                        {content && <p className="text-lg text-gray-700 leading-relaxed">{content}</p>}
-                      </div>
-                    )
-                  }
-                  return <p key={i} className="text-lg text-gray-700 leading-relaxed mb-6">{paragraph}</p>
-                })
+                  // Full content with flip cards for SEPTA project
+                  <div>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Problems</h2>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                      Through user interviews and testing, I uncovered something deeper than usability issues. People didn't just find the app frustrating. They didn't trust it.
+                    </p>
+
+                    {/* Flip Cards Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                      <FlipCard
+                        title="Login loops"
+                        description="Users stuck in endless authentication cycles, getting logged out mid-trip."
+                      />
+                      <FlipCard
+                        title="Broken real-time tracking"
+                        description="Real-time tracking wasn't real-time. Buses showed up late or not at all, with no explanation."
+                      />
+                      <FlipCard
+                        title="Confusing navigation"
+                        description="Finding a route required hunting through nested menus with unclear labels."
+                      />
+                      <FlipCard
+                        title="Accessibility gaps"
+                        description="No font controls, poor contrast, no consideration for users with disabilities."
+                      />
+                    </div>
+
+                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <b>The insight that hit hardest: </b>Every single user used Google Maps alongside SEPTA. Not by choice, by necessity. The app didn't have an integrated map, so planning a trip meant bouncing between two apps.
+                        <i>This wasn't just a missing feature. It was a signal that the app wasn't designed around how people actually plan trips.</i>
+                    </p>
+                  </div>
                 )}
               </div>
             </AnimatedSection>
