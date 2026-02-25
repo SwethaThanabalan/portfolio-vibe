@@ -9,7 +9,6 @@ const StrategicCaseStudy = () => {
   const project = projects.find((p: any) => p.id === id)
   const [scrollProgress, setScrollProgress] = useState(0)
   const [showAudioPlayer, setShowAudioPlayer] = useState(false)
-  const [showTranscript, setShowTranscript] = useState(false)
   const [quickSummaryMode] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const [showQuickSummary, setShowQuickSummary] = useState(false)
