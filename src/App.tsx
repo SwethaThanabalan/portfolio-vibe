@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
 import StrategicCaseStudy from './pages/StrategicCaseStudy'
 import TalofaCaseStudy from './pages/TalofaCaseStudy'
+import AdultYouCaseStudy from './pages/AdultYouCaseStudy'
 import About from './pages/About'
 import { projects } from './data/projects'
 
@@ -18,6 +19,11 @@ function ProjectRouter() {
   // Check if it's the Talofa case study
   if (id === 'talofa-games-retention') {
     return <TalofaCaseStudy />
+  }
+  
+  // Check if it's the Adult You case study
+  if (id === 'adult-you-platform') {
+    return <AdultYouCaseStudy />
   }
   
   // Check if it's a strategic case study

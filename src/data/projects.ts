@@ -2,6 +2,25 @@ import type { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 'adult-you-platform',
+    title: 'Designing Adult You: Building a Gamified Life Skills Platform from 0 → 1',
+    category: 'Product Design',
+    year: '2024',
+    thumbnail: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop',
+    description: '0→1 product design for gamified life skills platform teaching adults essential real-world skills',
+    role: 'Product Designer',
+    duration: 'Alpha stage',
+    tools: ['Figma', 'Figma Make', 'Unity Integration', 'User Testing'],
+    overview: 'Led end-to-end product design as sole designer for a 0→1 gamified learning platform teaching adults life skills.',
+    challenge: 'No existing product, design system, or documentation. Started with "just wireframe" without finalized content, modules, or UX principles.',
+    solution: 'Built custom design system integrated with Unity, transformed text-heavy modules into interactive flows, and established research-backed direction through testing with 20 participants.',
+    images: [
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop'
+    ]
+  },
+  {
     id: 'talofa-games-retention',
     title: 'Monster Walk Reengagement Strategy',
     category: 'Product Design',
