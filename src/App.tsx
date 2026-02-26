@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useParams, Navigate } from 'rea
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
 import StrategicCaseStudy from './pages/StrategicCaseStudy'
+import TalofaCaseStudy from './pages/TalofaCaseStudy'
 import About from './pages/About'
 import { projects } from './data/projects'
 
@@ -12,6 +13,11 @@ function ProjectRouter() {
   
   if (!project) {
     return <Navigate to="/" replace />
+  }
+  
+  // Check if it's the Talofa case study
+  if (id === 'talofa-games-retention') {
+    return <TalofaCaseStudy />
   }
   
   // Check if it's a strategic case study

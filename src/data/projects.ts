@@ -2,6 +2,25 @@ import type { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 'talofa-games-retention',
+    title: 'Monster Walk Reengagement Strategy',
+    category: 'Product Design',
+    year: '2024',
+    thumbnail: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop',
+    description: 'Behavioral re-entry strategy for fitness gaming app to address retention drop among lapsed users',
+    role: 'Product Designer',
+    duration: '3 months',
+    tools: ['Figma', 'User Research', 'Concept Testing'],
+    overview: 'Designed a behavioral re-entry strategy for Monster Walk, a fitness gaming app, to address retention drops among lapsed users.',
+    challenge: 'Retention dropped sharply after users lapsed for 7+ days. The Welcome Back experience needed to address emotional hesitation, not just surface-level UI.',
+    solution: 'Conducted concept testing instead of A/B testing to understand user motivation. Evolved messaging from functional clarity to emotional reassurance.',
+    images: [
+      'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1200&h=800&fit=crop'
+    ]
+  },
+  {
     id: 'septa-mobile-redesign',
     title: 'SEPTA Mobile App Revamp',
     category: 'Product Design',
