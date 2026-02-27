@@ -4,6 +4,7 @@ import ProjectDetail from './pages/ProjectDetail'
 import StrategicCaseStudy from './pages/StrategicCaseStudy'
 import TalofaCaseStudy from './pages/TalofaCaseStudy'
 import AdultYouCaseStudy from './pages/AdultYouCaseStudy'
+import AmazonTeardownCaseStudy from './pages/AmazonTeardownCaseStudy'
 import About from './pages/About'
 import { projects } from './data/projects'
 
@@ -24,6 +25,11 @@ function ProjectRouter() {
   // Check if it's the Adult You case study
   if (id === 'adult-you-platform') {
     return <AdultYouCaseStudy />
+  }
+  
+  // Check if it's the Amazon teardown
+  if (id === 'amazon-cancellation-teardown') {
+    return <AmazonTeardownCaseStudy />
   }
   
   // Check if it's a strategic case study

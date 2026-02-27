@@ -12,7 +12,7 @@ const Footer = () => {
         {/* Social Links */}
         <div className="flex gap-6">
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/swethathanabalan/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-sm transition-colors hover:opacity-100"
@@ -21,7 +21,7 @@ const Footer = () => {
             LinkedIn
           </a>
           <a 
-            href="mailto:hello@example.com"
+            href="tys.swetha@gmail.com"
             className="text-sm transition-colors hover:opacity-100"
             style={{ color: 'var(--muted)' }}
           >
@@ -34,7 +34,7 @@ const Footer = () => {
           className="text-sm"
           style={{ color: 'var(--muted)' }}
         >
-          © 2024 Your Name. All rights reserved.
+          © 2024 Swetha Thanabalan. All rights reserved.
         </p>
       </div>
     </footer>

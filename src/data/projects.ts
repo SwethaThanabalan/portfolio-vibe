@@ -2,6 +2,25 @@ import type { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 'amazon-cancellation-teardown',
+    title: 'When Recovery Fails: A UX Teardown of Amazon\'s Order Cancellation Flow',
+    category: 'UX Analysis',
+    year: '2024',
+    thumbnail: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800&h=600&fit=crop',
+    description: 'Professional UX audit analyzing error recovery and customer experience in high-stakes checkout scenarios',
+    role: 'UX Designer',
+    duration: 'Independent Analysis',
+    tools: ['UX Analysis', 'Interaction Design', 'Customer Experience'],
+    overview: 'A professional UX teardown examining Amazon\'s order cancellation flow during a high-pressure Prime Day scenario.',
+    challenge: 'Address cannot be edited post-order. System asks for cancellation reason but ignores user intent. No cart preservation or recovery assistance.',
+    solution: 'Identified critical gaps in error recovery design, including missed contextual responses, lack of lightning deal safeguards, and emotional friction points.',
+    images: [
+      'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=800&fit=crop'
+    ]
+  },
+  {
     id: 'adult-you-platform',
     title: 'Designing Adult You: Building a Gamified Life Skills Platform from 0 → 1',
     category: 'Product Design',
