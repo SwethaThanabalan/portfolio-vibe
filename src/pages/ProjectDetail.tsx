@@ -50,7 +50,7 @@ const ProjectDetail = () => {
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-6 py-12">
           <AnimatedSection animation="fade-in">
-            <Link to="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors group">
+            <Link to="/#work" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors group">
               <svg className="w-5 h-5 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -150,7 +150,7 @@ const ProjectDetail = () => {
         <section className="max-w-7xl mx-auto px-6 py-20">
           <div className="border-t border-gray-200 pt-12">
             <Link 
-              to="/"
+              to="/#work"
               className="inline-flex items-center text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors"
             >
               View all projects

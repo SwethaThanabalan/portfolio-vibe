@@ -28,18 +28,6 @@ const Hero = () => {
       {/* Readability veil - reduced opacity for more visible blobs */}
       <div className="absolute inset-0 bg-white/20 z-[1] pointer-events-none" />
       
-      {/* Identity section - z-10 */}
-      <div className="relative z-10 w-full pointer-events-none">
-        <div className="max-w-[1200px] xl:max-w-[1320px] 2xl:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 pt-8 pb-6">
-          <div className="text-neutral-900 font-medium text-base">
-            Swetha Thanabalan
-          </div>
-          <div className="text-neutral-600 text-sm mt-1">
-            Product Designer
-          </div>
-        </div>
-      </div>
-      
       {/* Hero content - z-10, centered, pointer-events-none on wrapper */}
       <div className="relative z-10 w-full flex-1 flex items-center pointer-events-none">
         <div className="max-w-[1200px] xl:max-w-[1320px] 2xl:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-20 w-full">
