@@ -73,18 +73,28 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div className="md:hidden w-full flex items-center justify-between">
-          <Link 
-            to="/" 
-            className="transition-colors hover:opacity-70"
+          <div 
+            className="backdrop-blur-sm transition-all duration-300"
             style={{ 
-              color: 'var(--accent)',
-              fontFamily: "'Cedarville Cursive', cursive",
-              fontSize: '1.25rem',
-              fontWeight: 700
+              backgroundColor: isScrolled ? 'var(--bg)' : 'transparent',
+              boxShadow: isScrolled ? '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)' : 'none',
+              borderRadius: isScrolled ? '9999px' : '0',
+              padding: isScrolled ? '0.5rem 1rem' : '0'
             }}
           >
-            Swetha Thanabalan
-          </Link>
+            <Link 
+              to="/" 
+              className="transition-colors hover:opacity-70"
+              style={{ 
+                color: 'var(--accent)',
+                fontFamily: "'Cedarville Cursive', cursive",
+                fontSize: '1.25rem',
+                fontWeight: 700
+              }}
+            >
+              Swetha Thanabalan
+            </Link>
+          </div>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
