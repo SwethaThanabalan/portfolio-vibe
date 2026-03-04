@@ -3,9 +3,10 @@ import { useEffect, useRef, useState } from 'react'
 interface InteractiveBlobFieldProps {
   className?: string
   onStroke?: () => void
+  penModeEnabled?: boolean
 }
 
-// Coral palette - soft and warm (increased opacity for better visibility)
+// Coral palette - soft and warm
 const colors = [
   'rgba(255, 146, 112, 0.35)',  // Soft coral
   'rgba(255, 186, 150, 0.30)',  // Light peach
@@ -23,14 +24,28 @@ interface Blob {
   createdAt: number
 }
 
-const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobFieldProps) => {
+const InteractiveBlobField = ({ className = '', onStroke, penModeEnabled = false }: InteractiveBlobFieldProps) => {
   const [blobs, setBlobs] = useState<Blob[]>([])
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const lastSpawnRef = useRef(0)
   const blobIdRef = useRef(0)
-  const cursorRef = useRef({ x: 0, y: 0, active: false })
   const lastPosRef = useRef({ x: 0, y: 0 })
+  const pointerDownRef = useRef(false)
+
+  // Detect touch device
+  useEffect(() => {
+    const checkTouchDevice = () => {
+      const hasCoarsePointer = window.matchMedia('(pointer: coarse)').matches
+      const hasNoHover = window.matchMedia('(hover: none)').matches
+      setIsTouchDevice(hasCoarsePointer && hasNoHover)
+    }
+    
+    checkTouchDevice()
+    window.addEventListener('resize', checkTouchDevice)
+    return () => window.removeEventListener('resize', checkTouchDevice)
+  }, [])
 
   // Check for reduced motion preference
   useEffect(() => {
@@ -70,12 +85,12 @@ const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobField
     }
   }, [prefersReducedMotion])
 
-  // Spawn blobs on cursor movement
+  // Spawn blobs
   const spawnBlob = (x: number, y: number) => {
     const now = Date.now()
     const timeSinceLastSpawn = now - lastSpawnRef.current
     
-    // Throttle spawn rate (80-120ms)
+    // Throttle spawn rate
     if (timeSinceLastSpawn < 100) return
     
     lastSpawnRef.current = now
@@ -83,7 +98,7 @@ const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobField
     // Random size between 380-560px
     const size = 380 + Math.random() * 180
     
-    // Create new blob centered on cursor
+    // Create new blob centered on position
     const newBlob: Blob = {
       id: blobIdRef.current++,
       x: x - size / 2,
@@ -104,20 +119,45 @@ const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobField
     })
   }
 
-  // Handle pointer move
+  // Handle pointer events
   useEffect(() => {
     if (prefersReducedMotion) return
 
-    const handlePointerMove = (e: PointerEvent) => {
+    const handlePointerDown = (e: PointerEvent) => {
       if (!containerRef.current) return
+      
+      // Desktop: always allow mouse
+      // Touch device: only allow if pen mode is enabled and pointer is touch/pen
+      const isMouseOnDesktop = !isTouchDevice && e.pointerType === 'mouse'
+      const isPenModeTouch = isTouchDevice && penModeEnabled && (e.pointerType === 'touch' || e.pointerType === 'pen')
+      
+      if (!isMouseOnDesktop && !isPenModeTouch) return
+      
+      pointerDownRef.current = true
       
       const rect = containerRef.current.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
       
-      cursorRef.current = { x, y, active: true }
+      lastPosRef.current = { x, y }
+      spawnBlob(x, y)
+    }
+
+    const handlePointerMove = (e: PointerEvent) => {
+      if (!containerRef.current) return
       
-      // Spawn blob at cursor position
+      // Desktop: always allow mouse
+      // Touch device: only allow if pen mode is enabled and pointer is down
+      const isMouseOnDesktop = !isTouchDevice && e.pointerType === 'mouse'
+      const isPenModeTouch = isTouchDevice && penModeEnabled && pointerDownRef.current && (e.pointerType === 'touch' || e.pointerType === 'pen')
+      
+      if (!isMouseOnDesktop && !isPenModeTouch) return
+      
+      const rect = containerRef.current.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      
+      // Spawn blob at position
       spawnBlob(x, y)
       
       // Track movement distance for stroke count
@@ -131,18 +171,22 @@ const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobField
       }
     }
 
-    const handlePointerLeave = () => {
-      cursorRef.current.active = false
+    const handlePointerUp = () => {
+      pointerDownRef.current = false
     }
 
+    window.addEventListener('pointerdown', handlePointerDown)
     window.addEventListener('pointermove', handlePointerMove)
-    window.addEventListener('pointerleave', handlePointerLeave)
+    window.addEventListener('pointerup', handlePointerUp)
+    window.addEventListener('pointercancel', handlePointerUp)
 
     return () => {
+      window.removeEventListener('pointerdown', handlePointerDown)
       window.removeEventListener('pointermove', handlePointerMove)
-      window.removeEventListener('pointerleave', handlePointerLeave)
+      window.removeEventListener('pointerup', handlePointerUp)
+      window.removeEventListener('pointercancel', handlePointerUp)
     }
-  }, [prefersReducedMotion, onStroke])
+  }, [prefersReducedMotion, isTouchDevice, penModeEnabled, onStroke])
 
   // Animate blob opacity and remove old blobs
   useEffect(() => {
@@ -167,7 +211,7 @@ const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobField
             }
             
             // Fade out over 800ms (2800-3600ms)
-            const fadeOutDuration = 800
+            const fadeOutDuration = prefersReducedMotion ? 0 : 800
             const fadeOutProgress = (age - 2800) / fadeOutDuration
             
             if (fadeOutProgress < 1) {
@@ -190,6 +234,7 @@ const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobField
       setBlobs([])
       lastSpawnRef.current = 0
       lastPosRef.current = { x: 0, y: 0 }
+      pointerDownRef.current = false
     }
 
     window.addEventListener('resetBackground', handleReset)
@@ -197,7 +242,13 @@ const InteractiveBlobField = ({ className = '', onStroke }: InteractiveBlobField
   }, [])
 
   return (
-    <div ref={containerRef} className={className}>
+    <div 
+      ref={containerRef} 
+      className={className}
+      style={{
+        touchAction: isTouchDevice && penModeEnabled ? 'none' : 'auto'
+      }}
+    >
       {blobs.map(blob => (
         <div
           key={blob.id}
