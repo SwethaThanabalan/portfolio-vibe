@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +15,28 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const handleProjectsClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setIsMobileMenuOpen(false)
+    
+    if (location.pathname === '/') {
+      // Already on home page, just scroll
+      const workSection = document.getElementById('work')
+      if (workSection) {
+        workSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      // Navigate to home page, then scroll
+      navigate('/')
+      setTimeout(() => {
+        const workSection = document.getElementById('work')
+        if (workSection) {
+          workSection.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    }
+  }
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
@@ -42,13 +66,14 @@ const Navbar = () => {
           
           <span className="mx-4 text-base" style={{ color: 'var(--muted)' }}>|</span>
           
-          <Link 
-            to="/#work" 
-            className="text-base transition-colors hover:opacity-100"
+          <a 
+            href="/#work" 
+            onClick={handleProjectsClick}
+            className="text-base transition-colors hover:opacity-100 cursor-pointer"
             style={{ color: 'var(--muted)' }}
           >
             Projects
-          </Link>
+          </a>
           
           <span className="mx-4 text-base" style={{ color: 'var(--muted)' }}>|</span>
           
@@ -125,14 +150,14 @@ const Navbar = () => {
           }}
         >
           <div className="px-6 py-4 space-y-4">
-            <Link 
-              to="/#work" 
-              className="block text-base transition-colors hover:opacity-70"
+            <a 
+              href="/#work" 
+              onClick={handleProjectsClick}
+              className="block text-base transition-colors hover:opacity-70 cursor-pointer"
               style={{ color: 'var(--text)' }}
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               Projects
-            </Link>
+            </a>
             
             <Link 
               to="/about" 

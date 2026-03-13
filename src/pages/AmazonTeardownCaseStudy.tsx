@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import AnimatedSection from '../components/AnimatedSection'
 
 const AmazonTeardownCaseStudy = () => {
@@ -127,73 +128,23 @@ const AmazonTeardownCaseStudy = () => {
         <section className="max-w-4xl mx-auto px-6 mb-20">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Current Flow Breakdown</h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-semibold text-sm">
-                    1
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">Navigate to orders</h3>
-                    <p className="text-gray-600">User must locate the order in their order history</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-semibold text-sm">
-                    2
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">Select "Cancel items"</h3>
-                    <p className="text-gray-600">Initiate cancellation for all 15 items</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-semibold text-sm">
-                    3
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">Choose cancellation reason</h3>
-                    <p className="text-gray-600 mb-3">System asks: "Why are you canceling?"</p>
-                    <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4">
-                      <p className="text-gray-900 font-medium">Option selected: "Need to change shipping address"</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-semibold text-sm">
-                    4
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">Confirm cancellation</h3>
-                    <p className="text-gray-600">Order is canceled. No further assistance offered.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-semibold text-sm">
-                    5
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">Manually rebuild cart</h3>
-                    <p className="text-gray-600">User must search for and re-add all 15 items</p>
-                    <div className="mt-3 bg-red-50 border-l-4 border-red-500 p-4">
-                      <p className="text-gray-900 font-medium">Lightning deal may no longer be available</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed mb-12">
+              <p>The user must navigate through a multi-step cancellation process that fails to recognize their stated intent.</p>
             </div>
+          </AnimatedSection>
+
+          {/* Visual Diagram */}
+          <AnimatedSection animation="fade-up" delay={100}>
+            <div className="mb-4">
+              <img 
+                src="/src/data/images/Portfolioamazoncasestudy.jpg" 
+                alt="Amazon cancellation flow analysis diagram"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-gray-600 italic text-center mb-12">
+              Cognitive walkthrough of the Amazon cancellation flow highlighting the gap between user intent and system feedback.
+            </p>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
@@ -224,25 +175,6 @@ const AmazonTeardownCaseStudy = () => {
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>Applying Norman's Action Cycle reveals a breakdown at the <span className="font-semibold text-gray-900">Interpretation stage</span>.</p>
               
-              <div className="bg-gray-50 rounded-xl p-8 space-y-4">
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">User Goal:</h3>
-                  <p>Change shipping address</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">System Action:</h3>
-                  <p>Asks for cancellation reason</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">User Input:</h3>
-                  <p>"Need to change shipping address"</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">System Response:</h3>
-                  <p className="text-red-600 font-semibold">Nothing. Order canceled. End of interaction.</p>
-                </div>
-              </div>
-
               <p className="font-semibold text-gray-900">The system ignores user intent despite explicitly asking for it.</p>
               <p>There is no meaningful feedback loop.</p>
             </div>
@@ -383,6 +315,8 @@ const AmazonTeardownCaseStudy = () => {
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   )
 }
