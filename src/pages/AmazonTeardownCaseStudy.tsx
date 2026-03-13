@@ -138,7 +138,7 @@ const AmazonTeardownCaseStudy = () => {
             <div className="mb-4">
               <img 
                 src="/portfolioamazoncasestudy.jpg" 
-                alt="Amazon cancellation flow analysis diagram"
+                alt="Amazon cancellation flow analysis diagram."
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
