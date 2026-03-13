@@ -38,6 +38,19 @@ const Navbar = () => {
     }
   }
 
+  const handleNameClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setIsMobileMenuOpen(false)
+    
+    if (location.pathname === '/') {
+      // Already on home page, just scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      // Navigate to home page (will automatically be at top)
+      navigate('/')
+    }
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div className="mx-auto px-6 md:px-8 py-5 flex justify-center" style={{ maxWidth: 'var(--max-width)' }}>
@@ -53,6 +66,7 @@ const Navbar = () => {
         >
           <Link 
             to="/" 
+            onClick={handleNameClick}
             className="transition-colors hover:opacity-70"
             style={{ 
               color: 'var(--accent)',
@@ -109,6 +123,7 @@ const Navbar = () => {
           >
             <Link 
               to="/" 
+              onClick={handleNameClick}
               className="transition-colors hover:opacity-70"
               style={{ 
                 color: 'var(--accent)',
