@@ -481,7 +481,43 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
         </section>
 
-        {/* 9. LAUNCH & REAL-WORLD IMPACT */}
+        {/* 9. INTERACTIVE PROTOTYPE */}
+        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Interactive Prototype</h2>
+            <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+              <p>To demonstrate the redesigned Monster Walk gameplay and retention mechanics, I built an interactive prototype that simulates the core player flow and progression loop.</p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={100}>
+            <div className="mt-8 w-full">
+              <div className="relative w-full rounded-lg overflow-hidden shadow-lg border border-gray-200" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F8tgWUX07X8n5GsiZauji9b%2FMonster-Walk-Hand-off---Swetha%3Fnode-id%3D7-6266%26t%3DOMRrHCZ6XR6pLSbr-0%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D7%253A6266%26show-proto-sidebar%3D1"
+                  allowFullScreen
+                  title="Monster Walk Interactive Prototype"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <a
+                  href="https://www.figma.com/proto/8tgWUX07X8n5GsiZauji9b/Monster-Walk-Hand-off---Swetha?node-id=7-6266&t=OMRrHCZ6XR6pLSbr-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=7%3A6266&show-proto-sidebar=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-indigo-600 transition-colors"
+                >
+                  Open in Figma
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </AnimatedSection>
+        </section>
+
+        {/* 10. LAUNCH & REAL-WORLD IMPACT */}
         <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Launch & Real-World Impact</h2>
@@ -524,7 +560,7 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
         </section>
 
-        {/* 10. STRATEGIC IMPACT */}
+        {/* 11. STRATEGIC IMPACT */}
         <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Strategic Impact</h2>
@@ -556,7 +592,7 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
         </section>
 
-        {/* 11. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
+        {/* 12. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
         <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">How This Project Elevated My Product Thinking</h2>

@@ -2,6 +2,44 @@ import type { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 'talofa-games-retention',
+    title: 'Monster Walk Reengagement Strategy',
+    category: 'Product Design',
+    year: '2024',
+    thumbnail: 'src/data/Images/Monster Walk Cover.png',
+    description: 'Behavioral re-entry strategy for fitness gaming app to address retention drop among lapsed users',
+    role: 'Product Designer',
+    duration: '3 months',
+    tools: ['Figma', 'User Research', 'Concept Testing'],
+    overview: 'Designed a behavioral re-entry strategy for Monster Walk, a fitness gaming app, to address retention drops among lapsed users.',
+    challenge: 'Retention dropped sharply after users lapsed for 7+ days. The Welcome Back experience needed to address emotional hesitation, not just surface-level UI.',
+    solution: 'Conducted concept testing instead of A/B testing to understand user motivation. Evolved messaging from functional clarity to emotional reassurance.',
+    images: [
+      'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1200&h=800&fit=crop'
+    ]
+  },
+  {
+    id: 'adult-you-platform',
+    title: 'Designing Adult You: Building a Gamified Life Skills Platform from 0 → 1',
+    category: 'Product Design',
+    year: '2024',
+    thumbnail: 'src/data/Images/adult you_logo_LIGHT.png',
+    description: '0→1 product design for gamified life skills platform teaching adults essential real-world skills',
+    role: 'Product Designer',
+    duration: 'Alpha stage',
+    tools: ['Figma', 'Figma Make', 'Unity Integration', 'User Testing'],
+    overview: 'Led end-to-end product design as sole designer for a 0→1 gamified learning platform teaching adults life skills.',
+    challenge: 'No existing product, design system, or documentation. Started with "just wireframe" without finalized content, modules, or UX principles.',
+    solution: 'Built custom design system integrated with Unity, transformed text-heavy modules into interactive flows, and established research-backed direction through testing with 20 participants.',
+    images: [
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop'
+    ]
+  },
+  {
     id: 'amazon-cancellation-teardown',
     title: 'When Recovery Fails: A UX Teardown of Amazon\'s Order Cancellation Flow',
     category: 'UX Analysis',
@@ -21,49 +59,11 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 'adult-you-platform',
-    title: 'Designing Adult You: Building a Gamified Life Skills Platform from 0 → 1',
-    category: 'Product Design',
-    year: '2024',
-    thumbnail: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop',
-    description: '0→1 product design for gamified life skills platform teaching adults essential real-world skills',
-    role: 'Product Designer',
-    duration: 'Alpha stage',
-    tools: ['Figma', 'Figma Make', 'Unity Integration', 'User Testing'],
-    overview: 'Led end-to-end product design as sole designer for a 0→1 gamified learning platform teaching adults life skills.',
-    challenge: 'No existing product, design system, or documentation. Started with "just wireframe" without finalized content, modules, or UX principles.',
-    solution: 'Built custom design system integrated with Unity, transformed text-heavy modules into interactive flows, and established research-backed direction through testing with 20 participants.',
-    images: [
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1200&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop'
-    ]
-  },
-  {
-    id: 'talofa-games-retention',
-    title: 'Monster Walk Reengagement Strategy',
-    category: 'Product Design',
-    year: '2024',
-    thumbnail: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop',
-    description: 'Behavioral re-entry strategy for fitness gaming app to address retention drop among lapsed users',
-    role: 'Product Designer',
-    duration: '3 months',
-    tools: ['Figma', 'User Research', 'Concept Testing'],
-    overview: 'Designed a behavioral re-entry strategy for Monster Walk, a fitness gaming app, to address retention drops among lapsed users.',
-    challenge: 'Retention dropped sharply after users lapsed for 7+ days. The Welcome Back experience needed to address emotional hesitation, not just surface-level UI.',
-    solution: 'Conducted concept testing instead of A/B testing to understand user motivation. Evolved messaging from functional clarity to emotional reassurance.',
-    images: [
-      'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1200&h=800&fit=crop'
-    ]
-  },
-  {
     id: 'septa-mobile-redesign',
     title: 'SEPTA Mobile App Revamp',
     category: 'Product Design',
     year: '2024',
-    thumbnail: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop',
+    thumbnail: 'src/data/Images/Next Stop Better SEPTA experience.png',
     description: 'Complete redesign of SEPTA\'s mobile app focusing on user experience and accessibility',
     role: 'Product Designer',
     duration: '3 months',

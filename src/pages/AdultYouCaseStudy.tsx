@@ -497,7 +497,31 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
         </section>
 
-        {/* 8. TESTING & CEO COLLABORATION */}
+        {/* 8. INTERACTIVE PROTOTYPE */}
+        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Interactive Prototype</h2>
+            <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+              <p>To demonstrate the interaction model for the learning modules, I created a working prototype that simulates the core flow of the experience.</p>
+              <p>Explore the prototype below to see how users progress through modules, interact with content, and receive feedback.</p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={100}>
+            <div className="mt-8 w-full">
+              <div className="relative w-full rounded-lg overflow-hidden shadow-lg border border-gray-200" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRyfAu7aSShQ8trzu60ALNq%2FAdult-you%3Fnode-id%3D1198-3262%26t%3DrVEAhyuetwgQTnuX-0%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D1%253A3"
+                  allowFullScreen
+                  title="Adult You Interactive Prototype"
+                />
+              </div>
+            </div>
+          </AnimatedSection>
+        </section>
+
+        {/* 9. TESTING & CEO COLLABORATION */}
         <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Testing & CEO Collaboration</h2>
@@ -551,7 +575,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
         </section>
 
-        {/* 9. STRATEGIC IMPACT */}
+        {/* 10. STRATEGIC IMPACT */}
         <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Strategic Impact</h2>
@@ -592,7 +616,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
         </section>
 
-        {/* 10. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
+        {/* 11. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
         <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">How This Project Elevated My Product Thinking</h2>
