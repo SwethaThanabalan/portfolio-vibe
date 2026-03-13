@@ -218,11 +218,4 @@ const About = () => {
             </div>
           </AnimatedSection>
         </section>
-      </main>
-
-      <Footer />
-    </div>
-  )
-}
-
-export default About
+      <
