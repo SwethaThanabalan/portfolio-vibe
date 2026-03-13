@@ -137,7 +137,7 @@ const AmazonTeardownCaseStudy = () => {
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mb-4">
               <img 
-                src="/src/data/images/Portfolioamazoncasestudy.jpg" 
+                src="/Portfolioamazoncasestudy.jpg" 
                 alt="Amazon cancellation flow analysis diagram"
                 className="w-full rounded-lg shadow-lg"
               />
