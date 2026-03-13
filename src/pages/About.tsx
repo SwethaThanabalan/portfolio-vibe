@@ -59,7 +59,7 @@ const About = () => {
               I'm always interested in hearing about new projects and opportunities.
             </p>
             <a 
-              href="mailto:hello@example.com"
+              href="mailto:tys.swetha@gmail.com"
               className="inline-block px-8 py-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
             >
               Get in touch

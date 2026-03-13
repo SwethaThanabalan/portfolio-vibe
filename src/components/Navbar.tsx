@@ -88,7 +88,7 @@ const Navbar = () => {
           <span className="mx-4 text-base" style={{ color: 'var(--muted)' }}>|</span>
           
           <a 
-            href="mailto:hello@example.com" 
+            href="mailto:tys.swetha@gmail.com" 
             className="text-base transition-colors hover:opacity-100"
             style={{ color: 'var(--muted)' }}
           >
@@ -169,7 +169,7 @@ const Navbar = () => {
             </Link>
             
             <a 
-              href="mailto:hello@example.com" 
+              href="mailto:tys.swetha@gmail.com" 
               className="block text-base transition-colors hover:opacity-70"
               style={{ color: 'var(--text)' }}
               onClick={() => setIsMobileMenuOpen(false)}
