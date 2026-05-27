@@ -76,16 +76,14 @@ const Footer = () => {
           
           {/* Icons and Headline row */}
           <div 
-            className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-32 mb-6 transition-all duration-500"
+            className="flex flex-col items-center justify-center gap-8 mb-6 transition-all duration-500"
             style={{
               opacity: pipelineHover ? 0.85 : 1,
               transform: pipelineHover ? 'translateY(-2px)' : 'translateY(0)',
-              maxWidth: '900px',
-              margin: '0 auto'
             }}
           >
-            {/* Icons on the left */}
-            <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', alignItems: 'center' }}>
+            {/* Icons centered */}
+            <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', alignItems: 'center', justifyContent: 'center' }}>
               {/* LinkedIn icon */}
               <a 
                 href="https://www.linkedin.com/in/swethathanabalan/" 
@@ -141,43 +139,6 @@ const Footer = () => {
                 marginBottom: '8px'
               }}
             >
-              <span 
-                className="handwritten-accent group"
-                style={{ 
-                  position: 'relative',
-                  display: 'inline-block'
-                }}
-              >
-                Built end-to-end by me.
-                <svg
-                  className="handwritten-underline"
-                  style={{
-                    position: 'absolute',
-                    bottom: '-4px',
-                    left: '0',
-                    width: '100%',
-                    height: '12px',
-                    overflow: 'visible',
-                    pointerEvents: 'none'
-                  }}
-                  viewBox="0 0 200 12"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M0,8 Q50,4 100,7 T200,6"
-                    stroke="#ffffff"
-                    strokeWidth="2.5"
-                    fill="none"
-                    strokeLinecap="round"
-                    style={{
-                      strokeDasharray: '200',
-                      strokeDashoffset: '200',
-                      transition: 'stroke-dashoffset 600ms ease-out',
-                      opacity: 0.9
-                    }}
-                  />
-                </svg>
-              </span>
             </h3>
             <div 
               className="text-sm sm:text-base"
@@ -188,7 +149,6 @@ const Footer = () => {
                 maxWidth: '500px'
               }}
             >
-              <p>Designed in Figma • Built with Kiro • AI-assisted with Claude & GPT • Version controlled with GitHub</p>
             </div>
           </div>
         </div>

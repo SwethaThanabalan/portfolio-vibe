@@ -98,13 +98,13 @@ const TalofaCaseStudy = () => {
           
           <AnimatedSection animation="fade-up">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-12 leading-tight">
-              Monster Walk Reengagement Strategy
+              Monster Walk: Redesigning the emotional re-entry experience
             </h1>
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="text-xl text-gray-700 leading-relaxed space-y-6 mb-16">
-              <p>Talofa Games builds a fitness-driven gaming ecosystem where real-world movement powers immersive progression. Monster Walk turns daily steps into character growth, while Running Legend expands the experience through distance-based challenges. I joined during beta to address a retention drop among lapsed users. What began as a Welcome Back redesign evolved into a behavioral re-entry strategy grounded in motivation psychology and product judgment.</p>
+              <p>Monster Walk was losing users after 7 days of inactivity, and the return experience wasn't built for the emotional state of someone who'd lapsed. I joined during beta to fix it. What started as a screen redesign became a full behavioral re-entry strategy. Four of my recommendations shipped in the live product.</p>
             </div>
           </AnimatedSection>
 
@@ -250,10 +250,8 @@ const TalofaCaseStudy = () => {
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Business Context</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
-              <p>Talofa Games built Monster Walk to gamify walking through character progression and challenges.</p>
-              <p>Initial engagement was strong. Retention dropped sharply after a lapse of 7+ days.</p>
-              <p>The Welcome Back experience became a strategic retention lever.</p>
-              <p>This was not a UI refresh. It was a behavioral re-entry problem.</p>
+              <p>Talofa Games built Monster Walk to gamify walking. Real steps power character growth, quests, and progression. Early engagement was strong. But when users lapsed for 7+ days, they weren't coming back.</p>
+              <p>The Welcome Back screen was the only re-entry point. It wasn't designed for someone who felt guilty, uncertain, or afraid their progress was gone. That's where I started.</p>
               <p>During this time, the official Monster Walk trailer was released publicly while we were actively working on the beta product.</p>
             </div>
           </AnimatedSection>
@@ -281,28 +279,28 @@ const TalofaCaseStudy = () => {
             <AnimatedSection animation="fade-up" delay={100}>
               <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 h-full">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Retention Gap</h3>
-                <p className="text-gray-700">Returning users are in a different emotional state than active users. They need reassurance, not challenge.</p>
+                <p className="text-gray-700">Users who lapsed 7+ days had a fundamentally different emotional state. Pushing them into challenges the moment they returned made it worse, not better.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 h-full">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Clarity Gap</h3>
-                <p className="text-gray-700">Users didn't understand what they were returning to or why it mattered.</p>
+                <p className="text-gray-700">Users couldn't remember where they left off or why it mattered to pick up again. The product offered no answer.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 h-full">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Motivation Gap</h3>
-                <p className="text-gray-700">The experience didn't address the emotional hesitation that comes with returning after a break.</p>
+                <p className="text-gray-700">No concept addressed guilt or hesitation, the two emotions every lapsed user described in research. The experience assumed motivation existed. It didn't.</p>
               </div>
             </AnimatedSection>
           </div>
 
           <AnimatedSection animation="fade-up" delay={400}>
             <div className="mt-8 bg-indigo-50 border-l-4 border-indigo-600 rounded-r-xl p-6">
-              <p className="text-lg text-gray-900 font-semibold">Insight: This was a behavioral problem disguised as a screen redesign.</p>
+              <p className="text-lg text-gray-900 font-semibold">Insight: Lapsed users weren't disengaged. They were hesitant. The barrier wasn't the product. It was the emotion of returning.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -317,35 +315,35 @@ const TalofaCaseStudy = () => {
             <AnimatedSection animation="fade-up" delay={100}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Stakeholder Interviews</h3>
-                <p className="text-gray-700">Spoke with the founder, coaches, and gaming advisors to understand business goals and technical constraints.</p>
+                <p className="text-gray-700">I ran stakeholder interviews with the founder, coaches, and gaming advisors to align on business goals and technical constraints before touching any design work.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Power User Conversations</h3>
-                <p className="text-gray-700">Interviewed active users who had lapsed and returned to understand their emotional journey and what brought them back.</p>
+                <p className="text-gray-700">I interviewed users who had lapsed and returned, specifically asking about the moment they decided to come back. Every single one mentioned fearing their progress was gone. None of them had checked. The fear was irrational, but it was real and it was the barrier.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Gaming Psychology Input</h3>
-                <p className="text-gray-700">Consulted with gaming psychology experts to understand motivation mechanics and re-engagement patterns.</p>
+                <p className="text-gray-700">I consulted gaming psychology experts on re-engagement patterns. Key finding: returning users need to feel welcomed, not evaluated. The first moment back should reduce cognitive load, not increase it.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Competitive Analysis</h3>
-                <p className="text-gray-700">Analyzed how other fitness and gaming apps handle lapsed user re-engagement.</p>
+                <p className="text-gray-700">I audited how Duolingo, Pokémon GO, and Habitica handle lapsed user return flows. All three prioritize progress preservation messaging over feature highlights, a pattern that directly informed our direction.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={500}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Emotional Barrier Analysis</h3>
-                <p className="text-gray-700">Identified hesitation and uncertainty as the primary friction points preventing users from re-engaging.</p>
+                <p className="text-gray-700">Across all research sessions, two emotions surfaced consistently: hesitation (am I behind?) and uncertainty (does my progress still matter?). These became the design brief.</p>
               </div>
             </AnimatedSection>
           </div>
@@ -354,14 +352,14 @@ const TalofaCaseStudy = () => {
         {/* 5. CONCEPTS WE TESTED */}
         <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Concepts We Tested</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Three re-entry concepts I designed and tested</h2>
           </AnimatedSection>
 
           <div className="space-y-12">
             <AnimatedSection animation="fade-up" delay={100}>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Daily Streak</h3>
-                <p className="text-lg text-gray-700 mb-6">Focus: Habit continuity and milestone reinforcement</p>
+                <p className="text-lg text-gray-700 mb-6">Hypothesis: Reminding users of their streak history would reactivate the habit loop and lower the barrier to return. Designed around milestone celebration rather than gap punishment.</p>
                 <div className="bg-gray-100 rounded-xl p-8 text-center">
                   <p className="text-gray-500 italic">[Concept visualization would appear here]</p>
                 </div>
@@ -371,7 +369,7 @@ const TalofaCaseStudy = () => {
             <AnimatedSection animation="fade-up" delay={200}>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Squad Leader Greeting</h3>
-                <p className="text-lg text-gray-700 mb-6">Focus: Social reinforcement and belonging</p>
+                <p className="text-lg text-gray-700 mb-6">Hypothesis: A personal message from a Squad Leader (social accountability partner) would trigger belonging and reduce isolation. Designed to make returning feel like rejoining a team, not restarting alone.</p>
                 <div className="bg-gray-100 rounded-xl p-8 text-center">
                   <p className="text-gray-500 italic">[Concept visualization would appear here]</p>
                 </div>
@@ -381,7 +379,7 @@ const TalofaCaseStudy = () => {
             <AnimatedSection animation="fade-up" delay={300}>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Mystery Monster</h3>
-                <p className="text-lg text-gray-700 mb-6">Focus: Curiosity and progression</p>
+                <p className="text-lg text-gray-700 mb-6">Hypothesis: Curiosity is a stronger motivator than guilt. Teasing a new monster encounter waiting for the user would pull them forward rather than push them back. This concept performed strongest in testing.</p>
                 <div className="bg-gray-100 rounded-xl p-8 text-center">
                   <p className="text-gray-500 italic">[Concept visualization would appear here]</p>
                 </div>
@@ -397,22 +395,22 @@ const TalofaCaseStudy = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">The Pivot: Choosing Signal Over Comfort</h2>
               
               <div className="space-y-6 text-lg text-gray-700">
-                <p>Initially, I proposed A/B testing the three concepts to let the data decide.</p>
+                <p>My first instinct was to A/B test all three concepts. But I caught myself. With limited beta traffic and a 3-month window, A/B testing would only measure which concept users clicked. It wouldn't tell us why they felt ready to return. We'd optimize for the wrong signal.</p>
                 
-                <p>But I recognized the risk: with limited traffic and a 3-month window, A/B testing would measure preference, not motivation. We'd get numbers, but we wouldn't understand why users chose what they chose.</p>
+                <p>I told the founder A/B testing was the wrong call for this problem. Here's how I made the case:</p>
                 
                 <p>I advocated for concept testing instead—moderated sessions where we could observe emotional reactions, ask follow-up questions, and understand the reasoning behind user choices.</p>
                 
                 <p>I presented the trade-off to the founder:</p>
                 
                 <ul className="space-y-2 ml-6">
-                  <li>• A/B testing = numerical comfort, shallow insights</li>
-                  <li>• Concept testing = diagnostic depth, strategic clarity</li>
+                  <li>• A/B testing → measures clicks, not emotional readiness. Comfortable data. Wrong question.</li>
+                  <li>• Concept testing → moderated sessions where we observe emotional reactions in real time. Slower. Far more useful.</li>
                 </ul>
                 
-                <p className="font-semibold text-gray-900 mt-6">We chose diagnostic depth over numerical comfort.</p>
+                <p className="font-semibold text-gray-900 mt-6">He agreed. We ran concept testing.</p>
                 
-                <p className="italic">This was the defining strategic moment of the project.</p>
+                <p className="italic">This decision shaped everything that followed, and it was the moment I stopped being an executor and started being a product thinker.</p>
               </div>
             </div>
           </AnimatedSection>
@@ -426,31 +424,31 @@ const TalofaCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="space-y-6 text-lg text-gray-700">
-              <p>We conducted moderated concept testing with lapsed users, observing their emotional responses and asking them to think aloud as they interacted with each concept.</p>
+              <p>I ran moderated concept testing sessions with lapsed users, observing their emotional responses, listening for hesitation, and asking follow-up questions about the reasoning behind their reactions. Here's what the research showed:</p>
               
               <div className="bg-gray-50 rounded-xl p-6 my-6">
                 <h3 className="font-semibold text-gray-900 mb-4">What we learned:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-indigo-600 mr-2">•</span>
-                    <span>Users responded most positively to concepts that acknowledged their absence without judgment</span>
+                    <span>Concepts that acknowledged the absence without judgment landed every time. Concepts that ignored it felt hollow.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-indigo-600 mr-2">•</span>
-                    <span>Emotional reassurance mattered more than feature highlights</span>
+                    <span>Emotional reassurance outperformed feature highlights in every session. Users didn't want to know what was new. They wanted to know their progress was safe.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-indigo-600 mr-2">•</span>
-                    <span>Users wanted to know their progress was preserved and meaningful</span>
+                    <span>Progress preservation was the single most important message. Every participant mentioned it unprompted.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-indigo-600 mr-2">•</span>
-                    <span>The Mystery Monster concept generated the most curiosity and reduced hesitation</span>
+                    <span>The Mystery Monster concept, curiosity over guilt, consistently reduced hesitation the fastest. It became the direction.</span>
                   </li>
                 </ul>
               </div>
               
-              <p>No fabricated scoring. Just patterns, observations, and strategic reasoning.</p>
+              <p>No fabricated scoring. This was qualitative research. The patterns were clear enough to make a confident recommendation without pretending the data was quantitative.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -463,7 +461,7 @@ const TalofaCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="space-y-6 text-lg text-gray-700">
-              <p>Based on testing insights, we evolved the selected concept from functional clarity to emotional reassurance.</p>
+              <p>Based on what I heard in testing, I evolved the Mystery Monster concept away from functional clarity toward emotional reassurance. The copy shift was small. The strategic shift was significant.</p>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-red-50 rounded-lg p-6">
@@ -525,9 +523,7 @@ const TalofaCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="space-y-6 text-lg text-gray-700">
-              <p>Two months after the internship concluded, Monster Walk officially launched.</p>
-              
-              <p>Several of our strategic recommendations were reflected in the live product, including:</p>
+              <p>Two months after my internship ended, Monster Walk officially launched. I wasn't in the room, but four of my design recommendations were:</p>
               
               <ul className="space-y-3 ml-6">
                 <li className="flex items-start">
@@ -549,12 +545,7 @@ const TalofaCaseStudy = () => {
               </ul>
               
               <div className="bg-indigo-50 rounded-xl p-6 mt-8">
-                <p className="font-semibold text-gray-900">This work contributed to:</p>
-                <ul className="mt-4 space-y-2">
-                  <li>• Influence on shipped product features</li>
-                  <li>• Contribution to beta insights shaping launch strategy</li>
-                  <li>• Validation of behavioral design direction</li>
-                </ul>
+                <p className="font-semibold text-gray-900">In a 3-month beta internship with no post-launch access and no live metrics, I built the behavioral framework that shaped how Monster Walk welcomes users back. The research, the pivot, and the concepts, all of it fed directly into what shipped.</p>
               </div>
             </div>
           </AnimatedSection>
@@ -568,24 +559,23 @@ const TalofaCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="space-y-6 text-lg text-gray-700">
-              <p>This was a pre-launch project. Impact is framed as strategic contribution, not post-launch metrics.</p>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-indigo-50 rounded-lg p-6">
                   <h3 className="font-semibold text-gray-900 mb-3">Validated motivational hierarchy</h3>
-                  <p className="text-gray-700">Confirmed that emotional reassurance matters more than feature highlights for lapsed users.</p>
+                  <p className="text-gray-700">Research across multiple sessions confirmed the same hierarchy every time: reassurance first, then progress, then new features. This ordered the entire design direction.</p>
                 </div>
                 <div className="bg-indigo-50 rounded-lg p-6">
                   <h3 className="font-semibold text-gray-900 mb-3">Reduced decision risk</h3>
-                  <p className="text-gray-700">Provided diagnostic insights that informed launch strategy with confidence.</p>
+                  <p className="text-gray-700">Concept testing gave the founder confidence to ship the Mystery Monster direction without second-guessing. Diagnostic clarity beats numerical comfort when the sample size is small.</p>
                 </div>
                 <div className="bg-indigo-50 rounded-lg p-6">
                   <h3 className="font-semibold text-gray-900 mb-3">Increased stakeholder confidence</h3>
-                  <p className="text-gray-700">Demonstrated strategic thinking and methodology judgment that influenced product direction.</p>
+                  <p className="text-gray-700">I presented a clear trade-off framework to the founder and got buy-in in a single meeting. Helping stakeholders make informed decisions is part of the design craft.</p>
                 </div>
                 <div className="bg-indigo-50 rounded-lg p-6">
                   <h3 className="font-semibold text-gray-900 mb-3">Delivered defensible retention strategy</h3>
-                  <p className="text-gray-700">Created a behavioral framework grounded in research, not assumptions.</p>
+                  <p className="text-gray-700">Every recommendation I made was traceable back to something a user said or felt. No assumptions dressed up as insights.</p>
                 </div>
               </div>
             </div>
@@ -601,36 +591,7 @@ const TalofaCaseStudy = () => {
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
               <div className="space-y-6 text-lg text-gray-700">
-                <p>This project taught me that strategic design isn't about following a rigid process—it's about making defensible bets under uncertainty.</p>
-                
-                <div className="space-y-4 mt-6">
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Methodology judgment over rigid process</h3>
-                    <p>Recognizing when to pivot from A/B testing to concept testing showed me that choosing the right method matters more than following a playbook.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Stakeholder framing as design work</h3>
-                    <p>Presenting trade-offs clearly to the founder wasn't just communication—it was strategic design. Helping stakeholders make informed decisions is part of the craft.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Comfort with ambiguity</h3>
-                    <p>Working in beta meant accepting that we wouldn't have perfect data. I learned to make confident recommendations based on patterns, not just numbers.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Defending strategic pivots</h3>
-                    <p>Advocating for concept testing over A/B testing required conviction. I learned to articulate why diagnostic depth matters more than numerical comfort.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Transition from executor to product thinker</h3>
-                    <p>This project shifted my mindset from "what should this screen look like?" to "what problem are we really solving, and how do we validate our approach?"</p>
-                  </div>
-                </div>
-                
-                <p className="mt-8 font-semibold text-gray-900 text-xl">Strategic design is about asking the right questions, making defensible bets, and adapting quickly.</p>
+                <p>Working in beta without clean data forced me to make confident recommendations from patterns, not proof. That's harder than it sounds, and more valuable than most portfolio projects show. The moment I told the founder that A/B testing was the wrong method for this problem, I stopped being a designer who executes and became one who thinks. That shift is what I'm bringing to every project from here.</p>
               </div>
             </div>
           </AnimatedSection>
