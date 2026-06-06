@@ -18,7 +18,7 @@ const WorkGrid = () => {
       
       {/* Grid */}
       <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-        {projects.slice(0, 4).map((project) => (
+        {projects.filter(p => p.id !== 'amazon-cancellation-teardown').slice(0, 4).map((project) => (
           <WorkCard key={project.id} project={project} />
         ))}
       </div>
