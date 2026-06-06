@@ -5,6 +5,7 @@ import StrategicCaseStudy from './pages/StrategicCaseStudy'
 import TalofaCaseStudy from './pages/TalofaCaseStudy'
 import AdultYouCaseStudy from './pages/AdultYouCaseStudy'
 import AmazonTeardownCaseStudy from './pages/AmazonTeardownCaseStudy'
+import SahayCaseStudy from './pages/SahayCaseStudy'
 import About from './pages/About'
 import { projects } from './data/projects'
 
@@ -15,6 +16,11 @@ function ProjectRouter() {
   
   if (!project) {
     return <Navigate to="/" replace />
+  }
+
+  // Check if it's the Sahay case study
+  if (id === 'sahay-home-companion') {
+    return <SahayCaseStudy />
   }
   
   // Check if it's the Talofa case study

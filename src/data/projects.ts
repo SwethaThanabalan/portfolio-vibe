@@ -2,6 +2,25 @@ import type { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 'sahay-home-companion',
+    title: 'Sahay: Confidence Before Contractors',
+    category: 'AI Product Design',
+    year: '2025',
+    thumbnail: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=600&fit=crop',
+    description: 'An AI-powered home maintenance companion that helps homeowners understand problems before deciding what to do next.',
+    role: 'UX/UI Designer & Researcher',
+    duration: '2 Academic Quarters',
+    tools: ['Figma', 'FigJam', 'Figma Make', 'Google Forms'],
+    overview: 'Initiated and led design for an AI-powered home companion that shifted from service marketplace to intelligent guidance platform based on research.',
+    challenge: "Homeowners face fragmented, stressful experiences when something breaks — bouncing between Google, YouTube, Reddit, and contractor sites with no confidence in what's actually wrong.",
+    solution: "Designed an AI companion that helps users understand problems, assess urgency, and decide between DIY and professional help — building confidence before spending money.",
+    images: [
+      'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1200&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&h=800&fit=crop'
+    ]
+  },
+  {
     id: 'talofa-games-retention',
     title: 'Monster Walk Reengagement Strategy',
     category: 'Product Design',
