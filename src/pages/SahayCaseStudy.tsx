@@ -514,23 +514,13 @@ const SahayCaseStudy = () => {
             <div className="w-full rounded-xl overflow-hidden border border-gray-200 shadow-sm" style={{ paddingBottom: '56.25%', position: 'relative' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FTKhJjjqvDBX0jZ3WvO2Aft%2FSahay%3Fcode-node-id%3D0-9%26p%3Df%26fullscreen%3D1"
+                src="https://www.youtube.com/embed/O67w4i0cTFg?si=AbfgtsdcDOJDs7TI"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-                title="Sahay Interactive Prototype"
               />
-            </div>
-            <div className="mt-4 text-center">
-              <a
-                href="https://www.figma.com/make/TKhJjjqvDBX0jZ3WvO2Aft/Sahay?code-node-id=0-9&p=f&fullscreen=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-indigo-600 transition-colors"
-              >
-                Open in Figma
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
             </div>
           </Reveal>
         </section>
