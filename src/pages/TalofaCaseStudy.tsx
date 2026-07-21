@@ -305,6 +305,22 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
         </section>
 
+        {/* CURRENT APP AUDIT */}
+        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Current App Audit</h2>
+            <p className="text-lg text-gray-700 mb-6">Before redesigning the re-engagement flow, I audited how the existing app handled lapsed users. This is what the experience looked like:</p>
+            <div className="flex justify-center overflow-hidden">
+              <img
+                src="/Monsterwalk Audit.png"
+                alt="MonsterWalk app audit - existing app state"
+                className="max-w-full border-0 shadow-none outline-none scale-105"
+                style={{ maxHeight: '500px' }}
+              />
+            </div>
+          </AnimatedSection>
+        </section>
+
         {/* 4. RESEARCH & DISCOVERY */}
         <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
           <AnimatedSection animation="fade-up">
@@ -360,8 +376,18 @@ const TalofaCaseStudy = () => {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Daily Streak</h3>
                 <p className="text-lg text-gray-700 mb-6">Hypothesis: Reminding users of their streak history would reactivate the habit loop and lower the barrier to return. Designed around milestone celebration rather than gap punishment.</p>
-                <div className="bg-gray-100 rounded-xl p-8 text-center">
-                  <p className="text-gray-500 italic">[Concept visualization would appear here]</p>
+                <div className="flex justify-center">
+                  <video
+                    className="rounded-lg max-w-full"
+                    autoPlay
+                    loop
+                    playsInline
+                    muted
+                    style={{ maxHeight: '400px' }}
+                  >
+                    <source src="/Streak.mov" type="video/quicktime" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </AnimatedSection>
@@ -370,8 +396,18 @@ const TalofaCaseStudy = () => {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Squad Leader Greeting</h3>
                 <p className="text-lg text-gray-700 mb-6">Hypothesis: A personal message from a Squad Leader (social accountability partner) would trigger belonging and reduce isolation. Designed to make returning feel like rejoining a team, not restarting alone.</p>
-                <div className="bg-gray-100 rounded-xl p-8 text-center">
-                  <p className="text-gray-500 italic">[Concept visualization would appear here]</p>
+                <div className="flex justify-center">
+                  <video
+                    className="rounded-lg max-w-full"
+                    autoPlay
+                    loop
+                    playsInline
+                    muted
+                    style={{ maxHeight: '400px' }}
+                  >
+                    <source src="/Monster Interaction.mov" type="video/quicktime" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </AnimatedSection>
@@ -380,8 +416,18 @@ const TalofaCaseStudy = () => {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Mystery Monster</h3>
                 <p className="text-lg text-gray-700 mb-6">Hypothesis: Curiosity is a stronger motivator than guilt. Teasing a new monster encounter waiting for the user would pull them forward rather than push them back. This concept performed strongest in testing.</p>
-                <div className="bg-gray-100 rounded-xl p-8 text-center">
-                  <p className="text-gray-500 italic">[Concept visualization would appear here]</p>
+                <div className="flex justify-center">
+                  <video
+                    className="rounded-lg max-w-full"
+                    autoPlay
+                    loop
+                    playsInline
+                    muted
+                    style={{ maxHeight: '400px' }}
+                  >
+                    <source src="/Hidden Monster.mov" type="video/quicktime" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </AnimatedSection>
