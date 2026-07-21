@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: 'Sahay: Confidence Before Contractors',
     category: 'AI Product Design',
     year: '2025',
-    thumbnail: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=600&fit=crop',
+    thumbnail: '/SAHAY(3).png',
     description: 'An AI-powered home maintenance companion that helps homeowners understand problems before deciding what to do next.',
     role: 'UX/UI Designer & Researcher',
     duration: '2 Academic Quarters',

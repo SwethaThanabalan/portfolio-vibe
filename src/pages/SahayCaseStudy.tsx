@@ -448,8 +448,12 @@ const SahayCaseStudy = () => {
 
           {/* Visual: placeholder for IA diagrams */}
           <Reveal delay={150}>
-            <div className="bg-gray-100 rounded-xl p-10 text-center mt-8">
-              <p className="text-gray-500 italic text-sm">[Information architecture diagram / User flow artifact]</p>
+            <div className="flex justify-center mt-8">
+              <img
+                src="/Research(5).png"
+                alt="Information architecture diagram and user flow"
+                className="w-full"
+              />
             </div>
           </Reveal>
         </section>
