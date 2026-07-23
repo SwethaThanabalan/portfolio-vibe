@@ -65,7 +65,7 @@ function Callout({ children, variant = 'default' }: { children: React.ReactNode;
   const bg = variant === 'insight' ? 'bg-indigo-50 border-indigo-600' : variant === 'shift' ? 'bg-amber-50 border-amber-500' : 'bg-gray-50 border-gray-300'
   return (
     <Reveal>
-      <div className={`border-l-4 ${bg} rounded-r-xl p-6 my-10`}>
+      <div className={`border-l-4 ${bg} rounded-r-xl p-6 my-6`}>
         <p className="text-lg text-gray-900 font-medium leading-relaxed">{children}</p>
       </div>
     </Reveal>
@@ -75,7 +75,7 @@ function Callout({ children, variant = 'default' }: { children: React.ReactNode;
 function PullQuote({ children }: { children: React.ReactNode }) {
   const { ref, visible } = useReveal(0.2)
   return (
-    <div ref={ref} className={`py-20 transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+    <div ref={ref} className={`py-6 transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
       <blockquote
         className="text-gray-900 font-medium"
         style={{ fontSize: 'clamp(1.5rem, 3vw, 2.4rem)', lineHeight: '1.3', maxWidth: '26ch', letterSpacing: '-0.02em' }}
@@ -147,9 +147,9 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             1. HERO
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-20">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <div className={`transition-all duration-700 ${heroVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
+            <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-6 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -177,7 +177,7 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             2. ORIGIN STORY
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <SectionLabel>Origin story</SectionLabel>
 
           <Reveal>
@@ -217,7 +217,7 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             3. THE PROBLEM
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <SectionLabel>The problem</SectionLabel>
 
           <Reveal>
@@ -234,7 +234,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="grid sm:grid-cols-3 gap-4 mb-10">
+            <div className="grid sm:grid-cols-3 gap-4 mb-6">
               <div className="bg-red-50 rounded-xl p-5">
                 <p className="text-sm font-semibold text-red-800 mb-1">Fragmented</p>
                 <p className="text-sm text-gray-700">5+ apps and platforms to diagnose a single issue</p>
@@ -255,17 +255,17 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             4. RESEARCH PROCESS
         ═══════════════════════════════════════════ */}
-        <section className="relative py-24 mb-32" style={{ backgroundColor: '#fafaf9' }}>
+        <section className="relative py-8 mb-6" style={{ backgroundColor: '#fafaf9' }}>
           <div className="max-w-4xl mx-auto px-6">
             <SectionLabel>Research process</SectionLabel>
 
             <Reveal>
-              <h2 className="text-3xl font-bold text-gray-900 mb-10">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 We talked to homeowners, renters, and shared housing participants.
               </h2>
             </Reveal>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
               <Reveal delay={50}>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Primary research</h3>
@@ -319,7 +319,7 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             5. THE TURNING POINT
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <SectionLabel>The turning point</SectionLabel>
 
           <PullQuote>
@@ -327,7 +327,7 @@ const SahayCaseStudy = () => {
           </PullQuote>
 
           <Reveal>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
+            <div className="space-y-2 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
               <p>
                 Initially, we believed the problem was: <em>"People need a better way to find service providers."</em>
               </p>
@@ -367,7 +367,7 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             6. PRODUCT STRATEGY & AI DIRECTION
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <SectionLabel>Product strategy: AI direction</SectionLabel>
 
           <Reveal>
@@ -416,7 +416,7 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             7. INFORMATION ARCHITECTURE & USER FLOWS
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <SectionLabel>Information architecture & user flow validation</SectionLabel>
 
           <Reveal>
@@ -462,12 +462,12 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             8. DESIGN PRINCIPLES
         ═══════════════════════════════════════════ */}
-        <section className="relative py-24 mb-32" style={{ backgroundColor: '#f8f8f6' }}>
+        <section className="relative py-8 mb-6" style={{ backgroundColor: '#f8f8f6' }}>
           <div className="max-w-4xl mx-auto px-6">
             <SectionLabel>Design principles</SectionLabel>
 
             <Reveal>
-              <h2 className="text-3xl font-bold text-gray-900 mb-10">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Every design decision was guided by three principles.
               </h2>
             </Reveal>
@@ -502,7 +502,7 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             9. KEY DESIGN DECISIONS
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <SectionLabel>Interactive prototype</SectionLabel>
 
           <Reveal>
@@ -530,12 +530,12 @@ const SahayCaseStudy = () => {
         </section>
 
 
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <SectionLabel>Key design decisions</SectionLabel>
 
           {/* Decision 1: Onboarding */}
           <Reveal>
-            <div className="mb-16">
+            <div className="mb-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Decision 01: Rethinking onboarding</h3>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
                 <p>
@@ -560,7 +560,7 @@ const SahayCaseStudy = () => {
 
           {/* Decision 2: MyHome Dashboard */}
           <Reveal>
-            <div className="mb-16">
+            <div className="mb-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Decision 02: MyHome dashboard</h3>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
                 <p>
@@ -577,7 +577,7 @@ const SahayCaseStudy = () => {
 
           {/* Decision 3: AI Home Summary */}
           <Reveal>
-            <div className="mb-16">
+            <div className="mb-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Decision 03: AI-generated home summary</h3>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
                 <p>
@@ -626,12 +626,12 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             10. MY CONTRIBUTIONS
         ═══════════════════════════════════════════ */}
-        <section className="relative py-24 mb-32" style={{ backgroundColor: '#fafaf9' }}>
+        <section className="relative py-8 mb-6" style={{ backgroundColor: '#fafaf9' }}>
           <div className="max-w-4xl mx-auto px-6">
             <SectionLabel>My contributions</SectionLabel>
 
             <Reveal>
-              <h2 className="text-3xl font-bold text-gray-900 mb-10">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 What I personally owned and drove.
               </h2>
             </Reveal>
@@ -670,7 +670,7 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             11. USABILITY TESTING RESULTS
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <SectionLabel>Usability testing</SectionLabel>
 
           <Reveal>
@@ -681,7 +681,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed mb-10" style={{ maxWidth: '60ch' }}>
+            <div className="space-y-4 text-lg text-gray-700 leading-relaxed mb-6" style={{ maxWidth: '60ch' }}>
               <p>
                 Across testing sessions, participants responded positively to AI document summaries, the home maintenance log, conversational AI, and the integrated DIY + professional support model.
               </p>
@@ -718,7 +718,7 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             12. REFLECTION
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <SectionLabel>Reflection</SectionLabel>
 
           <Reveal>
@@ -760,7 +760,7 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             13. KEY TAKEAWAYS
         ═══════════════════════════════════════════ */}
-        <section className="max-w-4xl mx-auto px-6 mb-32">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <Reveal>
             <div className="bg-gray-900 rounded-3xl p-10 md:p-14">
               <h2 className="text-2xl font-bold text-white mb-8">Why this project matters</h2>

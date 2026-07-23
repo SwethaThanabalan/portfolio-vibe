@@ -86,7 +86,7 @@ const TalofaCaseStudy = () => {
       
       <main className="pt-32 pb-32">
         {/* 1. HERO SECTION */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-in">
             <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +110,7 @@ const TalofaCaseStudy = () => {
 
           {/* Summary Block */}
           <AnimatedSection animation="fade-up" delay={150}>
-            <div className="flex flex-wrap items-center gap-6  text-sm text-gray-600" style={{ marginBottom: '50px' }}>
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
               {/* Audio Summary */}
               <button
                 onClick={() => {
@@ -177,7 +177,7 @@ const TalofaCaseStudy = () => {
                 opacity: showAudioPlayer ? 1 : 0
               }}
             >
-              <div className="border border-gray-200 rounded-lg p-6 " style={{ marginBottom: '50px' }}>
+              <div className="border border-gray-200 rounded-lg p-6 mb-6">
                 <audio
                   ref={audioRef}
                   src="/SeptaProjectAudioSummary.mp3"
@@ -246,7 +246,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 2. BUSINESS CONTEXT */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Business Context</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -270,7 +270,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 3. THE CORE PROBLEM */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">The Core Problem</h2>
           </AnimatedSection>
@@ -306,7 +306,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* CURRENT APP AUDIT */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Current App Audit</h2>
             <p className="text-lg text-gray-700 mb-6">Before redesigning the re-engagement flow, I audited how the existing app handled lapsed users. This is what the experience looked like:</p>
@@ -322,7 +322,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 4. RESEARCH & DISCOVERY */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Research & Discovery</h2>
           </AnimatedSection>
@@ -366,7 +366,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 5. CONCEPTS WE TESTED */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Three re-entry concepts I designed and tested</h2>
           </AnimatedSection>
@@ -435,7 +435,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 6. THE PIVOT */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-8 border-l-4 border-yellow-500">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">The Pivot: Choosing Signal Over Comfort</h2>
@@ -463,7 +463,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 7. TESTING & LEARNING */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Testing & Learning</h2>
           </AnimatedSection>
@@ -500,7 +500,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 8. ITERATION */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Iteration</h2>
           </AnimatedSection>
@@ -526,7 +526,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 9. INTERACTIVE PROTOTYPE */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Interactive Prototype</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -562,7 +562,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 10. LAUNCH & REAL-WORLD IMPACT */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Launch & Real-World Impact</h2>
           </AnimatedSection>
@@ -598,7 +598,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 11. STRATEGIC IMPACT */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Strategic Impact</h2>
           </AnimatedSection>
@@ -629,7 +629,7 @@ const TalofaCaseStudy = () => {
         </section>
 
         {/* 12. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">How This Project Elevated My Product Thinking</h2>
           </AnimatedSection>

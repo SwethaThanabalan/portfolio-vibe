@@ -137,16 +137,6 @@ const Hero = () => {
                 </div>
               )}
             </div>
-
-            {/* Subtle premium reset button for desktop */}
-            {!isTouchDevice && (
-              <button
-                onClick={handleReset}
-                className="px-4 py-2 text-sm text-neutral-700 bg-white/40 backdrop-blur-sm border border-black/10 rounded-md transition-all duration-200 hover:bg-white/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 pointer-events-auto"
-              >
-                Reset background
-              </button>
-            )}
           </div>
         </div>
       </div>

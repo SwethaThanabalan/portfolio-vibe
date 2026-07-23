@@ -86,7 +86,7 @@ const AdultYouCaseStudy = () => {
       
       <main className="pt-32 pb-32">
         {/* 1. HERO SECTION */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-in">
             <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +110,7 @@ const AdultYouCaseStudy = () => {
 
           {/* Summary Block */}
           <AnimatedSection animation="fade-up" delay={150}>
-            <div className="flex flex-wrap items-center gap-6  text-sm text-gray-600" style={{ marginBottom: '50px' }}>
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
               {/* Audio Summary */}
               <button
                 onClick={() => {
@@ -177,7 +177,7 @@ const AdultYouCaseStudy = () => {
                 opacity: showAudioPlayer ? 1 : 0
               }}
             >
-              <div className="border border-gray-200 rounded-lg p-6 " style={{ marginBottom: '50px' }}>
+              <div className="border border-gray-200 rounded-lg p-6 mb-6">
                 <audio
                   ref={audioRef}
                   src="/SeptaProjectAudioSummary.mp3"
@@ -250,7 +250,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 2. BUSINESS CONTEXT */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Business Context</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -264,7 +264,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 3. THE CORE PROBLEM */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">The Core Problem</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -314,7 +314,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 4. DESIGNING UNDER AMBIGUITY */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Designing Under Ambiguity</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -354,7 +354,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 5. AI-ASSISTED EXPLORATION */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-Assisted Exploration (Figma Make)</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -396,7 +396,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 6. BUILDING THE DESIGN SYSTEM */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Building the Design System</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -446,7 +446,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 7. INSTRUCTIONAL MODULE DESIGN */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Instructional Module Design</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -498,7 +498,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 8. INTERACTIVE PROTOTYPE */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Interactive Prototype</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -522,7 +522,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 9. TESTING & CEO COLLABORATION */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Testing & CEO Collaboration</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -576,7 +576,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 10. STRATEGIC IMPACT */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Strategic Impact</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -617,7 +617,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 11. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">How This Project Elevated My Product Thinking</h2>
           </AnimatedSection>

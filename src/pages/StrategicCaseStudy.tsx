@@ -102,7 +102,7 @@ const StrategicCaseStudy = () => {
       
       <main className="pt-32 pb-32">
         {/* 1. OPENING HOOK */}
-        <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-in">
             <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@ const StrategicCaseStudy = () => {
 
           {/* Recruiter Utilities */}
           <AnimatedSection animation="fade-up" delay={150}>
-            <div className="flex flex-wrap items-center gap-6  text-sm text-gray-600" style={{ marginBottom: '50px' }}>
+            <div className="flex flex-wrap items-center gap-6  text-sm text-gray-600">
               {/* Audio Summary */}
               <button
                 onClick={() => {
@@ -191,7 +191,7 @@ const StrategicCaseStudy = () => {
                 opacity: showAudioPlayer ? 1 : 0
               }}
             >
-              <div className="border border-gray-200 rounded-lg p-6 " style={{ marginBottom: '50px' }}>
+              <div className="border border-gray-200 rounded-lg p-6 mb-6">
                 {/* Hidden audio element */}
                 <audio
                   ref={audioRef}
@@ -262,7 +262,7 @@ const StrategicCaseStudy = () => {
 
         {/* 2. THE PROBLEM / TRUST GAP */}
         {project.problem && (
-          <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
               <div className="prose prose-lg max-w-none">
                 {quickSummaryMode ? (
@@ -352,9 +352,9 @@ const StrategicCaseStudy = () => {
 
         {/* 3. RESEARCH → INSIGHTS */}
         {!quickSummaryMode && project.researchInsights && (
-          <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 " style={{ marginBottom: '50px' }}>Research → Insights</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Research → Insights</h2>
             </AnimatedSection>
             
             <div className="space-y-8">
@@ -379,10 +379,10 @@ const StrategicCaseStudy = () => {
 
         {/* 4. STRATEGIC DECISION 01 */}
         {!quickSummaryMode && project.strategicDecision && (
-          <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">{project.strategicDecision.title}</h2>
-              <p className="text-lg text-gray-700 leading-relaxed " style={{ marginBottom: '50px' }}>{project.strategicDecision.context}</p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">{project.strategicDecision.context}</p>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={100}>
@@ -431,7 +431,7 @@ const StrategicCaseStudy = () => {
 
         {/* 5. ADDITIONAL STRATEGIC DECISIONS */}
         {!quickSummaryMode && project.additionalDecisions && project.additionalDecisions.map((decision, index) => (
-          <section key={index} className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <section key={index} className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">{decision.title}</h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">{decision.context}</p>
@@ -455,9 +455,9 @@ const StrategicCaseStudy = () => {
 
         {/* 6. DESIGN EXECUTION */}
         {!quickSummaryMode && project.designExecution && (
-          <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 " style={{ marginBottom: '50px' }}>Design Execution</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Design Execution</h2>
             </AnimatedSection>
 
             <div className="space-y-10">
@@ -503,7 +503,7 @@ const StrategicCaseStudy = () => {
 
         {/* 7. FIGMA PROTOTYPE */}
         {!quickSummaryMode && project.figmaPrototype && (
-          <section className="max-w-6xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <section className="max-w-6xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
               <div className="rounded-xl overflow-hidden shadow-2xl bg-gray-100" style={{ height: '600px' }}>
                 <iframe
@@ -534,13 +534,13 @@ const StrategicCaseStudy = () => {
 
         {/* 8. OUTCOME & IMPACT */}
         {project.outcome && (
-          <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 " style={{ marginBottom: '50px' }}>Outcome & Impact</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Outcome & Impact</h2>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={100}>
-              <div className="" style={{ marginBottom: '50px' }}>
+              <div className="mb-6">
                 <div className="font-semibold text-gray-900 mb-4">Key metrics:</div>
                 <div className="grid md:grid-cols-2 gap-4">
                   {project.outcome.metrics.map((metric, index) => (
@@ -553,7 +553,7 @@ const StrategicCaseStudy = () => {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <div className="" style={{ marginBottom: '50px' }}>
+              <div className="mb-6">
                 <div className="font-semibold text-gray-900 mb-4">Validation:</div>
                 <ul className="space-y-3">
                   {project.outcome.validation.map((item, index) => (
@@ -568,7 +568,7 @@ const StrategicCaseStudy = () => {
 
             {project.outcome.marketValidation && (
               <AnimatedSection animation="fade-up" delay={300}>
-                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 " style={{ marginBottom: '50px' }}>
+                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Market Validation</h3>
                   <p className="text-lg text-gray-700 leading-relaxed">{project.outcome.marketValidation}</p>
                 </div>
@@ -586,9 +586,9 @@ const StrategicCaseStudy = () => {
 
         {/* 9. REFLECTION */}
         {project.reflection && (
-          <section className="max-w-4xl mx-auto px-6 " style={{ marginBottom: '50px' }}>
+          <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 " style={{ marginBottom: '50px' }}>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 {project.reflection.title}
               </h2>
             </AnimatedSection>

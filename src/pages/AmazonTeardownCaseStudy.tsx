@@ -36,7 +36,7 @@ const AmazonTeardownCaseStudy = () => {
       
       <main className="pt-32 pb-32">
         {/* 1. HERO SECTION */}
-        <section className="max-w-4xl mx-auto px-6 mb-20">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-in">
             <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 2. CONTEXT */}
-        <section className="max-w-4xl mx-auto px-6 mb-20">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Context</h2>
             <div className="bg-gray-50 rounded-xl p-8">
@@ -104,7 +104,7 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 3. THE CORE PROBLEM */}
-        <section className="max-w-4xl mx-auto px-6 mb-20">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">The Core Problem</h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
@@ -125,7 +125,7 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 4. CURRENT FLOW BREAKDOWN */}
-        <section className="max-w-4xl mx-auto px-6 mb-20">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Current Flow Breakdown</h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed mb-12">
@@ -169,7 +169,7 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 5. UX ANALYSIS */}
-        <section className="max-w-4xl mx-auto px-6 mb-20">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">UX Analysis</h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
@@ -190,7 +190,7 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 6. ATTENTION TO DETAIL OBSERVATIONS */}
-        <section className="max-w-4xl mx-auto px-6 mb-20">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Attention to Detail Observations</h2>
             <p className="text-lg text-gray-700 mb-8">Micro-interaction gaps that impact macro-level trust.</p>
@@ -260,7 +260,7 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 7. CUSTOMER-FIRST REFLECTION */}
-        <section className="max-w-4xl mx-auto px-6 mb-20">
+        <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Customer-First Reflection</h2>
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 space-y-6 text-lg text-gray-700 leading-relaxed">
