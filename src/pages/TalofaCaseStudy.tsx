@@ -357,17 +357,70 @@ const TalofaCaseStudy = () => {
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-4">Before: the return moment felt fragmented</h2>
-            <p className="type-body-lg mb-8">The existing experience split the return moment across several overlays, making progress and rewards harder to understand as one cohesive journey.</p>
-            <figure>
-              <img
-                src="/Design Process.jpg"
-                alt="Old Monster Walk return flow showing daily tasks, stamina collection, reward modal, and gameplay return"
-                className="w-full border border-[var(--border)]"
-                loading="lazy"
-              />
-              <figcaption className="type-caption mt-3">The return journey moved through multiple overlays before bringing the player back into gameplay.</figcaption>
-            </figure>
+            <p className="type-body-lg mb-10">The existing return experience moved players through several separate states before bringing them back into gameplay.</p>
           </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <AnimatedSection animation="fade-up" delay={100}>
+              <figure>
+                <img
+                  src="/Design Process(4).jpg"
+                  alt="Monster Walk old experience: Daily Tasks panel appears first on return"
+                  className="w-full border border-[var(--border)]"
+                  loading="lazy"
+                />
+                <div className="mt-4">
+                  <p className="type-body font-medium mb-1">1. Daily tasks appear first</p>
+                  <p className="type-body-sm">The player encounters a task panel before reaching their progress and reward state.</p>
+                </div>
+              </figure>
+            </AnimatedSection>
+
+            <AnimatedSection animation="fade-up" delay={150}>
+              <figure>
+                <img
+                  src="/Design Process(5).jpg"
+                  alt="Monster Walk old experience: Welcome Back screen with steps and stamina"
+                  className="w-full border border-[var(--border)]"
+                  loading="lazy"
+                />
+                <div className="mt-4">
+                  <p className="type-body font-medium mb-1">2. Progress is visible, but hard to interpret</p>
+                  <p className="type-body-sm">New steps, total stamina, and the stamina cap appear together without clearly explaining what changed.</p>
+                </div>
+              </figure>
+            </AnimatedSection>
+
+            <AnimatedSection animation="fade-up" delay={200}>
+              <figure>
+                <img
+                  src="/Design Process(6).jpg"
+                  alt="Monster Walk old experience: Item Received reward modal"
+                  className="w-full border border-[var(--border)]"
+                  loading="lazy"
+                />
+                <div className="mt-4">
+                  <p className="type-body font-medium mb-1">3. The reward is separated into another modal</p>
+                  <p className="type-body-sm">The reward moment continues through an additional overlay instead of resolving directly into gameplay.</p>
+                </div>
+              </figure>
+            </AnimatedSection>
+
+            <AnimatedSection animation="fade-up" delay={250}>
+              <figure>
+                <img
+                  src="/Design Process(7).jpg"
+                  alt="Monster Walk old experience: player finally returns to game world"
+                  className="w-full border border-[var(--border)]"
+                  loading="lazy"
+                />
+                <div className="mt-4">
+                  <p className="type-body font-medium mb-1">4. The player finally returns to the game world</p>
+                  <p className="type-body-sm">The journey ends back in gameplay, but the connection between the earned reward and the next action is weak.</p>
+                </div>
+              </figure>
+            </AnimatedSection>
+          </div>
         </section>
 
         {/* 4. RESEARCH & DISCOVERY */}
