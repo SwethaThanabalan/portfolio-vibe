@@ -221,23 +221,23 @@ const SahayCaseStudy = () => {
           <Reveal delay={100}>
             <div className="grid sm:grid-cols-3 gap-4 mb-10">
               <div className="border-l-2 border-l-red-300 pl-4 py-2">
-                <p className="text-sm font-semibold text-[var(--text)] mb-1">Fragmented</p>
-                <p className="text-xs text-[var(--text-secondary)]">5+ platforms to diagnose one issue</p>
+                <p className="type-body-sm font-semibold mb-1">Fragmented</p>
+                <p className="type-body-sm">5+ platforms to diagnose one issue</p>
               </div>
               <div className="border-l-2 border-l-amber-300 pl-4 py-2">
-                <p className="text-sm font-semibold text-[var(--text)] mb-1">Uncertain</p>
-                <p className="text-xs text-[var(--text-secondary)]">No urgency assessment before spending money</p>
+                <p className="type-body-sm font-semibold mb-1">Uncertain</p>
+                <p className="type-body-sm">No urgency assessment before spending money</p>
               </div>
               <div className="border-l-2 border-l-blue-300 pl-4 py-2">
-                <p className="text-sm font-semibold text-[var(--text)] mb-1">Trust deficit</p>
-                <p className="text-xs text-[var(--text-secondary)]">Platforms prioritize booking over understanding</p>
+                <p className="type-body-sm font-semibold mb-1">Trust deficit</p>
+                <p className="type-body-sm">Platforms prioritize booking over understanding</p>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={150}>
             <div className="decision-block">
-              <p className="text-sm font-semibold text-[var(--text)] mb-1">My role</p>
+              <p className="type-body-sm font-semibold mb-1">My role</p>
               <p className="type-body">I initiated the project, identified the opportunity, recruited two teammates, and led research strategy from day one.</p>
             </div>
           </Reveal>
@@ -338,12 +338,12 @@ const SahayCaseStudy = () => {
               <div className="bg-[var(--finding)] p-8">
                 <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-3">What we assumed</p>
                 <p className="font-editorial text-xl text-[var(--text)]">Service Marketplace</p>
-                <p className="text-sm text-[var(--text-secondary)] mt-2">Help people find and book contractors faster</p>
+                <p className="type-body-sm mt-2">Help people find and book contractors faster</p>
               </div>
               <div className="bg-[var(--outcome)] p-8">
                 <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-3">What research revealed</p>
                 <p className="font-editorial text-xl text-[var(--text)]">AI-Powered Home Companion</p>
-                <p className="text-sm text-[var(--text-secondary)] mt-2">Help people understand problems and make informed decisions</p>
+                <p className="type-body-sm mt-2">Help people understand problems and make informed decisions</p>
               </div>
             </div>
           </Reveal>
@@ -388,7 +388,7 @@ const SahayCaseStudy = () => {
                 { label: 'Decision Support', desc: 'Help users choose between DIY and professional help' },
               ].map((item, i) => (
                 <div key={i} className="bg-gray-50 rounded-subtle p-5 border border-gray-100">
-                  <p className="text-sm font-semibold text-[var(--text)] mb-1">{item.label}</p>
+                  <p className="type-body-sm font-semibold mb-1">{item.label}</p>
                   <p className="type-body-sm">{item.desc}</p>
                 </div>
               ))}
@@ -694,7 +694,7 @@ const SahayCaseStudy = () => {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 bg-green-50 rounded-subtle px-5 py-3">
                   <span className="text-green-600">✓</span>
-                  <span className="text-sm text-gray-800">{item}</span>
+                  <span className="type-body-sm">{item}</span>
                 </div>
               ))}
             </div>
