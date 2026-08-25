@@ -169,9 +169,9 @@ const SahayCaseStudy = () => {
         {/* ═══════════════════════════════════════════
             1. HERO
         ═══════════════════════════════════════════ */}
-        <section className="layout-content mb-6">
+        <section className="layout-content mb-16">
           <div className={`transition-all duration-700 ${heroVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-6 transition-colors group">
+            <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -180,14 +180,13 @@ const SahayCaseStudy = () => {
           </div>
 
           <h1
-            className={`type-h1 mb-4 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ maxWidth: '20ch' }}
+            className={`type-h1 mb-8 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             Sahay: Confidence before contractors
           </h1>
 
           <div className={`transition-all duration-1000 delay-200 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <p className="type-lead mb-8">
+            <p className="type-lead mb-12">
               An AI-powered home maintenance companion that helps homeowners understand problems before deciding what to do next.
             </p>
           </div>
