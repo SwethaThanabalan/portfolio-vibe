@@ -522,20 +522,24 @@ const TalofaCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="space-y-6 type-body-lg">
-              <p>Based on what I heard in testing, I evolved the Mystery Monster concept away from functional clarity toward emotional reassurance. The copy shift was small. The strategic shift was significant.</p>
+              <p>Based on what I heard in testing, I evolved the Mystery Monster concept away from functional clarity toward emotional reassurance.</p>
               
-              <div className="grid md:grid-cols-2 gap-6 my-8">
-                <div className="bg-red-50 rounded-subtle p-6">
-                  <div className="text-sm font-semibold text-red-700 mb-3">Before</div>
-                  <p className="text-[var(--text-secondary)]">"You haven't logged in for 7 days. Start a new challenge."</p>
+              <div className="grid md:grid-cols-3 gap-6 my-8">
+                <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#c9a96e' }}>
+                  <p className="type-meta-label mb-2">Testing finding</p>
+                  <p className="type-body">Users responded to emotional reassurance, not feature highlights. They needed to know their progress was safe.</p>
                 </div>
-                <div className="bg-green-50 rounded-subtle p-6">
-                  <div className="text-sm font-semibold text-green-700 mb-3">After</div>
-                  <p className="text-[var(--text-secondary)]">"Welcome back. Your progress is still here. Ready to meet your next monster?"</p>
+                <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: 'var(--accent)' }}>
+                  <p className="type-meta-label mb-2">Before</p>
+                  <p className="type-body">"You haven't logged in for 7 days. Start a new challenge."</p>
+                </div>
+                <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#4a8c5c' }}>
+                  <p className="type-meta-label mb-2">After</p>
+                  <p className="type-body">"Welcome back. Your progress is still here. Ready to meet your next monster?"</p>
                 </div>
               </div>
               
-              <p>The shift was subtle but critical: from pushing action to offering reassurance.</p>
+              <p>The shift: from pushing action to offering reassurance.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -579,34 +583,32 @@ const TalofaCaseStudy = () => {
         {/* 10. LAUNCH & REAL-WORLD IMPACT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Launch & Real-World Impact</h2>
+            <h2 className="type-h2 mb-6">Launch & real-world impact</h2>
+            <p className="type-metric mb-2">4 shipped</p>
+            <p className="type-caption mb-8">Recommendations implemented in the live product</p>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="space-y-6 type-body-lg">
-              <p>Two months after my internship ended, Monster Walk officially launched. I wasn't in the room, but four of my design recommendations were:</p>
+              <p>Two months after my internship ended, Monster Walk officially launched. Four of my design recommendations were in the product:</p>
               
-              <ul className="space-y-3 ml-6">
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2 mt-1">✓</span>
-                  <span>Monster interaction moments</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2 mt-1">✓</span>
-                  <span>Encouraging return messaging</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2 mt-1">✓</span>
-                  <span>Daily quests</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2 mt-1">✓</span>
-                  <span>Daily rewards</span>
-                </li>
-              </ul>
+              <div className="grid sm:grid-cols-2 gap-4 my-8">
+                <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#4a8c5c' }}>
+                  <p className="type-body font-medium">Monster interaction moments</p>
+                </div>
+                <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#4a8c5c' }}>
+                  <p className="type-body font-medium">Encouraging return messaging</p>
+                </div>
+                <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#4a8c5c' }}>
+                  <p className="type-body font-medium">Daily quests</p>
+                </div>
+                <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#4a8c5c' }}>
+                  <p className="type-body font-medium">Daily rewards</p>
+                </div>
+              </div>
               
-              <div className="bg-indigo-50 rounded-subtle p-6 mt-8">
-                <p className="font-semibold text-[var(--text)]">In a 3-month beta internship with no post-launch access and no live metrics, I built the behavioral framework that shaped how Monster Walk welcomes users back. The research, the pivot, and the concepts, all of it fed directly into what shipped.</p>
+              <div className="border-l-4 pl-5 py-3" style={{ borderLeftColor: 'var(--accent)', backgroundColor: 'var(--decision)' }}>
+                <p className="type-body font-medium">In a 3-month beta internship with no post-launch access and no live metrics, I built the behavioral framework that shaped how Monster Walk welcomes users back.</p>
               </div>
             </div>
           </AnimatedSection>
