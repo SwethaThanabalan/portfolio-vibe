@@ -353,6 +353,23 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
         </section>
 
+        {/* BEFORE: EXISTING WELCOME BACK EXPERIENCE */}
+        <section className="layout-content mb-16">
+          <AnimatedSection animation="fade-up">
+            <h2 className="type-h2 mb-4">Before: the return moment felt fragmented</h2>
+            <p className="type-body-lg mb-8">The existing experience split the return moment across several overlays, making progress and rewards harder to understand as one cohesive journey.</p>
+            <figure>
+              <img
+                src="/Research(3).jpg"
+                alt="Research findings on existing Monster Walk return experience: Welcome Back screen is flat with little storytelling, step-to-stamina conversion is unclear, stamina cap not explained"
+                className="w-full border border-[var(--border)]"
+                loading="lazy"
+              />
+              <figcaption className="type-caption mt-3">The return journey moved through multiple overlays before bringing the player back into gameplay.</figcaption>
+            </figure>
+          </AnimatedSection>
+        </section>
+
         {/* 4. RESEARCH & DISCOVERY */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
