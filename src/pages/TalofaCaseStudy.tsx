@@ -423,48 +423,25 @@ const TalofaCaseStudy = () => {
           </div>
         </section>
 
-        {/* 4. RESEARCH & DISCOVERY */}
+        {/* 4. RESEARCH & DISCOVERY — compact */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-8">User research & discovery</h2>
+            <h2 className="type-h2 mb-6">User research & discovery</h2>
+            <p className="type-body-lg mb-6">I ran stakeholder interviews (founder, coaches, gaming advisor), conversations with lapsed power users, competitive analysis (Duolingo, Pokémon GO, Habitica), and consulted gaming psychology experts on re-engagement patterns.</p>
           </AnimatedSection>
 
-          <div className="space-y-6">
-            <AnimatedSection animation="fade-up" delay={100}>
-              <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="type-h3 mb-2">Stakeholder Interviews</h3>
-                <p className="text-[var(--text-secondary)]">I ran stakeholder interviews with the founder, coaches, and gaming advisors to align on business goals and technical constraints before touching any design work.</p>
+          <AnimatedSection animation="fade-up" delay={100}>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#c9a96e' }}>
+                <p className="type-body font-medium mb-1">Every lapsed user feared their progress was gone</p>
+                <p className="type-body-sm">None had checked. The fear was irrational but real, and it was the primary barrier to return.</p>
               </div>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={200}>
-              <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="type-h3 mb-2">Power User Conversations</h3>
-                <p className="text-[var(--text-secondary)]">I interviewed users who had lapsed and returned, specifically asking about the moment they decided to come back. Every single one mentioned fearing their progress was gone. None of them had checked. The fear was irrational, but it was real and it was the barrier.</p>
+              <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#c9a96e' }}>
+                <p className="type-body font-medium mb-1">Returning users need to feel welcomed, not evaluated</p>
+                <p className="type-body-sm">The first moment back should reduce cognitive load, not increase it. All competitive apps prioritize progress preservation over feature highlights.</p>
               </div>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={300}>
-              <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="type-h3 mb-2">Gaming Psychology Input</h3>
-                <p className="text-[var(--text-secondary)]">I consulted gaming psychology experts on re-engagement patterns. Key finding: returning users need to feel welcomed, not evaluated. The first moment back should reduce cognitive load, not increase it.</p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={400}>
-              <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="type-h3 mb-2">Competitive Analysis</h3>
-                <p className="text-[var(--text-secondary)]">I audited how Duolingo, Pokémon GO, and Habitica handle lapsed user return flows. All three prioritize progress preservation messaging over feature highlights, a pattern that directly informed our direction.</p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={500}>
-              <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="type-h3 mb-2">Emotional Barrier Analysis</h3>
-                <p className="text-[var(--text-secondary)]">Across all research sessions, two emotions surfaced consistently: hesitation (am I behind?) and uncertainty (does my progress still matter?). These became the design brief.</p>
-              </div>
-            </AnimatedSection>
-          </div>
+            </div>
+          </AnimatedSection>
         </section>
 
         {/* 5. CONCEPTS WE TESTED */}
@@ -670,7 +647,8 @@ const TalofaCaseStudy = () => {
         {/* FROM CONCEPT TO LIVE GAME */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-4">From concept to live game</h2>
+            <h2 className="type-h2 mb-2">From concept to live game</h2>
+            <p className="type-meta-label mb-6">Shipped in live product</p>
             <p className="type-body-lg mb-10">Several recommendations moved beyond prototype and into the live game, including expanded quest guidance and more contextual monster interactions.</p>
           </AnimatedSection>
 
@@ -750,47 +728,16 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
         </section>
 
-        {/* 11. STRATEGIC IMPACT */}
+        {/* 11. STRATEGIC IMPACT — compact */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Strategic Impact</h2>
-          </AnimatedSection>
-
-          <AnimatedSection animation="fade-up" delay={100}>
-            <div className="space-y-6 type-body-lg">
-              
-              <div className="grid md:grid-cols-2 gap-6 my-8">
-                <div className="border-l-4 border-indigo-300 pl-5 py-4">
-                  <h3 className="font-semibold text-[var(--text)] mb-3">Validated motivational hierarchy</h3>
-                  <p className="text-[var(--text-secondary)]">Research across multiple sessions confirmed the same hierarchy every time: reassurance first, then progress, then new features. This ordered the entire design direction.</p>
-                </div>
-                <div className="border-l-4 border-indigo-300 pl-5 py-4">
-                  <h3 className="font-semibold text-[var(--text)] mb-3">Reduced decision risk</h3>
-                  <p className="text-[var(--text-secondary)]">Concept testing gave the founder confidence to ship the Mystery Monster direction without second-guessing. Diagnostic clarity beats numerical comfort when the sample size is small.</p>
-                </div>
-                <div className="border-l-4 border-indigo-300 pl-5 py-4">
-                  <h3 className="font-semibold text-[var(--text)] mb-3">Increased stakeholder confidence</h3>
-                  <p className="text-[var(--text-secondary)]">I presented a clear trade-off framework to the founder and got buy-in in a single meeting. Helping stakeholders make informed decisions is part of the design craft.</p>
-                </div>
-                <div className="border-l-4 border-indigo-300 pl-5 py-4">
-                  <h3 className="font-semibold text-[var(--text)] mb-3">Delivered defensible retention strategy</h3>
-                  <p className="text-[var(--text-secondary)]">Every recommendation I made was traceable back to something a user said or felt. No assumptions dressed up as insights.</p>
-                </div>
+            <h2 className="type-h2 mb-6">What this project proved</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="border-l-4 border-indigo-300 pl-5 py-3">
+                <p className="type-body font-medium">Concept testing over A/B testing gave the founder confidence to ship without second-guessing.</p>
               </div>
-            </div>
-          </AnimatedSection>
-        </section>
-
-        {/* 12. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
-        <section className="layout-content mb-16">
-          <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">How This Project Elevated My Product Thinking</h2>
-          </AnimatedSection>
-
-          <AnimatedSection animation="fade-up" delay={100}>
-            <div className="border-l-4 border-indigo-400 pl-6 py-5">
-              <div className="space-y-6 type-body-lg">
-                <p>Working in beta without clean data forced me to make confident recommendations from patterns, not proof. That's harder than it sounds, and more valuable than most portfolio projects show. The moment I told the founder that A/B testing was the wrong method for this problem, I stopped being a designer who executes and became one who thinks. That shift is what I'm bringing to every project from here.</p>
+              <div className="border-l-4 border-indigo-300 pl-5 py-3">
+                <p className="type-body font-medium">Every recommendation was traceable back to something a user said or felt. No assumptions dressed as insights.</p>
               </div>
             </div>
           </AnimatedSection>
