@@ -221,15 +221,15 @@ const SahayCaseStudy = () => {
           <Reveal delay={100}>
             <div className="grid sm:grid-cols-3 gap-4 mb-10">
               <div className="border-l-2 border-l-red-300 pl-4 py-2">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Fragmented</p>
+                <p className="text-sm font-semibold text-[var(--text)] mb-1">Fragmented</p>
                 <p className="text-xs text-[var(--text-secondary)]">5+ platforms to diagnose one issue</p>
               </div>
               <div className="border-l-2 border-l-amber-300 pl-4 py-2">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Uncertain</p>
+                <p className="text-sm font-semibold text-[var(--text)] mb-1">Uncertain</p>
                 <p className="text-xs text-[var(--text-secondary)]">No urgency assessment before spending money</p>
               </div>
               <div className="border-l-2 border-l-blue-300 pl-4 py-2">
-                <p className="text-sm font-semibold text-gray-900 mb-1">Trust deficit</p>
+                <p className="text-sm font-semibold text-[var(--text)] mb-1">Trust deficit</p>
                 <p className="text-xs text-[var(--text-secondary)]">Platforms prioritize booking over understanding</p>
               </div>
             </div>
@@ -237,7 +237,7 @@ const SahayCaseStudy = () => {
 
           <Reveal delay={150}>
             <div className="decision-block">
-              <p className="text-sm font-semibold text-gray-900 mb-1">My role</p>
+              <p className="text-sm font-semibold text-[var(--text)] mb-1">My role</p>
               <p className="type-body">I initiated the project, identified the opportunity, recruited two teammates, and led research strategy from day one.</p>
             </div>
           </Reveal>
@@ -261,7 +261,7 @@ const SahayCaseStudy = () => {
               <Reveal delay={50}>
                 <div>
                   <h3 className="type-h3 mb-4">Primary research</h3>
-                  <ul className="space-y-3 text-gray-700">
+                  <ul className="space-y-3 text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Homeowner interviews</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Renter interviews</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Shared housing participants</li>
@@ -272,7 +272,7 @@ const SahayCaseStudy = () => {
               <Reveal delay={100}>
                 <div>
                   <h3 className="type-h3 mb-4">Secondary research</h3>
-                  <ul className="space-y-3 text-gray-700">
+                  <ul className="space-y-3 text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Competitive analysis of service platforms</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> DIY resource ecosystem mapping</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Existing marketplace evaluation</li>
@@ -283,7 +283,7 @@ const SahayCaseStudy = () => {
 
             <Reveal delay={150}>
               <div className="finding-block">
-                <h3 className="text-base font-semibold text-gray-900 mb-5">Key research findings</h3>
+                <h3 className="text-base font-semibold text-[var(--text)] mb-5">Key research findings</h3>
                 <div className="space-y-4">
                   {[
                     'Users rarely start with service marketplaces. They start with Google, YouTube, Reddit, friends.',
@@ -296,7 +296,7 @@ const SahayCaseStudy = () => {
                   ].map((finding, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <span className="text-xs font-medium text-[var(--muted)] min-w-[1.5rem]">{i + 1}.</span>
-                      <p className="text-[15px] text-gray-700 leading-relaxed">{finding}</p>
+                      <p className="text-[15px] text-[var(--text-secondary)] leading-relaxed">{finding}</p>
                     </div>
                   ))}
                 </div>
@@ -337,12 +337,12 @@ const SahayCaseStudy = () => {
             <div className="grid md:grid-cols-2 gap-px mt-12 border border-[var(--border)]">
               <div className="bg-[var(--finding)] p-8">
                 <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-3">What we assumed</p>
-                <p className="font-editorial text-xl text-gray-900">Service Marketplace</p>
+                <p className="font-editorial text-xl text-[var(--text)]">Service Marketplace</p>
                 <p className="text-sm text-[var(--text-secondary)] mt-2">Help people find and book contractors faster</p>
               </div>
               <div className="bg-[var(--outcome)] p-8">
                 <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-3">What research revealed</p>
-                <p className="font-editorial text-xl text-gray-900">AI-Powered Home Companion</p>
+                <p className="font-editorial text-xl text-[var(--text)]">AI-Powered Home Companion</p>
                 <p className="text-sm text-[var(--text-secondary)] mt-2">Help people understand problems and make informed decisions</p>
               </div>
             </div>
@@ -388,7 +388,7 @@ const SahayCaseStudy = () => {
                 { label: 'Decision Support', desc: 'Help users choose between DIY and professional help' },
               ].map((item, i) => (
                 <div key={i} className="bg-gray-50 rounded-subtle p-5 border border-gray-100">
-                  <p className="text-sm font-semibold text-gray-900 mb-1">{item.label}</p>
+                  <p className="text-sm font-semibold text-[var(--text)] mb-1">{item.label}</p>
                   <p className="type-body-sm">{item.desc}</p>
                 </div>
               ))}
@@ -598,7 +598,7 @@ const SahayCaseStudy = () => {
                 <p>
                   However, I believed DIY guidance was critical because it directly aligned with our core research findings: users want to understand and attempt simple fixes before hiring professionals. This wasn't a nice-to-have, it was foundational to the product's value proposition.
                 </p>
-                <p className="text-gray-900 font-medium">
+                <p className="text-[var(--text)] font-medium">
                   I advocated for keeping the feature. I designed the DIY experience. And I was right.
                 </p>
                 <p>
@@ -631,7 +631,7 @@ const SahayCaseStudy = () => {
               <Reveal delay={50}>
                 <div className="space-y-6">
                   <h3 className="type-h3">Strategy & Research</h3>
-                  <ul className="space-y-3 text-gray-700">
+                  <ul className="space-y-3 text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Initiated the project from personal insight</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Recruited and assembled the team</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Defined the research strategy</li>
@@ -643,7 +643,7 @@ const SahayCaseStudy = () => {
               <Reveal delay={100}>
                 <div className="space-y-6">
                   <h3 className="type-h3">Design & Validation</h3>
-                  <ul className="space-y-3 text-gray-700">
+                  <ul className="space-y-3 text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Designed the onboarding experience</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Designed the MyHome dashboard</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Designed the AI home summary experience</li>
@@ -736,7 +736,7 @@ const SahayCaseStudy = () => {
           <Reveal delay={100}>
             <div className="mt-10">
               <h3 className="type-h3 mb-6">If I continued this project, I would:</h3>
-              <ul className="space-y-3 text-gray-700" style={{ maxWidth: '60ch' }}>
+              <ul className="space-y-3 text-[var(--text-secondary)]" style={{ maxWidth: '60ch' }}>
                 <li className="flex items-start gap-3"><span className="text-gray-400">01</span> Conduct deeper validation of AI trust patterns</li>
                 <li className="flex items-start gap-3"><span className="text-gray-400">02</span> Test how users respond when AI is wrong vs. uncertain</li>
                 <li className="flex items-start gap-3"><span className="text-gray-400">03</span> Build more realistic AI prototypes with LLM integration</li>

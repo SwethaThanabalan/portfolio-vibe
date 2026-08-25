@@ -103,7 +103,7 @@ const TalofaCaseStudy = () => {
         {/* 1. HERO SECTION */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-in">
-            <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
+            <Link to="/#work" className="inline-flex items-center text-[var(--muted)] hover:text-gray-900 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -174,7 +174,7 @@ const TalofaCaseStudy = () => {
               }}
             >
               <div style={{ paddingBottom: '32px' }}>
-                <ul className="text-base text-gray-700 leading-relaxed space-y-2" style={{ maxWidth: '65ch' }}>
+                <ul className="text-base text-[var(--text-secondary)] leading-relaxed space-y-2" style={{ maxWidth: '65ch' }}>
                   <li>• Identified retention breakdown in lapsed users</li>
                   <li>• Diagnosed emotional hesitation as primary barrier</li>
                   <li>• Explored three motivational re-entry concepts</li>
@@ -192,7 +192,7 @@ const TalofaCaseStudy = () => {
                 opacity: showAudioPlayer ? 1 : 0
               }}
             >
-              <div className="border border-gray-200 rounded-subtle p-6 mb-6">
+              <div className="border border-[var(--border)] rounded-subtle p-6 mb-6">
                 <audio
                   ref={audioRef}
                   src="/SeptaProjectAudioSummary.mp3"
@@ -227,7 +227,7 @@ const TalofaCaseStudy = () => {
                         style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
                       />
                     </div>
-                    <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <div className="flex justify-between text-xs text-[var(--muted)] mt-1">
                       <span>{formatTime(currentTime)}</span>
                       <span>{formatTime(duration)}</span>
                     </div>
@@ -293,29 +293,29 @@ const TalofaCaseStudy = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AnimatedSection animation="fade-up" delay={100}>
               <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-subtle p-6 h-full">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Retention Gap</h3>
-                <p className="text-gray-700">Users who lapsed 7+ days had a fundamentally different emotional state. Pushing them into challenges the moment they returned made it worse, not better.</p>
+                <h3 className="text-xl font-bold text-[var(--text)] mb-3">Retention Gap</h3>
+                <p className="text-[var(--text-secondary)]">Users who lapsed 7+ days had a fundamentally different emotional state. Pushing them into challenges the moment they returned made it worse, not better.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-subtle p-6 h-full">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Clarity Gap</h3>
-                <p className="text-gray-700">Users couldn't remember where they left off or why it mattered to pick up again. The product offered no answer.</p>
+                <h3 className="text-xl font-bold text-[var(--text)] mb-3">Clarity Gap</h3>
+                <p className="text-[var(--text-secondary)]">Users couldn't remember where they left off or why it mattered to pick up again. The product offered no answer.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-subtle p-6 h-full">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Motivation Gap</h3>
-                <p className="text-gray-700">No concept addressed guilt or hesitation, the two emotions every lapsed user described in research. The experience assumed motivation existed. It didn't.</p>
+                <h3 className="text-xl font-bold text-[var(--text)] mb-3">Motivation Gap</h3>
+                <p className="text-[var(--text-secondary)]">No concept addressed guilt or hesitation, the two emotions every lapsed user described in research. The experience assumed motivation existed. It didn't.</p>
               </div>
             </AnimatedSection>
           </div>
 
           <AnimatedSection animation="fade-up" delay={400}>
             <div className="mt-8 bg-indigo-50 border-l-4 border-indigo-600 rounded-r-xl p-6">
-              <p className="text-lg text-gray-900 font-semibold">Insight: Lapsed users weren't disengaged. They were hesitant. The barrier wasn't the product. It was the emotion of returning.</p>
+              <p className="text-lg text-[var(--text)] font-semibold">Insight: Lapsed users weren't disengaged. They were hesitant. The barrier wasn't the product. It was the emotion of returning.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -346,35 +346,35 @@ const TalofaCaseStudy = () => {
             <AnimatedSection animation="fade-up" delay={100}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="type-h3 mb-2">Stakeholder Interviews</h3>
-                <p className="text-gray-700">I ran stakeholder interviews with the founder, coaches, and gaming advisors to align on business goals and technical constraints before touching any design work.</p>
+                <p className="text-[var(--text-secondary)]">I ran stakeholder interviews with the founder, coaches, and gaming advisors to align on business goals and technical constraints before touching any design work.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="type-h3 mb-2">Power User Conversations</h3>
-                <p className="text-gray-700">I interviewed users who had lapsed and returned, specifically asking about the moment they decided to come back. Every single one mentioned fearing their progress was gone. None of them had checked. The fear was irrational, but it was real and it was the barrier.</p>
+                <p className="text-[var(--text-secondary)]">I interviewed users who had lapsed and returned, specifically asking about the moment they decided to come back. Every single one mentioned fearing their progress was gone. None of them had checked. The fear was irrational, but it was real and it was the barrier.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="type-h3 mb-2">Gaming Psychology Input</h3>
-                <p className="text-gray-700">I consulted gaming psychology experts on re-engagement patterns. Key finding: returning users need to feel welcomed, not evaluated. The first moment back should reduce cognitive load, not increase it.</p>
+                <p className="text-[var(--text-secondary)]">I consulted gaming psychology experts on re-engagement patterns. Key finding: returning users need to feel welcomed, not evaluated. The first moment back should reduce cognitive load, not increase it.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="type-h3 mb-2">Competitive Analysis</h3>
-                <p className="text-gray-700">I audited how Duolingo, Pokémon GO, and Habitica handle lapsed user return flows. All three prioritize progress preservation messaging over feature highlights, a pattern that directly informed our direction.</p>
+                <p className="text-[var(--text-secondary)]">I audited how Duolingo, Pokémon GO, and Habitica handle lapsed user return flows. All three prioritize progress preservation messaging over feature highlights, a pattern that directly informed our direction.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={500}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="type-h3 mb-2">Emotional Barrier Analysis</h3>
-                <p className="text-gray-700">Across all research sessions, two emotions surfaced consistently: hesitation (am I behind?) and uncertainty (does my progress still matter?). These became the design brief.</p>
+                <p className="text-[var(--text-secondary)]">Across all research sessions, two emotions surfaced consistently: hesitation (am I behind?) and uncertainty (does my progress still matter?). These became the design brief.</p>
               </div>
             </AnimatedSection>
           </div>
@@ -469,7 +469,7 @@ const TalofaCaseStudy = () => {
                   <li>• Concept testing → moderated sessions where we observe emotional reactions in real time. Slower. Far more useful.</li>
                 </ul>
                 
-                <p className="font-semibold text-gray-900 mt-6">He agreed. We ran concept testing.</p>
+                <p className="font-semibold text-[var(--text)] mt-6">He agreed. We ran concept testing.</p>
                 
                 <p className="italic">This decision shaped everything that followed, and it was the moment I stopped being an executor and started being a product thinker.</p>
               </div>
@@ -487,8 +487,8 @@ const TalofaCaseStudy = () => {
             <div className="space-y-6 type-body-lg">
               <p>I ran moderated concept testing sessions with lapsed users, observing their emotional responses, listening for hesitation, and asking follow-up questions about the reasoning behind their reactions. Here's what the research showed:</p>
               
-              <div className="bg-gray-50 rounded-subtle p-6 my-6">
-                <h3 className="font-semibold text-gray-900 mb-4">What we learned:</h3>
+              <div className="bg-[var(--surface)] rounded-subtle p-6 my-6">
+                <h3 className="font-semibold text-[var(--text)] mb-4">What we learned:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-indigo-600 mr-2">•</span>
@@ -527,11 +527,11 @@ const TalofaCaseStudy = () => {
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-red-50 rounded-subtle p-6">
                   <div className="text-sm font-semibold text-red-700 mb-3">Before</div>
-                  <p className="text-gray-700">"You haven't logged in for 7 days. Start a new challenge."</p>
+                  <p className="text-[var(--text-secondary)]">"You haven't logged in for 7 days. Start a new challenge."</p>
                 </div>
                 <div className="bg-green-50 rounded-subtle p-6">
                   <div className="text-sm font-semibold text-green-700 mb-3">After</div>
-                  <p className="text-gray-700">"Welcome back. Your progress is still here. Ready to meet your next monster?"</p>
+                  <p className="text-[var(--text-secondary)]">"Welcome back. Your progress is still here. Ready to meet your next monster?"</p>
                 </div>
               </div>
               
@@ -551,7 +551,7 @@ const TalofaCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 w-full">
-              <div className="relative w-full rounded-subtle overflow-hidden shadow-lg border border-gray-200" style={{ paddingBottom: '56.25%' }}>
+              <div className="relative w-full rounded-subtle overflow-hidden shadow-lg border border-[var(--border)]" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
                   src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F8tgWUX07X8n5GsiZauji9b%2FMonster-Walk-Hand-off---Swetha%3Fnode-id%3D7-6266%26t%3DOMRrHCZ6XR6pLSbr-0%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D7%253A6266%26show-proto-sidebar%3D1"
@@ -606,7 +606,7 @@ const TalofaCaseStudy = () => {
               </ul>
               
               <div className="bg-indigo-50 rounded-subtle p-6 mt-8">
-                <p className="font-semibold text-gray-900">In a 3-month beta internship with no post-launch access and no live metrics, I built the behavioral framework that shaped how Monster Walk welcomes users back. The research, the pivot, and the concepts, all of it fed directly into what shipped.</p>
+                <p className="font-semibold text-[var(--text)]">In a 3-month beta internship with no post-launch access and no live metrics, I built the behavioral framework that shaped how Monster Walk welcomes users back. The research, the pivot, and the concepts, all of it fed directly into what shipped.</p>
               </div>
             </div>
           </AnimatedSection>
@@ -623,20 +623,20 @@ const TalofaCaseStudy = () => {
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-indigo-50 rounded-subtle p-6">
-                  <h3 className="font-semibold text-gray-900 mb-3">Validated motivational hierarchy</h3>
-                  <p className="text-gray-700">Research across multiple sessions confirmed the same hierarchy every time: reassurance first, then progress, then new features. This ordered the entire design direction.</p>
+                  <h3 className="font-semibold text-[var(--text)] mb-3">Validated motivational hierarchy</h3>
+                  <p className="text-[var(--text-secondary)]">Research across multiple sessions confirmed the same hierarchy every time: reassurance first, then progress, then new features. This ordered the entire design direction.</p>
                 </div>
                 <div className="bg-indigo-50 rounded-subtle p-6">
-                  <h3 className="font-semibold text-gray-900 mb-3">Reduced decision risk</h3>
-                  <p className="text-gray-700">Concept testing gave the founder confidence to ship the Mystery Monster direction without second-guessing. Diagnostic clarity beats numerical comfort when the sample size is small.</p>
+                  <h3 className="font-semibold text-[var(--text)] mb-3">Reduced decision risk</h3>
+                  <p className="text-[var(--text-secondary)]">Concept testing gave the founder confidence to ship the Mystery Monster direction without second-guessing. Diagnostic clarity beats numerical comfort when the sample size is small.</p>
                 </div>
                 <div className="bg-indigo-50 rounded-subtle p-6">
-                  <h3 className="font-semibold text-gray-900 mb-3">Increased stakeholder confidence</h3>
-                  <p className="text-gray-700">I presented a clear trade-off framework to the founder and got buy-in in a single meeting. Helping stakeholders make informed decisions is part of the design craft.</p>
+                  <h3 className="font-semibold text-[var(--text)] mb-3">Increased stakeholder confidence</h3>
+                  <p className="text-[var(--text-secondary)]">I presented a clear trade-off framework to the founder and got buy-in in a single meeting. Helping stakeholders make informed decisions is part of the design craft.</p>
                 </div>
                 <div className="bg-indigo-50 rounded-subtle p-6">
-                  <h3 className="font-semibold text-gray-900 mb-3">Delivered defensible retention strategy</h3>
-                  <p className="text-gray-700">Every recommendation I made was traceable back to something a user said or felt. No assumptions dressed up as insights.</p>
+                  <h3 className="font-semibold text-[var(--text)] mb-3">Delivered defensible retention strategy</h3>
+                  <p className="text-[var(--text-secondary)]">Every recommendation I made was traceable back to something a user said or felt. No assumptions dressed up as insights.</p>
                 </div>
               </div>
             </div>
@@ -660,7 +660,7 @@ const TalofaCaseStudy = () => {
 
         {/* Back to projects */}
         <section className="layout-content">
-          <div className="border-t border-gray-200 pt-12">
+          <div className="border-t border-[var(--border)] pt-12">
             <Link 
               to="/#work"
               className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors group"
