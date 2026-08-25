@@ -293,21 +293,21 @@ const TalofaCaseStudy = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AnimatedSection animation="fade-up" delay={100}>
               <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-subtle p-6 h-full">
-                <h3 className="text-xl font-bold text-[var(--text)] mb-3">Retention Gap</h3>
+                <h3 className="type-h3 mb-3">Retention Gap</h3>
                 <p className="text-[var(--text-secondary)]">Users who lapsed 7+ days had a fundamentally different emotional state. Pushing them into challenges the moment they returned made it worse, not better.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-subtle p-6 h-full">
-                <h3 className="text-xl font-bold text-[var(--text)] mb-3">Clarity Gap</h3>
+                <h3 className="type-h3 mb-3">Clarity Gap</h3>
                 <p className="text-[var(--text-secondary)]">Users couldn't remember where they left off or why it mattered to pick up again. The product offered no answer.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-subtle p-6 h-full">
-                <h3 className="text-xl font-bold text-[var(--text)] mb-3">Motivation Gap</h3>
+                <h3 className="type-h3 mb-3">Motivation Gap</h3>
                 <p className="text-[var(--text-secondary)]">No concept addressed guilt or hesitation, the two emotions every lapsed user described in research. The experience assumed motivation existed. It didn't.</p>
               </div>
             </AnimatedSection>

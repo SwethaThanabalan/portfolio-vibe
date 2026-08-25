@@ -55,14 +55,6 @@ function Reveal({ children, delay = 0, className = '' }: { children: React.React
   )
 }
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <Reveal>
-      <p className="type-eyebrow mb-4">{children}</p>
-    </Reveal>
-  )
-}
-
 function Callout({ children, variant = 'default' }: { children: React.ReactNode; variant?: 'default' | 'insight' | 'shift' }) {
   const styles = {
     insight: { backgroundColor: 'var(--decision)', borderColor: 'var(--accent)' },
@@ -199,7 +191,6 @@ const SahayCaseStudy = () => {
             2. ORIGIN + PROBLEM (merged, compressed)
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
-          <SectionLabel>Problem framing</SectionLabel>
 
           <Reveal>
             <h2 className="type-h2 mb-6">
@@ -249,7 +240,6 @@ const SahayCaseStudy = () => {
         ═══════════════════════════════════════════ */}
         <section className="bg-surface py-12 mb-16">
           <div className="layout-content">
-          <SectionLabel>User research</SectionLabel>
 
             <Reveal>
               <h2 className="type-h2 mb-6">
@@ -283,7 +273,7 @@ const SahayCaseStudy = () => {
 
             <Reveal delay={150}>
               <div className="finding-block">
-                <h3 className="text-base font-semibold text-[var(--text)] mb-5">Key research findings</h3>
+                <h3 className="type-h3 mb-5">Key research findings</h3>
                 <div className="space-y-4">
                   {[
                     'Users rarely start with service marketplaces. They start with Google, YouTube, Reddit, friends.',
@@ -310,7 +300,6 @@ const SahayCaseStudy = () => {
             5. THE TURNING POINT
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
-          <SectionLabel>Research synthesis: the turning point</SectionLabel>
 
           <PullQuote>
             People don't need a better way to find contractors. They need confidence before deciding whether they need one.
@@ -358,7 +347,6 @@ const SahayCaseStudy = () => {
             6. PRODUCT STRATEGY & AI DIRECTION
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
-          <SectionLabel>Product strategy: AI direction</SectionLabel>
 
           <Reveal>
             <h2 className="type-h2 mb-8">
@@ -407,7 +395,6 @@ const SahayCaseStudy = () => {
             7. INFORMATION ARCHITECTURE & USER FLOWS
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
-          <SectionLabel>Information architecture & user flow validation</SectionLabel>
 
           <Reveal>
             <h2 className="type-h2 mb-8">
@@ -455,7 +442,6 @@ const SahayCaseStudy = () => {
         ═══════════════════════════════════════════ */}
         <section className="bg-surface py-12 mb-16">
           <div className="layout-content">
-            <SectionLabel>Design principles</SectionLabel>
 
             <Reveal>
               <h2 className="type-h2 mb-6">
@@ -494,7 +480,6 @@ const SahayCaseStudy = () => {
             9. KEY DESIGN DECISIONS
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
-          <SectionLabel>High-fidelity design & prototyping</SectionLabel>
 
           <Reveal>
             <h2 className="type-h2 mb-6">
@@ -522,7 +507,6 @@ const SahayCaseStudy = () => {
 
 
         <section className="layout-content mb-16">
-          <SectionLabel>Interaction design decisions</SectionLabel>
 
           {/* Decision 1: Onboarding */}
           <Reveal>
@@ -619,7 +603,6 @@ const SahayCaseStudy = () => {
         ═══════════════════════════════════════════ */}
         <section className="bg-surface py-12 mb-16">
           <div className="layout-content">
-            <SectionLabel>My contributions</SectionLabel>
 
             <Reveal>
               <h2 className="type-h2 mb-6">
@@ -662,7 +645,6 @@ const SahayCaseStudy = () => {
             11. USABILITY TESTING RESULTS
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
-          <SectionLabel>Usability testing</SectionLabel>
 
           <Reveal>
             <h2 className="type-h2 mb-8">
@@ -710,7 +692,6 @@ const SahayCaseStudy = () => {
             12. REFLECTION
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
-          <SectionLabel>Reflection</SectionLabel>
 
           <Reveal>
             <h2 className="type-h2 mb-8">
