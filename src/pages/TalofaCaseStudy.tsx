@@ -360,8 +360,8 @@ const TalofaCaseStudy = () => {
             <p className="type-body-lg mb-10">The existing return experience moved players through several separate states before bringing them back into gameplay.</p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <AnimatedSection animation="fade-up" delay={100}>
+          <AnimatedSection animation="fade-up" delay={100}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               <figure>
                 <img
                   src="/Design Process(4).jpg"
@@ -369,14 +369,11 @@ const TalofaCaseStudy = () => {
                   className="w-full border border-[var(--border)]"
                   loading="lazy"
                 />
-                <div className="mt-4">
-                  <p className="type-body font-medium mb-1">1. Daily tasks appear first</p>
-                  <p className="type-body-sm">The player encounters a task panel before reaching their progress and reward state.</p>
+                <div className="mt-3">
+                  <p className="type-body-sm font-medium mb-1">01 Daily Tasks</p>
+                  <p className="type-caption">Task panel before progress state.</p>
                 </div>
               </figure>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={150}>
               <figure>
                 <img
                   src="/Design Process(5).jpg"
@@ -384,14 +381,11 @@ const TalofaCaseStudy = () => {
                   className="w-full border border-[var(--border)]"
                   loading="lazy"
                 />
-                <div className="mt-4">
-                  <p className="type-body font-medium mb-1">2. Progress is visible, but hard to interpret</p>
-                  <p className="type-body-sm">New steps, total stamina, and the stamina cap appear together without clearly explaining what changed.</p>
+                <div className="mt-3">
+                  <p className="type-body-sm font-medium mb-1">02 Welcome Back</p>
+                  <p className="type-caption">Steps and stamina without clear conversion.</p>
                 </div>
               </figure>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={200}>
               <figure>
                 <img
                   src="/Design Process(6).jpg"
@@ -399,14 +393,11 @@ const TalofaCaseStudy = () => {
                   className="w-full border border-[var(--border)]"
                   loading="lazy"
                 />
-                <div className="mt-4">
-                  <p className="type-body font-medium mb-1">3. The reward is separated into another modal</p>
-                  <p className="type-body-sm">The reward moment continues through an additional overlay instead of resolving directly into gameplay.</p>
+                <div className="mt-3">
+                  <p className="type-body-sm font-medium mb-1">03 Item Received</p>
+                  <p className="type-caption">Reward in a separate overlay.</p>
                 </div>
               </figure>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={250}>
               <figure>
                 <img
                   src="/Design Process(7).jpg"
@@ -414,13 +405,13 @@ const TalofaCaseStudy = () => {
                   className="w-full border border-[var(--border)]"
                   loading="lazy"
                 />
-                <div className="mt-4">
-                  <p className="type-body font-medium mb-1">4. The player finally returns to the game world</p>
-                  <p className="type-body-sm">The journey ends back in gameplay, but the connection between the earned reward and the next action is weak.</p>
+                <div className="mt-3">
+                  <p className="type-body-sm font-medium mb-1">04 Gameplay Return</p>
+                  <p className="type-caption">Weak connection to next action.</p>
                 </div>
               </figure>
-            </AnimatedSection>
-          </div>
+            </div>
+          </AnimatedSection>
         </section>
 
         {/* 4. RESEARCH & DISCOVERY — compact */}
