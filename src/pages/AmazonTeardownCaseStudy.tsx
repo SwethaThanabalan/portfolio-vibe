@@ -63,13 +63,13 @@ const AmazonTeardownCaseStudy = () => {
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up">
-            <h1 className="font-editorial text-4xl md:text-5xl font-normal text-gray-900 mb-8 leading-tight">
+            <h1 className="type-h1 mb-8 leading-tight">
               When Recovery Fails: A UX Teardown of Amazon's Order Cancellation Flow
             </h1>
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up" delay={100}>
-            <p className="text-xl text-gray-700 leading-relaxed mb-12">
+            <p className="type-lead mb-12">
               An analysis of error recovery during high-stakes checkout
             </p>
           </AnimatedSection>
@@ -95,9 +95,9 @@ const AmazonTeardownCaseStudy = () => {
         {/* 2. CONTEXT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Context</h2>
+            <h2 className="type-h2 mb-6">Context</h2>
             <div className="bg-gray-50 rounded-subtle p-8">
-              <ul className="space-y-3 text-lg text-gray-700">
+              <ul className="space-y-3 type-body-lg">
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-3 mt-1">•</span>
                   <span>Prime Day lightning deal</span>
@@ -122,8 +122,8 @@ const AmazonTeardownCaseStudy = () => {
         {/* 3. THE CORE PROBLEM */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">The Core Problem</h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <h2 className="type-h2 mb-6">The Core Problem</h2>
+            <div className="space-y-6 type-body-lg">
               <p>Address cannot be edited post-order.</p>
               <p>Only option: cancel and rebuild.</p>
               <p>Cancellation reason does not trigger contextual system response.</p>
@@ -143,8 +143,8 @@ const AmazonTeardownCaseStudy = () => {
         {/* 4. CURRENT FLOW BREAKDOWN */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Current Flow Breakdown</h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed mb-12">
+            <h2 className="type-h2 mb-6">Current Flow Breakdown</h2>
+            <div className="space-y-6 type-body-lg mb-12">
               <p>The user must navigate through a multi-step cancellation process that fails to recognize their stated intent.</p>
             </div>
           </AnimatedSection>
@@ -158,7 +158,7 @@ const AmazonTeardownCaseStudy = () => {
                 className="w-full rounded-subtle shadow-lg"
               />
             </div>
-            <p className="text-sm text-gray-600 italic text-center mb-12">
+            <p className="type-body-sm italic text-center mb-12">
               Cognitive walkthrough of the Amazon cancellation flow highlighting the gap between user intent and system feedback.
             </p>
           </AnimatedSection>
@@ -166,7 +166,7 @@ const AmazonTeardownCaseStudy = () => {
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 space-y-4">
               <h3 className="font-semibold text-gray-900 text-xl">Key Issues:</h3>
-              <ul className="space-y-3 text-lg text-gray-700">
+              <ul className="space-y-3 type-body-lg">
                 <li className="flex items-start">
                   <span className="text-red-600 mr-3 mt-1">×</span>
                   <span>Redundant cognitive load</span>
@@ -187,8 +187,8 @@ const AmazonTeardownCaseStudy = () => {
         {/* 5. UX ANALYSIS */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">UX Analysis</h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <h2 className="type-h2 mb-6">UX Analysis</h2>
+            <div className="space-y-6 type-body-lg">
               <p>Applying Norman's Action Cycle reveals a breakdown at the <span className="font-semibold text-gray-900">Interpretation stage</span>.</p>
               
               <p className="font-semibold text-gray-900">The system ignores user intent despite explicitly asking for it.</p>
@@ -208,8 +208,8 @@ const AmazonTeardownCaseStudy = () => {
         {/* 6. ATTENTION TO DETAIL OBSERVATIONS */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Attention to Detail Observations</h2>
-            <p className="text-lg text-gray-700 mb-8">Micro-interaction gaps that impact macro-level trust.</p>
+            <h2 className="type-h2 mb-6">Attention to Detail Observations</h2>
+            <p className="type-body-lg mb-8">Micro-interaction gaps that impact macro-level trust.</p>
           </AnimatedSection>
 
           <div className="space-y-6">
@@ -278,8 +278,8 @@ const AmazonTeardownCaseStudy = () => {
         {/* 7. CUSTOMER-FIRST REFLECTION */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Customer-First Reflection</h2>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8 space-y-6 text-lg text-gray-700 leading-relaxed">
+            <h2 className="type-h2 mb-6">Customer-First Reflection</h2>
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8 space-y-6 type-body-lg">
               <p className="text-xl text-gray-900 font-semibold">
                 Strong systems should anticipate mistakes, not penalize them.
               </p>

@@ -121,7 +121,7 @@ const ObservationCard = ({ title, detail }: { title: string; detail: string }) =
       <div
         className={`overflow-hidden transition-all duration-400 ease-out ${expanded ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0 mt-0'}`}
       >
-        <p className="text-sm text-gray-600 leading-relaxed">{detail}</p>
+        <p className="type-body-sm">{detail}</p>
       </div>
       <div className="absolute top-4 right-4 w-5 h-5 flex items-center justify-center">
         <svg
@@ -202,14 +202,10 @@ const About = () => {
                 About — Swetha Thanabalan
               </Annotation>
               <h1
-                className={`font-editorial font-normal text-gray-900 leading-[1.1] transition-all duration-1000 ease-out ${
+                className={`type-h1 transition-all duration-1000 ease-out ${
                   heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
-                style={{
-                  fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)',
-                  letterSpacing: '-0.02em',
-                  maxWidth: '16ch',
-                }}
+                style={{ maxWidth: '16ch' }}
               >
                 I didn't start in product design. I started behind a camera.
               </h1>
@@ -263,7 +259,7 @@ const About = () => {
             </div>
             <div className="md:col-span-8">
               <RevealBlock delay={0}>
-                <div className="space-y-8 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '58ch' }}>
+                <div className="space-y-8 type-body-lg" style={{ maxWidth: '58ch' }}>
                   <p className="text-xl text-gray-900 leading-relaxed font-medium">
                     As a commercial photographer, I spent years thinking about how products are presented, styled, and experienced visually.
                   </p>
@@ -274,7 +270,7 @@ const About = () => {
               </RevealBlock>
 
               <RevealBlock delay={100}>
-                <div className="space-y-8 text-lg text-gray-700 leading-relaxed mt-10" style={{ maxWidth: '58ch' }}>
+                <div className="space-y-8 type-body-lg mt-10" style={{ maxWidth: '58ch' }}>
                   <p>
                     Over time, my work naturally expanded into marketing and SEO, eventually leading me to work as an SEO research assistant at a fintech company. While analyzing competitors and improving search performance, I found myself becoming increasingly focused on the product itself, especially the interface.
                   </p>
@@ -369,7 +365,7 @@ const About = () => {
               </div>
               <div className="md:col-span-8">
                 <RevealBlock>
-                  <div className="space-y-8 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '58ch' }}>
+                  <div className="space-y-8 type-body-lg" style={{ maxWidth: '58ch' }}>
                     <p>
                       One moment that especially changed my perspective was during an internship conversation with my mentor. Instead of focusing only on polished outcomes, she encouraged me to talk about the rough patches — what failed, what changed, and why decisions were made throughout the process.
                     </p>

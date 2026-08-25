@@ -112,20 +112,20 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up">
-            <h1 className="font-editorial text-4xl md:text-5xl font-normal text-gray-900 mb-8 leading-tight">
+            <h1 className="type-h1 mb-8 leading-tight">
               Monster Walk: Redesigning the emotional re-entry experience
             </h1>
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="text-xl text-gray-700 leading-relaxed space-y-6 mb-16">
+            <div className="type-lead space-y-6 mb-16">
               <p>Monster Walk was losing users after 7 days of inactivity, and the return experience wasn't built for the emotional state of someone who'd lapsed. I joined during beta to fix it. What started as a screen redesign became a full behavioral re-entry strategy. Four of my recommendations shipped in the live product.</p>
             </div>
           </AnimatedSection>
 
           {/* Summary Block */}
           <AnimatedSection animation="fade-up" delay={150}>
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
+            <div className="flex flex-wrap items-center gap-6 type-body-sm mb-6">
               {/* Audio Summary */}
               <button
                 onClick={() => {
@@ -263,8 +263,8 @@ const TalofaCaseStudy = () => {
         {/* 2. BUSINESS CONTEXT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Business Context</h2>
-            <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+            <h2 className="type-h2 mb-6">Business Context</h2>
+            <div className="type-body-lg space-y-6">
               <p>Talofa Games built Monster Walk to gamify walking. Real steps power character growth, quests, and progression. Early engagement was strong. But when users lapsed for 7+ days, they weren't coming back.</p>
               <p>The Welcome Back screen was the only re-entry point. It wasn't designed for someone who felt guilty, uncertain, or afraid their progress was gone. That's where I started.</p>
               <p>During this time, the official Monster Walk trailer was released publicly while we were actively working on the beta product.</p>
@@ -280,14 +280,14 @@ const TalofaCaseStudy = () => {
                 title="Monster Walk Trailer"
               />
             </div>
-            <p className="text-sm text-gray-600 mt-4 italic">This work occurred during the beta phase prior to launch.</p>
+            <p className="type-body-sm mt-4 italic">This work occurred during the beta phase prior to launch.</p>
           </AnimatedSection>
         </section>
 
         {/* 3. THE CORE PROBLEM */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-8">Problem framing</h2>
+            <h2 className="type-h2 mb-8">Problem framing</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -323,8 +323,8 @@ const TalofaCaseStudy = () => {
         {/* CURRENT APP AUDIT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-4">Current App Audit</h2>
-            <p className="text-lg text-gray-700 mb-6">Before redesigning the re-engagement flow, I audited how the existing app handled lapsed users. This is what the experience looked like:</p>
+            <h2 className="type-h2 mb-4">Current App Audit</h2>
+            <p className="type-body-lg mb-6">Before redesigning the re-engagement flow, I audited how the existing app handled lapsed users. This is what the experience looked like:</p>
             <div className="flex justify-center overflow-hidden">
               <img
                 src="/Monsterwalk Audit.png"
@@ -339,41 +339,41 @@ const TalofaCaseStudy = () => {
         {/* 4. RESEARCH & DISCOVERY */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-8">User research & discovery</h2>
+            <h2 className="type-h2 mb-8">User research & discovery</h2>
           </AnimatedSection>
 
           <div className="space-y-6">
             <AnimatedSection animation="fade-up" delay={100}>
               <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Stakeholder Interviews</h3>
+                <h3 className="type-h3 mb-2">Stakeholder Interviews</h3>
                 <p className="text-gray-700">I ran stakeholder interviews with the founder, coaches, and gaming advisors to align on business goals and technical constraints before touching any design work.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Power User Conversations</h3>
+                <h3 className="type-h3 mb-2">Power User Conversations</h3>
                 <p className="text-gray-700">I interviewed users who had lapsed and returned, specifically asking about the moment they decided to come back. Every single one mentioned fearing their progress was gone. None of them had checked. The fear was irrational, but it was real and it was the barrier.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Gaming Psychology Input</h3>
+                <h3 className="type-h3 mb-2">Gaming Psychology Input</h3>
                 <p className="text-gray-700">I consulted gaming psychology experts on re-engagement patterns. Key finding: returning users need to feel welcomed, not evaluated. The first moment back should reduce cognitive load, not increase it.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
               <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Competitive Analysis</h3>
+                <h3 className="type-h3 mb-2">Competitive Analysis</h3>
                 <p className="text-gray-700">I audited how Duolingo, Pokémon GO, and Habitica handle lapsed user return flows. All three prioritize progress preservation messaging over feature highlights, a pattern that directly informed our direction.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={500}>
               <div className="border-l-4 border-indigo-600 pl-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Emotional Barrier Analysis</h3>
+                <h3 className="type-h3 mb-2">Emotional Barrier Analysis</h3>
                 <p className="text-gray-700">Across all research sessions, two emotions surfaced consistently: hesitation (am I behind?) and uncertainty (does my progress still matter?). These became the design brief.</p>
               </div>
             </AnimatedSection>
@@ -383,14 +383,14 @@ const TalofaCaseStudy = () => {
         {/* 5. CONCEPTS WE TESTED */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-8">Prototyping: three re-entry concepts</h2>
+            <h2 className="type-h2 mb-8">Prototyping: three re-entry concepts</h2>
           </AnimatedSection>
 
           <div className="space-y-12">
             <AnimatedSection animation="fade-up" delay={100}>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Daily Streak</h3>
-                <p className="text-lg text-gray-700 mb-6">Hypothesis: Reminding users of their streak history would reactivate the habit loop and lower the barrier to return. Designed around milestone celebration rather than gap punishment.</p>
+                <h3 className="type-h3 mb-4">Daily Streak</h3>
+                <p className="type-body-lg mb-6">Hypothesis: Reminding users of their streak history would reactivate the habit loop and lower the barrier to return. Designed around milestone celebration rather than gap punishment.</p>
                 <div className="flex justify-center">
                   <video
                     className="rounded-subtle max-w-full"
@@ -409,8 +409,8 @@ const TalofaCaseStudy = () => {
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Squad Leader Greeting</h3>
-                <p className="text-lg text-gray-700 mb-6">Hypothesis: A personal message from a Squad Leader (social accountability partner) would trigger belonging and reduce isolation. Designed to make returning feel like rejoining a team, not restarting alone.</p>
+                <h3 className="type-h3 mb-4">Squad Leader Greeting</h3>
+                <p className="type-body-lg mb-6">Hypothesis: A personal message from a Squad Leader (social accountability partner) would trigger belonging and reduce isolation. Designed to make returning feel like rejoining a team, not restarting alone.</p>
                 <div className="flex justify-center">
                   <video
                     className="rounded-subtle max-w-full"
@@ -429,8 +429,8 @@ const TalofaCaseStudy = () => {
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Mystery Monster</h3>
-                <p className="text-lg text-gray-700 mb-6">Hypothesis: Curiosity is a stronger motivator than guilt. Teasing a new monster encounter waiting for the user would pull them forward rather than push them back. This concept performed strongest in testing.</p>
+                <h3 className="type-h3 mb-4">Mystery Monster</h3>
+                <p className="type-body-lg mb-6">Hypothesis: Curiosity is a stronger motivator than guilt. Teasing a new monster encounter waiting for the user would pull them forward rather than push them back. This concept performed strongest in testing.</p>
                 <div className="flex justify-center">
                   <video
                     className="rounded-subtle max-w-full"
@@ -453,9 +453,9 @@ const TalofaCaseStudy = () => {
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-subtle p-8 border-l-4 border-yellow-500">
-              <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Product decision: choosing signal over comfort</h2>
+              <h2 className="type-h2 mb-6">Product decision: choosing signal over comfort</h2>
               
-              <div className="space-y-6 text-lg text-gray-700">
+              <div className="space-y-6 type-body-lg">
                 <p>My first instinct was to A/B test all three concepts. But I caught myself. With limited beta traffic and a 3-month window, A/B testing would only measure which concept users clicked. It wouldn't tell us why they felt ready to return. We'd optimize for the wrong signal.</p>
                 
                 <p>I told the founder A/B testing was the wrong call for this problem. Here's how I made the case:</p>
@@ -480,11 +480,11 @@ const TalofaCaseStudy = () => {
         {/* 7. TESTING & LEARNING */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Usability testing & findings</h2>
+            <h2 className="type-h2 mb-6">Usability testing & findings</h2>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="space-y-6 text-lg text-gray-700">
+            <div className="space-y-6 type-body-lg">
               <p>I ran moderated concept testing sessions with lapsed users, observing their emotional responses, listening for hesitation, and asking follow-up questions about the reasoning behind their reactions. Here's what the research showed:</p>
               
               <div className="bg-gray-50 rounded-subtle p-6 my-6">
@@ -517,11 +517,11 @@ const TalofaCaseStudy = () => {
         {/* 8. ITERATION */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Iteration</h2>
+            <h2 className="type-h2 mb-6">Iteration</h2>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="space-y-6 text-lg text-gray-700">
+            <div className="space-y-6 type-body-lg">
               <p>Based on what I heard in testing, I evolved the Mystery Monster concept away from functional clarity toward emotional reassurance. The copy shift was small. The strategic shift was significant.</p>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
@@ -543,8 +543,8 @@ const TalofaCaseStudy = () => {
         {/* 9. INTERACTIVE PROTOTYPE */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Interactive Prototype</h2>
-            <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+            <h2 className="type-h2 mb-6">Interactive Prototype</h2>
+            <div className="type-body-lg space-y-6">
               <p>To demonstrate the redesigned Monster Walk gameplay and retention mechanics, I built an interactive prototype that simulates the core player flow and progression loop.</p>
             </div>
           </AnimatedSection>
@@ -564,7 +564,7 @@ const TalofaCaseStudy = () => {
                   href="https://www.figma.com/proto/8tgWUX07X8n5GsiZauji9b/Monster-Walk-Hand-off---Swetha?node-id=7-6266&t=OMRrHCZ6XR6pLSbr-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=7%3A6266&show-proto-sidebar=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="inline-flex items-center gap-1 type-body-sm hover:text-indigo-600 transition-colors"
                 >
                   Open in Figma
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -579,11 +579,11 @@ const TalofaCaseStudy = () => {
         {/* 10. LAUNCH & REAL-WORLD IMPACT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Launch & Real-World Impact</h2>
+            <h2 className="type-h2 mb-6">Launch & Real-World Impact</h2>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="space-y-6 text-lg text-gray-700">
+            <div className="space-y-6 type-body-lg">
               <p>Two months after my internship ended, Monster Walk officially launched. I wasn't in the room, but four of my design recommendations were:</p>
               
               <ul className="space-y-3 ml-6">
@@ -615,11 +615,11 @@ const TalofaCaseStudy = () => {
         {/* 11. STRATEGIC IMPACT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Strategic Impact</h2>
+            <h2 className="type-h2 mb-6">Strategic Impact</h2>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="space-y-6 text-lg text-gray-700">
+            <div className="space-y-6 type-body-lg">
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-indigo-50 rounded-subtle p-6">
@@ -646,12 +646,12 @@ const TalofaCaseStudy = () => {
         {/* 12. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">How This Project Elevated My Product Thinking</h2>
+            <h2 className="type-h2 mb-6">How This Project Elevated My Product Thinking</h2>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8">
-              <div className="space-y-6 text-lg text-gray-700">
+              <div className="space-y-6 type-body-lg">
                 <p>Working in beta without clean data forced me to make confident recommendations from patterns, not proof. That's harder than it sounds, and more valuable than most portfolio projects show. The moment I told the founder that A/B testing was the wrong method for this problem, I stopped being a designer who executes and became one who thinks. That shift is what I'm bringing to every project from here.</p>
               </div>
             </div>

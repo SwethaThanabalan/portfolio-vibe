@@ -198,7 +198,7 @@ const SahayCaseStudy = () => {
           <SectionLabel>Problem framing</SectionLabel>
 
           <Reveal>
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">
+            <h2 className="type-h2 mb-6">
               Homeowners don't need another marketplace. They need confidence.
             </h2>
           </Reveal>
@@ -248,7 +248,7 @@ const SahayCaseStudy = () => {
           <SectionLabel>User research</SectionLabel>
 
             <Reveal>
-              <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">
+              <h2 className="type-h2 mb-6">
                 We talked to homeowners, renters, and shared housing participants.
               </h2>
             </Reveal>
@@ -256,7 +256,7 @@ const SahayCaseStudy = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <Reveal delay={50}>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Primary research</h3>
+                  <h3 className="type-h3 mb-4">Primary research</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Homeowner interviews</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Renter interviews</li>
@@ -267,7 +267,7 @@ const SahayCaseStudy = () => {
               </Reveal>
               <Reveal delay={100}>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Secondary research</h3>
+                  <h3 className="type-h3 mb-4">Secondary research</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Competitive analysis of service platforms</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> DIY resource ecosystem mapping</li>
@@ -313,14 +313,14 @@ const SahayCaseStudy = () => {
           </PullQuote>
 
           <Reveal>
-            <div className="space-y-2 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
+            <div className="space-y-2 type-body-lg" style={{ maxWidth: '60ch' }}>
               <p>
                 Initially, we believed the problem was: <em>"People need a better way to find service providers."</em>
               </p>
               <p>
                 Research proved that assumption wrong.
               </p>
-              <p className="text-xl text-gray-900 font-medium">
+              <p className="type-lead font-medium">
                 The real problem: "People need confidence before deciding whether they need a service provider at all."
               </p>
               <p>
@@ -357,13 +357,13 @@ const SahayCaseStudy = () => {
           <SectionLabel>Product strategy: AI direction</SectionLabel>
 
           <Reveal>
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+            <h2 className="type-h2 mb-8">
               What if homeowners could describe a problem and immediately receive guidance?
             </h2>
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
+            <div className="space-y-6 type-body-lg" style={{ maxWidth: '60ch' }}>
               <p>
                 As the project progressed, AI became increasingly central to how people solved problems in everyday life. Our team members were also working with AI in professional contexts, which informed our thinking about what was possible.
               </p>
@@ -385,7 +385,7 @@ const SahayCaseStudy = () => {
               ].map((item, i) => (
                 <div key={i} className="bg-gray-50 rounded-subtle p-5 border border-gray-100">
                   <p className="text-sm font-semibold text-gray-900 mb-1">{item.label}</p>
-                  <p className="text-sm text-gray-600">{item.desc}</p>
+                  <p className="type-body-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -406,13 +406,13 @@ const SahayCaseStudy = () => {
           <SectionLabel>Information architecture & user flow validation</SectionLabel>
 
           <Reveal>
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+            <h2 className="type-h2 mb-8">
               We validated flows before building screens.
             </h2>
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
+            <div className="space-y-6 type-body-lg" style={{ maxWidth: '60ch' }}>
               <p>
                 Because we planned to prototype AI-driven experiences, validating the information architecture and user flows before building became essential. We created detailed end-to-end flows and tested them with participants.
               </p>
@@ -421,7 +421,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={100}>
-            <ul className="mt-4 mb-8 space-y-3 text-lg text-gray-700 ml-1" style={{ maxWidth: '60ch' }}>
+            <ul className="mt-4 mb-8 space-y-3 ml-1 type-body-lg">
               <li className="flex items-start gap-3"><span className="text-green-600 mt-1">✓</span> Problem-first navigation: start with "what's wrong," not "find a pro"</li>
               <li className="flex items-start gap-3"><span className="text-green-600 mt-1">✓</span> Understanding before booking: diagnosis precedes action</li>
               <li className="flex items-start gap-3"><span className="text-green-600 mt-1">✓</span> Guided decision making: the system helps users decide, not just presents options</li>
@@ -454,7 +454,7 @@ const SahayCaseStudy = () => {
             <SectionLabel>Design principles</SectionLabel>
 
             <Reveal>
-              <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">
+              <h2 className="type-h2 mb-6">
                 Every design decision was guided by three principles.
               </h2>
             </Reveal>
@@ -463,22 +463,22 @@ const SahayCaseStudy = () => {
               <Reveal delay={50}>
                 <div className="bg-white rounded-subtle p-6 border border-gray-200 h-full">
                   <div className="text-2xl mb-3">🧭</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Confidence first</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">Every interaction should increase the user's understanding and reduce anxiety before asking them to take action or spend money.</p>
+                  <h3 className="type-h3 mb-2">Confidence first</h3>
+                  <p className="type-body-sm">Every interaction should increase the user's understanding and reduce anxiety before asking them to take action or spend money.</p>
                 </div>
               </Reveal>
               <Reveal delay={100}>
                 <div className="bg-white rounded-subtle p-6 border border-gray-200 h-full">
                   <div className="text-2xl mb-3">🤝</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Companion, not tool</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">The product should feel like a knowledgeable friend, conversational, empathetic, and always oriented toward the user's best interest.</p>
+                  <h3 className="type-h3 mb-2">Companion, not tool</h3>
+                  <p className="type-body-sm">The product should feel like a knowledgeable friend, conversational, empathetic, and always oriented toward the user's best interest.</p>
                 </div>
               </Reveal>
               <Reveal delay={150}>
                 <div className="bg-white rounded-subtle p-6 border border-gray-200 h-full">
                   <div className="text-2xl mb-3">⚖️</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">DIY + Pro, not either/or</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">Never force a user down one path. Present both options with clear guidance on when each makes sense.</p>
+                  <h3 className="type-h3 mb-2">DIY + Pro, not either/or</h3>
+                  <p className="type-body-sm">Never force a user down one path. Present both options with clear guidance on when each makes sense.</p>
                 </div>
               </Reveal>
             </div>
@@ -493,10 +493,10 @@ const SahayCaseStudy = () => {
           <SectionLabel>High-fidelity design & prototyping</SectionLabel>
 
           <Reveal>
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">
+            <h2 className="type-h2 mb-6">
               Final Solution
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8" style={{ maxWidth: '60ch' }}>
+            <p className="type-body-lg mb-8" style={{ maxWidth: '60ch' }}>
               The interactive prototype demonstrates the full Sahay experience, from onboarding through AI diagnosis, DIY guidance, and professional booking.
             </p>
           </Reveal>
@@ -523,8 +523,8 @@ const SahayCaseStudy = () => {
           {/* Decision 1: Onboarding */}
           <Reveal>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Decision 01: Rethinking onboarding</h3>
-              <div className="space-y-4 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
+              <h3 className="type-h3 mb-4">Decision 01: Rethinking onboarding</h3>
+              <div className="space-y-4 type-body-lg" style={{ maxWidth: '60ch' }}>
                 <p>
                   Originally, we wanted to collect extensive homeowner information upfront, including home age, systems, past repairs, and appliance inventory. Testing revealed this created too much friction. Users abandoned or rushed through it.
                 </p>
@@ -535,11 +535,11 @@ const SahayCaseStudy = () => {
               <div className="grid md:grid-cols-2 gap-4 mt-8">
                 <div className="bg-red-50 rounded-subtle p-5">
                   <p className="text-xs font-semibold text-red-700 mb-2">Before</p>
-                  <p className="text-sm text-gray-700">Long questionnaire upfront → high drop-off</p>
+                  <p className="type-body-sm">Long questionnaire upfront → high drop-off</p>
                 </div>
                 <div className="bg-green-50 rounded-subtle p-5">
                   <p className="text-xs font-semibold text-green-700 mb-2">After</p>
-                  <p className="text-sm text-gray-700">Minimal input → AI-generated home summary → progressive detail</p>
+                  <p className="type-body-sm">Minimal input → AI-generated home summary → progressive detail</p>
                 </div>
               </div>
             </div>
@@ -548,8 +548,8 @@ const SahayCaseStudy = () => {
           {/* Decision 2: MyHome Dashboard */}
           <Reveal>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Decision 02: MyHome dashboard</h3>
-              <div className="space-y-4 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
+              <h3 className="type-h3 mb-4">Decision 02: MyHome dashboard</h3>
+              <div className="space-y-4 type-body-lg" style={{ maxWidth: '60ch' }}>
                 <p>
                   I designed the MyHome experience as a central hub that felt useful immediately, not a static profile page, but a personalized home companion. The dashboard surfaces relevant maintenance reminders, AI-generated insights about the home, and quick access to diagnosis.
                 </p>
@@ -565,8 +565,8 @@ const SahayCaseStudy = () => {
           {/* Decision 3: AI Home Summary */}
           <Reveal>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Decision 03: AI-generated home summary</h3>
-              <div className="space-y-4 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
+              <h3 className="type-h3 mb-4">Decision 03: AI-generated home summary</h3>
+              <div className="space-y-4 type-body-lg" style={{ maxWidth: '60ch' }}>
                 <p>
                   One of my key design contributions was introducing AI-generated home summaries. Instead of asking users to manually document everything, the system synthesizes onboarding data, past interactions, and home details into an intelligent overview.
                 </p>
@@ -583,8 +583,8 @@ const SahayCaseStudy = () => {
           {/* Decision 4: DIY Experience: The Story */}
           <Reveal>
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Decision 04: Advocating for DIY guidance</h3>
-              <div className="space-y-4 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
+              <h3 className="type-h3 mb-4">Decision 04: Advocating for DIY guidance</h3>
+              <div className="space-y-4 type-body-lg" style={{ maxWidth: '60ch' }}>
                 <p>
                   This became one of the most important stories in the project.
                 </p>
@@ -618,7 +618,7 @@ const SahayCaseStudy = () => {
             <SectionLabel>My contributions</SectionLabel>
 
             <Reveal>
-              <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">
+              <h2 className="type-h2 mb-6">
                 What I personally owned and drove.
               </h2>
             </Reveal>
@@ -626,7 +626,7 @@ const SahayCaseStudy = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <Reveal delay={50}>
                 <div className="space-y-6">
-                  <h3 className="text-lg font-semibold text-gray-900">Strategy & Research</h3>
+                  <h3 className="type-h3">Strategy & Research</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Initiated the project from personal insight</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Recruited and assembled the team</li>
@@ -638,7 +638,7 @@ const SahayCaseStudy = () => {
               </Reveal>
               <Reveal delay={100}>
                 <div className="space-y-6">
-                  <h3 className="text-lg font-semibold text-gray-900">Design & Validation</h3>
+                  <h3 className="type-h3">Design & Validation</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Designed the onboarding experience</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Designed the MyHome dashboard</li>
@@ -661,14 +661,14 @@ const SahayCaseStudy = () => {
           <SectionLabel>Usability testing</SectionLabel>
 
           <Reveal>
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+            <h2 className="type-h2 mb-8">
               Users didn't call it a maintenance app.<br/>
               They called it a home partner.
             </h2>
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed mb-6" style={{ maxWidth: '60ch' }}>
+            <div className="space-y-4 type-body-lg mb-6" style={{ maxWidth: '60ch' }}>
               <p>
                 Across testing sessions, participants responded positively to AI document summaries, the home maintenance log, conversational AI, and the integrated DIY + professional support model.
               </p>
@@ -709,13 +709,13 @@ const SahayCaseStudy = () => {
           <SectionLabel>Reflection</SectionLabel>
 
           <Reveal>
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+            <h2 className="type-h2 mb-8">
               What I learned about AI product design.
             </h2>
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
+            <div className="space-y-6 type-body-lg" style={{ maxWidth: '60ch' }}>
               <p>
                 One of the most surprising learnings was that users perceived Sahay as a home companion, not a maintenance platform. They were responding to the broader vision of the product rather than the actual AI capabilities.
               </p>
@@ -731,7 +731,7 @@ const SahayCaseStudy = () => {
 
           <Reveal delay={100}>
             <div className="mt-10">
-              <h3 className="text-lg font-semibold text-gray-900 mb-6">If I continued this project, I would:</h3>
+              <h3 className="type-h3 mb-6">If I continued this project, I would:</h3>
               <ul className="space-y-3 text-gray-700" style={{ maxWidth: '60ch' }}>
                 <li className="flex items-start gap-3"><span className="text-gray-400">01</span> Conduct deeper validation of AI trust patterns</li>
                 <li className="flex items-start gap-3"><span className="text-gray-400">02</span> Test how users respond when AI is wrong vs. uncertain</li>

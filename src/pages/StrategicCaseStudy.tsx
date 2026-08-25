@@ -129,7 +129,7 @@ const StrategicCaseStudy = () => {
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up">
-            <h1 className="font-editorial text-4xl md:text-5xl font-normal text-gray-900 mb-6 leading-tight">
+            <h1 className="type-h1 mb-6 leading-tight">
               {project.title}
             </h1>
             {/* Context note for academic projects */}
@@ -141,7 +141,7 @@ const StrategicCaseStudy = () => {
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="text-xl text-gray-700 leading-relaxed space-y-6 mb-16">
+            <div className="type-lead space-y-6 mb-16">
               {project.openingHook?.split('\n\n').map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
@@ -150,7 +150,7 @@ const StrategicCaseStudy = () => {
 
           {/* Recruiter Utilities */}
           <AnimatedSection animation="fade-up" delay={150}>
-            <div className="flex flex-wrap items-center gap-6  text-sm text-gray-600">
+            <div className="flex flex-wrap items-center gap-6  type-body-sm">
               {/* Audio Summary */}
               <button
                 onClick={() => {
@@ -337,7 +337,7 @@ const StrategicCaseStudy = () => {
                   // Full content with flip cards for SEPTA project
                   <div>
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">Problems</h2>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                    <p className="type-body-lg mb-8">
                       Through user interviews and testing, I uncovered something deeper than usability issues. People didn't just find the app frustrating. They didn't trust it.
                     </p>
 
@@ -361,7 +361,7 @@ const StrategicCaseStudy = () => {
                       />
                     </div>
 
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    <p className="type-body-lg mb-6">
                       <b>The insight that hit hardest: </b>Every single user used Google Maps alongside SEPTA. Not by choice, by necessity. The app didn't have an integrated map, so planning a trip meant bouncing between two apps.
                         <i>This wasn't just a missing feature. It was a signal that the app wasn't designed around how people actually plan trips.</i>
                     </p>
@@ -386,7 +386,7 @@ const StrategicCaseStudy = () => {
                     <div className="text-sm font-semibold text-indigo-600 mb-2">
                       {insight.activity}
                     </div>
-                    <div className="text-lg font-semibold text-gray-900 mb-2">
+                    <div className="type-h3 mb-2">
                       → {insight.insight}
                     </div>
                     <div className="text-gray-600">
@@ -404,7 +404,7 @@ const StrategicCaseStudy = () => {
           <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">{project.strategicDecision.title}</h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">{project.strategicDecision.context}</p>
+              <p className="type-body-lg mb-6">{project.strategicDecision.context}</p>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={100}>
@@ -456,7 +456,7 @@ const StrategicCaseStudy = () => {
           <section key={index} className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">{decision.title}</h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">{decision.context}</p>
+              <p className="type-body-lg mb-6">{decision.context}</p>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={100}>
@@ -591,8 +591,8 @@ const StrategicCaseStudy = () => {
             {project.outcome.marketValidation && (
               <AnimatedSection animation="fade-up" delay={300}>
                 <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Market Validation</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">{project.outcome.marketValidation}</p>
+                  <h3 className="type-h3 mb-4">Market Validation</h3>
+                  <p className="type-body-lg">{project.outcome.marketValidation}</p>
                 </div>
               </AnimatedSection>
             )}
