@@ -297,64 +297,86 @@ const SahayCaseStudy = () => {
 
 
         {/* ═══════════════════════════════════════════
-            4b. RESEARCH SYNTHESIS ARTIFACTS
+            4b. RESEARCH SYNTHESIS
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Research synthesis</h2>
-            <p className="type-body-lg mb-8">
+            <p className="type-body-lg mb-10">
               Interview notes were grouped into recurring themes around maintenance behavior, urgency, trust, and DIY decision-making.
             </p>
           </AnimatedSection>
 
-          {/* 4-up overview */}
+          {/* Overview */}
           <AnimatedSection animation="fade-up" delay={100}>
-            <figure className="mb-12">
+            <figure className="mb-16">
               <img
                 src="/Overview of Sahay.png"
                 alt="Overview of four research synthesis themes: home maintenance experiences, desired features, attitudes toward apps, and DIY approach"
                 className="w-full border border-[var(--border)]"
                 loading="lazy"
               />
-              <figcaption className="type-caption mt-3">Four synthesis themes from user interviews. Expanded below.</figcaption>
+              <figcaption className="type-caption mt-3">Affinity mapping across four themes. Two findings drove the product direction.</figcaption>
             </figure>
           </AnimatedSection>
 
-          {/* Primary finding 1: Desired Features */}
+          {/* Finding 1 -> Decision -> Response */}
           <AnimatedSection animation="fade-up" delay={150}>
-            <div className="mb-12">
-              <h3 className="type-h3 mb-3">What homeowners want from a home repair app</h3>
-              <p className="type-body mb-6">
-                Users want symptom-based search, urgency indicators, estimated time and tools needed, and a clear "DIY vs. call a pro" decision flow. Trust depends on professional vetting and community feedback, not branding.
-              </p>
-              <figure>
+            <div className="mb-16">
+              <figure className="mb-8">
                 <img
                   src="/Research(1).jpg"
-                  alt="FigJam board: Desired Features in Home Repair App — interview notes grouped by urgency, trust, feature requests, and dealbreakers"
+                  alt="FigJam board: Desired Features in Home Repair App — notes grouped by urgency, trust, feature requests, and dealbreakers"
                   className="w-full border border-[var(--border)]"
                   loading="lazy"
                 />
-                <figcaption className="type-caption mt-3">Desired Features in Home Repair App. Sticky notes from user interviews grouped by theme.</figcaption>
+                <figcaption className="type-caption mt-3">Desired Features in Home Repair App. Sticky notes from interviews grouped by theme.</figcaption>
               </figure>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#c9a96e' }}>
+                  <p className="type-meta-label mb-2">Research finding</p>
+                  <p className="type-body">Participants repeatedly struggled to judge urgency, identify symptoms, and decide whether an issue required professional help.</p>
+                </div>
+                <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: 'var(--accent)' }}>
+                  <p className="type-meta-label mb-2">Product decision</p>
+                  <p className="type-body">Move issue understanding ahead of provider discovery. Help users assess the problem before spending money.</p>
+                </div>
+                <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#4a8c5c' }}>
+                  <p className="type-meta-label mb-2">Design response</p>
+                  <p className="type-body">AI-assisted issue assessment: describe symptoms, receive urgency guidance, then choose DIY instructions or professional support.</p>
+                </div>
+              </div>
             </div>
           </AnimatedSection>
 
-          {/* Primary finding 2: DIY Approach */}
+          {/* Finding 2 -> Decision -> Response */}
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="mb-12">
-              <h3 className="type-h3 mb-3">How people currently handle DIY repairs</h3>
-              <p className="type-body mb-6">
-                Users bounce between YouTube, Google, Reddit, and friends. They piece together information from multiple sources, often without knowing whether the issue is safe to attempt. The main frustration: not knowing if a problem is simple or requires a professional.
-              </p>
-              <figure>
+              <figure className="mb-8">
                 <img
                   src="/Research(2).jpg"
-                  alt="FigJam board: DIY Approach to Home Repairs — interview notes showing how users research problems across YouTube, Google, Reddit, and family"
+                  alt="FigJam board: DIY Approach to Home Repairs — notes showing how users research problems across YouTube, Google, Reddit, and family"
                   className="w-full border border-[var(--border)]"
                   loading="lazy"
                 />
-                <figcaption className="type-caption mt-3">DIY Approach to Home Repairs. Users rely on fragmented sources and often hesitate due to ambiguity about severity.</figcaption>
+                <figcaption className="type-caption mt-3">DIY Approach to Home Repairs. Users rely on fragmented sources and hesitate due to ambiguity about severity.</figcaption>
               </figure>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#c9a96e' }}>
+                  <p className="type-meta-label mb-2">Research finding</p>
+                  <p className="type-body">Users bounce between 5+ sources (YouTube, Google, Reddit, family) to diagnose one issue. No single resource reduces ambiguity.</p>
+                </div>
+                <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: 'var(--accent)' }}>
+                  <p className="type-meta-label mb-2">Product decision</p>
+                  <p className="type-body">Consolidate fragmented information into one guided flow. Reduce the number of sources a homeowner needs to consult.</p>
+                </div>
+                <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#4a8c5c' }}>
+                  <p className="type-meta-label mb-2">Design response</p>
+                  <p className="type-body">Conversational AI diagnosis with structured DIY guidance, replacing the multi-source research process with a single trusted companion.</p>
+                </div>
+              </div>
             </div>
           </AnimatedSection>
         </section>
