@@ -239,22 +239,22 @@ const TalofaCaseStudy = () => {
 
           {/* Metadata */}
           <AnimatedSection animation="fade-up" delay={200}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-gray-200">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 mt-8 border-t border-[var(--border)]">
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Role</div>
-                <div className="text-gray-900">Product Designer (Research → Strategy → Testing)</div>
+                <p className="type-meta-label">Role</p>
+                <p className="type-meta">Product Designer (Research → Strategy → Testing)</p>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Timeline</div>
-                <div className="text-gray-900">3 Months</div>
+                <p className="type-meta-label">Timeline</p>
+                <p className="type-meta">3 Months</p>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Stakeholders</div>
-                <div className="text-gray-900">Founder, Coaches, Power Users, Gaming Advisor</div>
+                <p className="type-meta-label">Stakeholders</p>
+                <p className="type-meta">Founder, Coaches, Power Users, Gaming Advisor</p>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Outcome</div>
-                <div className="text-gray-900">4 recommendations shipped in live product. Advocated for concept testing over A/B testing.</div>
+                <p className="type-meta-label">Outcome</p>
+                <p className="type-meta">4 recommendations shipped in live product. Advocated for concept testing over A/B testing.</p>
               </div>
             </div>
           </AnimatedSection>

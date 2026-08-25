@@ -120,7 +120,7 @@ function MetadataGrid() {
 
 function ContributionTag({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-block text-xs font-medium bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full">
+    <span className="inline-block type-tag border-b border-indigo-300 text-indigo-700 pb-px">
       {children}
     </span>
   )
@@ -209,7 +209,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-5 text-[15px] text-[var(--text-secondary)] leading-relaxed mb-8">
+            <div className="space-y-5 type-body mb-8">
               <p>
                 This project started from lived experience. Whenever something went wrong at home, I found myself bouncing between Google, YouTube, Reddit, and contractor sites with no way to know what was actually wrong, how serious it was, or who to trust.
               </p>
@@ -239,7 +239,7 @@ const SahayCaseStudy = () => {
           <Reveal delay={150}>
             <div className="decision-block">
               <p className="text-sm font-semibold text-gray-900 mb-1">My role</p>
-              <p className="text-[15px] text-[var(--text-secondary)]">I initiated the project, identified the opportunity, recruited two teammates, and led research strategy from day one.</p>
+              <p className="type-body">I initiated the project, identified the opportunity, recruited two teammates, and led research strategy from day one.</p>
             </div>
           </Reveal>
         </section>
