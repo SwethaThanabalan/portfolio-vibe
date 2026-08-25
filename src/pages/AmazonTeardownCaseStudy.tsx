@@ -52,7 +52,7 @@ const AmazonTeardownCaseStudy = () => {
       
       <main id="main-content" className="pt-32 pb-32">
         {/* 1. HERO SECTION */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-in">
             <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,10 +93,10 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 2. CONTEXT */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Context</h2>
-            <div className="bg-gray-50 rounded-xl p-8">
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Context</h2>
+            <div className="bg-gray-50 rounded-subtle p-8">
               <ul className="space-y-3 text-lg text-gray-700">
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-3 mt-1">•</span>
@@ -120,9 +120,9 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 3. THE CORE PROBLEM */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Core Problem</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">The Core Problem</h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>Address cannot be edited post-order.</p>
               <p>Only option: cancel and rebuild.</p>
@@ -141,9 +141,9 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 4. CURRENT FLOW BREAKDOWN */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Current Flow Breakdown</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Current Flow Breakdown</h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed mb-12">
               <p>The user must navigate through a multi-step cancellation process that fails to recognize their stated intent.</p>
             </div>
@@ -155,7 +155,7 @@ const AmazonTeardownCaseStudy = () => {
               <img 
                 src="/portfolioamazoncasestudy.jpg" 
                 alt="Amazon cancellation flow analysis diagram."
-                className="w-full rounded-lg shadow-lg"
+                className="w-full rounded-subtle shadow-lg"
               />
             </div>
             <p className="text-sm text-gray-600 italic text-center mb-12">
@@ -185,9 +185,9 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 5. UX ANALYSIS */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">UX Analysis</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">UX Analysis</h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>Applying Norman's Action Cycle reveals a breakdown at the <span className="font-semibold text-gray-900">Interpretation stage</span>.</p>
               
@@ -206,9 +206,9 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 6. ATTENTION TO DETAIL OBSERVATIONS */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Attention to Detail Observations</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Attention to Detail Observations</h2>
             <p className="text-lg text-gray-700 mb-8">Micro-interaction gaps that impact macro-level trust.</p>
           </AnimatedSection>
 
@@ -276,10 +276,10 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* 7. CUSTOMER-FIRST REFLECTION */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Customer-First Reflection</h2>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 space-y-6 text-lg text-gray-700 leading-relaxed">
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Customer-First Reflection</h2>
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8 space-y-6 text-lg text-gray-700 leading-relaxed">
               <p className="text-xl text-gray-900 font-semibold">
                 Strong systems should anticipate mistakes, not penalize them.
               </p>
@@ -317,7 +317,7 @@ const AmazonTeardownCaseStudy = () => {
         </section>
 
         {/* Back to projects */}
-        <section className="max-w-4xl mx-auto px-6">
+        <section className="layout-content">
           <div className="border-t border-gray-200 pt-12">
             <Link 
               to="/#work"

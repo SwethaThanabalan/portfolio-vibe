@@ -102,7 +102,7 @@ const AdultYouCaseStudy = () => {
       
       <main id="main-content" className="pt-32 pb-32">
         {/* 1. HERO SECTION */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-in">
             <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -193,7 +193,7 @@ const AdultYouCaseStudy = () => {
                 opacity: showAudioPlayer ? 1 : 0
               }}
             >
-              <div className="border border-gray-200 rounded-lg p-6 mb-6">
+              <div className="border border-gray-200 rounded-subtle p-6 mb-6">
                 <audio
                   ref={audioRef}
                   src="/SeptaProjectAudioSummary.mp3"
@@ -266,9 +266,9 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 2. BUSINESS CONTEXT */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Business Context</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Business Context</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>Adult You is a 0→1 gamified learning platform designed to teach adults essential life skills — from filing taxes to understanding home ownership — through interactive modules.</p>
               <p>There was no existing product. No design system. No documentation. No structured UX foundation.</p>
@@ -280,9 +280,9 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 3. THE CORE PROBLEM */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Problem framing</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Problem framing</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>The biggest ambiguity wasn't visual.</p>
               <p className="font-semibold text-gray-900">It was structural.</p>
@@ -298,7 +298,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mt-8 bg-red-50 rounded-xl p-6">
+            <div className="mt-8 bg-red-50 rounded-subtle p-6">
               <h3 className="font-semibold text-gray-900 mb-4">Without intervention, the product would have:</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
@@ -330,9 +330,9 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 4. DESIGNING UNDER AMBIGUITY */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Product discovery under ambiguity</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Product discovery under ambiguity</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>With no documentation to reference, I began by:</p>
             </div>
@@ -370,9 +370,9 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 5. AI-ASSISTED EXPLORATION */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-assisted design exploration</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">AI-assisted design exploration</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>During early module confusion — particularly around interaction patterns and call-to-action structure — I used Figma Make to rapidly explore:</p>
               <ul className="space-y-2 ml-6">
@@ -385,7 +385,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mt-8 bg-gray-50 rounded-xl p-6">
+            <div className="mt-8 bg-gray-50 rounded-subtle p-6">
               <h3 className="font-semibold text-gray-900 mb-4">It helped us:</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
@@ -412,16 +412,16 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 6. BUILDING THE DESIGN SYSTEM */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Design system</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Design system</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>Given the interactive nature of the modules and Unity integration, I proposed building a custom design system instead of adopting a generic one.</p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mt-8 bg-gray-50 rounded-xl p-6">
+            <div className="mt-8 bg-gray-50 rounded-subtle p-6">
               <h3 className="font-semibold text-gray-900 mb-4">The system included:</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
@@ -462,9 +462,9 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 7. INSTRUCTIONAL MODULE DESIGN */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Instructional Module Design</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Instructional Module Design</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>The modules teach real-world life skills such as:</p>
               <ul className="space-y-2 ml-6">
@@ -476,7 +476,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mt-8 bg-yellow-50 rounded-xl p-6 border-l-4 border-yellow-500">
+            <div className="mt-8 bg-yellow-50 rounded-subtle p-6 border-l-4 border-yellow-500">
               <h3 className="font-semibold text-gray-900 mb-4">The biggest UX challenge:</h3>
               <p className="text-lg text-gray-700">The CEO's initial vision was text-heavy.</p>
             </div>
@@ -486,19 +486,19 @@ const AdultYouCaseStudy = () => {
             <div className="mt-8">
               <p className="text-lg text-gray-700 mb-4">Through design exploration and testing, I pushed to:</p>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-green-50 rounded-lg p-6">
+                <div className="bg-green-50 rounded-subtle p-6">
                   <h4 className="font-semibold text-gray-900 mb-2">Reduce cognitive load</h4>
                   <p className="text-gray-700">Break down complex information into digestible chunks</p>
                 </div>
-                <div className="bg-green-50 rounded-lg p-6">
+                <div className="bg-green-50 rounded-subtle p-6">
                   <h4 className="font-semibold text-gray-900 mb-2">Break information into interactive segments</h4>
                   <p className="text-gray-700">Transform passive reading into active engagement</p>
                 </div>
-                <div className="bg-green-50 rounded-lg p-6">
+                <div className="bg-green-50 rounded-subtle p-6">
                   <h4 className="font-semibold text-gray-900 mb-2">Introduce gamified progression</h4>
                   <p className="text-gray-700">Add motivation through achievement and progress tracking</p>
                 </div>
-                <div className="bg-green-50 rounded-lg p-6">
+                <div className="bg-green-50 rounded-subtle p-6">
                   <h4 className="font-semibold text-gray-900 mb-2">Structure modules like playable experiences</h4>
                   <p className="text-gray-700">Design learning as an interactive journey, not a document</p>
                 </div>
@@ -514,9 +514,9 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 8. INTERACTIVE PROTOTYPE */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Interactive Prototype</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Interactive Prototype</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>To demonstrate the interaction model for the learning modules, I created a working prototype that simulates the core flow of the experience.</p>
               <p>Explore the prototype below to see how users progress through modules, interact with content, and receive feedback.</p>
@@ -525,7 +525,7 @@ const AdultYouCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 w-full">
-              <div className="relative w-full rounded-lg overflow-hidden shadow-lg border border-gray-200" style={{ paddingBottom: '56.25%' }}>
+              <div className="relative w-full rounded-subtle overflow-hidden shadow-lg border border-gray-200" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
                   src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRyfAu7aSShQ8trzu60ALNq%2FAdult-you%3Fnode-id%3D1198-3262%26t%3DrVEAhyuetwgQTnuX-0%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D1%253A3"
@@ -538,9 +538,9 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 9. TESTING & CEO COLLABORATION */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Testing & CEO Collaboration</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Testing & CEO Collaboration</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>We ran two testing rounds:</p>
               <ul className="space-y-2 ml-6">
@@ -551,7 +551,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mt-8 bg-indigo-50 rounded-xl p-6">
+            <div className="mt-8 bg-indigo-50 rounded-subtle p-6">
               <h3 className="font-semibold text-gray-900 mb-4">Key finding:</h3>
               <p className="text-lg text-gray-900">75% of participants said they would use an app like this.</p>
             </div>
@@ -578,7 +578,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={300}>
-            <div className="mt-8 bg-green-50 rounded-xl p-6">
+            <div className="mt-8 bg-green-50 rounded-subtle p-6">
               <p className="text-lg text-gray-900 font-semibold mb-4">Testing directly influenced direction:</p>
               <p className="text-gray-700">We reduced text and shifted toward interaction-first learning.</p>
             </div>
@@ -592,9 +592,9 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* 10. STRATEGIC IMPACT */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Strategic Impact</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">Strategic Impact</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>This project:</p>
             </div>
@@ -602,23 +602,23 @@ const AdultYouCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 grid md:grid-cols-2 gap-6">
-              <div className="bg-indigo-50 rounded-lg p-6">
+              <div className="bg-indigo-50 rounded-subtle p-6">
                 <h3 className="font-semibold text-gray-900 mb-3">Shifted modules from text-heavy to interaction-driven</h3>
                 <p className="text-gray-700">Transformed passive content into engaging, playable learning experiences</p>
               </div>
-              <div className="bg-indigo-50 rounded-lg p-6">
+              <div className="bg-indigo-50 rounded-subtle p-6">
                 <h3 className="font-semibold text-gray-900 mb-3">Introduced a scalable system integrated with Unity</h3>
                 <p className="text-gray-700">Created infrastructure that supports consistent development and future growth</p>
               </div>
-              <div className="bg-indigo-50 rounded-lg p-6">
+              <div className="bg-indigo-50 rounded-subtle p-6">
                 <h3 className="font-semibold text-gray-900 mb-3">Established research-backed validation before beta</h3>
                 <p className="text-gray-700">Provided evidence-based direction through structured user testing</p>
               </div>
-              <div className="bg-indigo-50 rounded-lg p-6">
+              <div className="bg-indigo-50 rounded-subtle p-6">
                 <h3 className="font-semibold text-gray-900 mb-3">Reduced ambiguity in early-stage product decisions</h3>
                 <p className="text-gray-700">Brought clarity and structure to undefined product territory</p>
               </div>
-              <div className="bg-indigo-50 rounded-lg p-6">
+              <div className="bg-indigo-50 rounded-subtle p-6">
                 <h3 className="font-semibold text-gray-900 mb-3">Strengthened CEO pitch clarity through visual prototypes</h3>
                 <p className="text-gray-700">Enabled stakeholder communication with tangible product demonstrations</p>
               </div>
@@ -626,20 +626,20 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={200}>
-            <div className="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
+            <div className="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8">
               <p className="text-xl text-gray-900 font-semibold">This was foundation work that shaped the alpha build.</p>
             </div>
           </AnimatedSection>
         </section>
 
         {/* 11. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">How This Project Elevated My Product Thinking</h2>
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">How This Project Elevated My Product Thinking</h2>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8">
               <div className="space-y-6 text-lg text-gray-700">
                 <p className="text-xl text-gray-900 font-semibold">Adult You forced me into full ownership.</p>
                 
@@ -672,7 +672,7 @@ const AdultYouCaseStudy = () => {
                   </div>
                 </div>
                 
-                <div className="mt-8 bg-yellow-50 rounded-lg p-6 border-l-4 border-yellow-500">
+                <div className="mt-8 bg-yellow-50 rounded-subtle p-6 border-l-4 border-yellow-500">
                   <p className="text-gray-900 font-semibold mb-2">If I were to start again:</p>
                   <p className="text-gray-700">I would formalize a PRD earlier to align scope before design. This would have reduced early-stage ambiguity and set clearer expectations.</p>
                 </div>
@@ -684,7 +684,7 @@ const AdultYouCaseStudy = () => {
         </section>
 
         {/* Back to projects */}
-        <section className="max-w-4xl mx-auto px-6">
+        <section className="layout-content">
           <div className="border-t border-gray-200 pt-12">
             <Link 
               to="/#work"
