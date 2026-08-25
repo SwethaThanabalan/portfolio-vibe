@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEO from '../components/SEO'
+import AnimatedSection from '../components/AnimatedSection'
 
 /* ═══════════════════════════════════════════════════════════════
    HOOKS
@@ -46,7 +47,7 @@ function Reveal({ children, delay = 0, className = '' }: { children: React.React
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} ${className}`}
+      className={`transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
@@ -81,7 +82,7 @@ function Callout({ children, variant = 'default' }: { children: React.ReactNode;
 function PullQuote({ children }: { children: React.ReactNode }) {
   const { ref, visible } = useReveal(0.2)
   return (
-    <div ref={ref} className={`py-10 transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+    <div ref={ref} className={`py-10 transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
       <blockquote className="type-quote">
         {children}
       </blockquote>
@@ -132,12 +133,9 @@ function ContributionTag({ children }: { children: React.ReactNode }) {
 
 const SahayCaseStudy = () => {
   const scrollProgress = useScrollProgress()
-  const [heroVisible, setHeroVisible] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    const t = setTimeout(() => setHeroVisible(true), 150)
-    return () => clearTimeout(t)
   }, [])
 
   return (
@@ -170,28 +168,30 @@ const SahayCaseStudy = () => {
             1. HERO
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
-          <div className={`transition-all duration-700 ${heroVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
+          <AnimatedSection animation="fade-in">
+            <Link to="/#work" className="inline-flex items-center text-[var(--muted)] hover:text-[var(--text)] mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               Back to projects
             </Link>
-          </div>
+          </AnimatedSection>
 
-          <h1
-            className={`type-h1 mb-8 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-          >
-            Sahay: Confidence before contractors
-          </h1>
+          <AnimatedSection animation="fade-up">
+            <h1 className="type-h1 mb-8">
+              Sahay: Confidence before contractors
+            </h1>
+          </AnimatedSection>
 
-          <div className={`transition-all duration-1000 delay-200 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <AnimatedSection animation="fade-up" delay={100}>
             <p className="type-lead mb-12">
               An AI-powered home maintenance companion that helps homeowners understand problems before deciding what to do next.
             </p>
-          </div>
+          </AnimatedSection>
 
-          <MetadataGrid />
+          <AnimatedSection animation="fade-up" delay={200}>
+            <MetadataGrid />
+          </AnimatedSection>
         </section>
 
 
