@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEO from '../components/SEO'
 
 /* ═══════════════════════════════════════════════════════════════
    HOOKS
@@ -140,9 +141,24 @@ const SahayCaseStudy = () => {
         <div className="h-full bg-indigo-600 transition-all duration-150" style={{ width: `${scrollProgress}%` }} />
       </div>
 
+      <SEO
+        title="Sahay | AI Home Maintenance Product Design Case Study | Swetha Thanabalan"
+        description="Product design case study: AI-powered home maintenance companion. User research, information architecture, interaction design, prototyping, and usability testing."
+        path="/project/sahay-home-companion"
+        type="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Sahay: AI-Assisted Home Maintenance Product",
+          "description": "AI-powered home maintenance companion helping homeowners understand problems before deciding what to do next.",
+          "author": { "@type": "Person", "name": "Swetha Thanabalan" },
+          "keywords": "Product Design, User Research, AI UX, Interaction Design, Information Architecture, Prototyping, Usability Testing"
+        }}
+      />
+
       <Navbar />
 
-      <main className="pt-32 pb-32">
+      <main id="main-content" className="pt-32 pb-32">
 
         {/* ═══════════════════════════════════════════
             1. HERO
@@ -218,7 +234,7 @@ const SahayCaseStudy = () => {
             3. THE PROBLEM
         ═══════════════════════════════════════════ */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
-          <SectionLabel>The problem</SectionLabel>
+          <SectionLabel>Problem framing</SectionLabel>
 
           <Reveal>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
@@ -257,7 +273,7 @@ const SahayCaseStudy = () => {
         ═══════════════════════════════════════════ */}
         <section className="relative py-8 mb-6" style={{ backgroundColor: '#fafaf9' }}>
           <div className="max-w-4xl mx-auto px-6">
-            <SectionLabel>Research process</SectionLabel>
+          <SectionLabel>User research</SectionLabel>
 
             <Reveal>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -320,7 +336,7 @@ const SahayCaseStudy = () => {
             5. THE TURNING POINT
         ═══════════════════════════════════════════ */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
-          <SectionLabel>The turning point</SectionLabel>
+          <SectionLabel>Research synthesis: the turning point</SectionLabel>
 
           <PullQuote>
             People don't need a better way to find contractors. They need confidence before deciding whether they need one.
@@ -503,7 +519,7 @@ const SahayCaseStudy = () => {
             9. KEY DESIGN DECISIONS
         ═══════════════════════════════════════════ */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
-          <SectionLabel>Interactive prototype</SectionLabel>
+          <SectionLabel>High-fidelity design & prototyping</SectionLabel>
 
           <Reveal>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -531,7 +547,7 @@ const SahayCaseStudy = () => {
 
 
         <section className="max-w-4xl mx-auto px-6 mb-6">
-          <SectionLabel>Key design decisions</SectionLabel>
+          <SectionLabel>Interaction design decisions</SectionLabel>
 
           {/* Decision 1: Onboarding */}
           <Reveal>

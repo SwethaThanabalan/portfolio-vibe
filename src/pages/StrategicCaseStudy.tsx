@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import AnimatedSection from '../components/AnimatedSection'
 import FlipCard from '../components/FlipCard'
+import SEO from '../components/SEO'
 import { projects } from '../data/projects'
 
 const StrategicCaseStudy = () => {
@@ -98,9 +99,24 @@ const StrategicCaseStudy = () => {
         />
       </div>
 
+      <SEO
+        title={`${project.title} | ${project.descriptor || project.category} Case Study | Swetha Thanabalan`}
+        description={project.description}
+        path={`/project/${project.id}`}
+        type="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": project.title,
+          "description": project.description,
+          "author": { "@type": "Person", "name": "Swetha Thanabalan" },
+          "keywords": (project.keywords || project.tools).join(', ')
+        }}
+      />
+
       <Navbar />
       
-      <main className="pt-32 pb-32">
+      <main id="main-content" className="pt-32 pb-32">
         {/* 1. OPENING HOOK */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-in">

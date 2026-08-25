@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import AnimatedSection from '../components/AnimatedSection'
+import SEO from '../components/SEO'
 
 const AdultYouCaseStudy = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -82,9 +83,24 @@ const AdultYouCaseStudy = () => {
         />
       </div>
 
+      <SEO
+        title="Adult You | Gamified Learning Product Design Case Study | Swetha Thanabalan"
+        description="End-to-end product design for a 0-to-1 gamified life skills platform. Design systems, prototyping, usability testing, and cross-functional collaboration with Unity developers."
+        path="/project/adult-you-platform"
+        type="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Adult You: Gamified Life Skills Platform",
+          "description": "0-to-1 product design for gamified life skills platform teaching adults essential real-world skills.",
+          "author": { "@type": "Person", "name": "Swetha Thanabalan" },
+          "keywords": "End-to-End Product Design, Design Systems, Prototyping, Usability Testing, Cross-Functional Collaboration, Gamification"
+        }}
+      />
+
       <Navbar />
       
-      <main className="pt-32 pb-32">
+      <main id="main-content" className="pt-32 pb-32">
         {/* 1. HERO SECTION */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-in">
@@ -266,7 +282,7 @@ const AdultYouCaseStudy = () => {
         {/* 3. THE CORE PROBLEM */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Core Problem</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Problem framing</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>The biggest ambiguity wasn't visual.</p>
               <p className="font-semibold text-gray-900">It was structural.</p>
@@ -316,7 +332,7 @@ const AdultYouCaseStudy = () => {
         {/* 4. DESIGNING UNDER AMBIGUITY */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Designing Under Ambiguity</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Product discovery under ambiguity</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>With no documentation to reference, I began by:</p>
             </div>
@@ -356,7 +372,7 @@ const AdultYouCaseStudy = () => {
         {/* 5. AI-ASSISTED EXPLORATION */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-Assisted Exploration (Figma Make)</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-assisted design exploration</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>During early module confusion — particularly around interaction patterns and call-to-action structure — I used Figma Make to rapidly explore:</p>
               <ul className="space-y-2 ml-6">
@@ -398,7 +414,7 @@ const AdultYouCaseStudy = () => {
         {/* 6. BUILDING THE DESIGN SYSTEM */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Building the Design System</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Design system</h2>
             <div className="text-lg text-gray-700 leading-relaxed space-y-6">
               <p>Given the interactive nature of the modules and Unity integration, I proposed building a custom design system instead of adopting a generic one.</p>
             </div>

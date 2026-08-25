@@ -29,6 +29,7 @@ const Footer = () => {
   return (
     <footer 
       id="footer-section"
+      aria-label="Site footer"
       className="relative border-t overflow-hidden"
       style={{ 
         backgroundColor: '#4338ca',

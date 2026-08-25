@@ -3,7 +3,7 @@ import RotatingWord from './RotatingWord'
 import InteractiveBlobField from './InteractiveBlobField'
 
 const Hero = () => {
-  const [strokeCount, setStrokeCount] = useState(0)
+  const [, setStrokeCount] = useState(0)
   const [penModeEnabled, setPenModeEnabled] = useState(false)
   const [isTouchDevice, setIsTouchDevice] = useState(false)
 
@@ -45,6 +45,9 @@ const Hero = () => {
       <div className="relative z-10 w-full flex-1 flex items-center pointer-events-none">
         <div className="max-w-[1200px] xl:max-w-[1320px] 2xl:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-20 w-full">
           <div className="text-center mx-auto" style={{ paddingTop: '80px' }}>
+            {/* Crawlable identity — visually hidden but readable by search engines and screen readers */}
+            <p className="sr-only">Swetha Thanabalan — Product Designer</p>
+
             {/* Main Headline */}
             <h1 
               className="font-bold text-neutral-900 mb-6 sm:mb-8 mx-auto"
@@ -58,15 +61,15 @@ const Hero = () => {
               <RotatingWord />
             </h1>
             
-            {/* Subline */}
+            {/* Subline — recruiter and crawler readable */}
             <p 
               className="text-neutral-700 leading-relaxed mb-10 sm:mb-12 mx-auto"
               style={{
                 fontSize: 'clamp(1.05rem, 1.2vw, 1.25rem)',
-                maxWidth: '600px'
+                maxWidth: '620px'
               }}
             >
-              Challenging ideas. Bringing structure to ambiguity. Designing with research and growth in mind.
+              Product Designer designing digital products through user research, interaction design, and rapid prototyping.
             </p>
             
             {/* CTAs - restore pointer events */}
@@ -95,7 +98,7 @@ const Hero = () => {
             {/* Micro-proof with stroke count and pen mode controls */}
             <div className="mb-6 pointer-events-auto">
               <p className="text-xs sm:text-sm text-neutral-500 mb-3">
-                Marketing background • Research-led • Systems mindset • Strokes: {strokeCount}
+                HCI-trained • Research-led • Visual storytelling background • AI-assisted workflows
               </p>
               
               {/* Touch device helper text */}

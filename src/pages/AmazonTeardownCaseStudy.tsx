@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import AnimatedSection from '../components/AnimatedSection'
+import SEO from '../components/SEO'
 
 const AmazonTeardownCaseStudy = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -32,9 +33,24 @@ const AmazonTeardownCaseStudy = () => {
         />
       </div>
 
+      <SEO
+        title="Amazon UX Teardown | Error Recovery Analysis | Swetha Thanabalan"
+        description="UX analysis of Amazon's order cancellation flow examining error recovery, interaction design, and customer experience during high-stakes checkout."
+        path="/project/amazon-cancellation-teardown"
+        type="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "UX Teardown of Amazon's Order Cancellation Flow",
+          "description": "Analysis of error recovery during high-stakes checkout examining interaction design and customer experience.",
+          "author": { "@type": "Person", "name": "Swetha Thanabalan" },
+          "keywords": "UX Analysis, Interaction Design, Error Recovery, Customer Experience"
+        }}
+      />
+
       <Navbar />
       
-      <main className="pt-32 pb-32">
+      <main id="main-content" className="pt-32 pb-32">
         {/* 1. HERO SECTION */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-in">

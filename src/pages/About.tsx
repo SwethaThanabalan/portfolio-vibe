@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEO from '../components/SEO'
 
 /* ═══════════════════════════════════════════════════════════════
    HOOKS
@@ -180,9 +181,14 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <SEO
+        title="About Swetha Thanabalan | Product Designer"
+        description="Product Designer with an HCI background, commercial photography experience, and expertise in user research, interaction design, design systems, and AI-assisted workflows."
+        path="/about"
+      />
       <Navbar />
 
-      <main className="pt-28 pb-32">
+      <main id="main-content" className="pt-28 pb-32">
 
         {/* ═══════════════════════════════════════════
             HERO — Immersive editorial opening

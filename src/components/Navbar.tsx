@@ -52,7 +52,15 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
+    <>
+      {/* Skip to content link for keyboard users */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-indigo-700 focus:rounded-md focus:shadow-lg focus:text-sm focus:font-medium"
+      >
+        Skip to content
+      </a>
+    <nav className="fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
       <div className="mx-auto px-6 md:px-8 py-5 flex justify-center" style={{ maxWidth: 'var(--max-width)' }}>
         {/* Desktop Navigation */}
         <div 
@@ -195,6 +203,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+    </>
   )
 }
 

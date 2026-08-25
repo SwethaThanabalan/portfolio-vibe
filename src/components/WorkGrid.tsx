@@ -5,11 +5,13 @@ const WorkGrid = () => {
   return (
     <section 
       id="work"
+      aria-labelledby="work-heading"
       className="py-20 md:py-32 px-6 md:px-8"
       style={{ maxWidth: 'var(--max-width)', margin: '0 auto', backgroundColor: 'var(--bg)' }}
     >
       {/* Section Heading */}
       <h2 
+        id="work-heading"
         className="text-4xl md:text-5xl font-semibold mb-12 md:mb-16"
         style={{ color: 'var(--text)' }}
       >

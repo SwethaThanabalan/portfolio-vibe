@@ -2,6 +2,8 @@ export interface Project {
   id: string;
   title: string;
   category: string;
+  descriptor?: string;
+  keywords?: string[];
   year: string;
   thumbnail: string;
   description: string;

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import AnimatedSection from '../components/AnimatedSection'
+import SEO from '../components/SEO'
 
 const TalofaCaseStudy = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -82,9 +83,23 @@ const TalofaCaseStudy = () => {
         />
       </div>
 
+      <SEO
+        title="Monster Walk | Mobile Game Product Design Case Study | Swetha Thanabalan"
+        description="Product design case study: behavioral re-entry strategy for a fitness gaming app. User research, concept testing, interaction design, and retention strategy."
+        path="/project/talofa-games-retention"
+        type="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Monster Walk Reengagement Strategy",
+          "description": "Behavioral re-entry strategy for fitness gaming app to address retention drop among lapsed users.",
+          "author": { "@type": "Person", "name": "Swetha Thanabalan" },
+          "keywords": "Product Design, User Research, A/B Testing, Interaction Design, Prototyping, Mobile UX, Concept Testing"
+        }}
+      />
+
       <Navbar />
-      
-      <main className="pt-32 pb-32">
+      <main id="main-content" className="pt-32 pb-32">
         {/* 1. HERO SECTION */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-in">
@@ -272,7 +287,7 @@ const TalofaCaseStudy = () => {
         {/* 3. THE CORE PROBLEM */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">The Core Problem</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Problem framing</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -324,7 +339,7 @@ const TalofaCaseStudy = () => {
         {/* 4. RESEARCH & DISCOVERY */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Research & Discovery</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">User research & discovery</h2>
           </AnimatedSection>
 
           <div className="space-y-6">
@@ -368,7 +383,7 @@ const TalofaCaseStudy = () => {
         {/* 5. CONCEPTS WE TESTED */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Three re-entry concepts I designed and tested</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Prototyping: three re-entry concepts</h2>
           </AnimatedSection>
 
           <div className="space-y-12">
@@ -438,7 +453,7 @@ const TalofaCaseStudy = () => {
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-8 border-l-4 border-yellow-500">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">The Pivot: Choosing Signal Over Comfort</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Product decision: choosing signal over comfort</h2>
               
               <div className="space-y-6 text-lg text-gray-700">
                 <p>My first instinct was to A/B test all three concepts. But I caught myself. With limited beta traffic and a 3-month window, A/B testing would only measure which concept users clicked. It wouldn't tell us why they felt ready to return. We'd optimize for the wrong signal.</p>
@@ -465,7 +480,7 @@ const TalofaCaseStudy = () => {
         {/* 7. TESTING & LEARNING */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Testing & Learning</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Usability testing & findings</h2>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
