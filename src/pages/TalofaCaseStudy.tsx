@@ -614,6 +614,59 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
         </section>
 
+        {/* FROM CONCEPT TO LIVE GAME */}
+        <section className="layout-content mb-16">
+          <AnimatedSection animation="fade-up">
+            <h2 className="type-h2 mb-4">From concept to live game</h2>
+            <p className="type-body-lg mb-10">Several recommendations moved beyond prototype and into the live game, including expanded quest guidance and more contextual monster interactions.</p>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={100}>
+            <figure className="mb-12">
+              <img
+                src="/IMG_9275.PNG"
+                alt="Live Monster Walk Daily Quests implementation"
+                className="w-full border border-[var(--border)]"
+                loading="lazy"
+              />
+              <div className="mt-4">
+                <p className="type-body font-medium mb-1">Quest guidance in context</p>
+                <p className="type-body-sm">Daily quests were surfaced directly within the gameplay environment, giving returning players clearer direction on what to do next.</p>
+              </div>
+            </figure>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={150}>
+            <figure className="mb-12">
+              <img
+                src="/IMG_9276.PNG"
+                alt="Live Monster Walk map with contextual monster interaction"
+                className="w-full border border-[var(--border)]"
+                loading="lazy"
+              />
+              <div className="mt-4">
+                <p className="type-body font-medium mb-1">More contextual monster interaction</p>
+                <p className="type-body-sm">Monster dialogue and in-world interactions added more personality and context to the gameplay experience.</p>
+              </div>
+            </figure>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={200}>
+            <figure className="mb-4" style={{ maxWidth: '480px' }}>
+              <img
+                src="/IMG_8534.PNG"
+                alt="Live Monster Walk Kyros character dialogue implementation"
+                className="w-full border border-[var(--border)]"
+                loading="lazy"
+              />
+              <div className="mt-4">
+                <p className="type-body font-medium mb-1">Character-led guidance</p>
+                <p className="type-body-sm">Narrative moments used Kyros to guide the player while staying inside the game world.</p>
+              </div>
+            </figure>
+          </AnimatedSection>
+        </section>
+
         {/* 10. LAUNCH & REAL-WORLD IMPACT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
