@@ -49,26 +49,16 @@ const Hero = () => {
             <p className="sr-only">Swetha Thanabalan — Product Designer</p>
 
             {/* Main Headline */}
-            <h1 
-              className="font-editorial font-normal text-neutral-900 mb-6 sm:mb-8 mx-auto"
-              style={{
-                fontSize: 'var(--text-display)',
-                lineHeight: '1.05',
-                maxWidth: '14ch'
-              }}
+            <h1
+              className="type-display mx-auto mb-6 sm:mb-8"
+              style={{ maxWidth: '14ch' }}
             >
               Good products aren't built on{' '}
               <RotatingWord />
             </h1>
             
             {/* Subline — recruiter and crawler readable */}
-            <p 
-              className="text-neutral-700 leading-relaxed mb-10 sm:mb-12 mx-auto"
-              style={{
-                fontSize: 'clamp(1.05rem, 1.2vw, 1.25rem)',
-                maxWidth: '620px'
-              }}
-            >
+            <p className="type-lead mb-10 sm:mb-12 mx-auto text-center">
               Product Designer designing digital products through user research, interaction design, and rapid prototyping.
             </p>
             

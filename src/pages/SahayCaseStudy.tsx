@@ -57,7 +57,7 @@ function Reveal({ children, delay = 0, className = '' }: { children: React.React
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <Reveal>
-      <p className="text-xs font-semibold text-gray-400 uppercase tracking-[0.18em] mb-6">{children}</p>
+      <p className="type-eyebrow mb-4">{children}</p>
     </Reveal>
   )
 }
@@ -77,10 +77,7 @@ function PullQuote({ children }: { children: React.ReactNode }) {
   const { ref, visible } = useReveal(0.2)
   return (
     <div ref={ref} className={`py-10 transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-      <blockquote
-        className="font-editorial font-normal text-gray-900"
-        style={{ fontSize: 'clamp(1.5rem, 2.8vw, 2.2rem)', lineHeight: '1.3', maxWidth: '24ch', letterSpacing: '-0.015em' }}
-      >
+      <blockquote className="type-quote">
         {children}
       </blockquote>
     </div>
@@ -90,27 +87,27 @@ function PullQuote({ children }: { children: React.ReactNode }) {
 function MetadataGrid() {
   return (
     <Reveal delay={200}>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-gray-200">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 mt-8 border-t border-[var(--border)]">
         <div>
-          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Role</div>
-          <div className="text-gray-900 text-sm">Product Designer & Researcher (initiated project, led research strategy)</div>
+          <p className="type-meta-label">Role</p>
+          <p className="type-meta">Product Designer & Researcher (initiated project, led research strategy)</p>
         </div>
         <div>
-          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Duration</div>
-          <div className="text-gray-900 text-sm">2 Academic Quarters</div>
+          <p className="type-meta-label">Duration</p>
+          <p className="type-meta">2 Academic Quarters</p>
         </div>
         <div>
-          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Team</div>
-          <div className="text-gray-900 text-sm">3 People (I led research and design direction)</div>
+          <p className="type-meta-label">Team</p>
+          <p className="type-meta">3 People (I led research and design direction)</p>
         </div>
         <div>
-          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Tools</div>
-          <div className="text-gray-900 text-sm">Figma, FigJam, Figma Make, Google Forms</div>
+          <p className="type-meta-label">Tools</p>
+          <p className="type-meta">Figma, FigJam, Figma Make, Google Forms</p>
         </div>
       </div>
-      <div className="mt-6 pt-6 border-t border-gray-100">
-        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Key outcome</div>
-        <div className="text-gray-900 text-sm">Research revealed homeowners need confidence, not contractor listings. Pivoted product from marketplace to AI guidance companion. Validated through information architecture testing and user flow validation.</div>
+      <div className="mt-5 pt-5 border-t border-[var(--border-subtle)]">
+        <p className="type-meta-label">Key outcome</p>
+        <p className="type-meta">Research revealed homeowners need confidence, not contractor listings. Pivoted product from marketplace to AI guidance companion. Validated through information architecture testing and user flow validation.</p>
       </div>
     </Reveal>
   )
@@ -178,14 +175,14 @@ const SahayCaseStudy = () => {
           </div>
 
           <h1
-            className={`font-editorial font-normal text-gray-900 leading-[1.12] mb-6 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.4rem)', letterSpacing: '-0.02em', maxWidth: '20ch' }}
+            className={`type-h1 mb-4 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ maxWidth: '20ch' }}
           >
             Sahay: Confidence before contractors
           </h1>
 
           <div className={`transition-all duration-1000 delay-200 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-[55ch] mb-8">
+            <p className="type-lead mb-8">
               An AI-powered home maintenance companion that helps homeowners understand problems before deciding what to do next.
             </p>
           </div>

@@ -11,8 +11,7 @@ const WorkGrid = () => {
       {/* Section Heading — editorial serif */}
       <h2
         id="work-heading"
-        className="font-editorial text-3xl md:text-4xl font-normal mb-14 md:mb-16"
-        style={{ color: 'var(--text)' }}
+        className="type-h1 mb-14 md:mb-16"
       >
         Selected Work
       </h2>

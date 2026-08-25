@@ -26,8 +26,7 @@ const Capabilities = () => {
     >
       <h2
         id="capabilities-heading"
-        className="font-editorial text-2xl md:text-3xl font-normal mb-12"
-        style={{ color: 'var(--text)' }}
+        className="type-h2 mb-12"
       >
         Capabilities
       </h2>
@@ -35,16 +34,12 @@ const Capabilities = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
         {capabilities.map((group) => (
           <div key={group.label}>
-            <h3 className="section-label mb-4">
+            <h3 className="type-eyebrow mb-4">
               {group.label}
             </h3>
             <ul className="space-y-2">
               {group.items.map((item) => (
-                <li
-                  key={item}
-                  className="text-sm leading-relaxed"
-                  style={{ color: 'var(--text-secondary)' }}
-                >
+                <li key={item} className="type-body-sm">
                   {item}
                 </li>
               ))}

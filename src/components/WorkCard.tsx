@@ -24,43 +24,30 @@ const WorkCard = ({ project }: WorkCardProps) => {
       <div>
         {/* Descriptor */}
         {project.descriptor && (
-          <p className="section-label mb-2">
-            {project.descriptor}
-          </p>
+          <p className="type-eyebrow mb-2">{project.descriptor}</p>
         )}
 
-        {/* Title — editorial serif */}
-        <h3
-          className="font-editorial text-2xl md:text-[1.75rem] font-normal mb-3 transition-colors duration-200 group-hover:text-[var(--accent)]"
-          style={{ letterSpacing: '-0.02em', lineHeight: '1.2' }}
-        >
+        {/* Title */}
+        <h3 className="type-h2 mb-3 transition-colors duration-200 group-hover:text-[var(--accent)]">
           {project.title}
         </h3>
 
         {/* Description */}
-        <p
-          className="text-[15px] leading-relaxed mb-3"
-          style={{ color: 'var(--text-secondary)', maxWidth: '48ch' }}
-        >
+        <p className="type-body mb-3">
           {project.description}
         </p>
 
-        {/* Outcome — quiet accent */}
+        {/* Outcome */}
         {project.result && (
-          <p
-            className="text-sm font-medium"
-            style={{ color: 'var(--accent)' }}
-          >
+          <p className="type-body-sm font-medium" style={{ color: 'var(--accent)' }}>
             {project.result}
           </p>
         )}
 
-        {/* Tags — subtle underlined text, not pills */}
+        {/* Tags */}
         <div className="flex flex-wrap gap-x-4 gap-y-1 mt-4">
           {(project.keywords || project.tools).slice(0, 4).map((tag) => (
-            <span key={tag} className="tag">
-              {tag}
-            </span>
+            <span key={tag} className="tag">{tag}</span>
           ))}
         </div>
       </div>

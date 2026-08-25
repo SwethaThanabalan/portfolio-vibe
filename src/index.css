@@ -3,68 +3,159 @@
 @tailwind utilities;
 
 /* ═══════════════════════════════════════════════════════════════
-   DESIGN SYSTEM TOKENS
-   Editorial portfolio system: photography-influenced, restrained,
-   research-led case study hierarchy
+   DESIGN SYSTEM
+   Editorial portfolio: photography-influenced, research-led
 ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  /* ─── Color: Roles ─── */
+  /* ─── Color ─── */
   --bg: #fafaf9;
-  --surface: #f5f4f0;        /* warm off-white for research/context sections */
+  --surface: #f5f4f0;
   --text: #1a1a1a;
   --text-secondary: #4a4a4a;
+  --text-tertiary: #6b6b6b;
   --muted: #71717a;
   --border: #e5e4e0;
   --border-subtle: #eeede9;
   --card: #ffffff;
   --accent: #4338ca;
   --accent-hover: #3730a3;
-  --finding: #f8f5ee;        /* warm cream for research findings */
-  --decision: #f0f3f9;       /* cool blue-gray for design decisions */
-  --outcome: #f0f7f0;        /* quiet green for outcomes */
+  --finding: #f8f5ee;
+  --decision: #f0f3f9;
+  --outcome: #f0f7f0;
 
-  /* ─── Typography: Scale ─── */
+  /* ─── Font stacks ─── */
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-heading: 'Fraunces', 'Georgia', serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  --text-xs: 0.75rem;        /* 12px — captions, metadata labels */
-  --text-sm: 0.875rem;       /* 14px — annotations, tags */
-  --text-base: 1rem;         /* 16px — body */
-  --text-lg: 1.125rem;       /* 18px — lead body */
-  --text-xl: 1.25rem;        /* 20px — subsection intro */
-  --text-2xl: 1.5rem;        /* 24px — subsection heading */
-  --text-3xl: 1.875rem;      /* 30px — section heading */
-  --text-4xl: 2.25rem;       /* 36px — page heading */
-  --text-5xl: 3rem;          /* 48px — case study title */
-  --text-display: clamp(3.2rem, 6vw, 5.5rem); /* hero display */
+  /* ─── Typography: Role tokens ───
+     Each role defines: size, weight, line-height, letter-spacing, color, font-family
+     Mobile-first values. Desktop overrides via media query below.
+  */
 
-  /* ─── Spacing: Vertical rhythm ─── */
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-10: 2.5rem;   /* 40px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-20: 5rem;     /* 80px */
-  --space-24: 6rem;     /* 96px */
-  --space-32: 8rem;     /* 128px */
+  /* Display: hero headline only */
+  --type-display-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  --type-display-weight: 400;
+  --type-display-lh: 1.08;
+  --type-display-ls: -0.025em;
 
-  /* ─── Layout: Content widths ─── */
-  --w-reading: 640px;    /* narrow reading column */
-  --w-content: 820px;    /* standard case study content */
-  --w-wide: 1080px;      /* wide visual/editorial */
-  --w-max: 1200px;       /* page max */
+  /* H1: case study title */
+  --type-h1-size: clamp(2rem, 4vw, 2.75rem);
+  --type-h1-weight: 400;
+  --type-h1-lh: 1.15;
+  --type-h1-ls: -0.02em;
 
-  /* ─── Radius: Restrained scale ─── */
-  --radius-0: 0;         /* editorial images, full-bleed */
-  --radius-sm: 3px;      /* subtle, metadata */
-  --radius-md: 6px;      /* interactive elements, cards */
-  --radius-lg: 8px;      /* larger containers when needed */
+  /* H2: major section heading */
+  --type-h2-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  --type-h2-weight: 400;
+  --type-h2-lh: 1.2;
+  --type-h2-ls: -0.015em;
+
+  /* H3: subsection heading */
+  --type-h3-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  --type-h3-weight: 600;
+  --type-h3-lh: 1.3;
+  --type-h3-ls: -0.01em;
+
+  /* Eyebrow: contextual label above a heading */
+  --type-eyebrow-size: 0.6875rem;
+  --type-eyebrow-weight: 600;
+  --type-eyebrow-lh: 1.4;
+  --type-eyebrow-ls: 0.1em;
+
+  /* Lead: short intro paragraph */
+  --type-lead-size: clamp(1.125rem, 1.4vw, 1.25rem);
+  --type-lead-weight: 400;
+  --type-lead-lh: 1.6;
+  --type-lead-ls: -0.005em;
+
+  /* Body large: important explanatory text */
+  --type-body-lg-size: 1.0625rem;
+  --type-body-lg-weight: 400;
+  --type-body-lg-lh: 1.7;
+
+  /* Body: default */
+  --type-body-size: 0.9375rem;
+  --type-body-weight: 400;
+  --type-body-lh: 1.7;
+
+  /* Body small: supporting */
+  --type-body-sm-size: 0.875rem;
+  --type-body-sm-weight: 400;
+  --type-body-sm-lh: 1.6;
+
+  /* Metadata: role, timeline, team */
+  --type-meta-size: 0.8125rem;
+  --type-meta-weight: 400;
+  --type-meta-lh: 1.5;
+
+  /* Metadata label */
+  --type-meta-label-size: 0.6875rem;
+  --type-meta-label-weight: 600;
+  --type-meta-label-lh: 1.4;
+  --type-meta-label-ls: 0.08em;
+
+  /* Caption */
+  --type-caption-size: 0.75rem;
+  --type-caption-weight: 400;
+  --type-caption-lh: 1.5;
+
+  /* Annotation */
+  --type-annotation-size: 0.6875rem;
+  --type-annotation-weight: 500;
+  --type-annotation-lh: 1.45;
+
+  /* Metric number */
+  --type-metric-size: clamp(2rem, 3vw, 2.5rem);
+  --type-metric-weight: 400;
+  --type-metric-lh: 1;
+  --type-metric-ls: -0.02em;
+
+  /* Quote */
+  --type-quote-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  --type-quote-weight: 400;
+  --type-quote-lh: 1.35;
+  --type-quote-ls: -0.01em;
+
+  /* Tag */
+  --type-tag-size: 0.6875rem;
+  --type-tag-weight: 400;
+  --type-tag-lh: 1.4;
+
+  /* ─── Spacing ─── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Section spacing */
+  --section-gap: 5rem;
+  --subsection-gap: 2.5rem;
+  --heading-to-body: 1rem;
+  --eyebrow-to-heading: 0.5rem;
+  --body-paragraph-gap: 1.25rem;
+  --caption-to-image: 0.625rem;
+  --metadata-gap: 0.375rem;
+
+  /* ─── Layout ─── */
+  --w-reading: 640px;
+  --w-content: 820px;
+  --w-wide: 1080px;
+  --w-max: 1200px;
+
+  /* ─── Radius ─── */
+  --radius-0: 0;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 
   /* ─── Motion ─── */
   --duration-fast: 150ms;
@@ -74,17 +165,16 @@
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ─── Base styles ─── */
+/* ─── Base ─── */
 @layer base {
   body {
     @apply antialiased;
     font-family: var(--font-body);
-    font-size: var(--text-base);
-    line-height: 1.65;
+    font-size: var(--type-body-size);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-lh);
     color: var(--text);
     background-color: var(--bg);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
@@ -96,33 +186,51 @@
     scroll-behavior: smooth;
   }
 
-  /* Editorial heading system */
-  h1, h2 {
+  /* Semantic heading defaults */
+  h1 {
     font-family: var(--font-heading);
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1.15;
+    font-size: var(--type-h1-size);
+    font-weight: var(--type-h1-weight);
+    line-height: var(--type-h1-lh);
+    letter-spacing: var(--type-h1-ls);
+    color: var(--text);
   }
 
-  h3, h4, h5, h6 {
+  h2 {
+    font-family: var(--font-heading);
+    font-size: var(--type-h2-size);
+    font-weight: var(--type-h2-weight);
+    line-height: var(--type-h2-lh);
+    letter-spacing: var(--type-h2-ls);
+    color: var(--text);
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-size: var(--type-h3-size);
+    font-weight: var(--type-h3-weight);
+    line-height: var(--type-h3-lh);
+    letter-spacing: var(--type-h3-ls);
+    color: var(--text);
+  }
+
+  h4, h5, h6 {
     font-family: var(--font-body);
     font-weight: 600;
-    letter-spacing: -0.01em;
     line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--text);
   }
 
-  /* Focus visible for accessibility */
   *:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
 
-  /* Editorial image defaults */
   img {
     border-radius: var(--radius-0);
   }
 
-  /* ─── Blob animations (hero interaction) ─── */
   @keyframes float-blob {
     0%, 100% { transform: translate3d(0, 0, 0) translate(-50%, -50%); }
     33% { transform: translate3d(15px, -20px, 0) translate(-50%, -50%); }
@@ -139,21 +247,150 @@
   }
 }
 
-/* ─── Layout utilities ─── */
+/* ─── Typography utility classes ─── */
 @layer utilities {
-  .text-muted {
+  /* Role-based type classes */
+  .type-display {
+    font-family: var(--font-heading);
+    font-size: var(--type-display-size);
+    font-weight: var(--type-display-weight);
+    line-height: var(--type-display-lh);
+    letter-spacing: var(--type-display-ls);
+    color: var(--text);
+  }
+
+  .type-h1 {
+    font-family: var(--font-heading);
+    font-size: var(--type-h1-size);
+    font-weight: var(--type-h1-weight);
+    line-height: var(--type-h1-lh);
+    letter-spacing: var(--type-h1-ls);
+    color: var(--text);
+  }
+
+  .type-h2 {
+    font-family: var(--font-heading);
+    font-size: var(--type-h2-size);
+    font-weight: var(--type-h2-weight);
+    line-height: var(--type-h2-lh);
+    letter-spacing: var(--type-h2-ls);
+    color: var(--text);
+  }
+
+  .type-h3 {
+    font-family: var(--font-body);
+    font-size: var(--type-h3-size);
+    font-weight: var(--type-h3-weight);
+    line-height: var(--type-h3-lh);
+    letter-spacing: var(--type-h3-ls);
+    color: var(--text);
+  }
+
+  .type-eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--type-eyebrow-size);
+    font-weight: var(--type-eyebrow-weight);
+    line-height: var(--type-eyebrow-lh);
+    letter-spacing: var(--type-eyebrow-ls);
+    text-transform: uppercase;
     color: var(--muted);
   }
 
-  .bg-card {
-    background-color: var(--card);
+  .type-lead {
+    font-size: var(--type-lead-size);
+    font-weight: var(--type-lead-weight);
+    line-height: var(--type-lead-lh);
+    letter-spacing: var(--type-lead-ls);
+    color: var(--text-secondary);
+    max-width: 58ch;
   }
 
-  .border-subtle {
-    border-color: var(--border);
+  .type-body-lg {
+    font-size: var(--type-body-lg-size);
+    font-weight: var(--type-body-lg-weight);
+    line-height: var(--type-body-lg-lh);
+    color: var(--text-secondary);
+    max-width: 65ch;
   }
 
-  /* Editorial layout containers */
+  .type-body {
+    font-size: var(--type-body-size);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-lh);
+    color: var(--text-secondary);
+    max-width: 65ch;
+  }
+
+  .type-body-sm {
+    font-size: var(--type-body-sm-size);
+    font-weight: var(--type-body-sm-weight);
+    line-height: var(--type-body-sm-lh);
+    color: var(--text-secondary);
+  }
+
+  .type-meta {
+    font-size: var(--type-meta-size);
+    font-weight: var(--type-meta-weight);
+    line-height: var(--type-meta-lh);
+    color: var(--text);
+  }
+
+  .type-meta-label {
+    font-size: var(--type-meta-label-size);
+    font-weight: var(--type-meta-label-weight);
+    line-height: var(--type-meta-label-lh);
+    letter-spacing: var(--type-meta-label-ls);
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .type-caption {
+    font-size: var(--type-caption-size);
+    font-weight: var(--type-caption-weight);
+    line-height: var(--type-caption-lh);
+    color: var(--muted);
+  }
+
+  .type-annotation {
+    font-size: var(--type-annotation-size);
+    font-weight: var(--type-annotation-weight);
+    line-height: var(--type-annotation-lh);
+    color: var(--muted);
+    max-width: 28ch;
+  }
+
+  .type-metric {
+    font-family: var(--font-heading);
+    font-size: var(--type-metric-size);
+    font-weight: var(--type-metric-weight);
+    line-height: var(--type-metric-lh);
+    letter-spacing: var(--type-metric-ls);
+    color: var(--text);
+  }
+
+  .type-quote {
+    font-family: var(--font-heading);
+    font-size: var(--type-quote-size);
+    font-weight: var(--type-quote-weight);
+    line-height: var(--type-quote-lh);
+    letter-spacing: var(--type-quote-ls);
+    color: var(--text);
+    max-width: 28ch;
+  }
+
+  .type-tag {
+    font-size: var(--type-tag-size);
+    font-weight: var(--type-tag-weight);
+    line-height: var(--type-tag-lh);
+    color: var(--text-secondary);
+  }
+
+  /* Legacy utilities kept for compatibility */
+  .text-muted { color: var(--muted); }
+  .bg-card { background-color: var(--card); }
+  .border-subtle { border-color: var(--border); }
+
+  /* Layout containers */
   .layout-reading {
     max-width: var(--w-reading);
     margin-left: auto;
@@ -186,114 +423,100 @@
   }
 
   /* Section backgrounds */
-  .bg-surface {
-    background-color: var(--surface);
-  }
-
-  .bg-finding {
-    background-color: var(--finding);
-  }
-
-  .bg-decision {
-    background-color: var(--decision);
-  }
-
-  .bg-outcome {
-    background-color: var(--outcome);
-  }
+  .bg-surface { background-color: var(--surface); }
+  .bg-finding { background-color: var(--finding); }
+  .bg-decision { background-color: var(--decision); }
+  .bg-outcome { background-color: var(--outcome); }
 }
 
 /* ─── Component patterns ─── */
 @layer components {
-  /* Case study section label */
   .section-label {
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    font-weight: 600;
+    font-size: var(--type-eyebrow-size);
+    font-weight: var(--type-eyebrow-weight);
+    line-height: var(--type-eyebrow-lh);
+    letter-spacing: var(--type-eyebrow-ls);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
     color: var(--muted);
   }
 
-  /* Metadata item */
   .metadata-label {
-    font-size: var(--text-xs);
-    font-weight: 600;
+    font-size: var(--type-meta-label-size);
+    font-weight: var(--type-meta-label-weight);
+    line-height: var(--type-meta-label-lh);
+    letter-spacing: var(--type-meta-label-ls);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
     color: var(--muted);
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--metadata-gap);
   }
 
   .metadata-value {
-    font-size: var(--text-sm);
+    font-size: var(--type-meta-size);
+    font-weight: var(--type-meta-weight);
+    line-height: var(--type-meta-lh);
     color: var(--text);
-    line-height: 1.5;
   }
 
-  /* Research finding block */
   .finding-block {
     background-color: var(--finding);
     border-left: 3px solid #c9a96e;
     padding: var(--space-6) var(--space-8);
   }
 
-  /* Decision block */
   .decision-block {
     background-color: var(--decision);
     border-left: 3px solid var(--accent);
     padding: var(--space-6) var(--space-8);
   }
 
-  /* Outcome block */
   .outcome-block {
     background-color: var(--outcome);
     border-left: 3px solid #4a8c5c;
     padding: var(--space-6) var(--space-8);
   }
 
-  /* Annotation (for image callouts) */
   .annotation {
-    font-size: var(--text-xs);
+    font-size: var(--type-annotation-size);
+    font-weight: var(--type-annotation-weight);
+    line-height: var(--type-annotation-lh);
     color: var(--muted);
-    line-height: 1.5;
     max-width: 28ch;
   }
 
-  /* Editorial image frame — contact-sheet inspired */
   .img-editorial {
     border: 1px solid var(--border);
     padding: 3px;
     background: white;
   }
 
-  /* Caption */
   .caption {
-    font-size: var(--text-xs);
+    font-size: var(--type-caption-size);
+    font-weight: var(--type-caption-weight);
+    line-height: var(--type-caption-lh);
     color: var(--muted);
-    margin-top: var(--space-3);
-    line-height: 1.5;
+    margin-top: var(--caption-to-image);
   }
 
-  /* Subtle tag (not pill) */
   .tag {
-    font-size: var(--text-xs);
+    font-size: var(--type-tag-size);
+    font-weight: var(--type-tag-weight);
+    line-height: var(--type-tag-lh);
     color: var(--text-secondary);
     border-bottom: 1px solid var(--border);
     padding-bottom: 1px;
   }
 
-  /* Metric display */
   .metric-value {
     font-family: var(--font-heading);
-    font-size: var(--text-3xl);
-    font-weight: 400;
+    font-size: var(--type-metric-size);
+    font-weight: var(--type-metric-weight);
+    line-height: var(--type-metric-lh);
+    letter-spacing: var(--type-metric-ls);
     color: var(--text);
-    line-height: 1;
   }
 
   .metric-label {
-    font-size: var(--text-sm);
+    font-size: var(--type-caption-size);
     color: var(--muted);
     margin-top: var(--space-2);
   }
@@ -301,9 +524,7 @@
 
 /* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
