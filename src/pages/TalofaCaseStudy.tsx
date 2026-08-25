@@ -360,8 +360,8 @@ const TalofaCaseStudy = () => {
             <p className="type-body-lg mb-8">The existing experience split the return moment across several overlays, making progress and rewards harder to understand as one cohesive journey.</p>
             <figure>
               <img
-                src="/Research(3).jpg"
-                alt="Research findings on existing Monster Walk return experience: Welcome Back screen is flat with little storytelling, step-to-stamina conversion is unclear, stamina cap not explained"
+                src="/Design Process.jpg"
+                alt="Old Monster Walk return flow showing daily tasks, stamina collection, reward modal, and gameplay return"
                 className="w-full border border-[var(--border)]"
                 loading="lazy"
               />
