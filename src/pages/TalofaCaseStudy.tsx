@@ -622,7 +622,7 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <figure className="mb-12">
+            <figure className="mb-12" style={{ maxWidth: '360px' }}>
               <img
                 src="/IMG_9275.PNG"
                 alt="Live Monster Walk Daily Quests implementation"
@@ -637,7 +637,7 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={150}>
-            <figure className="mb-12">
+            <figure className="mb-12" style={{ maxWidth: '360px' }}>
               <img
                 src="/IMG_9276.PNG"
                 alt="Live Monster Walk map with contextual monster interaction"
@@ -652,7 +652,7 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={200}>
-            <figure className="mb-4" style={{ maxWidth: '480px' }}>
+            <figure className="mb-4" style={{ maxWidth: '320px' }}>
               <img
                 src="/IMG_8534.PNG"
                 alt="Live Monster Walk Kyros character dialogue implementation"
