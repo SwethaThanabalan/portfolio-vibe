@@ -63,11 +63,16 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 function Callout({ children, variant = 'default' }: { children: React.ReactNode; variant?: 'default' | 'insight' | 'shift' }) {
-  const bg = variant === 'insight' ? 'bg-[var(--decision)] border-[var(--accent)]' : variant === 'shift' ? 'bg-[var(--finding)] border-[#c9a96e]' : 'bg-[var(--surface)] border-[var(--border)]'
+  const styles = {
+    insight: { backgroundColor: 'var(--decision)', borderColor: 'var(--accent)' },
+    shift: { backgroundColor: 'var(--finding)', borderColor: '#c9a96e' },
+    default: { backgroundColor: 'var(--surface)', borderColor: 'var(--border)' },
+  }
+  const s = styles[variant]
   return (
     <Reveal>
-      <div className={`border-l-3 ${bg} pl-6 py-5 my-8`}>
-        <p className="text-[15px] text-gray-900 font-medium leading-relaxed">{children}</p>
+      <div className="border-l-4 pl-6 py-5 my-8" style={{ backgroundColor: s.backgroundColor, borderLeftColor: s.borderColor }}>
+        <p className="type-body font-medium">{children}</p>
       </div>
     </Reveal>
   )
