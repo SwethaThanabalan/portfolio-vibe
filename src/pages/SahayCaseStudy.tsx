@@ -63,11 +63,11 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 function Callout({ children, variant = 'default' }: { children: React.ReactNode; variant?: 'default' | 'insight' | 'shift' }) {
-  const bg = variant === 'insight' ? 'bg-indigo-50 border-indigo-600' : variant === 'shift' ? 'bg-amber-50 border-amber-500' : 'bg-gray-50 border-gray-300'
+  const bg = variant === 'insight' ? 'bg-[var(--decision)] border-[var(--accent)]' : variant === 'shift' ? 'bg-[var(--finding)] border-[#c9a96e]' : 'bg-[var(--surface)] border-[var(--border)]'
   return (
     <Reveal>
-      <div className={`border-l-4 ${bg} rounded-r-xl p-6 my-6`}>
-        <p className="text-lg text-gray-900 font-medium leading-relaxed">{children}</p>
+      <div className={`border-l-3 ${bg} pl-6 py-5 my-8`}>
+        <p className="text-[15px] text-gray-900 font-medium leading-relaxed">{children}</p>
       </div>
     </Reveal>
   )
@@ -76,10 +76,10 @@ function Callout({ children, variant = 'default' }: { children: React.ReactNode;
 function PullQuote({ children }: { children: React.ReactNode }) {
   const { ref, visible } = useReveal(0.2)
   return (
-    <div ref={ref} className={`py-6 transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+    <div ref={ref} className={`py-10 transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
       <blockquote
-        className="text-gray-900 font-medium"
-        style={{ fontSize: 'clamp(1.5rem, 3vw, 2.4rem)', lineHeight: '1.3', maxWidth: '26ch', letterSpacing: '-0.02em' }}
+        className="font-editorial font-normal text-gray-900"
+        style={{ fontSize: 'clamp(1.5rem, 2.8vw, 2.2rem)', lineHeight: '1.3', maxWidth: '24ch', letterSpacing: '-0.015em' }}
       >
         {children}
       </blockquote>
@@ -195,78 +195,49 @@ const SahayCaseStudy = () => {
 
 
         {/* ═══════════════════════════════════════════
-            2. ORIGIN STORY
+            2. ORIGIN + PROBLEM (merged, compressed)
         ═══════════════════════════════════════════ */}
-        <section className="layout-reading mb-16">
-          <SectionLabel>Origin story</SectionLabel>
-
-          <Reveal>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
-              <p className="text-xl text-gray-900 font-medium">
-                This project started from my own lived experience as a homeowner.
-              </p>
-              <p>
-                Whenever something went wrong, a leak, an appliance failure, an unfamiliar noise, I found myself bouncing between Google searches, YouTube tutorials, Reddit threads, contractor websites, and advice from friends. The experience was fragmented, stressful, and filled with uncertainty.
-              </p>
-              <p>I never knew:</p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={100}>
-            <ul className="mt-6 mb-8 space-y-3 text-lg text-gray-700 ml-1" style={{ maxWidth: '60ch' }}>
-              <li className="flex items-start gap-3"><span className="text-gray-400 mt-1.5">•</span> What was actually wrong</li>
-              <li className="flex items-start gap-3"><span className="text-gray-400 mt-1.5">•</span> How serious the issue was</li>
-              <li className="flex items-start gap-3"><span className="text-gray-400 mt-1.5">•</span> Whether I could fix it myself</li>
-              <li className="flex items-start gap-3"><span className="text-gray-400 mt-1.5">•</span> Whether I needed a professional</li>
-              <li className="flex items-start gap-3"><span className="text-gray-400 mt-1.5">•</span> Who I could trust</li>
-            </ul>
-          </Reveal>
-
-          <Reveal delay={150}>
-            <p className="text-lg text-gray-700 leading-relaxed" style={{ maxWidth: '60ch' }}>
-              Instead of immediately building a solution, I recruited two teammates and set out to understand whether this problem extended beyond my own experience.
-            </p>
-          </Reveal>
-
-          <Callout variant="insight">
-            My role: I initiated the project, identified the opportunity, recruited the team, and drove research strategy from day one.
-          </Callout>
-        </section>
-
-
-        {/* ═══════════════════════════════════════════
-            3. THE PROBLEM
-        ═══════════════════════════════════════════ */}
-        <section className="layout-reading mb-16">
+        <section className="layout-reading mb-20">
           <SectionLabel>Problem framing</SectionLabel>
 
           <Reveal>
-            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-8">
-              Homeowners don't need another marketplace.<br/>
-              They need confidence.
+            <h2 className="font-editorial text-2xl md:text-3xl font-normal text-gray-900 mb-6">
+              Homeowners don't need another marketplace. They need confidence.
             </h2>
           </Reveal>
 
           <Reveal delay={50}>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8" style={{ maxWidth: '60ch' }}>
-              Every existing platform assumes the user already knows what they need. They jump straight to "find a pro" without helping people understand what's wrong, how urgent it is, or whether professional help is even necessary.
-            </p>
+            <div className="space-y-5 text-[15px] text-[var(--text-secondary)] leading-relaxed mb-8">
+              <p>
+                This project started from lived experience. Whenever something went wrong at home, I found myself bouncing between Google, YouTube, Reddit, and contractor sites with no way to know what was actually wrong, how serious it was, or who to trust.
+              </p>
+              <p>
+                Every existing platform assumes users already know what they need. They skip straight to "find a pro" without helping people understand the problem first.
+              </p>
+            </div>
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="grid sm:grid-cols-3 gap-4 mb-6">
-              <div className="border-l-3 border-l-red-300 pl-4 py-3">
+            <div className="grid sm:grid-cols-3 gap-4 mb-10">
+              <div className="border-l-2 border-l-red-300 pl-4 py-2">
                 <p className="text-sm font-semibold text-gray-900 mb-1">Fragmented</p>
-                <p className="text-sm text-[var(--text-secondary)]">5+ apps and platforms to diagnose a single issue</p>
+                <p className="text-xs text-[var(--text-secondary)]">5+ platforms to diagnose one issue</p>
               </div>
-              <div className="border-l-3 border-l-amber-300 pl-4 py-3">
+              <div className="border-l-2 border-l-amber-300 pl-4 py-2">
                 <p className="text-sm font-semibold text-gray-900 mb-1">Uncertain</p>
-                <p className="text-sm text-[var(--text-secondary)]">No way to assess urgency or severity before spending money</p>
+                <p className="text-xs text-[var(--text-secondary)]">No urgency assessment before spending money</p>
               </div>
-              <div className="border-l-3 border-l-blue-300 pl-4 py-3">
+              <div className="border-l-2 border-l-blue-300 pl-4 py-2">
                 <p className="text-sm font-semibold text-gray-900 mb-1">Trust deficit</p>
-                <p className="text-sm text-[var(--text-secondary)]">Existing platforms prioritize booking over understanding</p>
+                <p className="text-xs text-[var(--text-secondary)]">Platforms prioritize booking over understanding</p>
               </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={150}>
+            <div className="decision-block">
+              <p className="text-sm font-semibold text-gray-900 mb-1">My role</p>
+              <p className="text-[15px] text-[var(--text-secondary)]">I initiated the project, identified the opportunity, recruited two teammates, and led research strategy from day one.</p>
             </div>
           </Reveal>
         </section>
@@ -362,16 +333,16 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="grid md:grid-cols-2 gap-6 mt-12">
-              <div className="bg-red-50 rounded-xl p-6 border border-red-100">
-                <p className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-3">What we assumed</p>
-                <p className="text-lg font-semibold text-gray-900">Service Marketplace</p>
-                <p className="text-sm text-gray-600 mt-2">Help people find and book contractors faster</p>
+            <div className="grid md:grid-cols-2 gap-px mt-12 border border-[var(--border)]">
+              <div className="bg-[var(--finding)] p-8">
+                <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-3">What we assumed</p>
+                <p className="font-editorial text-xl text-gray-900">Service Marketplace</p>
+                <p className="text-sm text-[var(--text-secondary)] mt-2">Help people find and book contractors faster</p>
               </div>
-              <div className="bg-green-50 rounded-xl p-6 border border-green-100">
-                <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-3">What research revealed</p>
-                <p className="text-lg font-semibold text-gray-900">AI-Powered Home Companion</p>
-                <p className="text-sm text-gray-600 mt-2">Help people understand problems and make informed decisions</p>
+              <div className="bg-[var(--outcome)] p-8">
+                <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-3">What research revealed</p>
+                <p className="font-editorial text-xl text-gray-900">AI-Powered Home Companion</p>
+                <p className="text-sm text-[var(--text-secondary)] mt-2">Help people understand problems and make informed decisions</p>
               </div>
             </div>
           </Reveal>
@@ -415,7 +386,7 @@ const SahayCaseStudy = () => {
                 { label: 'DIY Guidance', desc: 'Step-by-step instructions when appropriate' },
                 { label: 'Decision Support', desc: 'Help users choose between DIY and professional help' },
               ].map((item, i) => (
-                <div key={i} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                <div key={i} className="bg-gray-50 rounded-subtle p-5 border border-gray-100">
                   <p className="text-sm font-semibold text-gray-900 mb-1">{item.label}</p>
                   <p className="text-sm text-gray-600">{item.desc}</p>
                 </div>
@@ -464,14 +435,15 @@ const SahayCaseStudy = () => {
             Feedback from flow testing helped us refine the experience before any high-fidelity design work began. This saved significant design and development time.
           </Callout>
 
-          {/* Visual: placeholder for IA diagrams */}
+          {/* IA diagram — wider for readability */}
           <Reveal delay={150}>
-            <div className="flex justify-center mt-8">
+            <div className="mt-10 -mx-6 md:mx-0">
               <img
                 src="/Research(5).png"
-                alt="Information architecture diagram and user flow"
-                className="w-full"
+                alt="Information architecture diagram and user flow validation"
+                className="w-full border border-[var(--border)]"
               />
+              <p className="caption mt-3 px-6 md:px-0">Information architecture and user flow diagram. Validated with participants before high-fidelity work began.</p>
             </div>
           </Reveal>
         </section>
@@ -492,21 +464,21 @@ const SahayCaseStudy = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               <Reveal delay={50}>
-                <div className="bg-white rounded-xl p-6 border border-gray-200 h-full">
+                <div className="bg-white rounded-subtle p-6 border border-gray-200 h-full">
                   <div className="text-2xl mb-3">🧭</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Confidence first</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">Every interaction should increase the user's understanding and reduce anxiety before asking them to take action or spend money.</p>
                 </div>
               </Reveal>
               <Reveal delay={100}>
-                <div className="bg-white rounded-xl p-6 border border-gray-200 h-full">
+                <div className="bg-white rounded-subtle p-6 border border-gray-200 h-full">
                   <div className="text-2xl mb-3">🤝</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Companion, not tool</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">The product should feel like a knowledgeable friend, conversational, empathetic, and always oriented toward the user's best interest.</p>
                 </div>
               </Reveal>
               <Reveal delay={150}>
-                <div className="bg-white rounded-xl p-6 border border-gray-200 h-full">
+                <div className="bg-white rounded-subtle p-6 border border-gray-200 h-full">
                   <div className="text-2xl mb-3">⚖️</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">DIY + Pro, not either/or</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">Never force a user down one path. Present both options with clear guidance on when each makes sense.</p>
@@ -533,7 +505,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="w-full rounded-xl overflow-hidden border border-gray-200 shadow-sm" style={{ paddingBottom: '56.25%', position: 'relative' }}>
+            <div className="w-full rounded-subtle overflow-hidden border border-gray-200 shadow-sm" style={{ paddingBottom: '56.25%', position: 'relative' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/O67w4i0cTFg?si=AbfgtsdcDOJDs7TI"
@@ -564,11 +536,11 @@ const SahayCaseStudy = () => {
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-8">
-                <div className="bg-red-50 rounded-lg p-5">
+                <div className="bg-red-50 rounded-subtle p-5">
                   <p className="text-xs font-semibold text-red-700 mb-2">Before</p>
                   <p className="text-sm text-gray-700">Long questionnaire upfront → high drop-off</p>
                 </div>
-                <div className="bg-green-50 rounded-lg p-5">
+                <div className="bg-green-50 rounded-subtle p-5">
                   <p className="text-xs font-semibold text-green-700 mb-2">After</p>
                   <p className="text-sm text-gray-700">Minimal input → AI-generated home summary → progressive detail</p>
                 </div>
@@ -719,7 +691,7 @@ const SahayCaseStudy = () => {
                 'AI-generated home summary',
                 'Problem-first navigation',
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-green-50 rounded-lg px-5 py-3">
+                <div key={i} className="flex items-center gap-3 bg-green-50 rounded-subtle px-5 py-3">
                   <span className="text-green-600">✓</span>
                   <span className="text-sm text-gray-800">{item}</span>
                 </div>
@@ -780,8 +752,8 @@ const SahayCaseStudy = () => {
         ═══════════════════════════════════════════ */}
         <section className="layout-content mb-16">
           <Reveal>
-            <div className="bg-gray-900 rounded-3xl p-10 md:p-14">
-              <h2 className="text-2xl font-bold text-white mb-8">Why this project matters</h2>
+            <div className="bg-gray-900 p-10 md:p-14">
+              <h2 className="font-editorial text-2xl font-normal text-white mb-8">Why this project matters</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div>
