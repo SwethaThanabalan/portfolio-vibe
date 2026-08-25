@@ -622,48 +622,44 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <figure className="mb-12" style={{ maxWidth: '360px' }}>
-              <img
-                src="/IMG_9275.PNG"
-                alt="Live Monster Walk Daily Quests implementation"
-                className="w-full border border-[var(--border)]"
-                loading="lazy"
-              />
-              <div className="mt-4">
-                <p className="type-body font-medium mb-1">Quest guidance in context</p>
-                <p className="type-body-sm">Daily quests were surfaced directly within the gameplay environment, giving returning players clearer direction on what to do next.</p>
-              </div>
-            </figure>
-          </AnimatedSection>
-
-          <AnimatedSection animation="fade-up" delay={150}>
-            <figure className="mb-12" style={{ maxWidth: '360px' }}>
-              <img
-                src="/IMG_9276.PNG"
-                alt="Live Monster Walk map with contextual monster interaction"
-                className="w-full border border-[var(--border)]"
-                loading="lazy"
-              />
-              <div className="mt-4">
-                <p className="type-body font-medium mb-1">More contextual monster interaction</p>
-                <p className="type-body-sm">Monster dialogue and in-world interactions added more personality and context to the gameplay experience.</p>
-              </div>
-            </figure>
-          </AnimatedSection>
-
-          <AnimatedSection animation="fade-up" delay={200}>
-            <figure className="mb-4" style={{ maxWidth: '320px' }}>
-              <img
-                src="/IMG_8534.PNG"
-                alt="Live Monster Walk Kyros character dialogue implementation"
-                className="w-full border border-[var(--border)]"
-                loading="lazy"
-              />
-              <div className="mt-4">
-                <p className="type-body font-medium mb-1">Character-led guidance</p>
-                <p className="type-body-sm">Narrative moments used Kyros to guide the player while staying inside the game world.</p>
-              </div>
-            </figure>
+            <div className="grid grid-cols-3 gap-4 mb-8">
+              <figure>
+                <img
+                  src="/IMG_9275.PNG"
+                  alt="Live Monster Walk Daily Quests implementation"
+                  className="w-full border border-[var(--border)]"
+                  loading="lazy"
+                />
+                <div className="mt-3">
+                  <p className="type-body-sm font-medium mb-1">Quest guidance in context</p>
+                  <p className="type-caption">Daily quests surfaced directly in gameplay.</p>
+                </div>
+              </figure>
+              <figure>
+                <img
+                  src="/IMG_9276.PNG"
+                  alt="Live Monster Walk map with contextual monster interaction"
+                  className="w-full border border-[var(--border)]"
+                  loading="lazy"
+                />
+                <div className="mt-3">
+                  <p className="type-body-sm font-medium mb-1">Contextual monster interaction</p>
+                  <p className="type-caption">In-world dialogue added personality to the experience.</p>
+                </div>
+              </figure>
+              <figure>
+                <img
+                  src="/IMG_8534.PNG"
+                  alt="Live Monster Walk Kyros character dialogue implementation"
+                  className="w-full border border-[var(--border)]"
+                  loading="lazy"
+                />
+                <div className="mt-3">
+                  <p className="type-body-sm font-medium mb-1">Character-led guidance</p>
+                  <p className="type-caption">Kyros guides the player within the game world.</p>
+                </div>
+              </figure>
+            </div>
           </AnimatedSection>
         </section>
 
