@@ -192,7 +192,7 @@ const TalofaCaseStudy = () => {
                 opacity: showAudioPlayer ? 1 : 0
               }}
             >
-              <div className="border border-[var(--border)] rounded-subtle p-6 mb-6">
+              <div className="border border-[var(--border)] p-6 mb-6">
                 <audio
                   ref={audioRef}
                   src="/SeptaProjectAudioSummary.mp3"
@@ -272,7 +272,7 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mt-8 rounded-subtle overflow-hidden shadow-2xl bg-gray-100" style={{ height: '400px' }}>
+            <div className="mt-8 overflow-hidden border border-[var(--border)]" style={{ height: '400px' }}>
               <iframe
                 src="https://www.youtube.com/embed/pJc8rHhbcgk"
                 allowFullScreen
@@ -292,21 +292,21 @@ const TalofaCaseStudy = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AnimatedSection animation="fade-up" delay={100}>
-              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-subtle p-6 h-full">
+              <div className="border-l-4 pl-5 py-3 h-full">
                 <h3 className="type-h3 mb-3">Retention Gap</h3>
                 <p className="text-[var(--text-secondary)]">Users who lapsed 7+ days had a fundamentally different emotional state. Pushing them into challenges the moment they returned made it worse, not better.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-subtle p-6 h-full">
+              <div className="border-l-4 pl-5 py-3 h-full">
                 <h3 className="type-h3 mb-3">Clarity Gap</h3>
                 <p className="text-[var(--text-secondary)]">Users couldn't remember where they left off or why it mattered to pick up again. The product offered no answer.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-subtle p-6 h-full">
+              <div className="border-l-4 pl-5 py-3 h-full">
                 <h3 className="type-h3 mb-3">Motivation Gap</h3>
                 <p className="text-[var(--text-secondary)]">No concept addressed guilt or hesitation, the two emotions every lapsed user described in research. The experience assumed motivation existed. It didn't.</p>
               </div>
@@ -314,7 +314,7 @@ const TalofaCaseStudy = () => {
           </div>
 
           <AnimatedSection animation="fade-up" delay={400}>
-            <div className="mt-8 bg-indigo-50 border-l-4 border-indigo-600 rounded-r-xl p-6">
+            <div className="mt-8 border-l-4 border-indigo-600 pl-5 py-4">
               <p className="text-lg text-[var(--text)] font-semibold">Insight: Lapsed users weren't disengaged. They were hesitant. The barrier wasn't the product. It was the emotion of returning.</p>
             </div>
           </AnimatedSection>
@@ -427,7 +427,7 @@ const TalofaCaseStudy = () => {
                 <p className="type-body-lg mb-6">Hypothesis: Reminding users of their streak history would reactivate the habit loop and lower the barrier to return. Designed around milestone celebration rather than gap punishment.</p>
                 <div className="flex justify-center">
                   <video
-                    className="rounded-subtle max-w-full"
+                    className="max-w-full"
                     autoPlay
                     loop
                     playsInline
@@ -447,7 +447,7 @@ const TalofaCaseStudy = () => {
                 <p className="type-body-lg mb-6">Hypothesis: A personal message from a Squad Leader (social accountability partner) would trigger belonging and reduce isolation. Designed to make returning feel like rejoining a team, not restarting alone.</p>
                 <div className="flex justify-center">
                   <video
-                    className="rounded-subtle max-w-full"
+                    className="max-w-full"
                     autoPlay
                     loop
                     playsInline
@@ -467,7 +467,7 @@ const TalofaCaseStudy = () => {
                 <p className="type-body-lg mb-6">Hypothesis: Curiosity is a stronger motivator than guilt. Teasing a new monster encounter waiting for the user would pull them forward rather than push them back. This concept performed strongest in testing.</p>
                 <div className="flex justify-center">
                   <video
-                    className="rounded-subtle max-w-full"
+                    className="max-w-full"
                     autoPlay
                     loop
                     playsInline
@@ -486,7 +486,7 @@ const TalofaCaseStudy = () => {
         {/* 6. THE PIVOT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-subtle p-8 border-l-4 border-yellow-500">
+            <div className="border-l-4 border-yellow-500 pl-6 py-5">
               <h2 className="type-h2 mb-6">Product decision: choosing signal over comfort</h2>
               
               <div className="space-y-6 type-body-lg">
@@ -521,7 +521,7 @@ const TalofaCaseStudy = () => {
             <div className="space-y-6 type-body-lg">
               <p>I ran moderated concept testing sessions with lapsed users, observing their emotional responses, listening for hesitation, and asking follow-up questions about the reasoning behind their reactions. Here's what the research showed:</p>
               
-              <div className="bg-[var(--surface)] rounded-subtle p-6 my-6">
+              <div className="bg-[var(--surface)] pl-6 py-5 my-8 border-l-4">
                 <h3 className="font-semibold text-[var(--text)] mb-4">What we learned:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
@@ -589,7 +589,7 @@ const TalofaCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 w-full">
-              <div className="relative w-full rounded-subtle overflow-hidden shadow-lg border border-[var(--border)]" style={{ paddingBottom: '56.25%' }}>
+              <div className="relative w-full overflow-hidden border border-[var(--border)]" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
                   src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F8tgWUX07X8n5GsiZauji9b%2FMonster-Walk-Hand-off---Swetha%3Fnode-id%3D7-6266%26t%3DOMRrHCZ6XR6pLSbr-0%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D7%253A6266%26show-proto-sidebar%3D1"
@@ -658,19 +658,19 @@ const TalofaCaseStudy = () => {
             <div className="space-y-6 type-body-lg">
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
-                <div className="bg-indigo-50 rounded-subtle p-6">
+                <div className="border-l-4 border-indigo-300 pl-5 py-4">
                   <h3 className="font-semibold text-[var(--text)] mb-3">Validated motivational hierarchy</h3>
                   <p className="text-[var(--text-secondary)]">Research across multiple sessions confirmed the same hierarchy every time: reassurance first, then progress, then new features. This ordered the entire design direction.</p>
                 </div>
-                <div className="bg-indigo-50 rounded-subtle p-6">
+                <div className="border-l-4 border-indigo-300 pl-5 py-4">
                   <h3 className="font-semibold text-[var(--text)] mb-3">Reduced decision risk</h3>
                   <p className="text-[var(--text-secondary)]">Concept testing gave the founder confidence to ship the Mystery Monster direction without second-guessing. Diagnostic clarity beats numerical comfort when the sample size is small.</p>
                 </div>
-                <div className="bg-indigo-50 rounded-subtle p-6">
+                <div className="border-l-4 border-indigo-300 pl-5 py-4">
                   <h3 className="font-semibold text-[var(--text)] mb-3">Increased stakeholder confidence</h3>
                   <p className="text-[var(--text-secondary)]">I presented a clear trade-off framework to the founder and got buy-in in a single meeting. Helping stakeholders make informed decisions is part of the design craft.</p>
                 </div>
-                <div className="bg-indigo-50 rounded-subtle p-6">
+                <div className="border-l-4 border-indigo-300 pl-5 py-4">
                   <h3 className="font-semibold text-[var(--text)] mb-3">Delivered defensible retention strategy</h3>
                   <p className="text-[var(--text-secondary)]">Every recommendation I made was traceable back to something a user said or felt. No assumptions dressed up as insights.</p>
                 </div>
@@ -686,7 +686,7 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8">
+            <div className="border-l-4 border-indigo-400 pl-6 py-5">
               <div className="space-y-6 type-body-lg">
                 <p>Working in beta without clean data forced me to make confident recommendations from patterns, not proof. That's harder than it sounds, and more valuable than most portfolio projects show. The moment I told the founder that A/B testing was the wrong method for this problem, I stopped being a designer who executes and became one who thinks. That shift is what I'm bringing to every project from here.</p>
               </div>
