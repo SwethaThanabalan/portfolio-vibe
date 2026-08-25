@@ -113,7 +113,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-12 leading-tight">
+            <h1 className="font-editorial text-4xl md:text-5xl font-normal text-gray-900 mb-8 leading-tight">
               Designing Adult You: Building a Gamified Life Skills Platform from 0 → 1
             </h1>
           </AnimatedSection>

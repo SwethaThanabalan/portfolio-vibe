@@ -27,15 +27,15 @@ const RotatingWord = () => {
   }, [])
 
   return (
-    <span className="inline-block relative" style={{ fontSize: '1.08em' }}>
+    <span className="inline-block relative" style={{ fontSize: '1em' }}>
       <span 
-        className={`inline-block font-handwritten text-indigo-600 transition-all duration-300 ${
+        className={`inline-block font-editorial italic text-indigo-600 transition-all duration-300 ${
           isAnimating 
             ? 'opacity-0 translate-y-3' 
             : 'opacity-100 translate-y-0'
         }`}
         style={{ 
-          lineHeight: '0.92'
+          lineHeight: '0.95'
         }}
       >
         {words[currentIndex]}

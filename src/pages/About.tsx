@@ -202,12 +202,12 @@ const About = () => {
                 About — Swetha Thanabalan
               </Annotation>
               <h1
-                className={`font-bold text-gray-900 leading-[1.05] transition-all duration-1000 ease-out ${
+                className={`font-editorial font-normal text-gray-900 leading-[1.1] transition-all duration-1000 ease-out ${
                   heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{
-                  fontSize: 'clamp(2.4rem, 5.5vw, 4.8rem)',
-                  letterSpacing: '-0.035em',
+                  fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)',
+                  letterSpacing: '-0.02em',
                   maxWidth: '16ch',
                 }}
               >

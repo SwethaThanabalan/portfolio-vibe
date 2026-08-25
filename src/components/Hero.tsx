@@ -50,11 +50,11 @@ const Hero = () => {
 
             {/* Main Headline */}
             <h1 
-              className="font-bold text-neutral-900 mb-6 sm:mb-8 mx-auto"
+              className="font-editorial font-normal text-neutral-900 mb-6 sm:mb-8 mx-auto"
               style={{
-                fontSize: 'clamp(3.2rem, 6vw, 6.8rem)',
-                lineHeight: '1.0',
-                maxWidth: '16ch'
+                fontSize: 'var(--text-display)',
+                lineHeight: '1.05',
+                maxWidth: '14ch'
               }}
             >
               Good products aren't built on{' '}
@@ -76,10 +76,11 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 pointer-events-auto">
               <a
                 href="#work"
-                className="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg transition-all duration-200 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="inline-flex items-center px-6 py-3 text-base font-medium transition-all duration-200 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 style={{ 
                   backgroundColor: 'var(--accent)',
-                  color: 'white'
+                  color: 'white',
+                  borderRadius: 'var(--radius-md)'
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--accent-hover)'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--accent)'}

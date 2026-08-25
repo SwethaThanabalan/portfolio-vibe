@@ -178,8 +178,8 @@ const SahayCaseStudy = () => {
           </div>
 
           <h1
-            className={`font-bold text-gray-900 leading-[1.08] mb-6 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ fontSize: 'clamp(2.4rem, 5vw, 3.8rem)', letterSpacing: '-0.03em', maxWidth: '20ch' }}
+            className={`font-editorial font-normal text-gray-900 leading-[1.12] mb-6 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.4rem)', letterSpacing: '-0.02em', maxWidth: '20ch' }}
           >
             Sahay: Confidence before contractors
           </h1>

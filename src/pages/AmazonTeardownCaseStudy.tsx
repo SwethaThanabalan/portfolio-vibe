@@ -63,7 +63,7 @@ const AmazonTeardownCaseStudy = () => {
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+            <h1 className="font-editorial text-4xl md:text-5xl font-normal text-gray-900 mb-8 leading-tight">
               When Recovery Fails: A UX Teardown of Amazon's Order Cancellation Flow
             </h1>
           </AnimatedSection>

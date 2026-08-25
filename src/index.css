@@ -2,52 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-/* DESIGN TOKENS */
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN SYSTEM TOKENS
+   Editorial portfolio system: photography-influenced, restrained,
+   research-led case study hierarchy
+═══════════════════════════════════════════════════════════════ */
+
 :root {
-  /* Colors - Option A: Deep Indigo (change here to swap accent) */
+  /* ─── Color: Roles ─── */
   --bg: #fafaf9;
-  --text: #18181b;
+  --surface: #f5f4f0;        /* warm off-white for research/context sections */
+  --text: #1a1a1a;
+  --text-secondary: #4a4a4a;
   --muted: #71717a;
-  --border: #e4e4e7;
+  --border: #e5e4e0;
+  --border-subtle: #eeede9;
   --card: #ffffff;
-  --accent: #4338ca; /* Deep Indigo */
+  --accent: #4338ca;
   --accent-hover: #3730a3;
-  
-  /* Alternative accent options (uncomment to use):
-  --accent: #0f766e; Muted Teal
-  --accent-hover: #0d5f58;
-  
-  --accent: #9f1239; Warm Burgundy
-  --accent-hover: #881337;
-  */
-  
-  /* Spacing system (base unit: 8px) */
-  --space-1: 0.5rem;   /* 8px */
-  --space-2: 1rem;     /* 16px */
-  --space-3: 1.5rem;   /* 24px */
-  --space-4: 2rem;     /* 32px */
-  --space-6: 3rem;     /* 48px */
-  --space-8: 4rem;     /* 64px */
-  --space-10: 5rem;    /* 80px */
-  --space-12: 6rem;    /* 96px */
-  --space-15: 7.5rem;  /* 120px */
-  --space-20: 10rem;   /* 160px */
-  
-  /* Max content width */
-  --max-width: 1200px;
+  --finding: #f8f5ee;        /* warm cream for research findings */
+  --decision: #f0f3f9;       /* cool blue-gray for design decisions */
+  --outcome: #f0f7f0;        /* quiet green for outcomes */
+
+  /* ─── Typography: Scale ─── */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Fraunces', 'Georgia', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs: 0.75rem;        /* 12px — captions, metadata labels */
+  --text-sm: 0.875rem;       /* 14px — annotations, tags */
+  --text-base: 1rem;         /* 16px — body */
+  --text-lg: 1.125rem;       /* 18px — lead body */
+  --text-xl: 1.25rem;        /* 20px — subsection intro */
+  --text-2xl: 1.5rem;        /* 24px — subsection heading */
+  --text-3xl: 1.875rem;      /* 30px — section heading */
+  --text-4xl: 2.25rem;       /* 36px — page heading */
+  --text-5xl: 3rem;          /* 48px — case study title */
+  --text-display: clamp(3.2rem, 6vw, 5.5rem); /* hero display */
+
+  /* ─── Spacing: Vertical rhythm ─── */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* ─── Layout: Content widths ─── */
+  --w-reading: 640px;    /* narrow reading column */
+  --w-content: 820px;    /* standard case study content */
+  --w-wide: 1080px;      /* wide visual/editorial */
+  --w-max: 1200px;       /* page max */
+
+  /* ─── Radius: Restrained scale ─── */
+  --radius-0: 0;         /* editorial images, full-bleed */
+  --radius-sm: 3px;      /* subtle, metadata */
+  --radius-md: 6px;      /* interactive elements, cards */
+  --radius-lg: 8px;      /* larger containers when needed */
+
+  /* ─── Motion ─── */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-reveal: 600ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ─── Base styles ─── */
 @layer base {
   body {
     @apply antialiased;
-    background-color: var(--bg);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.65;
     color: var(--text);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    background-color: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  
+
   ::selection {
     background-color: var(--accent);
     color: white;
@@ -56,63 +95,211 @@
   html {
     scroll-behavior: smooth;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  /* Editorial heading system */
+  h1, h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
     letter-spacing: -0.02em;
-    font-weight: 600;
+    line-height: 1.15;
   }
-  
-  /* Focus visible styles for accessibility */
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  /* Focus visible for accessibility */
   *:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
-  
-  /* Blob floating animation */
-  @keyframes float-blob {
-    0%, 100% {
-      transform: translate3d(0, 0, 0) translate(-50%, -50%);
-    }
-    33% {
-      transform: translate3d(15px, -20px, 0) translate(-50%, -50%);
-    }
-    66% {
-      transform: translate3d(-15px, 10px, 0) translate(-50%, -50%);
-    }
+
+  /* Editorial image defaults */
+  img {
+    border-radius: var(--radius-0);
   }
-  
+
+  /* ─── Blob animations (hero interaction) ─── */
+  @keyframes float-blob {
+    0%, 100% { transform: translate3d(0, 0, 0) translate(-50%, -50%); }
+    33% { transform: translate3d(15px, -20px, 0) translate(-50%, -50%); }
+    66% { transform: translate3d(-15px, 10px, 0) translate(-50%, -50%); }
+  }
+
   .animate-float-blob {
     animation: float-blob 20s ease-in-out infinite;
   }
 
-  /* Smooth blob appearance animation */
   @keyframes blobAppear {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(0.8);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
   }
 }
 
+/* ─── Layout utilities ─── */
 @layer utilities {
   .text-muted {
     color: var(--muted);
   }
-  
+
   .bg-card {
     background-color: var(--card);
   }
-  
+
   .border-subtle {
     border-color: var(--border);
   }
+
+  /* Editorial layout containers */
+  .layout-reading {
+    max-width: var(--w-reading);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .layout-content {
+    max-width: var(--w-content);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .layout-wide {
+    max-width: var(--w-wide);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .layout-full {
+    width: 100%;
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Section backgrounds */
+  .bg-surface {
+    background-color: var(--surface);
+  }
+
+  .bg-finding {
+    background-color: var(--finding);
+  }
+
+  .bg-decision {
+    background-color: var(--decision);
+  }
+
+  .bg-outcome {
+    background-color: var(--outcome);
+  }
 }
 
-/* Reduced motion: disable animations globally */
+/* ─── Component patterns ─── */
+@layer components {
+  /* Case study section label */
+  .section-label {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  /* Metadata item */
+  .metadata-label {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .metadata-value {
+    font-size: var(--text-sm);
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  /* Research finding block */
+  .finding-block {
+    background-color: var(--finding);
+    border-left: 3px solid #c9a96e;
+    padding: var(--space-6) var(--space-8);
+  }
+
+  /* Decision block */
+  .decision-block {
+    background-color: var(--decision);
+    border-left: 3px solid var(--accent);
+    padding: var(--space-6) var(--space-8);
+  }
+
+  /* Outcome block */
+  .outcome-block {
+    background-color: var(--outcome);
+    border-left: 3px solid #4a8c5c;
+    padding: var(--space-6) var(--space-8);
+  }
+
+  /* Annotation (for image callouts) */
+  .annotation {
+    font-size: var(--text-xs);
+    color: var(--muted);
+    line-height: 1.5;
+    max-width: 28ch;
+  }
+
+  /* Editorial image frame — contact-sheet inspired */
+  .img-editorial {
+    border: 1px solid var(--border);
+    padding: 3px;
+    background: white;
+  }
+
+  /* Caption */
+  .caption {
+    font-size: var(--text-xs);
+    color: var(--muted);
+    margin-top: var(--space-3);
+    line-height: 1.5;
+  }
+
+  /* Subtle tag (not pill) */
+  .tag {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+  }
+
+  /* Metric display */
+  .metric-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .metric-label {
+    font-size: var(--text-sm);
+    color: var(--muted);
+    margin-top: var(--space-2);
+  }
+}
+
+/* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -124,7 +311,7 @@
   }
 }
 
-/* Screen-reader only utility */
+/* ─── Screen-reader only ─── */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -136,5 +323,3 @@
   white-space: nowrap;
   border-width: 0;
 }
-
-

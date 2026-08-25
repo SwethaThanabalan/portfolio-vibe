@@ -21,24 +21,21 @@ const Capabilities = () => {
   return (
     <section
       aria-labelledby="capabilities-heading"
-      className="py-16 md:py-24 px-6 md:px-8"
-      style={{ maxWidth: 'var(--max-width)', margin: '0 auto' }}
+      className="py-16 md:py-24 layout-wide border-t"
+      style={{ borderColor: 'var(--border)' }}
     >
       <h2
         id="capabilities-heading"
-        className="text-2xl md:text-3xl font-semibold mb-10"
+        className="font-editorial text-2xl md:text-3xl font-normal mb-12"
         style={{ color: 'var(--text)' }}
       >
         Capabilities
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
         {capabilities.map((group) => (
           <div key={group.label}>
-            <h3
-              className="text-xs font-semibold uppercase tracking-wide mb-4"
-              style={{ color: 'var(--muted)' }}
-            >
+            <h3 className="section-label mb-4">
               {group.label}
             </h3>
             <ul className="space-y-2">
@@ -46,7 +43,7 @@ const Capabilities = () => {
                 <li
                   key={item}
                   className="text-sm leading-relaxed"
-                  style={{ color: 'var(--text)' }}
+                  style={{ color: 'var(--text-secondary)' }}
                 >
                   {item}
                 </li>

@@ -112,7 +112,7 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-12 leading-tight">
+            <h1 className="font-editorial text-4xl md:text-5xl font-normal text-gray-900 mb-8 leading-tight">
               Monster Walk: Redesigning the emotional re-entry experience
             </h1>
           </AnimatedSection>

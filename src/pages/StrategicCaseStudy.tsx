@@ -129,9 +129,15 @@ const StrategicCaseStudy = () => {
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-12 leading-tight">
+            <h1 className="font-editorial text-4xl md:text-5xl font-normal text-gray-900 mb-6 leading-tight">
               {project.title}
             </h1>
+            {/* Context note for academic projects */}
+            {project.id === 'septa-mobile-redesign' && (
+              <p className="text-sm text-[var(--muted)] border-l-2 border-[var(--border)] pl-4 mb-8">
+                Context: Academic project. No backend access. Research and design only.
+              </p>
+            )}
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up" delay={100}>
