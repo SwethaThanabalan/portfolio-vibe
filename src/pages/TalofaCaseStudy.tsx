@@ -336,6 +336,23 @@ const TalofaCaseStudy = () => {
           </AnimatedSection>
         </section>
 
+        {/* CURRENT USER FLOW BREAKDOWN */}
+        <section className="layout-content mb-16">
+          <AnimatedSection animation="fade-up">
+            <h2 className="type-h2 mb-4">Where the existing return flow broke down</h2>
+            <p className="type-body-lg mb-8">Mapping the existing return flow helped identify where clarity, motivation, and reward feedback were breaking down.</p>
+            <figure>
+              <img
+                src="/Design Process(2).jpg"
+                alt="Current user flow diagram showing the return journey stages and friction points in clarity, motivation, and reward feedback"
+                className="w-full border border-[var(--border)]"
+                loading="lazy"
+              />
+              <figcaption className="type-caption mt-3">Mapping the existing return flow connected specific friction points to each stage of the return journey.</figcaption>
+            </figure>
+          </AnimatedSection>
+        </section>
+
         {/* 4. RESEARCH & DISCOVERY */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
