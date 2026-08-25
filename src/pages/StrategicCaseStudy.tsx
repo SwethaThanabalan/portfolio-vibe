@@ -336,7 +336,7 @@ const StrategicCaseStudy = () => {
                 ) : (
                   // Full content with flip cards for SEPTA project
                   <div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Problems</h2>
+                    <h2 className="type-h2 mb-6">Problems</h2>
                     <p className="type-body-lg mb-8">
                       Through user interviews and testing, I uncovered something deeper than usability issues. People didn't just find the app frustrating. They didn't trust it.
                     </p>
@@ -376,7 +376,7 @@ const StrategicCaseStudy = () => {
         {!quickSummaryMode && project.researchInsights && (
           <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Research → Insights</h2>
+              <h2 className="type-h2 mb-6">Research → Insights</h2>
             </AnimatedSection>
             
             <div className="space-y-8">
@@ -403,7 +403,7 @@ const StrategicCaseStudy = () => {
         {!quickSummaryMode && project.strategicDecision && (
           <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">{project.strategicDecision.title}</h2>
+              <h2 className="type-h2 mb-6">{project.strategicDecision.title}</h2>
               <p className="type-body-lg mb-6">{project.strategicDecision.context}</p>
             </AnimatedSection>
 
@@ -455,7 +455,7 @@ const StrategicCaseStudy = () => {
         {!quickSummaryMode && project.additionalDecisions && project.additionalDecisions.map((decision, index) => (
           <section key={index} className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">{decision.title}</h2>
+              <h2 className="type-h2 mb-6">{decision.title}</h2>
               <p className="type-body-lg mb-6">{decision.context}</p>
             </AnimatedSection>
 
@@ -479,14 +479,14 @@ const StrategicCaseStudy = () => {
         {!quickSummaryMode && project.designExecution && (
           <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Design Execution</h2>
+              <h2 className="type-h2 mb-6">Design Execution</h2>
             </AnimatedSection>
 
             <div className="space-y-10">
               {project.designExecution.changes.map((change, index) => (
                 <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">{change.title}</h3>
+                    <h3 className="type-h3 mb-4">{change.title}</h3>
                     <div className="grid md:grid-cols-2 gap-6 mb-4">
                       <div className="bg-red-50 rounded-lg p-4">
                         <div className="text-sm font-semibold text-red-700 mb-2">Before</div>
@@ -558,7 +558,7 @@ const StrategicCaseStudy = () => {
         {project.outcome && (
           <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Outcome & Impact</h2>
+              <h2 className="type-h2 mb-6">Outcome & Impact</h2>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={100}>
@@ -610,7 +610,7 @@ const StrategicCaseStudy = () => {
         {project.reflection && (
           <section className="max-w-4xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="type-h2 mb-6">
                 {project.reflection.title}
               </h2>
             </AnimatedSection>
