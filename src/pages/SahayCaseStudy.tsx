@@ -93,7 +93,7 @@ function MetadataGrid() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-gray-200">
         <div>
           <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Role</div>
-          <div className="text-gray-900 text-sm">UX/UI Designer & Researcher</div>
+          <div className="text-gray-900 text-sm">Product Designer & Researcher (initiated project, led research strategy)</div>
         </div>
         <div>
           <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Duration</div>
@@ -101,12 +101,16 @@ function MetadataGrid() {
         </div>
         <div>
           <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Team</div>
-          <div className="text-gray-900 text-sm">3 People</div>
+          <div className="text-gray-900 text-sm">3 People (I led research and design direction)</div>
         </div>
         <div>
           <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Tools</div>
           <div className="text-gray-900 text-sm">Figma, FigJam, Figma Make, Google Forms</div>
         </div>
+      </div>
+      <div className="mt-6 pt-6 border-t border-gray-100">
+        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Key outcome</div>
+        <div className="text-gray-900 text-sm">Research revealed homeowners need confidence, not contractor listings. Pivoted product from marketplace to AI guidance companion. Validated through information architecture testing and user flow validation.</div>
       </div>
     </Reveal>
   )

@@ -253,8 +253,8 @@ const TalofaCaseStudy = () => {
                 <div className="text-gray-900">Founder, Coaches, Power Users, Gaming Advisor</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Focus Areas</div>
-                <div className="text-gray-900">Retention, Behavioral Motivation, Testing Strategy</div>
+                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Outcome</div>
+                <div className="text-gray-900">4 recommendations shipped in live product. Advocated for concept testing over A/B testing.</div>
               </div>
             </div>
           </AnimatedSection>

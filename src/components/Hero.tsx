@@ -88,17 +88,17 @@ const Hero = () => {
               </a>
               
               <a
-                href="/about"
+                href="mailto:tys.swetha@gmail.com"
                 className="text-base font-medium transition-colors hover:opacity-70 text-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                About me →
+                tys.swetha@gmail.com
               </a>
             </div>
             
             {/* Micro-proof with stroke count and pen mode controls */}
             <div className="mb-6 pointer-events-auto">
               <p className="text-xs sm:text-sm text-neutral-500 mb-3">
-                HCI-trained • Research-led • Visual storytelling background • AI-assisted workflows
+                MS in HCI, Drexel University. Background in commercial photography and marketing research. Building AI-assisted products.
               </p>
               
               {/* Touch device helper text */}

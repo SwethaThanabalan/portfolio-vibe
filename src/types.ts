@@ -4,6 +4,7 @@ export interface Project {
   category: string;
   descriptor?: string;
   keywords?: string[];
+  result?: string;
   year: string;
   thumbnail: string;
   description: string;

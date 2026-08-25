@@ -52,6 +52,16 @@ const WorkCard = ({ project }: WorkCardProps) => {
         >
           {project.description}
         </p>
+
+        {/* Outcome line */}
+        {project.result && (
+          <p 
+            className="text-sm font-medium mb-4"
+            style={{ color: 'var(--accent)' }}
+          >
+            {project.result}
+          </p>
+        )}
         
         {/* Tags — show keywords if available, otherwise tools */}
         <div className="flex flex-wrap gap-2">
