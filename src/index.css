@@ -694,6 +694,21 @@
   .deck-slide .type-meta-label { font-size: 7.5pt !important; }
   .deck-slide .deck-num { font-size: 8pt !important; }
 
+  /* Force responsive grids to their intended desktop layout in print.
+     Tailwind md: breakpoints don't reliably match in the print context,
+     so two-column slides collapse and the image bleeds full width. */
+  .deck-slide .grid { display: grid !important; align-items: center !important; }
+  .deck-slide .md\:grid-cols-2 { grid-template-columns: 1fr 1fr !important; }
+  .deck-slide .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
+  .deck-slide .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr) !important; }
+  .deck-slide .md\:grid-cols-5 { grid-template-columns: repeat(5, 1fr) !important; }
+  .deck-slide .md\:col-span-2 { grid-column: span 2 / span 2 !important; }
+  .deck-slide .md\:col-span-3 { grid-column: span 3 / span 3 !important; }
+
+  /* Keep the two-column image slides balanced and centered */
+  .deck-slide figure { margin: 0 !important; }
+  .deck-slide figure img { display: block; margin-left: auto; margin-right: auto; }
+
   /* Tighten vertical rhythm in print */
   .deck-slide .mb-10 { margin-bottom: 0.28in !important; }
   .deck-slide .mb-8 { margin-bottom: 0.22in !important; }
