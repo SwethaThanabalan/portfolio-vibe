@@ -500,6 +500,18 @@ const Deck = () => {
       <p className="deck-hint" style={{ position: 'fixed', bottom: '3vh', left: '50%', transform: 'translateX(-50%)', fontSize: 'var(--type-caption-size)', color: 'var(--muted)', zIndex: 50 }}>
         Scroll · Print to PDF via browser
       </p>
+
+      {/* Download button (screen only, hidden in print) */}
+      <button
+        onClick={() => window.print()}
+        className="deck-download"
+        aria-label="Download deck as PDF"
+      >
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        Download PDF
+      </button>
     </div>
   )
 }

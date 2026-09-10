@@ -594,6 +594,25 @@
   letter-spacing: 0.08em;
 }
 
+/* Download button */
+.deck-download {
+  position: fixed;
+  top: 3vh;
+  right: 3vw;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  font-size: var(--type-body-sm-size);
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--accent);
+  border-radius: var(--radius-md);
+  transition: background-color var(--duration-fast) ease;
+}
+.deck-download:hover { background-color: var(--accent-hover); }
+
 /* Print: one slide per page */
 @media print {
   @page {
@@ -603,7 +622,7 @@
 
   body { background: white; }
 
-  nav, .deck-hint, .deck-nav-dots { display: none !important; }
+  nav, .deck-hint, .deck-nav-dots, .deck-download { display: none !important; }
 
   .deck {
     height: auto;
