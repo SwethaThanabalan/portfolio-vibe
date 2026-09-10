@@ -77,18 +77,16 @@ const Deck = () => {
           <div className="md:col-span-3">
             <Eyebrow>About</Eyebrow>
             <h2 className="type-h1 mb-6" style={{ maxWidth: '18ch' }}>
-              I didn't start in product design. I started behind a camera.
+              Product design is where everything I do comes together.
             </h2>
             <div className="space-y-4 type-body-lg">
               <p>
-                I moved from commercial photography into marketing and SEO, then into product
-                design through an HCI master's at Drexel University. Photography taught me to
-                notice what others overlook and to think about how framing changes understanding.
+                I still shoot photography, run my own online presence with marketing, and take on
+                freelance design and photo work. Each is a craft I keep sharpening on its own.
               </p>
               <p>
-                Today I work across user research, interaction design, prototyping, and
-                AI-assisted product development, having designed across India, Canada, and the
-                United States.
+                Product design is the intersection. Observation from photography, positioning from
+                marketing, and research from my HCI master's at Drexel, tied into one workflow.
               </p>
             </div>
           </div>
