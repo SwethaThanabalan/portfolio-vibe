@@ -77,16 +77,18 @@ const Deck = () => {
           <div className="md:col-span-3">
             <Eyebrow>About</Eyebrow>
             <h2 className="type-h1 mb-6" style={{ maxWidth: '18ch' }}>
-              Product design is where everything I do comes together.
+              I kept picking up crafts before I knew they'd connect.
             </h2>
             <div className="space-y-4 type-body-lg">
               <p>
-                I still shoot photography, run my own online presence with marketing, and take on
-                freelance design and photo work. Each is a craft I keep sharpening on its own.
+                Photography came first. Then I taught myself marketing to get my own work seen,
+                which pulled me into how people search, judge, and decide. I kept following that
+                thread until it led me to an HCI master's at Drexel.
               </p>
               <p>
-                Product design is the intersection. Observation from photography, positioning from
-                marketing, and research from my HCI master's at Drexel, tied into one workflow.
+                Somewhere in there I realized these weren't separate hobbies. Product design was
+                the thing that used all of them at once. I still shoot, still market, still
+                freelance, and each one keeps sharpening the way I design.
               </p>
             </div>
           </div>

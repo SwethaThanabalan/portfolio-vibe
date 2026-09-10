@@ -80,10 +80,10 @@ const About = () => {
               <h1
                 className={`type-h1 mb-6 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-                Product design is where everything I do comes together.
+                I kept picking up crafts before I knew they'd connect.
               </h1>
               <p className={`type-lead transition-all duration-1000 delay-200 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                I still shoot photography, run my own online presence, and take on freelance design and photo work. Product design is the intersection of all of it, one workflow built from skills I keep sharpening on their own.
+                Photography, then marketing, then HCI. It took me a while to see that product design was the thing already using all of them at once.
               </p>
             </div>
             <div className={`md:col-span-2 transition-all duration-1000 delay-300 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
@@ -105,11 +105,12 @@ const About = () => {
         {/* THE THROUGH-LINE */}
         <section className="layout-content mb-20">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">The through-line</h2>
+            <h2 className="type-h2 mb-6">How it came together</h2>
             <div className="space-y-5 type-body-lg">
-              <p>I didn't collect these skills and move on from them. I still do all of them. I shoot photography, both freelance and for myself. I use marketing to build and run my own online presence. I take on freelance design work. Each one stays sharp because I keep practicing it.</p>
-              <p>Product design is where they meet. Photography taught me to observe closely and understand how framing changes what people see. Marketing taught me how people find, judge, and decide. Design gave me the tools to build for those decisions. The common thread is studying how people perceive and choose, then designing around it.</p>
-              <p>I think of it as learning each skill on its own first, then tying them into one workflow. Product design is that workflow.</p>
+              <p>Photography came first. I spent years learning to read light, frame a shot, and notice the small details that change how someone sees a subject. Then I needed people to actually find my work, so I taught myself marketing and SEO. That sent me down a rabbit hole of how people search, compare, and decide, which turned out to be its own kind of design problem.</p>
+              <p>Following that curiosity led me to an HCI master's at Drexel. That's where I got the language for what I'd been doing all along: framing problems, testing assumptions, and designing around how people actually behave.</p>
+              <p>At some point the separate skills stopped feeling separate. Product design was already pulling from all of them, the observation, the positioning, the research. So I stopped treating them as different lanes and started building one workflow that uses everything.</p>
+              <p>I still shoot, still market, still take freelance work. Each one keeps a different muscle sharp, and all of them feed the way I design.</p>
             </div>
           </AnimatedSection>
         </section>
