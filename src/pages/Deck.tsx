@@ -48,12 +48,13 @@ const Deck = () => {
       {/* ══════════ TITLE ══════════ */}
       <Slide variant="bg">
         <Eyebrow>Product Design Case Studies</Eyebrow>
-        <h1 className="type-display mb-6" style={{ maxWidth: '18ch' }}>
-          Selected product design work.
+        <h1 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
+          A designer who covers the whole funnel.
         </h1>
         <p className="type-lead mb-10">
-          Swetha Thanabalan, Product Designer with an HCI background and a foundation in
-          photography, communication, and marketing, currently building AI-assisted products.
+          Swetha Thanabalan, Product Designer. I research it, design it, make it look right, and
+          understand how it gets adopted, drawing on professional photography, marketing, and an
+          HCI master's.
         </p>
         <div className="grid grid-cols-3 gap-6" style={{ maxWidth: '640px' }}>
           <div className="border-t-2 pt-3" style={{ borderTopColor: 'var(--accent)' }}>
@@ -482,9 +483,12 @@ const Deck = () => {
       {/* ══════════ CLOSING ══════════ */}
       <Slide variant="bg">
         <Eyebrow>Contact</Eyebrow>
-        <h2 className="type-display mb-8" style={{ maxWidth: '20ch' }}>
-          Get in touch
+        <h2 className="type-display mb-6" style={{ maxWidth: '22ch' }}>
+          Research, interaction, visual, and a read on adoption, in one designer.
         </h2>
+        <p className="type-lead mb-10" style={{ maxWidth: '48ch' }}>
+          If you want a designer who can cover more of the product than most, let's talk.
+        </p>
         <div className="flex flex-col gap-3">
           <a href="mailto:tys.swetha@gmail.com" className="type-h3 text-[var(--text)] hover:text-[var(--accent)] transition-colors">tys.swetha@gmail.com</a>
           <a href="https://www.linkedin.com/in/swethathanabalan/" target="_blank" rel="noopener noreferrer" className="type-body text-[var(--accent)] hover:underline">linkedin.com/in/swethathanabalan</a>
