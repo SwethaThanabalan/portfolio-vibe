@@ -8,16 +8,19 @@ import SEO from '../components/SEO'
    Uses the portfolio brand system. Print to PDF via browser.
 ═══════════════════════════════════════════════════════════════ */
 
+let slideCounter = 0
+
 type SlideProps = {
   children: React.ReactNode
   variant?: 'bg' | 'surface' | 'dark'
-  num?: string
 }
 
-function Slide({ children, variant = 'bg', num }: SlideProps) {
+function Slide({ children, variant = 'bg' }: SlideProps) {
+  slideCounter += 1
+  const num = String(slideCounter).padStart(2, '0')
   return (
     <section className={`deck-slide deck-slide--${variant}`}>
-      {num && <span className="deck-num">{num}</span>}
+      <span className="deck-num">{num}</span>
       <div className="deck-inner">{children}</div>
     </section>
   )
@@ -28,6 +31,8 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 }
 
 const Deck = () => {
+  slideCounter = 0
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -41,7 +46,7 @@ const Deck = () => {
       />
 
       {/* ══════════ TITLE ══════════ */}
-      <Slide variant="bg" num="01">
+      <Slide variant="bg">
         <Eyebrow>Product Design Case Studies</Eyebrow>
         <h1 className="type-display mb-6" style={{ maxWidth: '18ch' }}>
           Selected product design work.
@@ -66,12 +71,48 @@ const Deck = () => {
         </div>
       </Slide>
 
+      {/* ══════════ ABOUT ══════════ */}
+      <Slide variant="surface">
+        <div className="grid md:grid-cols-5 gap-12 items-center">
+          <div className="md:col-span-3">
+            <Eyebrow>About</Eyebrow>
+            <h2 className="type-h1 mb-6" style={{ maxWidth: '18ch' }}>
+              I didn't start in product design. I started behind a camera.
+            </h2>
+            <div className="space-y-4 type-body-lg">
+              <p>
+                I moved from commercial photography into marketing and SEO, then into product
+                design through an HCI master's at Drexel University. Photography taught me to
+                notice what others overlook and to think about how framing changes understanding.
+              </p>
+              <p>
+                Today I work across user research, interaction design, prototyping, and
+                AI-assisted product development, having designed across India, Canada, and the
+                United States.
+              </p>
+            </div>
+          </div>
+          <div className="md:col-span-2">
+            <figure>
+              <img
+                src="/PortfolioPictureswetha.jpg"
+                alt="Swetha Thanabalan"
+                className="w-full border border-[var(--border)]"
+                style={{ aspectRatio: '3/4', objectFit: 'cover' }}
+                loading="eager"
+              />
+              <figcaption className="type-caption mt-3">Commercial photographer → product designer</figcaption>
+            </figure>
+          </div>
+        </div>
+      </Slide>
+
       {/* ══════════════════════════════════════════
           PROJECT 1 — SEPTA
       ══════════════════════════════════════════ */}
 
       {/* Cover */}
-      <Slide variant="dark" num="02">
+      <Slide variant="dark">
         <Eyebrow>Case Study 01 · Mobile Transit Experience Redesign</Eyebrow>
         <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
           SEPTA: rebuilding trust in a transit app people depend on.
@@ -85,7 +126,7 @@ const Deck = () => {
       </Slide>
 
       {/* Snapshot */}
-      <Slide variant="bg" num="03">
+      <Slide variant="bg">
         <Eyebrow>Snapshot</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '22ch' }}>
           Riders were forced to use Google Maps alongside SEPTA.
@@ -117,7 +158,7 @@ const Deck = () => {
       </Slide>
 
       {/* Research */}
-      <Slide variant="surface" num="04">
+      <Slide variant="surface">
         <Eyebrow>User research</Eyebrow>
         <h2 className="type-h1 mb-10" style={{ maxWidth: '20ch' }}>
           Interviews surfaced a trust problem underneath the usability issues.
@@ -139,7 +180,7 @@ const Deck = () => {
       </Slide>
 
       {/* Key decision */}
-      <Slide variant="bg" num="05">
+      <Slide variant="bg">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <Eyebrow>Product decision</Eyebrow>
@@ -168,7 +209,7 @@ const Deck = () => {
       </Slide>
 
       {/* Outcome */}
-      <Slide variant="dark" num="06">
+      <Slide variant="dark">
         <Eyebrow>Outcome</Eyebrow>
         <h2 className="type-display mb-8" style={{ maxWidth: '20ch' }}>
           The redesign matched how riders actually plan trips.
@@ -183,19 +224,31 @@ const Deck = () => {
           PROJECT 2 — SAHAY
       ══════════════════════════════════════════ */}
 
-      <Slide variant="dark" num="07">
-        <Eyebrow>Case Study 02 · AI-Assisted Home Maintenance Product</Eyebrow>
-        <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
-          Sahay: confidence before contractors.
-        </h2>
-        <p className="type-lead" style={{ color: 'rgba(255,255,255,0.7)' }}>
-          An AI home maintenance companion that helps homeowners understand problems before
-          deciding what to do next.
-        </p>
+      <Slide variant="dark">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <Eyebrow>Case Study 02 · AI-Assisted Home Maintenance Product</Eyebrow>
+            <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
+              Sahay: confidence before contractors.
+            </h2>
+            <p className="type-lead" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              An AI home maintenance companion that helps homeowners understand problems before
+              deciding what to do next.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="/SAHAY(3).png"
+              alt="Sahay: diagnose home issues, learn to fix them, or hire a trusted pro, all in one place"
+              className="w-full"
+              loading="lazy"
+            />
+          </figure>
+        </div>
       </Slide>
 
       {/* Snapshot */}
-      <Slide variant="bg" num="08">
+      <Slide variant="bg">
         <Eyebrow>Snapshot</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '22ch' }}>
           Homeowners want confidence before they spend money on a repair.
@@ -227,7 +280,7 @@ const Deck = () => {
       </Slide>
 
       {/* Research synthesis */}
-      <Slide variant="surface" num="09">
+      <Slide variant="surface">
         <Eyebrow>Research synthesis</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '22ch' }}>
           Interview notes grouped into four recurring themes.
@@ -238,8 +291,20 @@ const Deck = () => {
         </figure>
       </Slide>
 
+      {/* Research artifact — DIY affinity board */}
+      <Slide variant="bg">
+        <Eyebrow>Research evidence</Eyebrow>
+        <h2 className="type-h1 mb-8" style={{ maxWidth: '24ch' }}>
+          Homeowners piece together fixes across many disconnected sources.
+        </h2>
+        <figure>
+          <img src="/Research(2).jpg" alt="DIY Approach to Home Repairs affinity board with interview notes and AI-summarized insights" className="w-full border border-[var(--border)]" loading="lazy" />
+          <figcaption className="type-caption mt-3">Affinity board: participants relied on YouTube, Google, Reddit, and family, and hesitated because they couldn't judge urgency or cost.</figcaption>
+        </figure>
+      </Slide>
+
       {/* Key decision — the pivot */}
-      <Slide variant="bg" num="10">
+      <Slide variant="bg">
         <Eyebrow>The pivot</Eyebrow>
         <h2 className="type-h1 mb-10" style={{ maxWidth: '20ch' }}>
           From transactional marketplace to intelligent companion.
@@ -259,7 +324,7 @@ const Deck = () => {
       </Slide>
 
       {/* Finding -> decision -> response */}
-      <Slide variant="bg" num="11">
+      <Slide variant="bg">
         <Eyebrow>Finding → decision → design</Eyebrow>
         <h2 className="type-h1 mb-10" style={{ maxWidth: '22ch' }}>
           Move issue understanding ahead of provider discovery.
@@ -281,7 +346,7 @@ const Deck = () => {
       </Slide>
 
       {/* Outcome */}
-      <Slide variant="dark" num="12">
+      <Slide variant="dark">
         <Eyebrow>Outcome</Eyebrow>
         <h2 className="type-display mb-8" style={{ maxWidth: '22ch' }}>
           In testing, users described Sahay as a home partner.
@@ -297,7 +362,7 @@ const Deck = () => {
           PROJECT 3 — MONSTER WALK
       ══════════════════════════════════════════ */}
 
-      <Slide variant="dark" num="13">
+      <Slide variant="dark">
         <Eyebrow>Case Study 03 · Mobile Game Product Experience</Eyebrow>
         <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
           Monster Walk: redesigning the emotional re-entry moment.
@@ -309,7 +374,7 @@ const Deck = () => {
       </Slide>
 
       {/* Snapshot */}
-      <Slide variant="bg" num="14">
+      <Slide variant="bg">
         <Eyebrow>Snapshot</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '24ch' }}>
           Research showed lapsed users hesitated to return, mostly out of guilt and uncertainty.
@@ -339,7 +404,7 @@ const Deck = () => {
       </Slide>
 
       {/* Before state */}
-      <Slide variant="surface" num="15">
+      <Slide variant="surface">
         <Eyebrow>Before</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '22ch' }}>
           The return moment felt fragmented.
@@ -360,7 +425,7 @@ const Deck = () => {
       </Slide>
 
       {/* Key decision */}
-      <Slide variant="bg" num="16">
+      <Slide variant="bg">
         <Eyebrow>Product decision</Eyebrow>
         <h2 className="type-h1 mb-10" style={{ maxWidth: '22ch' }}>
           Concept testing over A/B testing.
@@ -383,7 +448,7 @@ const Deck = () => {
       </Slide>
 
       {/* Shipped */}
-      <Slide variant="bg" num="17">
+      <Slide variant="bg">
         <Eyebrow>Shipped in live product</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '22ch' }}>
           From concept to live game.
@@ -403,7 +468,7 @@ const Deck = () => {
       </Slide>
 
       {/* Outcome */}
-      <Slide variant="dark" num="18">
+      <Slide variant="dark">
         <Eyebrow>Outcome</Eyebrow>
         <h2 className="type-display mb-8" style={{ maxWidth: '20ch' }}>
           4 recommendations shipped in the live product.
@@ -415,7 +480,7 @@ const Deck = () => {
       </Slide>
 
       {/* ══════════ CLOSING ══════════ */}
-      <Slide variant="bg" num="19">
+      <Slide variant="bg">
         <Eyebrow>Contact</Eyebrow>
         <h2 className="type-display mb-8" style={{ maxWidth: '20ch' }}>
           Get in touch
