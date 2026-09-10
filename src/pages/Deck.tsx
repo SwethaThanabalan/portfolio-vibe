@@ -77,19 +77,18 @@ const Deck = () => {
           <div className="md:col-span-3">
             <Eyebrow>About</Eyebrow>
             <h2 className="type-h1 mb-6" style={{ maxWidth: '18ch' }}>
-              I kept picking up crafts before I knew they'd connect.
+              A designer who covers more of the product than most.
             </h2>
             <div className="space-y-4 type-body-lg">
               <p>
-                I studied communication, then photography, and built a freelance photo business.
-                To get that work seen I went into PR and marketing, which pulled me into how
-                people find, compare, and decide. That thread led me to an HCI master's at Drexel.
+                I shot professionally for paying clients, ran marketing and SEO at real companies,
+                and trained in HCI at Drexel. Visual craft, interaction design, user research, and
+                a marketer's read on adoption, all in one designer.
               </p>
               <p>
-                Somewhere in there I realized these weren't separate pursuits. Product design was
-                the thing that used all of them at once, the observation, the audience thinking,
-                the research. I still shoot and freelance, and each keeps sharpening the way I
-                design.
+                Most early-career designers own one part of how a product gets found, understood,
+                and chosen. I have worked across all of it, and I still shoot and freelance to keep
+                each skill sharp.
               </p>
             </div>
           </div>

@@ -85,10 +85,10 @@ const About = () => {
               <h1
                 className={`type-h1 mb-6 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-                I kept picking up crafts before I knew they'd connect.
+                A product designer who covers the whole funnel: attention, perception, and decision.
               </h1>
               <p className={`type-lead transition-all duration-1000 delay-200 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                Communication, photography, marketing, then HCI. It took me a while to see that product design was the thing already using all of them at once.
+                I shoot professionally, ran marketing and SEO at real companies, and trained in HCI. Most designers own one part of how a product gets found, understood, and chosen. I have worked across all of it.
               </p>
             </div>
             <div className={`md:col-span-2 transition-all duration-1000 delay-300 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
@@ -110,13 +110,12 @@ const About = () => {
         {/* THE THROUGH-LINE */}
         <section className="layout-content mb-20">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">How it came together</h2>
+            <h2 className="type-h2 mb-6">Why the range matters</h2>
             <div className="space-y-5 type-body-lg">
-              <p>I studied communication in Chennai, then moved to Canada for advanced photography at Fanshawe. Photography taught me to read light, frame a shot, and notice the small details that change how someone sees a subject. I built a freelance business around it, shooting headshots, events, and product campaigns for clients.</p>
-              <p>To get that work seen, I went deeper into public relations and marketing. A PR postgrad, then roles doing social media, content, and SEO at Big Brothers Big Sisters, Beauty First Spa, and RATESDOTCA. That work was really about how people find, compare, and decide, which turned out to be its own kind of design problem.</p>
-              <p>Following that thread led me to an HCI master's at Drexel. That's where I got the language for what I'd been doing all along: framing problems, testing assumptions, and designing around how people actually behave. It also led to product design work at Talofa and Adult You.</p>
-              <p>At some point the separate skills stopped feeling separate. Product design was already pulling from all of them, the observation, the audience thinking, the research. So I stopped treating them as different lanes and started building one workflow that uses everything.</p>
-              <p>I still shoot and still take freelance work. Each one keeps a different muscle sharp, and all of them feed the way I design.</p>
+              <p>Visual design is not a skill I picked up on the side. I shot professionally for paying clients, corporate headshots, events, and product campaigns, delivering to brand guidelines under real deadlines. I know how to make something look intentional and hold up in front of a stakeholder.</p>
+              <p>I also ran marketing and SEO at real companies, including RATESDOTCA and Beauty First Spa. That means I understand the part of the product most designers never touch: how it gets found, how people compare it, and what makes them decide. I design with adoption in mind, not just usability.</p>
+              <p>My HCI master's at Drexel gave me the research rigor to back those instincts, and I have applied it shipping product design at Talofa and Adult You.</p>
+              <p>Put together, I cover more of the product than a typical early-career designer. Visual craft, interaction design, user research, and a marketer's read on how things actually get adopted, all in one person.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -125,8 +124,8 @@ const About = () => {
         {/* SKILLS THAT CONVERGE */}
         <section className="layout-content mb-20">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-3">The skills that feed it</h2>
-            <p className="type-body-lg mb-8">Each of these is a practice I still keep up. Product design is where they combine.</p>
+            <h2 className="type-h2 mb-3">The range I bring</h2>
+            <p className="type-body-lg mb-8">Real experience across each area, not a list of courses. This is what I draw on as a product designer.</p>
           </AnimatedSection>
 
           <div className="space-y-6">
@@ -185,7 +184,7 @@ const About = () => {
         <section className="layout-content mb-20">
           <AnimatedSection animation="fade-up">
             <blockquote className="type-quote">
-              I'm a product designer who kept the crafts that led me here: observation from photography, audience thinking from PR and marketing, and research from HCI, working as one.
+              Hire me and you get a designer who can research it, design it, make it look right, and understand how it gets adopted.
             </blockquote>
           </AnimatedSection>
         </section>
