@@ -53,7 +53,7 @@ const Deck = () => {
         </h1>
         <p className="type-lead mb-10">
           Swetha Thanabalan, Product Designer with an HCI background and a foundation in
-          photography and public relations, currently building AI-assisted products.
+          photography, communication, and marketing, currently building AI-assisted products.
         </p>
         <div className="grid grid-cols-3 gap-6" style={{ maxWidth: '640px' }}>
           <div className="border-t-2 pt-3" style={{ borderTopColor: 'var(--accent)' }}>
@@ -81,14 +81,14 @@ const Deck = () => {
             </h2>
             <div className="space-y-4 type-body-lg">
               <p>
-                Photography came first, around age 14, and I never put the camera down. I studied
-                it alongside public relations, learning both the craft and how people form
-                impressions. That curiosity led me to an HCI master's at Drexel.
+                I studied communication, then photography, and built a freelance photo business.
+                To get that work seen I went into PR and marketing, which pulled me into how
+                people find, compare, and decide. That thread led me to an HCI master's at Drexel.
               </p>
               <p>
                 Somewhere in there I realized these weren't separate pursuits. Product design was
                 the thing that used all of them at once, the observation, the audience thinking,
-                the research. I still shoot and freelance, and each one keeps sharpening the way I
+                the research. I still shoot and freelance, and each keeps sharpening the way I
                 design.
               </p>
             </div>

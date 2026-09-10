@@ -10,24 +10,29 @@ import AnimatedSection from '../components/AnimatedSection'
 
 const skills = [
   {
-    label: 'Photography',
-    status: 'Since age 14 — still shooting',
-    text: 'Trained me to observe closely and understand how framing, light, and composition change what people notice. That instinct now shapes how I approach interfaces.',
+    label: 'Communication & Photography',
+    status: 'BSc Communication · Advanced Photography, 2016–2020',
+    text: 'Studied communication in Chennai, then advanced photography at Fanshawe. Photography taught me to observe closely and understand how framing, light, and composition change what people notice.',
   },
   {
-    label: 'Public Relations',
-    status: 'Studied alongside photography',
-    text: 'Taught me how messages land and how people form impressions. At its core it is audience thinking, which carries straight into designing for how people perceive and decide.',
+    label: 'Public Relations & Marketing',
+    status: 'PR postgrad + marketing/SEO roles, 2021–2022',
+    text: 'A PR postgrad, then marketing and SEO work at Big Brothers Big Sisters, Beauty First Spa, and RATESDOTCA. I learned how people find, judge, and decide, and how messages shape impressions.',
+  },
+  {
+    label: 'Freelance Photography',
+    status: 'Self-employed, 2021–2024 · still shooting',
+    text: 'Ran my own photography business shooting corporate headshots, events, and product campaigns, working directly with clients and adapting to brand guidelines.',
   },
   {
     label: 'HCI at Drexel University',
-    status: 'MS, 2022–2024',
-    text: 'Gave me the formal foundation: research methods, problem framing, validation, and the understanding that design is about decisions, not screens.',
+    status: "Master's, 2024–present",
+    text: 'The formal design foundation: research methods, problem framing, validation, and the understanding that design is about decisions, not screens.',
   },
   {
     label: 'Product Design',
-    status: 'Where it all converges',
-    text: 'The workflow that ties everything together. I connect research to strategy to interface to outcome, drawing on observation, audience thinking, and craft from everything else I do.',
+    status: 'Talofa, Adult You · where it converges',
+    text: 'Product design at Talofa and Adult You is where everything meets. I connect research to strategy to interface to outcome, drawing on observation, audience thinking, and craft from everything else I do.',
   },
 ]
 
@@ -63,7 +68,7 @@ const About = () => {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <SEO
         title="About Swetha Thanabalan | Product Designer"
-        description="Product Designer with an HCI background and a foundation in photography and public relations, working across user research, interaction design, prototyping, and AI-assisted product development."
+        description="Product Designer with an HCI background and a foundation in photography, communication, and marketing, working across user research, interaction design, prototyping, and AI-assisted product development."
         path="/about"
       />
       <Navbar />
@@ -83,7 +88,7 @@ const About = () => {
                 I kept picking up crafts before I knew they'd connect.
               </h1>
               <p className={`type-lead transition-all duration-1000 delay-200 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                Photography, then public relations, then HCI. It took me a while to see that product design was the thing already using all of them at once.
+                Communication, photography, marketing, then HCI. It took me a while to see that product design was the thing already using all of them at once.
               </p>
             </div>
             <div className={`md:col-span-2 transition-all duration-1000 delay-300 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
@@ -107,9 +112,9 @@ const About = () => {
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">How it came together</h2>
             <div className="space-y-5 type-body-lg">
-              <p>Photography came first. I picked up a camera around 14 and never really put it down. It taught me to read light, frame a shot, and notice the small details that change how someone sees a subject.</p>
-              <p>I went to school for photography and public relations, so alongside the craft I learned how messages land and how people form impressions. PR was really about understanding an audience and shaping how they perceive something, which turned out to be its own kind of design problem.</p>
-              <p>Following that curiosity led me to an HCI master's at Drexel. That's where I got the language for what I'd been doing all along: framing problems, testing assumptions, and designing around how people actually behave.</p>
+              <p>I studied communication in Chennai, then moved to Canada for advanced photography at Fanshawe. Photography taught me to read light, frame a shot, and notice the small details that change how someone sees a subject. I built a freelance business around it, shooting headshots, events, and product campaigns for clients.</p>
+              <p>To get that work seen, I went deeper into public relations and marketing. A PR postgrad, then roles doing social media, content, and SEO at Big Brothers Big Sisters, Beauty First Spa, and RATESDOTCA. That work was really about how people find, compare, and decide, which turned out to be its own kind of design problem.</p>
+              <p>Following that thread led me to an HCI master's at Drexel. That's where I got the language for what I'd been doing all along: framing problems, testing assumptions, and designing around how people actually behave. It also led to product design work at Talofa and Adult You.</p>
               <p>At some point the separate skills stopped feeling separate. Product design was already pulling from all of them, the observation, the audience thinking, the research. So I stopped treating them as different lanes and started building one workflow that uses everything.</p>
               <p>I still shoot and still take freelance work. Each one keeps a different muscle sharp, and all of them feed the way I design.</p>
             </div>
@@ -180,7 +185,7 @@ const About = () => {
         <section className="layout-content mb-20">
           <AnimatedSection animation="fade-up">
             <blockquote className="type-quote">
-              I'm a product designer who kept the crafts that led me here: observation from photography, audience thinking from public relations, and research from HCI, working as one.
+              I'm a product designer who kept the crafts that led me here: observation from photography, audience thinking from PR and marketing, and research from HCI, working as one.
             </blockquote>
           </AnimatedSection>
         </section>
