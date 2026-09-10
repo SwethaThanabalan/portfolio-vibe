@@ -51,16 +51,16 @@ const Deck = () => {
           background, currently building AI-assisted products.
         </p>
         <div className="grid grid-cols-3 gap-6" style={{ maxWidth: '640px' }}>
-          <div>
-            <p className="type-meta-label mb-1">01</p>
+          <div className="border-t-2 pt-3" style={{ borderTopColor: 'var(--accent)' }}>
+            <p className="type-meta-label mb-1" style={{ color: 'var(--accent)' }}>01</p>
             <p className="type-body font-medium">SEPTA Transit Redesign</p>
           </div>
-          <div>
-            <p className="type-meta-label mb-1">02</p>
+          <div className="border-t-2 pt-3" style={{ borderTopColor: 'var(--accent)' }}>
+            <p className="type-meta-label mb-1" style={{ color: 'var(--accent)' }}>02</p>
             <p className="type-body font-medium">Sahay AI Home Companion</p>
           </div>
-          <div>
-            <p className="type-meta-label mb-1">03</p>
+          <div className="border-t-2 pt-3" style={{ borderTopColor: 'var(--accent)' }}>
+            <p className="type-meta-label mb-1" style={{ color: 'var(--accent)' }}>03</p>
             <p className="type-body font-medium">Monster Walk Re-entry</p>
           </div>
         </div>

@@ -576,12 +576,13 @@
 /* Slide background variants */
 .deck-slide--bg { background-color: var(--bg); }
 .deck-slide--surface { background-color: var(--surface); }
-.deck-slide--dark { background-color: #1a1a1a; }
-.deck-slide--dark .deck-eyebrow { color: rgba(255,255,255,0.5); }
+.deck-slide--dark { background-color: var(--accent); }
+.deck-slide--dark .deck-num { color: rgba(255,255,255,0.55); }
+.deck-slide--dark .deck-eyebrow { color: rgba(255,255,255,0.6); }
 .deck-slide--dark h1,
 .deck-slide--dark h2,
 .deck-slide--dark p,
-.deck-slide--dark li { color: #f5f4f0; }
+.deck-slide--dark li { color: #ffffff; }
 
 /* Slide number */
 .deck-num {
