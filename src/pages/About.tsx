@@ -11,13 +11,13 @@ import AnimatedSection from '../components/AnimatedSection'
 const skills = [
   {
     label: 'Photography',
-    status: 'Still active — freelance and personal',
+    status: 'Since age 14 — still shooting',
     text: 'Trained me to observe closely and understand how framing, light, and composition change what people notice. That instinct now shapes how I approach interfaces.',
   },
   {
-    label: 'Marketing & SEO',
-    status: 'Still active — my own online presence',
-    text: 'Taught me how people find, judge, and decide. I use it to build my own presence and to think about products as systems people navigate, not just screens.',
+    label: 'Public Relations',
+    status: 'Studied alongside photography',
+    text: 'Taught me how messages land and how people form impressions. At its core it is audience thinking, which carries straight into designing for how people perceive and decide.',
   },
   {
     label: 'HCI at Drexel University',
@@ -27,7 +27,7 @@ const skills = [
   {
     label: 'Product Design',
     status: 'Where it all converges',
-    text: 'The workflow that ties everything together. I connect research to strategy to interface to outcome, drawing on observation, positioning, and craft from everything else I do.',
+    text: 'The workflow that ties everything together. I connect research to strategy to interface to outcome, drawing on observation, audience thinking, and craft from everything else I do.',
   },
 ]
 
@@ -63,7 +63,7 @@ const About = () => {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <SEO
         title="About Swetha Thanabalan | Product Designer"
-        description="Product Designer with an HCI background, commercial photography experience, and expertise in user research, interaction design, design systems, and AI-assisted workflows."
+        description="Product Designer with an HCI background and a foundation in photography and public relations, working across user research, interaction design, prototyping, and AI-assisted product development."
         path="/about"
       />
       <Navbar />
@@ -83,7 +83,7 @@ const About = () => {
                 I kept picking up crafts before I knew they'd connect.
               </h1>
               <p className={`type-lead transition-all duration-1000 delay-200 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                Photography, then marketing, then HCI. It took me a while to see that product design was the thing already using all of them at once.
+                Photography, then public relations, then HCI. It took me a while to see that product design was the thing already using all of them at once.
               </p>
             </div>
             <div className={`md:col-span-2 transition-all duration-1000 delay-300 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
@@ -107,10 +107,11 @@ const About = () => {
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">How it came together</h2>
             <div className="space-y-5 type-body-lg">
-              <p>Photography came first. I spent years learning to read light, frame a shot, and notice the small details that change how someone sees a subject. Then I needed people to actually find my work, so I taught myself marketing and SEO. That sent me down a rabbit hole of how people search, compare, and decide, which turned out to be its own kind of design problem.</p>
+              <p>Photography came first. I picked up a camera around 14 and never really put it down. It taught me to read light, frame a shot, and notice the small details that change how someone sees a subject.</p>
+              <p>I went to school for photography and public relations, so alongside the craft I learned how messages land and how people form impressions. PR was really about understanding an audience and shaping how they perceive something, which turned out to be its own kind of design problem.</p>
               <p>Following that curiosity led me to an HCI master's at Drexel. That's where I got the language for what I'd been doing all along: framing problems, testing assumptions, and designing around how people actually behave.</p>
-              <p>At some point the separate skills stopped feeling separate. Product design was already pulling from all of them, the observation, the positioning, the research. So I stopped treating them as different lanes and started building one workflow that uses everything.</p>
-              <p>I still shoot, still market, still take freelance work. Each one keeps a different muscle sharp, and all of them feed the way I design.</p>
+              <p>At some point the separate skills stopped feeling separate. Product design was already pulling from all of them, the observation, the audience thinking, the research. So I stopped treating them as different lanes and started building one workflow that uses everything.</p>
+              <p>I still shoot and still take freelance work. Each one keeps a different muscle sharp, and all of them feed the way I design.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -179,7 +180,7 @@ const About = () => {
         <section className="layout-content mb-20">
           <AnimatedSection animation="fade-up">
             <blockquote className="type-quote">
-              I'm a product designer who kept the crafts that led me here: observation from photography, positioning from marketing, and research from HCI, working as one.
+              I'm a product designer who kept the crafts that led me here: observation from photography, audience thinking from public relations, and research from HCI, working as one.
             </blockquote>
           </AnimatedSection>
         </section>

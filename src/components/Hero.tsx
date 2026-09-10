@@ -89,7 +89,7 @@ const Hero = () => {
             {/* Micro-proof with stroke count and pen mode controls */}
             <div className="mb-6 pointer-events-auto">
               <p className="text-xs sm:text-sm text-neutral-500 mb-3">
-                MS in HCI, Drexel University. Product design at the intersection of photography, marketing, and research, the crafts I still practice.
+                MS in HCI, Drexel University. Product design at the intersection of photography, public relations, and research.
               </p>
               
               {/* Touch device helper text */}
