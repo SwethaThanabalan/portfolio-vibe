@@ -613,15 +613,20 @@
 }
 .deck-download:hover { background-color: var(--accent-hover); }
 
-/* Print: one slide per page */
+/* Print: one 16:9 landscape slide per page, matching the on-screen deck */
 @media print {
+  /* Fixed 16:9 landscape page (11in x 6.1875in) so slides keep the same
+     proportions as the on-screen deck instead of reflowing to A4. */
   @page {
-    size: A4 landscape;
+    size: 11in 6.1875in;
     margin: 0;
   }
 
   html, body {
+    width: 11in !important;
     height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
     overflow: visible !important;
     background: white;
   }
@@ -637,21 +642,23 @@
     display: block !important;
   }
 
-  /* Each slide fills one printed page and never clips */
+  /* Each slide is locked to one full 16:9 page, same layout as on screen */
   .deck-slide {
     scroll-snap-align: none !important;
-    min-height: 0 !important;
-    height: auto !important;
     box-sizing: border-box;
-    display: flex;
+    width: 11in !important;
+    height: 6.1875in !important;
+    min-height: 6.1875in !important;
+    max-height: 6.1875in !important;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
-    padding: 8mm 14mm;
+    padding: 0.5in 0.7in !important;
     page-break-after: always;
     break-after: page;
     page-break-inside: avoid;
     break-inside: avoid;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .deck-slide:last-child {
@@ -661,13 +668,13 @@
 
   .deck-num {
     position: absolute;
-    top: 6mm;
-    right: 14mm;
+    top: 0.35in;
+    right: 0.7in;
   }
 
-  /* Keep images within the printable page */
+  /* Keep images inside the slide frame without distorting proportions */
   .deck-slide img {
-    max-height: 150mm;
+    max-height: 4.4in;
     width: auto;
     max-width: 100%;
     object-fit: contain;
