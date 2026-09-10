@@ -8,6 +8,7 @@ import AmazonTeardownCaseStudy from './pages/AmazonTeardownCaseStudy'
 import SahayCaseStudy from './pages/SahayCaseStudy'
 import About from './pages/About'
 import Deck from './pages/Deck'
+import DeckQuick from './pages/DeckQuick'
 import MockupPreview from './pages/MockupPreview'
 import { projects } from './data/projects'
 
@@ -54,6 +55,7 @@ function App() {
         <Route path="/project/:id" element={<ProjectRouter />} />
         <Route path="/about" element={<About />} />
         <Route path="/deck" element={<Deck />} />
+        <Route path="/deck/quick" element={<DeckQuick />} />
         <Route path="/mockup-preview" element={<MockupPreview />} />
       </Routes>
     </Router>
