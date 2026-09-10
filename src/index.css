@@ -544,3 +544,87 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   DECK — immersive scroll deck + print-to-PDF
+═══════════════════════════════════════════════════════════════ */
+
+.deck {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.deck-slide {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6vh 8vw;
+  position: relative;
+}
+
+.deck-inner {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Slide background variants */
+.deck-slide--bg { background-color: var(--bg); }
+.deck-slide--surface { background-color: var(--surface); }
+.deck-slide--dark { background-color: #1a1a1a; }
+.deck-slide--dark .deck-eyebrow { color: rgba(255,255,255,0.5); }
+.deck-slide--dark h1,
+.deck-slide--dark h2,
+.deck-slide--dark p,
+.deck-slide--dark li { color: #f5f4f0; }
+
+/* Slide number */
+.deck-num {
+  position: absolute;
+  top: 4vh;
+  right: 8vw;
+  font-size: var(--type-caption-size);
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+/* Print: one slide per page */
+@media print {
+  @page {
+    size: 1280px 720px;
+    margin: 0;
+  }
+
+  body { background: white; }
+
+  nav, .deck-hint, .deck-nav-dots { display: none !important; }
+
+  .deck {
+    height: auto;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .deck-slide {
+    min-height: 720px;
+    height: 720px;
+    page-break-after: always;
+    break-after: page;
+    padding: 60px 80px;
+  }
+
+  .deck-slide:last-child {
+    page-break-after: auto;
+  }
+
+  /* Force background colors to print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

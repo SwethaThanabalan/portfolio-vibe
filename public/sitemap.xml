@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://swethathanabalan.com/deck</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://swethathanabalan.com/project/sahay-home-companion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

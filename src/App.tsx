@@ -7,6 +7,7 @@ import AdultYouCaseStudy from './pages/AdultYouCaseStudy'
 import AmazonTeardownCaseStudy from './pages/AmazonTeardownCaseStudy'
 import SahayCaseStudy from './pages/SahayCaseStudy'
 import About from './pages/About'
+import Deck from './pages/Deck'
 import MockupPreview from './pages/MockupPreview'
 import { projects } from './data/projects'
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/project/:id" element={<ProjectRouter />} />
         <Route path="/about" element={<About />} />
+        <Route path="/deck" element={<Deck />} />
         <Route path="/mockup-preview" element={<MockupPreview />} />
       </Routes>
     </Router>
