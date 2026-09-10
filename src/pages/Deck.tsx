@@ -44,11 +44,11 @@ const Deck = () => {
       <Slide variant="bg" num="01">
         <Eyebrow>Product Design Case Studies</Eyebrow>
         <h1 className="type-display mb-6" style={{ maxWidth: '18ch' }}>
-          Designing products through research, decisions, and evidence.
+          Selected product design work.
         </h1>
         <p className="type-lead mb-10">
-          Swetha Thanabalan — Product Designer. HCI background, commercial photography roots,
-          building AI-assisted products.
+          Swetha Thanabalan, Product Designer with an HCI background and a commercial photography
+          background, currently building AI-assisted products.
         </p>
         <div className="grid grid-cols-3 gap-6" style={{ maxWidth: '640px' }}>
           <div>
@@ -120,7 +120,7 @@ const Deck = () => {
       <Slide variant="surface" num="04">
         <Eyebrow>User research</Eyebrow>
         <h2 className="type-h1 mb-10" style={{ maxWidth: '20ch' }}>
-          The problem was trust, not just usability.
+          Interviews surfaced a trust problem underneath the usability issues.
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#c9a96e' }}>
@@ -144,7 +144,7 @@ const Deck = () => {
           <div>
             <Eyebrow>Product decision</Eyebrow>
             <h2 className="type-h1 mb-6" style={{ maxWidth: '18ch' }}>
-              Make the map the core interaction, not a buried tab.
+              Make the map the core interaction layer.
             </h2>
             <div className="space-y-5">
               <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#c9a96e' }}>
@@ -171,7 +171,7 @@ const Deck = () => {
       <Slide variant="dark" num="06">
         <Eyebrow>Outcome</Eyebrow>
         <h2 className="type-display mb-8" style={{ maxWidth: '20ch' }}>
-          Design decisions aligned with real mental models, and the market.
+          The redesign matched how riders actually plan trips.
         </h2>
         <div className="grid md:grid-cols-2 gap-6" style={{ maxWidth: '760px' }}>
           <p className="type-body">Map-first navigation replaced the buried tab. Biometric login and persistent sessions removed the trust-breaking logout loops.</p>
@@ -198,7 +198,7 @@ const Deck = () => {
       <Slide variant="bg" num="08">
         <Eyebrow>Snapshot</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '22ch' }}>
-          Homeowners don't need another marketplace. They need confidence.
+          Homeowners want confidence before they spend money on a repair.
         </h2>
         <div className="grid md:grid-cols-4 gap-8 mb-10">
           <div>
@@ -284,11 +284,11 @@ const Deck = () => {
       <Slide variant="dark" num="12">
         <Eyebrow>Outcome</Eyebrow>
         <h2 className="type-display mb-8" style={{ maxWidth: '22ch' }}>
-          Users called it a home partner, not a maintenance app.
+          In testing, users described Sahay as a home partner.
         </h2>
         <p className="type-lead" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '52ch' }}>
-          That shift in language signaled the product felt genuinely different from existing
-          solutions. I advocated for keeping DIY guidance against internal pressure, and usability
+          That language signaled the product felt different from existing solutions. I advocated
+          for keeping DIY guidance when there was internal pressure to cut it, and usability
           testing validated it as one of the strongest features.
         </p>
       </Slide>
@@ -312,7 +312,7 @@ const Deck = () => {
       <Slide variant="bg" num="14">
         <Eyebrow>Snapshot</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '24ch' }}>
-          Lapsed users weren't disengaged. They were hesitant.
+          Research showed lapsed users hesitated to return, mostly out of guilt and uncertainty.
         </h2>
         <div className="grid md:grid-cols-4 gap-8 mb-10">
           <div>
@@ -373,10 +373,10 @@ const Deck = () => {
           </p>
           <div className="space-y-4">
             <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#c9a96e' }}>
-              <p className="type-body-sm">A/B testing → measures clicks, not emotional readiness. Wrong question.</p>
+              <p className="type-body-sm">A/B testing measures clicks, not emotional readiness.</p>
             </div>
             <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#4a8c5c' }}>
-              <p className="type-body-sm">Concept testing → observe emotional reactions in real time. Far more useful.</p>
+              <p className="type-body-sm">Concept testing surfaces emotional reactions in real time, which is what this problem needed.</p>
             </div>
           </div>
         </div>
@@ -416,9 +416,9 @@ const Deck = () => {
 
       {/* ══════════ CLOSING ══════════ */}
       <Slide variant="bg" num="19">
-        <Eyebrow>Thank you</Eyebrow>
+        <Eyebrow>Contact</Eyebrow>
         <h2 className="type-display mb-8" style={{ maxWidth: '20ch' }}>
-          Let's talk.
+          Get in touch
         </h2>
         <div className="flex flex-col gap-3">
           <a href="mailto:tys.swetha@gmail.com" className="type-h3 text-[var(--text)] hover:text-[var(--accent)] transition-colors">tys.swetha@gmail.com</a>
