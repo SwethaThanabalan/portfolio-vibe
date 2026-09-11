@@ -6,6 +6,11 @@ const Footer = () => {
   const [pipelineHover, setPipelineHover] = useState(false)
 
   useEffect(() => {
+    // Respect reduced-motion: skip the pointer-driven parallax entirely.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
       const footer = document.getElementById('footer-section')
       if (footer) {
@@ -166,7 +171,7 @@ const Footer = () => {
         >
           <p 
             className="text-xs sm:text-sm text-center"
-            style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+            style={{ color: 'rgba(255, 255, 255, 0.88)' }}
           >
             © 2026 Swetha Thanabalan
           </p>

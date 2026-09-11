@@ -72,6 +72,30 @@ const StrategicCaseStudy = () => {
     }
   }
 
+  // Keyboard seeking for the slider-role progress bar
+  const handleSeekKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!audioRef.current || duration === 0) return
+    const step = 5 // seconds
+    let next = currentTime
+    switch (e.key) {
+      case 'ArrowRight':
+      case 'ArrowUp':
+        next = Math.min(duration, currentTime + step); break
+      case 'ArrowLeft':
+      case 'ArrowDown':
+        next = Math.max(0, currentTime - step); break
+      case 'Home':
+        next = 0; break
+      case 'End':
+        next = duration; break
+      default:
+        return
+    }
+    e.preventDefault()
+    audioRef.current.currentTime = next
+    setCurrentTime(next)
+  }
+
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60)
     const seconds = Math.floor(time % 60)
@@ -157,9 +181,11 @@ const StrategicCaseStudy = () => {
                   setShowAudioPlayer(!showAudioPlayer)
                   if (!showAudioPlayer) setShowQuickSummary(false)
                 }}
+                aria-expanded={showAudioPlayer}
+                aria-controls="audio-player-panel"
                 className="inline-flex items-center gap-2 hover:text-gray-900 transition-colors hover:underline"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                 </svg>
                 Audio summary
@@ -171,9 +197,11 @@ const StrategicCaseStudy = () => {
                   setShowQuickSummary(!showQuickSummary)
                   if (!showQuickSummary) setShowAudioPlayer(false)
                 }}
+                aria-expanded={showQuickSummary}
+                aria-controls="quick-summary-panel"
                 className="inline-flex items-center gap-2 hover:text-gray-900 transition-colors hover:underline"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 Quick summary
@@ -181,7 +209,7 @@ const StrategicCaseStudy = () => {
 
               {/* Read Time */}
               <div className="inline-flex items-center gap-2">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 2 min read
@@ -190,10 +218,15 @@ const StrategicCaseStudy = () => {
 
             {/* Quick Summary (Collapsible) */}
             <div 
+              id="quick-summary-panel"
+              role="region"
+              aria-label="Quick summary"
+              aria-hidden={!showQuickSummary}
               className="overflow-hidden transition-all"
               style={{ 
                 maxHeight: showQuickSummary ? '600px' : '0',
                 opacity: showQuickSummary ? 1 : 0,
+                visibility: showQuickSummary ? 'visible' : 'hidden',
                 transitionDuration: prefersReducedMotion ? '0ms' : '260ms',
                 transitionTimingFunction: prefersReducedMotion ? 'linear' : 'cubic-bezier(0.22, 1, 0.36, 1)'
               }}
@@ -207,33 +240,42 @@ const StrategicCaseStudy = () => {
 
             {/* Audio Player (Collapsible) */}
             <div 
+              id="audio-player-panel"
+              role="region"
+              aria-label="Audio summary player"
+              aria-hidden={!showAudioPlayer}
               className="overflow-hidden transition-all duration-260"
               style={{ 
-                maxHeight: showAudioPlayer ? '300px' : '0',
-                opacity: showAudioPlayer ? 1 : 0
+                maxHeight: showAudioPlayer ? '400px' : '0',
+                opacity: showAudioPlayer ? 1 : 0,
+                visibility: showAudioPlayer ? 'visible' : 'hidden'
               }}
             >
               <div className="border border-gray-200 rounded-lg p-6 mb-6">
-                {/* Hidden audio element */}
+                {/* Native audio element with controls as an accessible fallback */}
                 <audio
                   ref={audioRef}
                   src="/SeptaProjectAudioSummary.mp3"
                   onTimeUpdate={handleTimeUpdate}
                   onLoadedMetadata={handleLoadedMetadata}
                   onEnded={() => setIsPlaying(false)}
+                  onPlay={() => setIsPlaying(true)}
+                  onPause={() => setIsPlaying(false)}
+                  aria-label="SEPTA case study audio summary"
                 />
                 
                 <div className="flex items-center gap-4 mb-4">
                   <button
                     onClick={togglePlayPause}
+                    aria-label={isPlaying ? 'Pause audio summary' : 'Play audio summary'}
                     className="w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center hover:bg-indigo-800 transition-colors"
                   >
                     {isPlaying ? (
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                         <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
                       </svg>
                     ) : (
-                      <svg className="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                         <path d="M8 5v14l11-7z" />
                       </svg>
                     )}
@@ -241,20 +283,47 @@ const StrategicCaseStudy = () => {
                   
                   <div className="flex-1">
                     <div 
-                      className="h-1 bg-gray-200 rounded-full overflow-hidden cursor-pointer"
+                      className="h-2 bg-gray-200 rounded-full overflow-hidden cursor-pointer"
                       onClick={handleSeek}
+                      onKeyDown={handleSeekKeyDown}
+                      role="slider"
+                      tabIndex={0}
+                      aria-label="Audio progress. Use arrow keys to seek."
+                      aria-valuemin={0}
+                      aria-valuemax={Math.round(duration)}
+                      aria-valuenow={Math.round(currentTime)}
+                      aria-valuetext={`${formatTime(currentTime)} of ${formatTime(duration)}`}
                     >
                       <div 
                         className="h-full bg-indigo-700 transition-all"
                         style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
                       />
                     </div>
-                    <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <div className="flex justify-between text-xs text-gray-600 mt-1">
                       <span>{formatTime(currentTime)}</span>
                       <span>{formatTime(duration)}</span>
                     </div>
                   </div>
                 </div>
+
+                {/* Text transcript / alternative for the audio (WCAG 1.2.1) */}
+                <details className="mt-2">
+                  <summary className="text-sm text-indigo-700 cursor-pointer hover:underline">
+                    Read transcript
+                  </summary>
+                  <p className="text-sm text-gray-700 leading-relaxed mt-3" style={{ maxWidth: '65ch' }}>
+                    SEPTA's mobile app was widely used for ticketing and trip planning, yet
+                    purchasing a ticket required seven steps and reflected internal navigation
+                    categories rather than rider intent, creating confusion and reduced trust.
+                    Research showed 68% of sessions involved ticketing, but usability testing
+                    revealed only a 45% task success rate. I reduced primary navigation from five
+                    tabs to three, merged overlapping trip functions, elevated ticketing as a
+                    persistent primary action, introduced biometric login with persistent sessions,
+                    and integrated a map-first interaction model. These decisions reduced ticket
+                    steps by 57%, improved task success from 45% to 92%, and all eight usability
+                    participants completed ticket purchase unassisted.
+                  </p>
+                </details>
               </div>
             </div>
           </AnimatedSection>

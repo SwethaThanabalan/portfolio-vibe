@@ -94,7 +94,7 @@ const Hero = () => {
               
               {/* Touch device helper text */}
               {isTouchDevice && !penModeEnabled && (
-                <p className="text-xs text-neutral-400 mb-3">
+                <p className="text-xs text-neutral-600 mb-3">
                   Tip: Turn on Pen mode to interact with the background
                 </p>
               )}

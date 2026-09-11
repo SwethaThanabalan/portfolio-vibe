@@ -46,7 +46,7 @@ const ProjectDetail = () => {
 
       <Navbar />
       
-      <main className="pt-24 pb-20">
+      <main id="main-content" className="pt-24 pb-20">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-6 py-12">
           <AnimatedSection animation="fade-in">

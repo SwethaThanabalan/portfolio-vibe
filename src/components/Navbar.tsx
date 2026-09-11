@@ -16,6 +16,13 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Respect reduced-motion for programmatic scrolling.
+  const scrollBehavior = (): ScrollBehavior =>
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? 'auto'
+      : 'smooth'
+
   const handleProjectsClick = (e: React.MouseEvent) => {
     e.preventDefault()
     setIsMobileMenuOpen(false)
@@ -24,7 +31,7 @@ const Navbar = () => {
       // Already on home page, just scroll
       const workSection = document.getElementById('work')
       if (workSection) {
-        workSection.scrollIntoView({ behavior: 'smooth' })
+        workSection.scrollIntoView({ behavior: scrollBehavior() })
       }
     } else {
       // Navigate to home page, then scroll
@@ -32,7 +39,7 @@ const Navbar = () => {
       setTimeout(() => {
         const workSection = document.getElementById('work')
         if (workSection) {
-          workSection.scrollIntoView({ behavior: 'smooth' })
+          workSection.scrollIntoView({ behavior: scrollBehavior() })
         }
       }, 100)
     }
@@ -44,7 +51,7 @@ const Navbar = () => {
     
     if (location.pathname === '/') {
       // Already on home page, just scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      window.scrollTo({ top: 0, behavior: scrollBehavior() })
     } else {
       // Navigate to home page (will automatically be at top)
       navigate('/')
@@ -86,7 +93,7 @@ const Navbar = () => {
             Swetha Thanabalan
           </Link>
           
-          <span className="mx-4 text-base" style={{ color: 'var(--muted)' }}>|</span>
+          <span className="mx-4 text-base" style={{ color: 'var(--muted)' }} aria-hidden="true">|</span>
           
           <a 
             href="/#work" 
@@ -97,7 +104,7 @@ const Navbar = () => {
             Projects
           </a>
           
-          <span className="mx-4 text-base" style={{ color: 'var(--muted)' }}>|</span>
+          <span className="mx-4 text-base" style={{ color: 'var(--muted)' }} aria-hidden="true">|</span>
           
           <Link 
             to="/about" 
@@ -107,7 +114,7 @@ const Navbar = () => {
             About Me
           </Link>
           
-          <span className="mx-4 text-base" style={{ color: 'var(--muted)' }}>|</span>
+          <span className="mx-4 text-base" style={{ color: 'var(--muted)' }} aria-hidden="true">|</span>
           
           <a 
             href="mailto:tys.swetha@gmail.com" 
@@ -148,14 +155,16 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 transition-colors hover:opacity-70"
             style={{ color: 'var(--text)' }}
-            aria-label="Toggle menu"
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
@@ -166,6 +175,7 @@ const Navbar = () => {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div 
+          id="mobile-menu"
           className="md:hidden backdrop-blur-sm border-t transition-all duration-300"
           style={{ 
             backgroundColor: 'var(--bg)',

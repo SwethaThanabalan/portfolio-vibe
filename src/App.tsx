@@ -10,6 +10,7 @@ import About from './pages/About'
 import Deck from './pages/Deck'
 import DeckQuick from './pages/DeckQuick'
 import MockupPreview from './pages/MockupPreview'
+import RouteChangeHandler from './components/RouteChangeHandler'
 import { projects } from './data/projects'
 
 // Wrapper to determine which template to use
@@ -50,6 +51,7 @@ function ProjectRouter() {
 function App() {
   return (
     <Router>
+      <RouteChangeHandler />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project/:id" element={<ProjectRouter />} />

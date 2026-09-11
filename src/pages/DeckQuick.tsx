@@ -77,7 +77,7 @@ const DeckQuick = () => {
   }, [])
 
   return (
-    <div className="deck bg-white">
+    <div className="deck bg-white" id="main-content" role="main" aria-label="Portfolio overview deck">
       <SEO
         title="Portfolio Overview | Swetha Thanabalan | Product Designer"
         description="A quick overview of Swetha Thanabalan's product design work: SEPTA transit redesign, Sahay AI home companion, and Monster Walk re-engagement."

@@ -9,12 +9,22 @@ const FlipCard = ({ title, description}: FlipCardProps) => {
   const [isFlipped, setIsFlipped] = useState(false)
 
   return (
-    <div
+    <button
+      type="button"
       className="flip-card-container"
+      aria-pressed={isFlipped}
+      aria-label={isFlipped ? `${title}: showing details. Activate to flip back.` : `${title}. Activate to learn more.`}
       style={{
         perspective: '1000px',
         height: '120px',
-        cursor: 'pointer'
+        width: '100%',
+        cursor: 'pointer',
+        display: 'block',
+        padding: 0,
+        border: 'none',
+        background: 'transparent',
+        textAlign: 'inherit',
+        font: 'inherit'
       }}
       onClick={() => setIsFlipped(!isFlipped)}
     >
@@ -63,6 +73,7 @@ const FlipCard = ({ title, description}: FlipCardProps) => {
         >
           {/* Animated background pattern */}
           <div
+            aria-hidden="true"
             style={{
               position: 'absolute',
               top: '-50%',
@@ -84,10 +95,11 @@ const FlipCard = ({ title, description}: FlipCardProps) => {
           
           {/* Click hint */}
           <div 
+            aria-hidden="true"
             style={{
               fontSize: '12px',
               color: '#991b1b',
-              opacity: 0.6,
+              opacity: 0.75,
               zIndex: 1,
               animation: 'fadeInOut 2s ease-in-out infinite'
             }}
@@ -118,6 +130,7 @@ const FlipCard = ({ title, description}: FlipCardProps) => {
         >
           {/* Animated background pattern */}
           <div
+            aria-hidden="true"
             style={{
               position: 'absolute',
               top: '-50%',
@@ -141,10 +154,11 @@ const FlipCard = ({ title, description}: FlipCardProps) => {
           
           {/* Click hint */}
           <div 
+            aria-hidden="true"
             style={{
               fontSize: '12px',
               color: '#fecaca',
-              opacity: 0.8,
+              opacity: 0.85,
               marginTop: '16px',
               zIndex: 1
             }}
@@ -185,7 +199,7 @@ const FlipCard = ({ title, description}: FlipCardProps) => {
           }
         }
       `}</style>
-    </div>
+    </button>
   )
 }
 

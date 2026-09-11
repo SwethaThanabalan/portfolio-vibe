@@ -38,7 +38,7 @@ const Deck = () => {
   }, [])
 
   return (
-    <div className="deck bg-white">
+    <div className="deck bg-white" id="main-content" role="main" aria-label="Case study deck">
       <SEO
         title="Case Study Deck | Swetha Thanabalan | Product Designer"
         description="Selected product design case studies: SEPTA transit redesign, Sahay AI home maintenance companion, and Monster Walk re-engagement strategy."
@@ -118,7 +118,7 @@ const Deck = () => {
         <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
           SEPTA: rebuilding trust in a transit app people depend on.
         </h2>
-        <p className="type-lead" style={{ color: 'rgba(255,255,255,0.7)' }}>
+        <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)' }}>
           A rider-first redesign of SEPTA's mobile app, centered on how people actually plan trips.
         </p>
         <p className="type-caption mt-8" style={{ color: 'rgba(255,255,255,0.45)' }}>
@@ -232,7 +232,7 @@ const Deck = () => {
             <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
               Sahay: confidence before contractors.
             </h2>
-            <p className="type-lead" style={{ color: 'rgba(255,255,255,0.7)' }}>
+            <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)' }}>
               An AI home maintenance companion that helps homeowners understand problems before
               deciding what to do next.
             </p>
@@ -352,7 +352,7 @@ const Deck = () => {
         <h2 className="type-display mb-8" style={{ maxWidth: '22ch' }}>
           In testing, users described Sahay as a home partner.
         </h2>
-        <p className="type-lead" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '52ch' }}>
+        <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)', maxWidth: '52ch' }}>
           That language signaled the product felt different from existing solutions. I advocated
           for keeping DIY guidance when there was internal pressure to cut it, and usability
           testing validated it as one of the strongest features.
@@ -368,7 +368,7 @@ const Deck = () => {
         <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
           Monster Walk: redesigning the emotional re-entry moment.
         </h2>
-        <p className="type-lead" style={{ color: 'rgba(255,255,255,0.7)' }}>
+        <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)' }}>
           A behavioral re-entry strategy for a fitness game losing lapsed users after 7 days of
           inactivity.
         </p>
@@ -474,7 +474,7 @@ const Deck = () => {
         <h2 className="type-display mb-8" style={{ maxWidth: '20ch' }}>
           4 recommendations shipped in the live product.
         </h2>
-        <p className="type-lead" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '52ch' }}>
+        <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)', maxWidth: '52ch' }}>
           In a 3-month beta internship with no post-launch access and no live metrics, I built the
           behavioral framework that shaped how Monster Walk welcomes users back.
         </p>
