@@ -24,9 +24,9 @@ const AmazonTeardownCaseStudy = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[var(--bg)]">
       {/* Scroll progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 z-50">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 dark:bg-[var(--surface)] z-50">
         <div 
           className="h-full bg-indigo-600 transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
@@ -54,7 +54,7 @@ const AmazonTeardownCaseStudy = () => {
         {/* 1. HERO SECTION */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-in">
-            <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
+            <Link to="/#work" className="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -75,18 +75,18 @@ const AmazonTeardownCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={200}>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200 dark:border-[var(--border)]">
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Role</div>
-                <div className="text-gray-900">UX Designer (Independent Analysis)</div>
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Role</div>
+                <div className="text-gray-900 dark:text-gray-100">UX Designer (Independent Analysis)</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Focus Areas</div>
-                <div className="text-gray-900">Interaction Design, Error Recovery, Customer Experience</div>
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Focus Areas</div>
+                <div className="text-gray-900 dark:text-gray-100">Interaction Design, Error Recovery, Customer Experience</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Reading Time</div>
-                <div className="text-gray-900">3 min</div>
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Reading Time</div>
+                <div className="text-gray-900 dark:text-gray-100">3 min</div>
               </div>
             </div>
           </AnimatedSection>
@@ -96,7 +96,7 @@ const AmazonTeardownCaseStudy = () => {
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Context</h2>
-            <div className="bg-gray-50 rounded-subtle p-8">
+            <div className="bg-gray-50 dark:bg-[var(--surface)] rounded-subtle p-8">
               <ul className="space-y-3 type-body-lg">
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-3 mt-1">•</span>
@@ -132,8 +132,8 @@ const AmazonTeardownCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mt-8 bg-indigo-50 border-l-4 border-indigo-600 rounded-r-xl p-6">
-              <p className="text-lg text-gray-900 font-semibold">
+            <div className="mt-8 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-600 rounded-r-xl p-6">
+              <p className="text-lg text-gray-900 dark:text-gray-100 font-semibold">
                 This is a breakdown in recovery design, not a functional bug.
               </p>
             </div>
@@ -165,18 +165,18 @@ const AmazonTeardownCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 space-y-4">
-              <h3 className="font-semibold text-gray-900 text-xl">Key Issues:</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-xl">Key Issues:</h3>
               <ul className="space-y-3 type-body-lg">
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-3 mt-1">×</span>
+                  <span className="text-red-600 dark:text-red-400 mr-3 mt-1">×</span>
                   <span>Redundant cognitive load</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-3 mt-1">×</span>
+                  <span className="text-red-600 dark:text-red-400 mr-3 mt-1">×</span>
                   <span>Missed opportunity in reason selection</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-3 mt-1">×</span>
+                  <span className="text-red-600 dark:text-red-400 mr-3 mt-1">×</span>
                   <span>System rigidity</span>
                 </li>
               </ul>
@@ -189,16 +189,16 @@ const AmazonTeardownCaseStudy = () => {
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">UX Analysis</h2>
             <div className="space-y-6 type-body-lg">
-              <p>Applying Norman's Action Cycle reveals a breakdown at the <span className="font-semibold text-gray-900">Interpretation stage</span>.</p>
+              <p>Applying Norman's Action Cycle reveals a breakdown at the <span className="font-semibold text-gray-900 dark:text-gray-100">Interpretation stage</span>.</p>
               
-              <p className="font-semibold text-gray-900">The system ignores user intent despite explicitly asking for it.</p>
+              <p className="font-semibold text-gray-900 dark:text-gray-100">The system ignores user intent despite explicitly asking for it.</p>
               <p>There is no meaningful feedback loop.</p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mt-8 bg-indigo-50 border-l-4 border-indigo-600 rounded-r-xl p-6">
-              <p className="text-lg text-gray-900">
+            <div className="mt-8 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-600 rounded-r-xl p-6">
+              <p className="text-lg text-gray-900 dark:text-gray-100">
                 The system collects data but doesn't act on it. This is a missed opportunity to close the recovery loop.
               </p>
             </div>
@@ -214,60 +214,60 @@ const AmazonTeardownCaseStudy = () => {
 
           <div className="space-y-6">
             <AnimatedSection animation="fade-up" delay={100}>
-              <div className="bg-white border-l-4 border-indigo-600 p-6 rounded-r-lg">
-                <h3 className="font-semibold text-gray-900 mb-3 text-lg">Observation 1: Reason Selection Theater</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="bg-white dark:bg-[var(--bg)] border-l-4 border-indigo-600 p-6 rounded-r-lg">
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 text-lg">Observation 1: Reason Selection Theater</h3>
+                <p className="text-gray-700 dark:text-gray-200 mb-3">
                   Cancellation reason includes "Need to change shipping address" as an option.
                 </p>
-                <p className="text-gray-700 font-semibold">
+                <p className="text-gray-700 dark:text-gray-200 font-semibold">
                   But the system does nothing with that input.
                 </p>
-                <p className="text-gray-600 mt-3 italic">
+                <p className="text-gray-600 dark:text-gray-300 mt-3 italic">
                   Why ask if you won't respond? This creates false expectations and erodes trust.
                 </p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <div className="bg-white border-l-4 border-indigo-600 p-6 rounded-r-lg">
-                <h3 className="font-semibold text-gray-900 mb-3 text-lg">Observation 2: No Lightning Deal Safeguard</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="bg-white dark:bg-[var(--bg)] border-l-4 border-indigo-600 p-6 rounded-r-lg">
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 text-lg">Observation 2: No Lightning Deal Safeguard</h3>
+                <p className="text-gray-700 dark:text-gray-200 mb-3">
                   No warning that canceling may result in losing time-sensitive pricing.
                 </p>
-                <p className="text-gray-700 font-semibold">
+                <p className="text-gray-700 dark:text-gray-200 font-semibold">
                   No acknowledgment of urgency context.
                 </p>
-                <p className="text-gray-600 mt-3 italic">
+                <p className="text-gray-600 dark:text-gray-300 mt-3 italic">
                   The system treats all cancellations equally, regardless of stakes.
                 </p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
-              <div className="bg-white border-l-4 border-indigo-600 p-6 rounded-r-lg">
-                <h3 className="font-semibold text-gray-900 mb-3 text-lg">Observation 3: No Cart Preservation</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="bg-white dark:bg-[var(--bg)] border-l-4 border-indigo-600 p-6 rounded-r-lg">
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 text-lg">Observation 3: No Cart Preservation</h3>
+                <p className="text-gray-700 dark:text-gray-200 mb-3">
                   After cancellation, the 15-item cart is gone.
                 </p>
-                <p className="text-gray-700 font-semibold">
+                <p className="text-gray-700 dark:text-gray-200 font-semibold">
                   User must manually search and re-add every item.
                 </p>
-                <p className="text-gray-600 mt-3 italic">
+                <p className="text-gray-600 dark:text-gray-300 mt-3 italic">
                   The system knows what was ordered. It could offer to restore the cart with a corrected address.
                 </p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
-              <div className="bg-white border-l-4 border-indigo-600 p-6 rounded-r-lg">
-                <h3 className="font-semibold text-gray-900 mb-3 text-lg">Observation 4: Emotional Friction Increases Abandonment Risk</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="bg-white dark:bg-[var(--bg)] border-l-4 border-indigo-600 p-6 rounded-r-lg">
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 text-lg">Observation 4: Emotional Friction Increases Abandonment Risk</h3>
+                <p className="text-gray-700 dark:text-gray-200 mb-3">
                   The combination of urgency, manual effort, and uncertainty creates decision paralysis.
                 </p>
-                <p className="text-gray-700 font-semibold">
+                <p className="text-gray-700 dark:text-gray-200 font-semibold">
                   Users may abandon the purchase entirely rather than rebuild.
                 </p>
-                <p className="text-gray-600 mt-3 italic">
+                <p className="text-gray-600 dark:text-gray-300 mt-3 italic">
                   Recovery friction directly impacts conversion.
                 </p>
               </div>
@@ -280,7 +280,7 @@ const AmazonTeardownCaseStudy = () => {
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Customer-First Reflection</h2>
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8 space-y-6 type-body-lg">
-              <p className="text-xl text-gray-900 font-semibold">
+              <p className="text-xl text-gray-900 dark:text-gray-100 font-semibold">
                 Strong systems should anticipate mistakes, not penalize them.
               </p>
               
@@ -305,11 +305,11 @@ const AmazonTeardownCaseStudy = () => {
                 </li>
               </ul>
 
-              <p className="pt-6 border-t border-indigo-200">
+              <p className="pt-6 border-t border-indigo-200 dark:border-indigo-800">
                 This teardown isn't about criticizing Amazon. It's about recognizing that even mature systems have recovery gaps.
               </p>
               
-              <p className="font-semibold text-gray-900">
+              <p className="font-semibold text-gray-900 dark:text-gray-100">
                 The best opportunities for UX improvement often live in the moments when things go wrong.
               </p>
             </div>
@@ -318,10 +318,10 @@ const AmazonTeardownCaseStudy = () => {
 
         {/* Back to projects */}
         <section className="layout-content">
-          <div className="border-t border-gray-200 pt-12">
+          <div className="border-t border-gray-200 dark:border-[var(--border)] pt-12">
             <Link 
               to="/#work"
-              className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors group"
+              className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors group"
             >
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

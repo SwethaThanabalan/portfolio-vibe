@@ -11,7 +11,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       to={`/project/${project.id}`}
       className="group block"
     >
-      <div className="relative overflow-hidden rounded-2xl aspect-[16/11] bg-gray-100 mb-6 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-gray-900/10">
+      <div className="relative overflow-hidden rounded-2xl aspect-[16/11] bg-gray-100 dark:bg-[var(--surface)] mb-6 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-gray-900/10">
         <img 
           src={project.thumbnail} 
           alt={project.title}
@@ -20,10 +20,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
       
       <div className="space-y-3">
-        <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 tracking-tight transition-colors duration-300 group-hover:text-gray-600">
+        <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-gray-100 tracking-tight transition-colors duration-300 group-hover:text-gray-600 dark:text-gray-300">
           {project.title}
         </h3>
-        <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
           {project.description}
         </p>
       </div>

@@ -38,7 +38,7 @@ const Deck = () => {
   }, [])
 
   return (
-    <div className="deck bg-white" id="main-content" role="main" aria-label="Case study deck">
+    <div className="deck bg-white dark:bg-[var(--bg)]" id="main-content" role="main" aria-label="Case study deck">
       <SEO
         title="Case Study Deck | Swetha Thanabalan | Product Designer"
         description="Selected product design case studies: SEPTA transit redesign, Sahay AI home maintenance companion, and Monster Walk re-engagement strategy."

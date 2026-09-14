@@ -148,7 +148,7 @@ const HeroBackground = ({ currentWord }: HeroBackgroundProps) => {
 
       {/* Readability veil overlay - DO NOT exceed bg-white/45 */}
       <div 
-        className="absolute inset-0 bg-white/35 z-[1]"
+        className="absolute inset-0 bg-white/35 dark:bg-black/50 z-[1]"
       />
     </div>
   )

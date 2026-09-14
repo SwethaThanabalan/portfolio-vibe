@@ -113,7 +113,7 @@ function MetadataGrid() {
 
 function ContributionTag({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-block type-tag border-b border-indigo-300 text-indigo-700 pb-px">
+    <span className="inline-block type-tag border-b border-indigo-300 dark:border-indigo-700 text-indigo-700 pb-px">
       {children}
     </span>
   )
@@ -131,9 +131,9 @@ const SahayCaseStudy = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[var(--bg)]">
       {/* Progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 z-50">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 dark:bg-[var(--surface)] z-50">
         <div className="h-full bg-indigo-600 transition-all duration-150" style={{ width: `${scrollProgress}%` }} />
       </div>
 
@@ -461,7 +461,7 @@ const SahayCaseStudy = () => {
                 { label: 'DIY Guidance', desc: 'Step-by-step instructions when appropriate' },
                 { label: 'Decision Support', desc: 'Help users choose between DIY and professional help' },
               ].map((item, i) => (
-                <div key={i} className="bg-gray-50 rounded-subtle p-5 border border-gray-100">
+                <div key={i} className="bg-gray-50 dark:bg-[var(--surface)] rounded-subtle p-5 border border-gray-100 dark:border-[var(--border)]">
                   <p className="type-body-sm font-semibold mb-1">{item.label}</p>
                   <p className="type-body-sm">{item.desc}</p>
                 </div>
@@ -470,7 +470,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={150}>
-            <p className="text-base text-gray-500 mt-8 italic">
+            <p className="text-base text-gray-500 dark:text-gray-400 mt-8 italic">
               We used Figma Make to rapidly prototype AI-driven interactions and test them with real users.
             </p>
           </Reveal>
@@ -499,9 +499,9 @@ const SahayCaseStudy = () => {
 
           <Reveal delay={100}>
             <ul className="mt-4 mb-8 space-y-3 ml-1 type-body-lg">
-              <li className="flex items-start gap-3"><span className="text-green-600 mt-1">✓</span> Problem-first navigation: start with "what's wrong," not "find a pro"</li>
-              <li className="flex items-start gap-3"><span className="text-green-600 mt-1">✓</span> Understanding before booking: diagnosis precedes action</li>
-              <li className="flex items-start gap-3"><span className="text-green-600 mt-1">✓</span> Guided decision making: the system helps users decide, not just presents options</li>
+              <li className="flex items-start gap-3"><span className="text-green-600 dark:text-green-400 mt-1">✓</span> Problem-first navigation: start with "what's wrong," not "find a pro"</li>
+              <li className="flex items-start gap-3"><span className="text-green-600 dark:text-green-400 mt-1">✓</span> Understanding before booking: diagnosis precedes action</li>
+              <li className="flex items-start gap-3"><span className="text-green-600 dark:text-green-400 mt-1">✓</span> Guided decision making: the system helps users decide, not just presents options</li>
             </ul>
           </Reveal>
 
@@ -537,21 +537,21 @@ const SahayCaseStudy = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               <Reveal delay={50}>
-                <div className="bg-white rounded-subtle p-6 border border-gray-200 h-full">
+                <div className="bg-white dark:bg-[var(--bg)] rounded-subtle p-6 border border-gray-200 dark:border-[var(--border)] h-full">
                   <div className="text-2xl mb-3">🧭</div>
                   <h3 className="type-h3 mb-2">Confidence first</h3>
                   <p className="type-body-sm">Every interaction should increase the user's understanding and reduce anxiety before asking them to take action or spend money.</p>
                 </div>
               </Reveal>
               <Reveal delay={100}>
-                <div className="bg-white rounded-subtle p-6 border border-gray-200 h-full">
+                <div className="bg-white dark:bg-[var(--bg)] rounded-subtle p-6 border border-gray-200 dark:border-[var(--border)] h-full">
                   <div className="text-2xl mb-3">🤝</div>
                   <h3 className="type-h3 mb-2">Companion, not tool</h3>
                   <p className="type-body-sm">The product should feel like a knowledgeable friend, conversational, empathetic, and always oriented toward the user's best interest.</p>
                 </div>
               </Reveal>
               <Reveal delay={150}>
-                <div className="bg-white rounded-subtle p-6 border border-gray-200 h-full">
+                <div className="bg-white dark:bg-[var(--bg)] rounded-subtle p-6 border border-gray-200 dark:border-[var(--border)] h-full">
                   <div className="text-2xl mb-3">⚖️</div>
                   <h3 className="type-h3 mb-2">DIY + Pro, not either/or</h3>
                   <p className="type-body-sm">Never force a user down one path. Present both options with clear guidance on when each makes sense.</p>
@@ -577,7 +577,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="w-full rounded-subtle overflow-hidden border border-gray-200 shadow-sm" style={{ paddingBottom: '56.25%', position: 'relative' }}>
+            <div className="w-full rounded-subtle overflow-hidden border border-gray-200 dark:border-[var(--border)] shadow-sm" style={{ paddingBottom: '56.25%', position: 'relative' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/O67w4i0cTFg?si=AbfgtsdcDOJDs7TI"
@@ -607,12 +607,12 @@ const SahayCaseStudy = () => {
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-8">
-                <div className="bg-red-50 rounded-subtle p-5">
-                  <p className="text-xs font-semibold text-red-700 mb-2">Before</p>
+                <div className="bg-red-50 dark:bg-red-950/30 rounded-subtle p-5">
+                  <p className="text-xs font-semibold text-red-700 dark:text-red-300 mb-2">Before</p>
                   <p className="type-body-sm">Long questionnaire upfront → high drop-off</p>
                 </div>
-                <div className="bg-green-50 rounded-subtle p-5">
-                  <p className="text-xs font-semibold text-green-700 mb-2">After</p>
+                <div className="bg-green-50 dark:bg-green-950/30 rounded-subtle p-5">
+                  <p className="text-xs font-semibold text-green-700 dark:text-green-300 mb-2">After</p>
                   <p className="type-body-sm">Minimal input → AI-generated home summary → progressive detail</p>
                 </div>
               </div>
@@ -760,8 +760,8 @@ const SahayCaseStudy = () => {
                 'AI-generated home summary',
                 'Problem-first navigation',
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-green-50 rounded-subtle px-5 py-3">
-                  <span className="text-green-600">✓</span>
+                <div key={i} className="flex items-center gap-3 bg-green-50 dark:bg-green-950/30 rounded-subtle px-5 py-3">
+                  <span className="text-green-600 dark:text-green-400">✓</span>
                   <span className="type-body-sm">{item}</span>
                 </div>
               ))}
@@ -804,11 +804,11 @@ const SahayCaseStudy = () => {
             <div className="mt-10">
               <h3 className="type-h3 mb-6">If I continued this project, I would:</h3>
               <ul className="space-y-3 text-[var(--text-secondary)]">
-                <li className="flex items-start gap-3"><span className="text-gray-400">01</span> Conduct deeper validation of AI trust patterns</li>
-                <li className="flex items-start gap-3"><span className="text-gray-400">02</span> Test how users respond when AI is wrong vs. uncertain</li>
-                <li className="flex items-start gap-3"><span className="text-gray-400">03</span> Build more realistic AI prototypes with LLM integration</li>
-                <li className="flex items-start gap-3"><span className="text-gray-400">04</span> Explore trust calibration: when should AI express confidence vs. uncertainty?</li>
-                <li className="flex items-start gap-3"><span className="text-gray-400">05</span> Continue refining the home companion vision with longitudinal testing</li>
+                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">01</span> Conduct deeper validation of AI trust patterns</li>
+                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">02</span> Test how users respond when AI is wrong vs. uncertain</li>
+                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">03</span> Build more realistic AI prototypes with LLM integration</li>
+                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">04</span> Explore trust calibration: when should AI express confidence vs. uncertainty?</li>
+                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">05</span> Continue refining the home companion vision with longitudinal testing</li>
               </ul>
             </div>
           </Reveal>
@@ -826,21 +826,21 @@ const SahayCaseStudy = () => {
                 <div className="space-y-6">
                   <div>
                     <p className="text-sm font-semibold text-indigo-400 mb-2">Product thinking</p>
-                    <p className="text-gray-300 text-sm leading-relaxed">Reframed the entire product direction based on research, from marketplace to companion. Didn't just execute, challenged the brief.</p>
+                    <p className="text-gray-300 dark:text-gray-600 text-sm leading-relaxed">Reframed the entire product direction based on research, from marketplace to companion. Didn't just execute, challenged the brief.</p>
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-indigo-400 mb-2">Research-driven decisions</p>
-                    <p className="text-gray-300 text-sm leading-relaxed">Advocated for DIY guidance against internal pressure. Was later validated by usability testing. Trusted the data over opinions.</p>
+                    <p className="text-gray-300 dark:text-gray-600 text-sm leading-relaxed">Advocated for DIY guidance against internal pressure. Was later validated by usability testing. Trusted the data over opinions.</p>
                   </div>
                 </div>
                 <div className="space-y-6">
                   <div>
                     <p className="text-sm font-semibold text-indigo-400 mb-2">AI product design</p>
-                    <p className="text-gray-300 text-sm leading-relaxed">Explored conversational AI as a core interaction model. Learned that AI products are judged by the quality of the intelligence, not just the UI.</p>
+                    <p className="text-gray-300 dark:text-gray-600 text-sm leading-relaxed">Explored conversational AI as a core interaction model. Learned that AI products are judged by the quality of the intelligence, not just the UI.</p>
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-indigo-400 mb-2">Strategic initiative</p>
-                    <p className="text-gray-300 text-sm leading-relaxed">Identified the opportunity, recruited the team, drove research, and designed key experiences. Ownership from concept to validation.</p>
+                    <p className="text-gray-300 dark:text-gray-600 text-sm leading-relaxed">Identified the opportunity, recruited the team, drove research, and designed key experiences. Ownership from concept to validation.</p>
                   </div>
                 </div>
               </div>
@@ -854,14 +854,14 @@ const SahayCaseStudy = () => {
         ═══════════════════════════════════════════ */}
         <section className="layout-content">
           <Reveal>
-            <div className="border-t border-gray-200 pt-12 flex justify-between items-center">
-              <Link to="/#work" className="group inline-flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors">
+            <div className="border-t border-gray-200 dark:border-[var(--border)] pt-12 flex justify-between items-center">
+              <Link to="/#work" className="group inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                 <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 All projects
               </Link>
-              <Link to="/about" className="group inline-flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors">
+              <Link to="/about" className="group inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                 About me
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

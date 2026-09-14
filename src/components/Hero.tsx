@@ -39,7 +39,7 @@ const Hero = () => {
       />
       
       {/* Readability veil - reduced opacity for more visible blobs */}
-      <div className="absolute inset-0 bg-white/20 z-[1] pointer-events-none" />
+      <div className="absolute inset-0 bg-white/20 dark:bg-black/45 z-[1] pointer-events-none" />
       
       {/* Hero content - z-10, centered, pointer-events-none on wrapper */}
       <div className="relative z-10 w-full flex-1 flex items-center pointer-events-none">
@@ -80,7 +80,7 @@ const Hero = () => {
               
               <a
                 href="mailto:tys.swetha@gmail.com"
-                className="text-base font-medium transition-colors hover:opacity-70 text-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="text-base font-medium transition-colors hover:opacity-70 text-neutral-900 dark:text-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 tys.swetha@gmail.com
               </a>
@@ -88,13 +88,13 @@ const Hero = () => {
             
             {/* Micro-proof with stroke count and pen mode controls */}
             <div className="mb-6 pointer-events-auto">
-              <p className="text-xs sm:text-sm text-neutral-500 mb-3">
+              <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mb-3">
                 MS in HCI, Drexel University. Professional photographer and former marketer, so I research it, design it, and know how it gets adopted.
               </p>
               
               {/* Touch device helper text */}
               {isTouchDevice && !penModeEnabled && (
-                <p className="text-xs text-neutral-600 mb-3">
+                <p className="text-xs text-neutral-600 dark:text-neutral-300 mb-3">
                   Tip: Turn on Pen mode to interact with the background
                 </p>
               )}
@@ -104,7 +104,7 @@ const Hero = () => {
                 <div className="flex items-center justify-center gap-4 text-sm">
                   <button
                     onClick={() => setPenModeEnabled(!penModeEnabled)}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 text-neutral-700 hover:text-neutral-900 transition-colors border-b border-transparent hover:border-neutral-300"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 text-neutral-700 dark:text-neutral-200 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-600"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -116,13 +116,13 @@ const Hero = () => {
                     <>
                       <button
                         onClick={handleReset}
-                        className="px-3 py-1.5 text-neutral-600 hover:text-neutral-900 transition-colors text-sm"
+                        className="px-3 py-1.5 text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors text-sm"
                       >
                         Reset
                       </button>
                       <button
                         onClick={() => setPenModeEnabled(false)}
-                        className="px-3 py-1.5 text-neutral-600 hover:text-neutral-900 transition-colors text-sm"
+                        className="px-3 py-1.5 text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors text-sm"
                       >
                         Done
                       </button>

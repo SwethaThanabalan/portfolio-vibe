@@ -23,9 +23,9 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-white dark:bg-[var(--bg)] flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Project not found</h1>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">Project not found</h1>
           <Link to="/" className="text-blue-600 hover:text-blue-700">
             Back to home
           </Link>
@@ -35,9 +35,9 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[var(--bg)]">
       {/* Scroll progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 z-50">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 dark:bg-[var(--surface)] z-50">
         <div 
           className="h-full bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
@@ -50,7 +50,7 @@ const ProjectDetail = () => {
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-6 py-12">
           <AnimatedSection animation="fade-in">
-            <Link to="/#work" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors group">
+            <Link to="/#work" className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 mb-8 transition-colors group">
               <svg className="w-5 h-5 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -61,28 +61,28 @@ const ProjectDetail = () => {
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             <div className="md:col-span-2">
               <AnimatedSection animation="fade-up">
-                <h1 className="text-5xl font-bold text-gray-900 mb-6">{project.title}</h1>
+                <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">{project.title}</h1>
               </AnimatedSection>
               <AnimatedSection animation="fade-up" delay={100}>
-                <p className="text-xl text-gray-600 leading-relaxed">{project.description}</p>
+                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
               </AnimatedSection>
             </div>
             
             <AnimatedSection animation="slide-left" delay={200}>
-              <div className="space-y-6 bg-gray-50 p-6 rounded-xl">
+              <div className="space-y-6 bg-gray-50 dark:bg-[var(--surface)] p-6 rounded-xl">
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900 mb-2">Role</h3>
-                  <p className="text-gray-600">{project.role}</p>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Role</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{project.role}</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900 mb-2">Duration</h3>
-                  <p className="text-gray-600">{project.duration}</p>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Duration</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{project.duration}</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900 mb-2">Tools</h3>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Tools</h3>
                   <div className="flex flex-wrap gap-2">
                     {project.tools.map((tool) => (
-                      <span key={tool} className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm shadow-sm">
+                      <span key={tool} className="px-3 py-1 bg-white dark:bg-[var(--bg)] text-gray-700 dark:text-gray-200 rounded-full text-sm shadow-sm">
                         {tool}
                       </span>
                     ))}
@@ -106,24 +106,24 @@ const ProjectDetail = () => {
         {/* Overview */}
         <section className="max-w-4xl mx-auto px-6 py-12">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Overview</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-16">
               {project.overview}
             </p>
           </AnimatedSection>
 
           {/* Challenge */}
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">The Challenge</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-16">
               {project.challenge}
             </p>
           </AnimatedSection>
 
           {/* Solution */}
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Solution</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">The Solution</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-16">
               {project.solution}
             </p>
           </AnimatedSection>
@@ -148,10 +148,10 @@ const ProjectDetail = () => {
 
         {/* Next Project */}
         <section className="max-w-7xl mx-auto px-6 py-20">
-          <div className="border-t border-gray-200 pt-12">
+          <div className="border-t border-gray-200 dark:border-[var(--border)] pt-12">
             <Link 
               to="/#work"
-              className="inline-flex items-center text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors"
+              className="inline-flex items-center text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-blue-600 transition-colors"
             >
               View all projects
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

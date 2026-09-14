@@ -65,7 +65,7 @@ const About = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white dark:bg-[var(--bg)] overflow-x-hidden">
       <SEO
         title="About Swetha Thanabalan | Product Designer"
         description="Product Designer with an HCI background and a foundation in photography, communication, and marketing, working across user research, interaction design, prototyping, and AI-assisted product development."

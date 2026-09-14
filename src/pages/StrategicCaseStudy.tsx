@@ -104,9 +104,9 @@ const StrategicCaseStudy = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-white dark:bg-[var(--bg)] flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Project not found</h1>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">Project not found</h1>
           <Link to="/" className="text-indigo-600 hover:text-indigo-700">Back to home</Link>
         </div>
       </div>
@@ -114,9 +114,9 @@ const StrategicCaseStudy = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[var(--bg)]">
       {/* Scroll progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 z-50">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 dark:bg-[var(--surface)] z-50">
         <div 
           className="h-full bg-indigo-600 transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
@@ -144,7 +144,7 @@ const StrategicCaseStudy = () => {
         {/* 1. OPENING HOOK */}
         <section className="max-w-4xl mx-auto px-6 mb-6">
           <AnimatedSection animation="fade-in">
-            <Link to="/#work" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-12 transition-colors group">
+            <Link to="/#work" className="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -183,7 +183,7 @@ const StrategicCaseStudy = () => {
                 }}
                 aria-expanded={showAudioPlayer}
                 aria-controls="audio-player-panel"
-                className="inline-flex items-center gap-2 hover:text-gray-900 transition-colors hover:underline"
+                className="inline-flex items-center gap-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors hover:underline"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
@@ -199,7 +199,7 @@ const StrategicCaseStudy = () => {
                 }}
                 aria-expanded={showQuickSummary}
                 aria-controls="quick-summary-panel"
-                className="inline-flex items-center gap-2 hover:text-gray-900 transition-colors hover:underline"
+                className="inline-flex items-center gap-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors hover:underline"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -232,7 +232,7 @@ const StrategicCaseStudy = () => {
               }}
             >
               <div style={{ paddingBottom: '32px' }}>
-                <p className="text-base text-gray-700 leading-relaxed" style={{ maxWidth: '65ch' }}>
+                <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed" style={{ maxWidth: '65ch' }}>
                   SEPTA's mobile app was widely used for ticketing and trip planning, yet purchasing a ticket required seven steps and reflected internal navigation categories rather than rider intent, creating confusion and reduced trust. Research showed that 68% of sessions involved ticketing, but usability testing revealed only a 45% task success rate. To address the structural misalignment, I reduced primary navigation from five tabs to three, merged overlapping trip functions, elevated ticketing as a persistent primary action, introduced biometric login with persistent sessions, and integrated a map first interaction model. These prioritization decisions reduced ticket steps by 57%, improved task success from 45% to 92%, and resulted in all eight usability participants completing ticket purchase unassisted. Reframing the information architecture around rider intent rebuilt trust and reduced cognitive load in a system people depend on daily.
                 </p>
               </div>
@@ -251,7 +251,7 @@ const StrategicCaseStudy = () => {
                 visibility: showAudioPlayer ? 'visible' : 'hidden'
               }}
             >
-              <div className="border border-gray-200 rounded-lg p-6 mb-6">
+              <div className="border border-gray-200 dark:border-[var(--border)] rounded-lg p-6 mb-6">
                 {/* Native audio element with controls as an accessible fallback */}
                 <audio
                   ref={audioRef}
@@ -283,7 +283,7 @@ const StrategicCaseStudy = () => {
                   
                   <div className="flex-1">
                     <div 
-                      className="h-2 bg-gray-200 rounded-full overflow-hidden cursor-pointer"
+                      className="h-2 bg-gray-200 dark:bg-[var(--border)] rounded-full overflow-hidden cursor-pointer"
                       onClick={handleSeek}
                       onKeyDown={handleSeekKeyDown}
                       role="slider"
@@ -299,7 +299,7 @@ const StrategicCaseStudy = () => {
                         style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
                       />
                     </div>
-                    <div className="flex justify-between text-xs text-gray-600 mt-1">
+                    <div className="flex justify-between text-xs text-gray-600 dark:text-gray-300 mt-1">
                       <span>{formatTime(currentTime)}</span>
                       <span>{formatTime(duration)}</span>
                     </div>
@@ -311,7 +311,7 @@ const StrategicCaseStudy = () => {
                   <summary className="text-sm text-indigo-700 cursor-pointer hover:underline">
                     Read transcript
                   </summary>
-                  <p className="text-sm text-gray-700 leading-relaxed mt-3" style={{ maxWidth: '65ch' }}>
+                  <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed mt-3" style={{ maxWidth: '65ch' }}>
                     SEPTA's mobile app was widely used for ticketing and trip planning, yet
                     purchasing a ticket required seven steps and reflected internal navigation
                     categories rather than rider intent, creating confusion and reduced trust.
@@ -330,22 +330,22 @@ const StrategicCaseStudy = () => {
 
           {/* Metadata */}
           <AnimatedSection animation="fade-up" delay={200}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-gray-200">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-gray-200 dark:border-[var(--border)]">
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Role</div>
-                <div className="text-gray-900">{project.role}</div>
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Role</div>
+                <div className="text-gray-900 dark:text-gray-100">{project.role}</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Scope</div>
-                <div className="text-gray-900">{project.scope}</div>
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Scope</div>
+                <div className="text-gray-900 dark:text-gray-100">{project.scope}</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Methods</div>
-                <div className="text-gray-900">{project.methods}</div>
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Methods</div>
+                <div className="text-gray-900 dark:text-gray-100">{project.methods}</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Impact</div>
-                <div className="text-gray-900">{project.impact}</div>
+                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Impact</div>
+                <div className="text-gray-900 dark:text-gray-100">{project.impact}</div>
               </div>
             </div>
           </AnimatedSection>
@@ -360,15 +360,15 @@ const StrategicCaseStudy = () => {
                   // SMART Quick Summary
                   <div className="space-y-8">
                     <div>
-                      <div className="text-sm font-bold text-gray-900 mb-3">Situation</div>
-                      <p className="text-base text-gray-700 leading-relaxed">
+                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Situation</div>
+                      <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed">
                         SEPTA's mobile app was widely used for ticketing and trip planning but required seven steps to complete a ticket purchase. Navigation reflected internal categories rather than rider intent, leading to confusion and reduced trust.
                       </p>
                     </div>
 
                     <div>
-                      <div className="text-sm font-bold text-gray-900 mb-3">Measurable Problem</div>
-                      <ul className="text-base text-gray-700 leading-relaxed space-y-2">
+                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Measurable Problem</div>
+                      <ul className="text-base text-gray-700 dark:text-gray-200 leading-relaxed space-y-2">
                         <li>• 68% of sessions involved ticketing</li>
                         <li>• Ticket purchase required 7 screens</li>
                         <li>• Task success rate was 45% in usability testing</li>
@@ -376,8 +376,8 @@ const StrategicCaseStudy = () => {
                     </div>
 
                     <div>
-                      <div className="text-sm font-bold text-gray-900 mb-3">Action</div>
-                      <ul className="text-base text-gray-700 leading-relaxed space-y-2">
+                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Action</div>
+                      <ul className="text-base text-gray-700 dark:text-gray-200 leading-relaxed space-y-2">
                         <li>• Reduced navigation from 5 tabs to 3</li>
                         <li>• Merged overlapping trip functions</li>
                         <li>• Elevated ticketing as a persistent primary action</li>
@@ -387,8 +387,8 @@ const StrategicCaseStudy = () => {
                     </div>
 
                     <div>
-                      <div className="text-sm font-bold text-gray-900 mb-3">Results</div>
-                      <ul className="text-base text-gray-700 leading-relaxed space-y-2">
+                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Results</div>
+                      <ul className="text-base text-gray-700 dark:text-gray-200 leading-relaxed space-y-2">
                         <li>• 57% reduction in ticket steps (7 → 3)</li>
                         <li>• Task success improved from 45% to 92%</li>
                         <li>• 8/8 participants completed ticket purchase unassisted</li>
@@ -396,8 +396,8 @@ const StrategicCaseStudy = () => {
                     </div>
 
                     <div>
-                      <div className="text-sm font-bold text-gray-900 mb-3">Takeaway</div>
-                      <p className="text-base text-gray-700 leading-relaxed">
+                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Takeaway</div>
+                      <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed">
                         Reframing information architecture around rider intent rebuilt trust and reduced cognitive load in a high-dependency system.
                       </p>
                     </div>
@@ -458,7 +458,7 @@ const StrategicCaseStudy = () => {
                     <div className="type-h3 mb-2">
                       → {insight.insight}
                     </div>
-                    <div className="text-gray-600">
+                    <div className="text-gray-600 dark:text-gray-300">
                       <span className="font-semibold">Why it matters:</span> {insight.why}
                     </div>
                   </div>
@@ -477,13 +477,13 @@ const StrategicCaseStudy = () => {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={100}>
-              <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                <div className="font-semibold text-gray-900 mb-3">Options considered:</div>
+              <div className="bg-gray-50 dark:bg-[var(--surface)] rounded-xl p-6 mb-6">
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Options considered:</div>
                 <ul className="space-y-2">
                   {project.strategicDecision.options.map((option, index) => (
                     <li key={index} className="flex items-start">
                       <span className="text-indigo-600 mr-2">•</span>
-                      <span className="text-gray-700">{option}</span>
+                      <span className="text-gray-700 dark:text-gray-200">{option}</span>
                     </li>
                   ))}
                 </ul>
@@ -492,29 +492,29 @@ const StrategicCaseStudy = () => {
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="mb-6">
-                <div className="font-semibold text-gray-900 mb-2">Tradeoffs:</div>
-                <p className="text-gray-700 leading-relaxed">{project.strategicDecision.tradeoffs}</p>
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Tradeoffs:</div>
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed">{project.strategicDecision.tradeoffs}</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
-              <div className="bg-indigo-50 border-l-4 border-indigo-600 rounded-r-xl p-6 mb-6">
-                <div className="font-semibold text-gray-900 mb-2">Decision:</div>
-                <p className="text-gray-700 leading-relaxed">{project.strategicDecision.decision}</p>
+              <div className="bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-600 rounded-r-xl p-6 mb-6">
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Decision:</div>
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed">{project.strategicDecision.decision}</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
               <div className="mb-6">
-                <div className="font-semibold text-gray-900 mb-2">Reasoning:</div>
-                <p className="text-gray-700 leading-relaxed">{project.strategicDecision.reasoning}</p>
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Reasoning:</div>
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed">{project.strategicDecision.reasoning}</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={500}>
-              <div className="bg-green-50 rounded-xl p-6">
-                <div className="font-semibold text-gray-900 mb-2">Impact:</div>
-                <p className="text-gray-700 leading-relaxed">{project.strategicDecision.impact}</p>
+              <div className="bg-green-50 dark:bg-green-950/30 rounded-xl p-6">
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Impact:</div>
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed">{project.strategicDecision.impact}</p>
               </div>
             </AnimatedSection>
           </section>
@@ -529,16 +529,16 @@ const StrategicCaseStudy = () => {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={100}>
-              <div className="bg-indigo-50 border-l-4 border-indigo-600 rounded-r-xl p-6 mb-6">
-                <div className="font-semibold text-gray-900 mb-2">Decision:</div>
-                <p className="text-gray-700 leading-relaxed">{decision.decision}</p>
+              <div className="bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-600 rounded-r-xl p-6 mb-6">
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Decision:</div>
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed">{decision.decision}</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <div className="bg-green-50 rounded-xl p-6">
-                <div className="font-semibold text-gray-900 mb-2">Impact:</div>
-                <p className="text-gray-700 leading-relaxed">{decision.impact}</p>
+              <div className="bg-green-50 dark:bg-green-950/30 rounded-xl p-6">
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Impact:</div>
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed">{decision.impact}</p>
               </div>
             </AnimatedSection>
           </section>
@@ -557,16 +557,16 @@ const StrategicCaseStudy = () => {
                   <div>
                     <h3 className="type-h3 mb-4">{change.title}</h3>
                     <div className="grid md:grid-cols-2 gap-6 mb-4">
-                      <div className="bg-red-50 rounded-lg p-4">
-                        <div className="text-sm font-semibold text-red-700 mb-2">Before</div>
-                        <div className="text-gray-700">{change.before}</div>
+                      <div className="bg-red-50 dark:bg-red-950/30 rounded-lg p-4">
+                        <div className="text-sm font-semibold text-red-700 dark:text-red-300 mb-2">Before</div>
+                        <div className="text-gray-700 dark:text-gray-200">{change.before}</div>
                       </div>
-                      <div className="bg-green-50 rounded-lg p-4">
-                        <div className="text-sm font-semibold text-green-700 mb-2">After</div>
-                        <div className="text-gray-700">{change.after}</div>
+                      <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-4">
+                        <div className="text-sm font-semibold text-green-700 dark:text-green-300 mb-2">After</div>
+                        <div className="text-gray-700 dark:text-gray-200">{change.after}</div>
                       </div>
                     </div>
-                    <div className="text-gray-600">
+                    <div className="text-gray-600 dark:text-gray-300">
                       <span className="font-semibold">Rationale:</span> {change.rationale}
                     </div>
                   </div>
@@ -576,13 +576,13 @@ const StrategicCaseStudy = () => {
 
             {project.designExecution.removed.length > 0 && (
               <AnimatedSection animation="fade-up" delay={400}>
-                <div className="mt-10 bg-gray-50 rounded-xl p-6">
-                  <div className="font-semibold text-gray-900 mb-3">What we removed:</div>
+                <div className="mt-10 bg-gray-50 dark:bg-[var(--surface)] rounded-xl p-6">
+                  <div className="font-semibold text-gray-900 dark:text-gray-100 mb-3">What we removed:</div>
                   <ul className="space-y-2">
                     {project.designExecution.removed.map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="text-gray-400 mr-2">×</span>
-                        <span className="text-gray-700">{item}</span>
+                        <span className="text-gray-400 dark:text-gray-500 mr-2">×</span>
+                        <span className="text-gray-700 dark:text-gray-200">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -596,7 +596,7 @@ const StrategicCaseStudy = () => {
         {!quickSummaryMode && project.figmaPrototype && (
           <section className="max-w-6xl mx-auto px-6 mb-6">
             <AnimatedSection animation="fade-up">
-              <div className="rounded-xl overflow-hidden shadow-2xl bg-gray-100" style={{ height: '600px' }}>
+              <div className="rounded-xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-[var(--surface)]" style={{ height: '600px' }}>
                 <iframe
                   src={project.figmaPrototype}
                   allowFullScreen
@@ -632,11 +632,11 @@ const StrategicCaseStudy = () => {
 
             <AnimatedSection animation="fade-up" delay={100}>
               <div className="mb-6">
-                <div className="font-semibold text-gray-900 mb-4">Key metrics:</div>
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-4">Key metrics:</div>
                 <div className="grid md:grid-cols-2 gap-4">
                   {project.outcome.metrics.map((metric, index) => (
-                    <div key={index} className="bg-indigo-50 rounded-lg p-4">
-                      <div className="text-gray-900 font-medium">{metric}</div>
+                    <div key={index} className="bg-indigo-50 dark:bg-indigo-950/30 rounded-lg p-4">
+                      <div className="text-gray-900 dark:text-gray-100 font-medium">{metric}</div>
                     </div>
                   ))}
                 </div>
@@ -645,12 +645,12 @@ const StrategicCaseStudy = () => {
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="mb-6">
-                <div className="font-semibold text-gray-900 mb-4">Validation:</div>
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-4">Validation:</div>
                 <ul className="space-y-3">
                   {project.outcome.validation.map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-green-600 mr-2 mt-1">✓</span>
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-green-600 dark:text-green-400 mr-2 mt-1">✓</span>
+                      <span className="text-gray-700 dark:text-gray-200">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -667,9 +667,9 @@ const StrategicCaseStudy = () => {
             )}
 
             <AnimatedSection animation="fade-up" delay={400}>
-              <div className="bg-gray-50 rounded-xl p-6">
-                <div className="font-semibold text-gray-900 mb-2">Limitations:</div>
-                <p className="text-gray-700">{project.outcome.limitations}</p>
+              <div className="bg-gray-50 dark:bg-[var(--surface)] rounded-xl p-6">
+                <div className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Limitations:</div>
+                <p className="text-gray-700 dark:text-gray-200">{project.outcome.limitations}</p>
               </div>
             </AnimatedSection>
           </section>
@@ -698,7 +698,7 @@ const StrategicCaseStudy = () => {
                                 return (
                                   <li key={j} className="flex items-start">
                                     <span className="text-indigo-600 mr-2 mt-1">•</span>
-                                    <span className="text-gray-700">
+                                    <span className="text-gray-700 dark:text-gray-200">
                                       <strong>{match[1]}</strong>{match[2]}
                                     </span>
                                   </li>
@@ -709,7 +709,7 @@ const StrategicCaseStudy = () => {
                           </ul>
                         )
                       }
-                      return <p key={i} className="text-gray-700 leading-relaxed mb-4">{paragraph}</p>
+                      return <p key={i} className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">{paragraph}</p>
                     })}
                   </div>
                 </div>
@@ -720,10 +720,10 @@ const StrategicCaseStudy = () => {
 
         {/* Back to projects */}
         <section className="max-w-4xl mx-auto px-6">
-          <div className="border-t border-gray-200 pt-12">
+          <div className="border-t border-gray-200 dark:border-[var(--border)] pt-12">
             <Link 
               to="/#work"
-              className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors group"
+              className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors group"
             >
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

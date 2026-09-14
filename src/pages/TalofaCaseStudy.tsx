@@ -97,9 +97,9 @@ const TalofaCaseStudy = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[var(--bg)]">
       {/* Scroll progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 z-50">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 dark:bg-[var(--surface)] z-50">
         <div 
           className="h-full bg-indigo-600 transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
@@ -126,7 +126,7 @@ const TalofaCaseStudy = () => {
         {/* 1. HERO SECTION */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-in">
-            <Link to="/#work" className="inline-flex items-center text-[var(--muted)] hover:text-gray-900 mb-12 transition-colors group">
+            <Link to="/#work" className="inline-flex items-center text-[var(--muted)] hover:text-gray-900 dark:hover:text-gray-100 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -157,7 +157,7 @@ const TalofaCaseStudy = () => {
                 }}
                 aria-expanded={showAudioPlayer}
                 aria-controls="audio-player-panel"
-                className="inline-flex items-center gap-2 hover:text-gray-900 transition-colors hover:underline"
+                className="inline-flex items-center gap-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors hover:underline"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
@@ -173,7 +173,7 @@ const TalofaCaseStudy = () => {
                 }}
                 aria-expanded={showQuickSummary}
                 aria-controls="quick-summary-panel"
-                className="inline-flex items-center gap-2 hover:text-gray-900 transition-colors hover:underline"
+                className="inline-flex items-center gap-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors hover:underline"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -260,7 +260,7 @@ const TalofaCaseStudy = () => {
                   
                   <div className="flex-1">
                     <div 
-                      className="h-2 bg-gray-200 rounded-full overflow-hidden cursor-pointer"
+                      className="h-2 bg-gray-200 dark:bg-[var(--border)] rounded-full overflow-hidden cursor-pointer"
                       onClick={handleSeek}
                       onKeyDown={handleSeekKeyDown}
                       role="slider"
@@ -566,7 +566,7 @@ const TalofaCaseStudy = () => {
         {/* 6. THE PIVOT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <div className="border-l-4 border-yellow-500 pl-6 py-5">
+            <div className="border-l-4 border-yellow-500 dark:border-yellow-600 pl-6 py-5">
               <h2 className="type-h2 mb-6">Product decision: choosing signal over comfort</h2>
               
               <div className="space-y-6 type-body-lg">
@@ -783,10 +783,10 @@ const TalofaCaseStudy = () => {
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">What this project proved</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="border-l-4 border-indigo-300 pl-5 py-3">
+              <div className="border-l-4 border-indigo-300 dark:border-indigo-700 pl-5 py-3">
                 <p className="type-body font-medium">Concept testing over A/B testing gave the founder confidence to ship without second-guessing.</p>
               </div>
-              <div className="border-l-4 border-indigo-300 pl-5 py-3">
+              <div className="border-l-4 border-indigo-300 dark:border-indigo-700 pl-5 py-3">
                 <p className="type-body font-medium">Every recommendation was traceable back to something a user said or felt. No assumptions dressed as insights.</p>
               </div>
             </div>
@@ -798,7 +798,7 @@ const TalofaCaseStudy = () => {
           <div className="border-t border-[var(--border)] pt-12">
             <Link 
               to="/#work"
-              className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors group"
+              className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors group"
             >
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

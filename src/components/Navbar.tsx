@@ -1,5 +1,6 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -123,6 +124,10 @@ const Navbar = () => {
           >
             Contact
           </a>
+
+          <span className="mx-4 text-base" style={{ color: 'var(--muted)' }} aria-hidden="true">|</span>
+
+          <ThemeToggle />
         </div>
 
         {/* Mobile Navigation */}
@@ -151,6 +156,8 @@ const Navbar = () => {
             </Link>
           </div>
 
+          <div className="flex items-center gap-1">
+          <ThemeToggle />
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 transition-colors hover:opacity-70"
@@ -169,6 +176,7 @@ const Navbar = () => {
               </svg>
             )}
           </button>
+          </div>
         </div>
       </div>
 

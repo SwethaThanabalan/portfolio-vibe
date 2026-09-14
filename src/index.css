@@ -163,6 +163,40 @@
   --duration-reveal: 600ms;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* ─── Dark theme token overrides ───
+   Class-based (Tailwind darkMode: 'class'). Toggled by adding `.dark`
+   to <html>. Only color tokens change; type/spacing tokens are shared. */
+.dark {
+  /* True-black base with clear separation between page and raised surfaces. */
+  --bg: #08080a;
+  --surface: #17171b;
+  --text: #ffffff;
+  --text-secondary: #e4e4e7;
+  --text-tertiary: #c9c9d1;
+  --muted: #a9a9b4;
+  --border: #33333b;
+  --border-subtle: #26262c;
+  --card: #17171b;
+  --accent: #b4c0ff;
+  --accent-hover: #d4dcff;
+  --finding: #2a271c;
+  --decision: #1a2236;
+  --outcome: #16281c;
+
+  color-scheme: dark;
+}
+
+/* Smooth the theme transition without animating every property */
+html.theme-transition,
+html.theme-transition body,
+html.theme-transition * {
+  transition: background-color var(--duration-base) ease,
+              border-color var(--duration-base) ease,
+              color var(--duration-base) ease;
 }
 
 /* ─── Base ─── */
@@ -179,7 +213,7 @@
 
   ::selection {
     background-color: var(--accent);
-    color: white;
+    color: var(--bg);
   }
 
   html {
@@ -576,7 +610,10 @@
 /* Slide background variants */
 .deck-slide--bg { background-color: var(--bg); }
 .deck-slide--surface { background-color: var(--surface); }
-.deck-slide--dark { background-color: var(--accent); }
+/* Dark slide stays a deep indigo in both themes so white text keeps contrast
+   (in dark mode --accent flips to a light tint, which would break it). */
+.deck-slide--dark { background-color: #312e81; }
+.dark .deck-slide--dark { background-color: #1e1b4b; }
 .deck-slide--dark .deck-num { color: rgba(255,255,255,0.55); }
 .deck-slide--dark .deck-eyebrow { color: rgba(255,255,255,0.6); }
 .deck-slide--dark h1,
