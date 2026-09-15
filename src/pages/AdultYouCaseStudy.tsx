@@ -246,7 +246,7 @@ const AdultYouCaseStudy = () => {
                   <button
                     onClick={togglePlayPause}
                     aria-label={isPlaying ? 'Pause audio summary' : 'Play audio summary'}
-                    className="w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center hover:bg-indigo-800 transition-colors"
+                    className="btn-3d w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center hover:bg-indigo-800 transition-colors"
                   >
                     {isPlaying ? (
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -675,7 +675,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={200}>
-            <div className="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8">
+            <div className="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-subtle p-8">
               <p className="text-xl text-gray-900 dark:text-gray-100 font-semibold">This was foundation work that shaped the alpha build.</p>
             </div>
           </AnimatedSection>
@@ -688,7 +688,7 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8">
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-subtle p-8">
               <div className="space-y-6 type-body-lg">
                 <p className="text-xl text-gray-900 dark:text-gray-100 font-semibold">Adult You forced me into full ownership.</p>
                 

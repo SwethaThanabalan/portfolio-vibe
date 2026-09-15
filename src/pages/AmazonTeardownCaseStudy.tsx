@@ -279,7 +279,7 @@ const AmazonTeardownCaseStudy = () => {
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Customer-First Reflection</h2>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-subtle p-8 space-y-6 type-body-lg">
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-subtle p-8 space-y-6 type-body-lg">
               <p className="text-xl text-gray-900 dark:text-gray-100 font-semibold">
                 Strong systems should anticipate mistakes, not penalize them.
               </p>

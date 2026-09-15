@@ -245,7 +245,7 @@ const TalofaCaseStudy = () => {
                   <button
                     onClick={togglePlayPause}
                     aria-label={isPlaying ? 'Pause audio summary' : 'Play audio summary'}
-                    className="w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center hover:bg-indigo-800 transition-colors"
+                    className="btn-3d w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center hover:bg-indigo-800 transition-colors"
                   >
                     {isPlaying ? (
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">

@@ -66,14 +66,14 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 pointer-events-auto">
               <a
                 href="#work"
-                className="inline-flex items-center px-6 py-3 text-base font-medium transition-all duration-200 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="btn-3d inline-flex items-center px-6 py-3 text-base font-medium transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 style={{ 
-                  backgroundColor: 'var(--accent)',
+                  backgroundColor: '#4338ca',
                   color: 'white',
                   borderRadius: 'var(--radius-md)'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--accent-hover)'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--accent)'}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3730a3'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4338ca'}
               >
                 View Selected Work
               </a>

@@ -95,8 +95,8 @@ const DeckQuick = () => {
           gets adopted, drawing on professional photography, marketing, and an HCI master's.
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <a href="mailto:tys.swetha@gmail.com" className="type-body text-[var(--accent)] hover:underline">tys.swetha@gmail.com</a>
-          <a href="https://www.linkedin.com/in/swethathanabalan/" target="_blank" rel="noopener noreferrer" className="type-body text-[var(--accent)] hover:underline">linkedin.com/in/swethathanabalan</a>
+          <a href="mailto:tys.swetha@gmail.com" className="accent-text type-body text-[var(--accent)] hover:underline">tys.swetha@gmail.com</a>
+          <a href="https://www.linkedin.com/in/swethathanabalan/" target="_blank" rel="noopener noreferrer" className="accent-text type-body text-[var(--accent)] hover:underline">linkedin.com/in/swethathanabalan</a>
         </div>
       </Slide>
 
@@ -202,7 +202,7 @@ const DeckQuick = () => {
       {/* Download button (screen only, hidden in print) */}
       <button
         onClick={() => window.print()}
-        className="deck-download"
+        className="deck-download btn-3d"
         aria-label="Download deck as PDF"
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

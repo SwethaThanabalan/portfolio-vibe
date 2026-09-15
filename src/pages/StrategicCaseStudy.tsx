@@ -268,7 +268,7 @@ const StrategicCaseStudy = () => {
                   <button
                     onClick={togglePlayPause}
                     aria-label={isPlaying ? 'Pause audio summary' : 'Play audio summary'}
-                    className="w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center hover:bg-indigo-800 transition-colors"
+                    className="btn-3d w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center hover:bg-indigo-800 transition-colors"
                   >
                     {isPlaying ? (
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -659,7 +659,7 @@ const StrategicCaseStudy = () => {
 
             {project.outcome.marketValidation && (
               <AnimatedSection animation="fade-up" delay={300}>
-                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 mb-6">
+                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-xl p-8 mb-6">
                   <h3 className="type-h3 mb-4">Market Validation</h3>
                   <p className="type-body-lg">{project.outcome.marketValidation}</p>
                 </div>
@@ -686,7 +686,7 @@ const StrategicCaseStudy = () => {
 
             <div className="space-y-6">
               <AnimatedSection animation="fade-up" delay={300}>
-                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
+                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-xl p-8">
                   <div className="prose prose-lg max-w-none">
                     {project.reflection.learned.split('\n\n').map((paragraph, i) => {
                       if (paragraph.startsWith('- **')) {

@@ -83,9 +83,9 @@ const Navbar = () => {
           <Link 
             to="/" 
             onClick={handleNameClick}
-            className="transition-colors hover:opacity-70"
+            className="nav-logo transition-colors hover:opacity-70"
             style={{ 
-              color: 'var(--accent)',
+              color: '#4338ca',
               fontFamily: "'Cedarville Cursive', cursive",
               fontSize: '1.5rem',
               fontWeight: 700
@@ -144,9 +144,9 @@ const Navbar = () => {
             <Link 
               to="/" 
               onClick={handleNameClick}
-              className="transition-colors hover:opacity-70"
+              className="nav-logo transition-colors hover:opacity-70"
               style={{ 
-                color: 'var(--accent)',
+                color: '#4338ca',
                 fontFamily: "'Cedarville Cursive', cursive",
                 fontSize: '1.25rem',
                 fontWeight: 700

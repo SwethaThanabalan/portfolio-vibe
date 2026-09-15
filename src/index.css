@@ -181,8 +181,10 @@
   --border: #33333b;
   --border-subtle: #26262c;
   --card: #17171b;
-  --accent: #b4c0ff;
-  --accent-hover: #d4dcff;
+  /* Keep the brand indigo identical in dark mode (same hover too) rather than
+     shifting to a lighter tint. */
+  --accent: #4338ca;
+  --accent-hover: #3730a3;
   --finding: #2a271c;
   --decision: #1a2236;
   --outcome: #16281c;
@@ -197,6 +199,51 @@ html.theme-transition * {
   transition: background-color var(--duration-base) ease,
               border-color var(--duration-base) ease,
               color var(--duration-base) ease;
+}
+
+/* In dark mode, keep the brand indigo logo but add a subtle light edge so it
+   separates from the near-black background without changing its color. */
+.dark .nav-logo {
+  text-shadow: 0 0 4px rgba(180, 192, 255, 0.35);
+}
+
+/* Accent-colored text/links keep the brand indigo in dark mode; a subtle light
+   halo lifts them off the dark background without changing the color. */
+.dark .accent-text {
+  text-shadow: 0 0 4px rgba(180, 192, 255, 0.4);
+}
+
+/* Subtle 3D lift for filled buttons. Shadow tuned per theme:
+   soft dark shadow on light backgrounds, deeper shadow on dark. */
+.btn-3d {
+  box-shadow: 0 1px 2px rgba(17, 17, 26, 0.16),
+              0 2px 6px rgba(17, 17, 26, 0.12);
+  transition: box-shadow var(--duration-fast) ease,
+              transform var(--duration-fast) ease,
+              background-color var(--duration-fast) ease;
+}
+.btn-3d:hover {
+  box-shadow: 0 2px 4px rgba(17, 17, 26, 0.2),
+              0 6px 14px rgba(17, 17, 26, 0.16);
+  transform: translateY(-1px);
+}
+.btn-3d:active {
+  box-shadow: 0 1px 2px rgba(17, 17, 26, 0.2);
+  transform: translateY(0);
+}
+.dark .btn-3d {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6),
+              0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.dark .btn-3d:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.65),
+              0 8px 18px rgba(0, 0, 0, 0.55);
+}
+.dark .btn-3d:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-3d, .btn-3d:hover, .btn-3d:active { transform: none; }
 }
 
 /* ─── Base ─── */

@@ -491,7 +491,7 @@ const Deck = () => {
         </p>
         <div className="flex flex-col gap-3">
           <a href="mailto:tys.swetha@gmail.com" className="type-h3 text-[var(--text)] hover:text-[var(--accent)] transition-colors">tys.swetha@gmail.com</a>
-          <a href="https://www.linkedin.com/in/swethathanabalan/" target="_blank" rel="noopener noreferrer" className="type-body text-[var(--accent)] hover:underline">linkedin.com/in/swethathanabalan</a>
+          <a href="https://www.linkedin.com/in/swethathanabalan/" target="_blank" rel="noopener noreferrer" className="accent-text type-body text-[var(--accent)] hover:underline">linkedin.com/in/swethathanabalan</a>
           <Link to="/" className="type-body text-[var(--muted)] hover:text-[var(--text)] transition-colors mt-4">← Back to portfolio</Link>
         </div>
       </Slide>
@@ -504,7 +504,7 @@ const Deck = () => {
       {/* Download button (screen only, hidden in print) */}
       <button
         onClick={() => window.print()}
-        className="deck-download"
+        className="deck-download btn-3d"
         aria-label="Download deck as PDF"
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

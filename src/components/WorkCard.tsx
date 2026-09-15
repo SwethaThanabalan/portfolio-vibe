@@ -39,7 +39,7 @@ const WorkCard = ({ project }: WorkCardProps) => {
 
         {/* Outcome */}
         {project.result && (
-          <p className="type-body-sm font-medium" style={{ color: 'var(--accent)' }}>
+          <p className="accent-text type-body-sm font-medium" style={{ color: 'var(--accent)' }}>
             {project.result}
           </p>
         )}
