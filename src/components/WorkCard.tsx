@@ -6,24 +6,31 @@ interface WorkCardProps {
 }
 
 const WorkCard = ({ project }: WorkCardProps) => {
+  const isBuilding = project.descriptor === 'Currently building'
   return (
     <Link
       to={`/project/${project.id}`}
       className="group block"
     >
       {/* Image — editorial framing, no rounded corners */}
-      <div className="w-full aspect-[4/3] overflow-hidden mb-5 border border-[var(--border)]">
+      <div className="relative w-full aspect-[4/3] overflow-hidden mb-5 border border-[var(--border)]">
         <img
           src={project.thumbnail}
           alt={`${project.title}${project.descriptor ? ' — ' + project.descriptor : ''}`}
           className="w-full h-full object-cover object-bottom transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
+        {isBuilding && (
+          <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-medium text-white">
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+            Currently building
+          </span>
+        )}
       </div>
 
       {/* Content */}
       <div>
         {/* Descriptor */}
-        {project.descriptor && (
+        {project.descriptor && !isBuilding && (
           <p className="type-eyebrow mb-2">{project.descriptor}</p>
         )}
 

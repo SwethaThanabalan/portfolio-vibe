@@ -24,6 +24,24 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 'wanderai',
+    title: 'WanderAI',
+    category: 'AI Product Design',
+    descriptor: 'Currently building',
+    keywords: ['AI-Assisted Development', 'Rapid Prototyping', 'Design to Implementation', 'Product Direction'],
+    result: 'Work in progress. Building closer to implementation with AI-assisted development.',
+    year: '2026',
+    thumbnail: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><rect width='800' height='600' fill='%23ffffff'/><text x='400' y='300' font-family='Fraunces, Georgia, serif' font-size='64' fill='%231a1a1a' text-anchor='middle' dominant-baseline='central'>WanderAI</text></svg>",
+    description: 'A work-in-progress project where I am designing and building closer to implementation, using AI-assisted development as part of my design process. This page tracks what I am building and what I am learning as my workflow moves between design and code.',
+    role: 'Product Designer building toward implementation',
+    duration: 'In progress',
+    tools: ['Figma', 'Figma Make', 'Kiro'],
+    overview: 'A work-in-progress project exploring how a product designer can build closer to implementation using AI-assisted development tools.',
+    challenge: 'Moving from static design into working software, and learning how to keep AI-assisted builds aligned with product and design decisions.',
+    solution: 'Designing and building in parallel, then documenting the constraints and workflow that keep AI-assisted changes predictable.',
+    images: []
+  },
+  {
     id: 'talofa-games-retention',
     title: 'Monster Walk Reengagement Strategy',
     category: 'Product Design',

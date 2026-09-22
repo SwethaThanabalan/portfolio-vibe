@@ -6,6 +6,7 @@ import TalofaCaseStudy from './pages/TalofaCaseStudy'
 import AdultYouCaseStudy from './pages/AdultYouCaseStudy'
 import AmazonTeardownCaseStudy from './pages/AmazonTeardownCaseStudy'
 import SahayCaseStudy from './pages/SahayCaseStudy'
+import WanderAI from './pages/WanderAI'
 import About from './pages/About'
 import Deck from './pages/Deck'
 import DeckQuick from './pages/DeckQuick'
@@ -25,6 +26,11 @@ function ProjectRouter() {
   // Check if it's the Sahay case study
   if (id === 'sahay-home-companion') {
     return <SahayCaseStudy />
+  }
+
+  // WanderAI — work-in-progress page
+  if (id === 'wanderai') {
+    return <WanderAI />
   }
   
   // Check if it's the Talofa case study

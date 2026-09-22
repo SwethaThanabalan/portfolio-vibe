@@ -315,9 +315,18 @@ const TalofaCaseStudy = () => {
             <h2 className="type-h2 mb-6">Business Context</h2>
             <div className="type-body-lg space-y-6">
               <p>Talofa Games built Monster Walk to gamify walking. Real steps power character growth, quests, and progression. Early engagement was strong. But when users lapsed for 7+ days, they weren't coming back.</p>
-              <p>The Welcome Back screen was the only re-entry point. It wasn't designed for someone who felt guilty, uncertain, or afraid their progress was gone. That's where I started.</p>
-              <p>During this time, the official Monster Walk trailer was released publicly while we were actively working on the beta product.</p>
             </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={50}>
+            <div className="mt-8 border-l-4 pl-5 py-4" style={{ borderLeftColor: 'var(--accent)', backgroundColor: 'var(--surface)' }}>
+              <p className="type-meta-label mb-2">The Welcome Back problem</p>
+              <p className="type-body">The Welcome Back screen was the only re-entry point. It wasn't designed for someone who felt guilty, uncertain, or afraid their progress was gone. That's where I started.</p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={100}>
+            <p className="type-body-lg mt-8">During this time, the official Monster Walk trailer was released publicly while we were actively working on the beta product.</p>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
@@ -341,21 +350,21 @@ const TalofaCaseStudy = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AnimatedSection animation="fade-up" delay={100}>
-              <div className="border-l-4 pl-5 py-3 h-full">
+              <div className="border-l-4 pl-5 py-3 h-full" style={{ borderLeftColor: '#c9a96e' }}>
                 <h3 className="type-h3 mb-3">Retention Gap</h3>
                 <p className="text-[var(--text-secondary)]">Users who lapsed 7+ days had a fundamentally different emotional state. Pushing them into challenges the moment they returned made it worse, not better.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <div className="border-l-4 pl-5 py-3 h-full">
+              <div className="border-l-4 pl-5 py-3 h-full" style={{ borderLeftColor: '#6b8cc9' }}>
                 <h3 className="type-h3 mb-3">Clarity Gap</h3>
                 <p className="text-[var(--text-secondary)]">Users couldn't remember where they left off or why it mattered to pick up again. The product offered no answer.</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
-              <div className="border-l-4 pl-5 py-3 h-full">
+              <div className="border-l-4 pl-5 py-3 h-full" style={{ borderLeftColor: 'var(--accent)' }}>
                 <h3 className="type-h3 mb-3">Motivation Gap</h3>
                 <p className="text-[var(--text-secondary)]">No concept addressed guilt or hesitation, the two emotions every lapsed user described in research. The experience assumed motivation existed. It didn't.</p>
               </div>

@@ -1,6 +1,9 @@
 import WorkCard from './WorkCard'
 import { projects } from '../data/projects'
 
+const FEATURED = ['sahay-home-companion', 'wanderai', 'talofa-games-retention', 'septa-mobile-redesign']
+const MORE_WORK = ['adult-you-platform', 'amazon-cancellation-teardown']
+
 const WorkGrid = () => {
   return (
     <section
@@ -18,7 +21,17 @@ const WorkGrid = () => {
 
       {/* Grid — 2 col with generous gap */}
       <div className="grid md:grid-cols-2 gap-x-10 gap-y-16">
-        {['sahay-home-companion', 'talofa-games-retention', 'septa-mobile-redesign', 'adult-you-platform'].map((id) => {
+        {FEATURED.map((id) => {
+          const project = projects.find(p => p.id === id)
+          if (!project) return null
+          return <WorkCard key={project.id} project={project} />
+        })}
+      </div>
+
+      {/* More Work */}
+      <h3 className="type-h3 mt-24 mb-10 text-[var(--muted)]">More work</h3>
+      <div className="grid md:grid-cols-2 gap-x-10 gap-y-16">
+        {MORE_WORK.map((id) => {
           const project = projects.find(p => p.id === id)
           if (!project) return null
           return <WorkCard key={project.id} project={project} />

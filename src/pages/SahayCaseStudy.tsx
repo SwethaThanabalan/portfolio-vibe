@@ -424,7 +424,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Callout variant="shift">
-            This shift, from transactional marketplace to intelligent companion, defined every product decision that followed.
+            The original concept was closer to helping users connect with services. Research showed people often needed help understanding the problem before they were ready to decide what to do. That moved us toward an issue-first experience, and it defined every product decision that followed.
           </Callout>
         </section>
 
@@ -473,6 +473,81 @@ const SahayCaseStudy = () => {
             <p className="text-base text-gray-500 dark:text-gray-400 mt-8 italic">
               We used Figma Make to rapidly prototype AI-driven interactions and test them with real users.
             </p>
+          </Reveal>
+        </section>
+
+
+        {/* ═══════════════════════════════════════════
+            6b. HOW THE AI EXPERIENCE WAS DESIGNED
+        ═══════════════════════════════════════════ */}
+        <section className="layout-content mb-16">
+
+          <Reveal>
+            <h2 className="type-h2 mb-6">
+              How the AI experience was designed to work
+            </h2>
+            <p className="type-body-lg mb-8">
+              I designed the AI interaction around a single idea: help people understand the problem before asking them to decide what to do about it. The flow moves from description, to understanding, to a recommended path the user chooses to follow.
+            </p>
+          </Reveal>
+
+          <Reveal delay={50}>
+            <ol className="relative border-l border-[var(--border)] ml-2 mb-10">
+              {[
+                { label: 'Describe the problem', text: 'The user describes the home-maintenance problem using text, image, or voice.' },
+                { label: 'Sahay analyzes the input', text: 'Sahay reviews the information the user provided to understand the problem.' },
+                { label: 'Ask follow-up questions', text: 'When it needs more context, it asks follow-up questions before making a recommendation.' },
+                { label: 'Recommend a path', text: 'Once it has enough information, it recommends one of two paths: DIY, or third-party professional help.' },
+                { label: 'Personalize to skill level', text: 'The recommendation also considers the user\'s DIY skill level, which is collected during onboarding.' },
+                { label: 'DIY → Issue Tracker', text: 'If the user chooses DIY, the issue is added to the Issue Tracker so they can keep updating and managing it.' },
+                { label: 'Professional → relevant options', text: 'If the user chooses professional help, the app shows relevant third-party options for the problem in another section.' },
+              ].map((step, i) => (
+                <li key={i} className="ml-6 mb-8 last:mb-0">
+                  <span className="absolute -left-[9px] flex items-center justify-center w-4 h-4 rounded-full bg-[var(--accent)] text-white text-[10px] font-semibold">
+                    {i + 1}
+                  </span>
+                  <p className="type-body font-semibold mb-1">{step.label}</p>
+                  <p className="type-body-sm">{step.text}</p>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
+
+          <Callout variant="shift">
+            The AI itself was not functional in the prototype. This case study uses an example scenario to demonstrate how the interaction would work. It is not a working AI system.
+          </Callout>
+        </section>
+
+
+        {/* ═══════════════════════════════════════════
+            6c. TRUST & CONTROL
+        ═══════════════════════════════════════════ */}
+        <section className="layout-content mb-16">
+
+          <Reveal>
+            <h2 className="type-h2 mb-6">
+              The user stays in control of the decision
+            </h2>
+            <p className="type-body-lg mb-8">
+              Sahay gathers information and recommends a direction, but the user decides what happens next. The system does not act on the user's behalf or push them down a single path.
+            </p>
+          </Reveal>
+
+          <Reveal delay={50}>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#c9a96e' }}>
+                <p className="type-meta-label mb-2">AI's role</p>
+                <p className="type-body">Understand the problem through the description and any follow-up questions, then recommend a direction.</p>
+              </div>
+              <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: 'var(--accent)' }}>
+                <p className="type-meta-label mb-2">User's role</p>
+                <p className="type-body">Decide whether to follow the DIY path or seek professional help. The recommendation is a starting point, not a verdict.</p>
+              </div>
+              <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#4a8c5c' }}>
+                <p className="type-meta-label mb-2">Personalization</p>
+                <p className="type-body">The recommendation is tailored using the user's DIY skill level from onboarding, so the guidance fits what they are comfortable attempting.</p>
+              </div>
+            </div>
           </Reveal>
         </section>
 
@@ -799,19 +874,43 @@ const SahayCaseStudy = () => {
           <Callout variant="insight">
             AI products are evaluated based on the quality of the AI interaction itself, not just the surrounding interface. The promise must match the delivery.
           </Callout>
+        </section>
 
-          <Reveal delay={100}>
-            <div className="mt-10">
-              <h3 className="type-h3 mb-6">If I continued this project, I would:</h3>
-              <ul className="space-y-3 text-[var(--text-secondary)]">
-                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">01</span> Conduct deeper validation of AI trust patterns</li>
-                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">02</span> Test how users respond when AI is wrong vs. uncertain</li>
-                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">03</span> Build more realistic AI prototypes with LLM integration</li>
-                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">04</span> Explore trust calibration: when should AI express confidence vs. uncertainty?</li>
-                <li className="flex items-start gap-3"><span className="text-gray-400 dark:text-gray-500">05</span> Continue refining the home companion vision with longitudinal testing</li>
-              </ul>
+
+        {/* ═══════════════════════════════════════════
+            12b. WHERE I WOULD TAKE THIS NEXT
+        ═══════════════════════════════════════════ */}
+        <section className="layout-content mb-16">
+
+          <Reveal>
+            <h2 className="type-h2 mb-6">
+              Where I would take this next
+            </h2>
+            <p className="type-body-lg mb-8">
+              I did not design detailed uncertainty or failure states during this project. If it continued, these are the questions I would work through next. They are future design considerations, not features that existed in the original prototype.
+            </p>
+          </Reveal>
+
+          <Reveal delay={50}>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                'What should happen if the system does not have enough information to make a recommendation?',
+                'What happens if an uploaded image is unclear or unusable?',
+                'What happens when multiple problems seem possible at once?',
+                'How should the system communicate that it is unsure, rather than sounding confident?',
+                'What happens if the user disagrees with the recommendation?',
+                'When should the system stop asking questions and simply recommend professional help?',
+              ].map((q, i) => (
+                <div key={i} className="border border-[var(--border)] rounded-subtle p-5 bg-[var(--surface)]">
+                  <p className="type-body-sm">{q}</p>
+                </div>
+              ))}
             </div>
           </Reveal>
+
+          <Callout>
+            These are the design problems I would tackle if the project moved past the prototype stage, especially around how an AI-assisted product behaves when it is uncertain or wrong.
+          </Callout>
         </section>
 
 
