@@ -39,23 +39,23 @@ const skills = [
 const faqs = [
   {
     q: 'What roles are you looking for?',
-    a: 'Product Designer, UX Designer, and Visual Designer roles.',
+    a: 'Product Designer, UX Designer, or Visual Designer.',
   },
   {
     q: 'What tools do you use?',
-    a: 'I design in Figma and Figma Make, use GPT for prompting, and Kiro for end-to-end building. I build design systems in Figma with Claude MCP. For user testing and research I use Google Forms, Qualtrics, and Maze.',
+    a: 'Figma is home base, with Figma Make for quick prototypes. When I build design systems I pair Figma with Claude MCP. GPT is where I work out prompts, and Kiro is what I use to build a product end to end. For testing and research I reach for Google Forms, Qualtrics, and Maze.',
   },
   {
     q: 'What design methods do you use?',
-    a: 'I work across user research, journey mapping, personas, user flows, and user flow testing, and I iterate on designs using AI.',
+    a: 'Mostly user research, journey maps, personas, and user flows, then testing those flows with people. I lean on AI to iterate faster between rounds.',
   },
   {
     q: 'How do you work with AI?',
-    a: 'I design AI-assisted products and build closer to implementation with AI-assisted development tools. I use GPT for prompting, Kiro for end-to-end building, and Figma with Claude MCP to build design systems, and I iterate on designs with AI.',
+    a: 'Two ways. I design products that use AI, and I use AI to build them. GPT helps me think through prompts, Kiro takes me from design to a working build, and Claude MCP inside Figma helps me stand up design systems. When a design needs another pass, AI helps me get there quicker.',
   },
   {
     q: 'What is your background?',
-    a: 'I have an MS in Human-Computer Interaction from Drexel University, with a background in photography, communication, and marketing.',
+    a: 'A master\'s in Human-Computer Interaction from Drexel, and before that, years in photography, communication, and marketing.',
   },
 ]
 
@@ -80,6 +80,7 @@ const principles = [
 
 const About = () => {
   const [heroVisible, setHeroVisible] = useState(false)
+  const [openFaq, setOpenFaq] = useState<number | null>(0)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -215,18 +216,54 @@ const About = () => {
 
         {/* FAQ */}
         <section className="layout-content mb-20">
-          <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-8">Quick answers</h2>
-          </AnimatedSection>
-          <div className="space-y-6">
-            {faqs.map((f, i) => (
-              <AnimatedSection key={f.q} animation="fade-up" delay={i * 60}>
-                <div className="border-t border-[var(--border)] pt-6">
-                  <h3 className="type-h3 mb-2">{f.q}</h3>
-                  <p className="type-body" style={{ maxWidth: '65ch' }}>{f.a}</p>
-                </div>
+          <div className="grid md:grid-cols-5 gap-10 items-start">
+            {/* Left: heading */}
+            <div className="md:col-span-2">
+              <AnimatedSection animation="fade-up">
+                <h2 className="type-h2 mb-3">Quick answers</h2>
+                <p className="type-body">The short version, for recruiters and hiring managers. Tap a question to expand.</p>
               </AnimatedSection>
-            ))}
+            </div>
+
+            {/* Right: click-to-expand accordion */}
+            <div className="md:col-span-3">
+              {faqs.map((f, i) => {
+                const isOpen = openFaq === i
+                return (
+                  <AnimatedSection key={f.q} animation="fade-up" delay={i * 60}>
+                    <div className="border-t border-[var(--border)] last:border-b">
+                      <h3>
+                        <button
+                          type="button"
+                          onClick={() => setOpenFaq(isOpen ? null : i)}
+                          aria-expanded={isOpen}
+                          aria-controls={`faq-answer-${i}`}
+                          id={`faq-question-${i}`}
+                          className="w-full flex items-center justify-between gap-4 py-5 text-left transition-colors hover:text-[var(--accent)]"
+                        >
+                          <span className="type-h3">{f.q}</span>
+                          <svg
+                            className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                          </svg>
+                        </button>
+                      </h3>
+                      <div
+                        id={`faq-answer-${i}`}
+                        role="region"
+                        aria-labelledby={`faq-question-${i}`}
+                        className="overflow-hidden transition-all duration-300 ease-out"
+                        style={{ maxHeight: isOpen ? '260px' : '0', opacity: isOpen ? 1 : 0 }}
+                      >
+                        <p className="type-body pb-5" style={{ maxWidth: '60ch' }}>{f.a}</p>
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                )
+              })}
+            </div>
           </div>
         </section>
 
