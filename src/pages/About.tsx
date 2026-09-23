@@ -36,6 +36,29 @@ const skills = [
   },
 ]
 
+const faqs = [
+  {
+    q: 'What roles are you looking for?',
+    a: 'Product Designer, UX Designer, and Visual Designer roles.',
+  },
+  {
+    q: 'What tools do you use?',
+    a: 'I design in Figma and Figma Make, use GPT for prompting, and Kiro for end-to-end building. I build design systems in Figma with Claude MCP. For user testing and research I use Google Forms, Qualtrics, and Maze.',
+  },
+  {
+    q: 'What design methods do you use?',
+    a: 'I work across user research, journey mapping, personas, user flows, and user flow testing, and I iterate on designs using AI.',
+  },
+  {
+    q: 'How do you work with AI?',
+    a: 'I design AI-assisted products and build closer to implementation with AI-assisted development tools. I use GPT for prompting, Kiro for end-to-end building, and Figma with Claude MCP to build design systems, and I iterate on designs with AI.',
+  },
+  {
+    q: 'What is your background?',
+    a: 'I have an MS in Human-Computer Interaction from Drexel University, with a background in photography, communication, and marketing.',
+  },
+]
+
 const principles = [
   {
     title: 'Structure before polish',
@@ -187,6 +210,24 @@ const About = () => {
               Hire me and you get a designer who can research it, design it, make it look right, and understand how it gets adopted.
             </blockquote>
           </AnimatedSection>
+        </section>
+
+
+        {/* FAQ */}
+        <section className="layout-content mb-20">
+          <AnimatedSection animation="fade-up">
+            <h2 className="type-h2 mb-8">Quick answers</h2>
+          </AnimatedSection>
+          <div className="space-y-6">
+            {faqs.map((f, i) => (
+              <AnimatedSection key={f.q} animation="fade-up" delay={i * 60}>
+                <div className="border-t border-[var(--border)] pt-6">
+                  <h3 className="type-h3 mb-2">{f.q}</h3>
+                  <p className="type-body" style={{ maxWidth: '65ch' }}>{f.a}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </section>
 
 
