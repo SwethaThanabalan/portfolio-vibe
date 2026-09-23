@@ -10,8 +10,8 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = 'Swetha Thanabalan | Product Designer',
-  description = 'Product Designer with an HCI background working across user research, interaction design, prototyping, design systems, and AI-assisted product development.',
+  title = 'Swetha Thanabalan | Product Designer & UX Designer',
+  description = 'Product Designer, UX Designer, and Visual Designer working across user research, journey mapping, user flows, prototyping, design systems, and AI-assisted product design and development.',
   path = '',
   type = 'website',
   image = 'https://swethathanabalan.com/PortfolioPictureswetha.jpg',
