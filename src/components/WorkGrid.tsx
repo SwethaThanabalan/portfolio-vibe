@@ -1,8 +1,8 @@
 import WorkCard from './WorkCard'
 import { projects } from '../data/projects'
 
-const FEATURED = ['sahay-home-companion', 'wanderai', 'talofa-games-retention', 'septa-mobile-redesign']
-const MORE_WORK = ['adult-you-platform', 'amazon-cancellation-teardown']
+const FEATURED = ['adult-you-platform', 'sahay-home-companion', 'talofa-games-retention', 'septa-mobile-redesign']
+const MORE_WORK = ['wanderai', 'amazon-cancellation-teardown']
 
 const WorkGrid = () => {
   return (
