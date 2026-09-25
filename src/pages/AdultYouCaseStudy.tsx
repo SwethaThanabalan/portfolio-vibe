@@ -577,7 +577,7 @@ const AdultYouCaseStudy = () => {
               <div className="relative w-full rounded-subtle overflow-hidden shadow-lg border border-gray-200 dark:border-[var(--border)]" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRyfAu7aSShQ8trzu60ALNq%2FAdult-you%3Fnode-id%3D1198-3262%26t%3DrVEAhyuetwgQTnuX-0%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D1%253A3"
+                  src="https://embed.figma.com/proto/RyfAu7aSShQ8trzu60ALNq/Adult-you?node-id=1893-1491&page-id=1%3A3&starting-point-node-id=1893%3A1491&scaling=scale-down&content-scaling=fixed&embed-host=share"
                   allowFullScreen
                   title="Adult You Interactive Prototype"
                 />
