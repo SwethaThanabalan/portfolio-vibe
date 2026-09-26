@@ -1,0 +1,34 @@
+# Dependencies (installed by npm ci in CI)
+node_modules/
+
+# Build output (CI rebuilds dist/ on every push to main)
+dist/
+dist-ssr/
+*.local
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files (shared VS Code settings stay tracked)
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+
+# Vite cache
+.vite/
