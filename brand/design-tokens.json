@@ -1,0 +1,85 @@
+{
+  "$description": "Design tokens extracted from src/index.css. Light and dark themes. Values are the real, shipped values.",
+  "color": {
+    "light": {
+      "bg": "#fafaf9",
+      "surface": "#f5f4f0",
+      "text": "#1a1a1a",
+      "textSecondary": "#4a4a4a",
+      "textTertiary": "#5c5c5c",
+      "muted": "#5f5f68",
+      "border": "#e5e4e0",
+      "borderSubtle": "#eeede9",
+      "card": "#ffffff",
+      "accent": "#4338ca",
+      "accentHover": "#3730a3",
+      "finding": "#f8f5ee",
+      "decision": "#f0f3f9",
+      "outcome": "#f0f7f0"
+    },
+    "dark": {
+      "bg": "#08080a",
+      "surface": "#17171b",
+      "text": "#ffffff",
+      "textSecondary": "#e4e4e7",
+      "textTertiary": "#c9c9d1",
+      "muted": "#a9a9b4",
+      "border": "#33333b",
+      "borderSubtle": "#26262c",
+      "card": "#17171b",
+      "accent": "#4338ca",
+      "accentHover": "#3730a3",
+      "finding": "#2a271c",
+      "decision": "#1a2236",
+      "outcome": "#16281c"
+    },
+    "calloutBorders": {
+      "finding": "#c9a96e",
+      "decision": "#4338ca",
+      "outcome": "#4a8c5c"
+    }
+  },
+  "font": {
+    "heading": "Fraunces, Georgia, serif",
+    "body": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "handwritten": "'Cedarville Cursive', cursive"
+  },
+  "type": {
+    "display": { "size": "clamp(2.5rem, 5.5vw, 4.5rem)", "weight": 400, "lineHeight": 1.08, "letterSpacing": "-0.025em" },
+    "h1": { "size": "clamp(2rem, 4vw, 2.75rem)", "weight": 400, "lineHeight": 1.15, "letterSpacing": "-0.02em" },
+    "h2": { "size": "clamp(1.5rem, 2.5vw, 1.875rem)", "weight": 400, "lineHeight": 1.2, "letterSpacing": "-0.015em" },
+    "h3": { "size": "clamp(1.125rem, 1.5vw, 1.25rem)", "weight": 600, "lineHeight": 1.3, "letterSpacing": "-0.01em" },
+    "eyebrow": { "size": "0.6875rem", "weight": 600, "lineHeight": 1.4, "letterSpacing": "0.1em" },
+    "lead": { "size": "clamp(1.125rem, 1.4vw, 1.25rem)", "weight": 400, "lineHeight": 1.6 },
+    "bodyLg": { "size": "1.0625rem", "weight": 400, "lineHeight": 1.7 },
+    "body": { "size": "0.9375rem", "weight": 400, "lineHeight": 1.7 },
+    "bodySm": { "size": "0.875rem", "weight": 400, "lineHeight": 1.6 },
+    "metric": { "size": "clamp(2rem, 3vw, 2.5rem)", "weight": 400, "lineHeight": 1, "letterSpacing": "-0.02em" },
+    "quote": { "size": "clamp(1.25rem, 2.2vw, 1.625rem)", "weight": 400, "lineHeight": 1.35, "letterSpacing": "-0.01em" }
+  },
+  "space": {
+    "1": "0.25rem", "2": "0.5rem", "3": "0.75rem", "4": "1rem",
+    "6": "1.5rem", "8": "2rem", "10": "2.5rem", "12": "3rem",
+    "16": "4rem", "20": "5rem", "24": "6rem", "32": "8rem",
+    "sectionGap": "5rem", "subsectionGap": "2.5rem"
+  },
+  "layout": {
+    "reading": "640px",
+    "content": "820px",
+    "wide": "1080px",
+    "max": "1200px"
+  },
+  "radius": {
+    "none": "0",
+    "sm": "3px",
+    "md": "6px",
+    "lg": "8px"
+  },
+  "motion": {
+    "durationFast": "150ms",
+    "durationBase": "300ms",
+    "durationReveal": "600ms",
+    "easeOut": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)"
+  }
+}
