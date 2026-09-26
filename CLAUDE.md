@@ -66,6 +66,7 @@ npm run preview  # preview the production build
 - `04-brand-guidelines.md` — colors, type, spacing, tokens, voice
 - `05-content-and-assets.md` — content inventory + asset manifest (unused files flagged)
 - `06-urls-and-seo.md` — route/URL map + SEO-preservation checklist
+- `07-todo-after-migration.md` — outstanding tasks (analytics, resume, cleanup, etc.)
 - `brand/design-tokens.json` — machine-readable tokens
 
 ## Known open items
