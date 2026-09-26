@@ -1,6 +1,7 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ThemeToggle from './ThemeToggle'
+import { RESUME_URL, LINKEDIN_URL } from '../data/links'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -127,6 +128,19 @@ const Navbar = () => {
 
           <span className="mx-4 text-base" style={{ color: 'var(--muted)' }} aria-hidden="true">|</span>
 
+          <a
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Resume (PDF, opens in a new tab)"
+            className="text-base transition-colors hover:opacity-100"
+            style={{ color: 'var(--muted)' }}
+          >
+            Resume
+          </a>
+
+          <span className="mx-4 text-base" style={{ color: 'var(--muted)' }} aria-hidden="true">|</span>
+
           <ThemeToggle />
         </div>
 
@@ -216,6 +230,30 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
+            </a>
+
+            <a
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Resume (PDF, opens in a new tab)"
+              className="block text-base transition-colors hover:opacity-70"
+              style={{ color: 'var(--text)' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Resume
+            </a>
+
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn (opens in a new tab)"
+              className="block text-base transition-colors hover:opacity-70"
+              style={{ color: 'var(--text)' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              LinkedIn
             </a>
           </div>
         </div>

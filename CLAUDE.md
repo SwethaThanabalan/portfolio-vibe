@@ -54,6 +54,8 @@ npm run preview  # preview the production build
 
 - Routes & dispatch: `src/App.tsx` (`ProjectRouter` picks the case-study component by id)
 - Project content: `src/data/projects.ts` (single source of truth) + `src/types.ts`
+- Resume / LinkedIn / email links: `src/data/links.ts`. To update the resume, replace
+  `public/Swetha_Thanabalan_Resume.pdf` and keep the file name.
 - Homepage grid order: `src/components/WorkGrid.tsx` (`FEATURED` + `MORE_WORK` arrays)
 - Design tokens: `src/index.css` `:root` and `.dark`
 - SEO/meta/JSON-LD/crawlable fallback: `src/components/SEO.tsx` + `index.html`
@@ -75,5 +77,5 @@ npm run preview  # preview the production build
 - `sameAs` schema is LinkedIn-only; add other profiles when available.
 - Per-project OG images still default to the headshot.
 - WanderAI uses placeholder visuals until real screenshots exist.
-- Dead code: `src/pages/TalofaCaseStudy_complete.tsx`, `src/components/ProjectCard.tsx`.
+- Amazon teardown card still uses an Unsplash stock thumbnail; replace with real screenshots.
 - A tactile / faux-3D redesign was explored in `mockup/` but not shipped.

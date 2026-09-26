@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import RotatingWord from './RotatingWord'
 import InteractiveBlobField from './InteractiveBlobField'
+import { RESUME_URL, LINKEDIN_URL, EMAIL } from '../data/links'
 
 const Hero = () => {
   const [, setStrokeCount] = useState(0)
@@ -63,7 +64,7 @@ const Hero = () => {
             </p>
             
             {/* CTAs - restore pointer events */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 pointer-events-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-4 mb-6 pointer-events-auto">
               <a
                 href="#work"
                 className="btn-3d inline-flex items-center px-6 py-3 text-base font-medium transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -77,12 +78,46 @@ const Hero = () => {
               >
                 View Selected Work
               </a>
-              
+
               <a
-                href="mailto:tys.swetha@gmail.com"
+                href={RESUME_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Resume (PDF, opens in a new tab)"
+                className="inline-flex items-center gap-2 px-6 py-3 text-base font-medium border transition-colors duration-200 hover:bg-[var(--surface)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                style={{
+                  color: 'var(--text)',
+                  borderColor: 'var(--text)',
+                  borderRadius: 'var(--radius-md)'
+                }}
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14" />
+                </svg>
+                Resume
+              </a>
+            </div>
+
+            {/* Contact row */}
+            <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mb-8 pointer-events-auto">
+              <a
+                href={`mailto:${EMAIL}`}
                 className="text-base font-medium transition-colors hover:opacity-70 text-neutral-900 dark:text-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                tys.swetha@gmail.com
+                {EMAIL}
+              </a>
+              <span className="text-neutral-400 dark:text-neutral-500" aria-hidden="true">·</span>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn (opens in a new tab)"
+                className="inline-flex items-center gap-1.5 text-base font-medium transition-colors hover:opacity-70 text-neutral-900 dark:text-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                </svg>
+                LinkedIn
               </a>
             </div>
             
