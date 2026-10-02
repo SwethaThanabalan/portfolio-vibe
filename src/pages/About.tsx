@@ -59,6 +59,55 @@ const faqs = [
   },
 ]
 
+// Photography: files live in /public/Photography (resized for web; originals kept offline).
+// Alt text describes what is visible, for screen readers and search engines.
+const photos: { file: string; alt: string }[] = [
+  { file: 'DSC08218.jpg', alt: 'Green ridged mountains under a blue sky, landscape photography' },
+  { file: 'DSC02825.jpg', alt: 'Studio headshot of a smiling woman against a teal backdrop' },
+  { file: 'Portraits 20.jpg', alt: 'Studio portrait of a man in glasses and a dark suit, arms crossed' },
+  { file: 'Thai curry final.jpg', alt: 'Thai curry served in a coconut shell, food photography' },
+  { file: 'DSC08108.jpg', alt: 'Lawn and low building at the foot of green mountains, landscape photography' },
+  { file: 'Abstract.jpg', alt: 'Abstract close-up of red and purple sandstone canyon walls' },
+  { file: 'Portraits 4.jpg', alt: 'Studio portrait of a man in a black jacket and grey turtleneck' },
+  { file: 'Grilled Provimi Veal Chop.jpg', alt: 'Grilled veal chop plated with sauce and garnish, food photography' },
+  { file: 'DSC02188.jpg', alt: 'Professional headshot of a woman in a grey blazer' },
+  { file: 'DSC08235.jpg', alt: 'Sunlit green mountain ridgeline with clouds, landscape photography' },
+  { file: 'Best ohio.jpg', alt: 'Rolling green farmland with a wooden fence in Ohio, landscape photography' },
+  { file: 'Paneer 06-022108.jpg', alt: 'Paneer curry in a silver bowl with naan, styled food photography' },
+  { file: 'March12th1135 1.jpg', alt: 'Crispy fritters beside fresh green chilies on a dark surface, food photography' },
+  { file: 'Ocean Wise Rainbow Trout Fillet 2.jpg', alt: 'Rainbow trout fillet plated in a golden sauce, food photography' },
+  { file: 'food photo 2020.jpg', alt: 'Stack of jam-topped cookies beside a pitcher of milk, food photography' },
+  { file: '947220-1 Sticky rice.jpg', alt: 'Sushi rolls on a wooden board with chopsticks, food photography' },
+  { file: 'Hair dryer0389.jpg', alt: 'Black hair dryer on a dark background, product photography' },
+]
+
+// Strategic mosaic rhythm: a repeating 8-tile pattern where a couple of tiles are
+// promoted to larger spans, so the grid is intentionally uneven but still balanced.
+// grid-auto-flow: dense (in CSS) backfills gaps so it stays seamless.
+const photoSpan = (i: number): string => {
+  const p = i % 8
+  if (p === 0) return 'mosaic-wide'   // 2 cols wide
+  if (p === 3) return 'mosaic-tall'   // 2 rows tall
+  if (p === 5) return 'mosaic-big'    // 2x2 feature
+  return ''
+}
+
+// Graphic design: files live in /public/Graphic. Images render inline; PDFs open in a new tab.
+const graphics: { file: string; title: string; type: 'image' | 'pdf' }[] = [
+  { file: 'Poster sahana.jpg', title: 'Yoga classes poster', type: 'image' },
+  { file: 'welcome.jpg', title: 'Baby shower welcome sign', type: 'image' },
+  { file: 'posterize and invert.jpg', title: 'Posterize and invert photo treatment of a vintage car', type: 'image' },
+  { file: 'Thanabalan_editorial _Page_1.jpg', title: 'Editorial cover: Spring 2021 community events', type: 'image' },
+  { file: 'Thanabalan_editorial _Page_2.jpg', title: 'Editorial spread: library events listing', type: 'image' },
+  { file: 'Thanabalan_Newsads_Page_1.jpg', title: 'News ad: Invest in Canada\'s Future, donation appeal', type: 'image' },
+  { file: 'Thanabalan_Newsads_Page_2.jpg', title: 'News ad: Invest in Canada\'s Future, alternate layout', type: 'image' },
+  { file: 'Thanabalan_digitalmailpostcard_Page_1.jpg', title: 'Postcard front: COVID-19 vaccine', type: 'image' },
+  { file: 'Thanabalan_digitalmailpostcard_Page_2.jpg', title: 'Postcard back: immunization clinic details', type: 'image' },
+  { file: 'Branded INSTAGRAM POSTS.pdf', title: 'Branded Instagram posts', type: 'pdf' },
+  { file: 'Never apologize for your growth. (20 x 30 in).pdf', title: 'Never Apologize for Your Growth (poster)', type: 'pdf' },
+  { file: 'Varum vandhu tholayum to Yuvan\'s 1st.pdf', title: 'Event invite', type: 'pdf' },
+]
+
 const principles = [
   {
     title: 'Structure before polish',
@@ -167,6 +216,77 @@ const About = () => {
               </AnimatedSection>
             ))}
           </div>
+        </section>
+
+
+        {/* PHOTOGRAPHY */}
+        <section className="layout-wide mb-20" aria-labelledby="photography-heading">
+          <AnimatedSection animation="fade-up">
+            <h2 id="photography-heading" className="type-h2 mb-3">Photography</h2>
+            <p className="type-body-lg mb-8" style={{ maxWidth: '60ch' }}>
+              Commercial and personal work. When I shoot, I ask the same question I ask of a product: is it impactful, and does it evoke what I intend?
+            </p>
+          </AnimatedSection>
+          <AnimatedSection animation="fade-up" delay={80}>
+            <div className="mosaic">
+              {photos.map((p, i) => (
+                <figure key={p.file} className={`mosaic-item ${photoSpan(i)} overflow-hidden border border-[var(--border)]`}>
+                  <img
+                    src={`/Photography/${encodeURIComponent(p.file)}`}
+                    alt={p.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                  />
+                </figure>
+              ))}
+            </div>
+          </AnimatedSection>
+        </section>
+
+
+        {/* GRAPHIC DESIGN */}
+        <section className="layout-wide mb-20" aria-labelledby="graphic-design-heading">
+          <AnimatedSection animation="fade-up">
+            <h2 id="graphic-design-heading" className="type-h2 mb-3">Graphic Design</h2>
+            <p className="type-body-lg mb-8" style={{ maxWidth: '60ch' }}>
+              Posters, editorial layouts, ads, and brand assets, work from my communication and marketing background.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection animation="fade-up" delay={80}>
+            <div className="masonry">
+              {graphics.map((g) => (
+                g.type === 'image' ? (
+                  <figure key={g.file} className="masonry-item border border-[var(--border)]">
+                    <img
+                      src={`/Graphic/${encodeURIComponent(g.file)}`}
+                      alt={g.title}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                ) : (
+                  <a
+                    key={g.file}
+                    href={`/Graphic/${encodeURIComponent(g.file)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${g.title} (PDF, opens in a new tab)`}
+                    className="group masonry-item flex flex-col justify-between gap-10 border border-[var(--border)] bg-[var(--surface)] p-5 transition-colors hover:border-[var(--accent)]"
+                  >
+                    <span className="type-meta-label">PDF</span>
+                    <span>
+                      <span className="type-body font-medium block mb-1 group-hover:text-[var(--accent)] transition-colors">{g.title}</span>
+                      <span className="type-caption inline-flex items-center gap-1">
+                        View PDF
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                      </span>
+                    </span>
+                  </a>
+                )
+              ))}
+            </div>
+          </AnimatedSection>
         </section>
 
 

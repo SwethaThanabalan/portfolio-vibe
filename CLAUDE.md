@@ -56,6 +56,9 @@ npm run preview  # preview the production build
 - Project content: `src/data/projects.ts` (single source of truth) + `src/types.ts`
 - Resume / LinkedIn / email links: `src/data/links.ts`. To update the resume, replace
   `public/Swetha_Thanabalan_Resume.pdf` and keep the file name.
+- About page galleries: Photography (`public/Photography`) and Graphic Design
+  (`public/Graphic`), lists in `src/pages/About.tsx`. Resize photos to ~2000px / under
+  ~700 KB before adding (originals were 5-30 MB). Every image needs alt text.
 - Homepage grid order: `src/components/WorkGrid.tsx` (`FEATURED` + `MORE_WORK` arrays)
 - Design tokens: `src/index.css` `:root` and `.dark`
 - SEO/meta/JSON-LD/crawlable fallback: `src/components/SEO.tsx` + `index.html`
