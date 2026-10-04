@@ -21,7 +21,7 @@ const Capabilities = () => {
   return (
     <section
       aria-labelledby="capabilities-heading"
-      className="py-16 md:py-24 layout-wide border-t"
+      className="py-16 md:py-24 layout-content border-t"
       style={{ borderColor: 'var(--border)' }}
     >
       <h2
