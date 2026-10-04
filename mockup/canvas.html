@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Canvas Portfolio Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --canvas: #f4f4f2; --dot: #d7d6d2; --panel: #ffffff; --ink: #141414; --ink-2: #4a4a4f; --muted: #7a7a80; --line: #e4e3df;
+    --blue: #1155cc; --blue-soft: #e8f0fc; --sel: #1155cc;
+    --sticky-y: #fff1a8; --sticky-b: #d9e7ff; --sticky-p: #ffd9e4; --sticky-g: #d6f2dc;
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; --serif: 'Fraunces', Georgia, serif; --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --canvas: #121316; --dot: #2a2c31; --panel: #1b1d21; --ink: #f4f4f5; --ink-2: #d0d0d6; --muted: #9a9aa3; --line: #2c2e34; --blue: #6f9ff2; --blue-soft: #1a2640; --sel: #6f9ff2;
+      --sticky-y: #5a5126; --sticky-b: #253a5c; --sticky-p: #5a2f3d; --sticky-g: #264a31; }
+  }
+  :root[data-theme="dark"] { --canvas: #121316; --dot: #2a2c31; --panel: #1b1d21; --ink: #f4f4f5; --ink-2: #d0d0d6; --muted: #9a9aa3; --line: #2c2e34; --blue: #6f9ff2; --blue-soft: #1a2640; --sel: #6f9ff2;
+    --sticky-y: #5a5126; --sticky-b: #253a5c; --sticky-p: #5a2f3d; --sticky-g: #264a31; }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; }
+  body { background: var(--canvas); color: var(--ink); font-family: var(--font); -webkit-font-smoothing: antialiased; overscroll-behavior: none; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+  button { font: inherit; color: inherit; }
+
+  /* ─── Canvas ─── */
+  #viewport { position: fixed; inset: 0; cursor: grab; touch-action: none; overflow: hidden;
+    background-image: radial-gradient(var(--dot) var(--dotr, 1.2px), transparent var(--dotr, 1.2px)); background-size: var(--grid, 24px) var(--grid, 24px); background-position: var(--gx, 0) var(--gy, 0); }
+  #viewport.dragging { cursor: grabbing; }
+  #world { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
+  #world.animating { transition: transform .9s cubic-bezier(.22, 1, .36, 1); }
+
+  /* Frames */
+  .frame { position: absolute; }
+  .frame-label { position: absolute; left: 0; bottom: 100%; padding-bottom: 8px; font-size: 13px; color: var(--muted); white-space: nowrap; display: flex; gap: 8px; align-items: center; }
+  .frame-label b { font-weight: 500; color: var(--ink-2); }
+  .frame.visited .frame-label::after { content: '● visited'; color: var(--blue); font-family: var(--mono); font-size: 11px; }
+  .frame-body { width: 100%; height: 100%; background: var(--panel); border-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 12px 32px -18px rgba(0,0,0,.25); overflow: hidden; position: relative; cursor: pointer; border: 1px solid transparent; transition: border-color .15s, box-shadow .15s; display: block; text-align: left; padding: 0; width: 100%; }
+  .frame-body:hover, .frame.focused .frame-body { border-color: var(--sel); box-shadow: 0 0 0 1px var(--sel), 0 12px 32px -18px rgba(0,0,0,.25); }
+  .frame.focused .frame-label b { color: var(--sel); }
+
+  /* Project frame contents */
+  .proj { display: grid; grid-template-rows: 58% 1fr; height: 100%; }
+  .proj .img { background: var(--canvas) center / cover no-repeat; }
+  .proj .txt { padding: 22px 26px; display: flex; flex-direction: column; gap: 8px; }
+  .proj .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .proj h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0; }
+  .proj p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ink-2); }
+  .proj .open { margin-top: auto; font-size: 13px; font-weight: 500; color: var(--blue); text-decoration: none; align-self: flex-start; }
+  .proj .open:hover { text-decoration: underline; }
+
+  /* Intro frame */
+  .intro { padding: 44px 48px; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+  .intro .name { font-family: 'Cedarville Cursive', cursive; font-size: 30px; color: var(--blue); }
+  .intro h1 { font-family: var(--serif); font-weight: 400; font-size: 46px; line-height: 1.05; letter-spacing: -.02em; margin: 0; }
+  .intro h1 em { color: var(--blue); }
+  .intro p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-2); max-width: 520px; }
+  .hints { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .hints span { font-family: var(--mono); font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+
+  /* Component sheet (skills) */
+  .comp { padding: 26px 28px; height: 100%; overflow: hidden; }
+  .comp h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; margin: 0 0 4px; }
+  .comp .sub { font-size: 13px; color: var(--muted); margin: 0 0 18px; }
+  .comp .group { margin-bottom: 14px; }
+  .comp .glabel { font-family: var(--mono); font-size: 11px; color: var(--blue); display: flex; align-items: center; gap: 6px; margin-bottom: 7px; }
+  .comp .glabel::before { content: '◆'; font-size: 10px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chips span { font-size: 12.5px; padding: 5px 10px; border-radius: 6px; border: 1px dashed var(--blue); color: var(--ink); background: var(--blue-soft); }
+
+  /* Photography frame */
+  .photos { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto 1fr 1fr; gap: 6px; padding: 18px; height: 100%; }
+  .photos h3 { grid-column: 1 / -1; font-family: var(--serif); font-weight: 400; font-size: 24px; margin: 4px 4px 8px; }
+  .photos div { background: center / cover no-repeat; border-radius: 3px; }
+
+  /* Contact frame */
+  .contact { padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+  .contact h3 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.1; margin: 0; }
+  .contact p { margin: 0; color: var(--ink-2); font-size: 15px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+  .btn { display: inline-flex; padding: 10px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; text-decoration: none; border: 1px solid var(--blue); color: var(--blue); }
+  .btn.primary { background: var(--blue); color: #fff; }
+
+  /* Stickies + connectors */
+  .sticky { position: absolute; width: 190px; min-height: 150px; padding: 16px; font-size: 14px; line-height: 1.45; color: #1d1d1f; border-radius: 2px; box-shadow: 0 6px 14px -8px rgba(0,0,0,.35); transform: rotate(var(--r, 0deg)); }
+  :root[data-theme="dark"] .sticky { color: #f4f4f5; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sticky { color: #f4f4f5; } }
+  .sticky .who { display: block; margin-top: 10px; font-family: var(--mono); font-size: 10px; opacity: .6; }
+  .s-y { background: var(--sticky-y); } .s-b { background: var(--sticky-b); } .s-p { background: var(--sticky-p); } .s-g { background: var(--sticky-g); }
+  svg.links { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+  svg.links path { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 5; opacity: .7; }
+
+  /* ─── Editor chrome ─── */
+  .topbar { position: fixed; z-index: 10; top: 12px; left: 12px; right: 12px; height: 48px; display: flex; align-items: center; gap: 12px; padding: 0 10px 0 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 4px 16px -10px rgba(0,0,0,.25); }
+  .topbar .logo { font-family: 'Cedarville Cursive', cursive; font-size: 20px; color: var(--blue); white-space: nowrap; }
+  .crumb { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .crumb b { color: var(--ink); font-weight: 500; }
+  .spacer { flex: 1; }
+  .visits { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .meter { width: 90px; height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+  .meter i { display: block; height: 100%; width: 0; background: var(--blue); transition: width .5s; }
+  .tb-btn { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 7px 12px; font-size: 13px; cursor: pointer; white-space: nowrap; text-decoration: none; }
+  .tb-btn:hover { border-color: var(--blue); color: var(--blue); }
+  .tb-btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+  .layers { position: fixed; z-index: 10; top: 72px; left: 12px; width: 220px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 6px; box-shadow: 0 4px 16px -10px rgba(0,0,0,.25); }
+  .layers h4 { margin: 2px 10px 8px; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .layers button { display: flex; width: 100%; align-items: center; gap: 8px; border: 0; background: none; text-align: left; padding: 6px 10px; border-radius: 6px; font-size: 13px; cursor: pointer; color: var(--ink-2); }
+  .layers button:hover, .layers button.on { background: var(--blue-soft); color: var(--blue); }
+  .layers button .hash { font-family: var(--mono); font-size: 12px; color: var(--muted); width: 12px; }
+  .layers button .dot { margin-left: auto; width: 6px; height: 6px; border-radius: 50%; border: 1px solid var(--muted); }
+  .layers button.seen .dot { background: var(--blue); border-color: var(--blue); }
+
+  .tools { position: fixed; z-index: 10; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 4px; padding: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px -12px rgba(0,0,0,.3); }
+  .tools button { border: 0; background: none; border-radius: 8px; padding: 8px 12px; font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+  .tools button:hover { background: var(--blue-soft); color: var(--blue); }
+  .tools .zoom { font-family: var(--mono); font-size: 12px; color: var(--muted); padding: 8px 6px; min-width: 52px; text-align: center; }
+  .tools .tour { background: var(--blue); color: #fff; }
+  .tools .tour:hover { background: var(--blue); color: #fff; filter: brightness(1.1); }
+
+  .minimap { position: fixed; z-index: 10; right: 12px; bottom: 16px; width: 200px; height: 140px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 16px -10px rgba(0,0,0,.25); cursor: pointer; }
+  .minimap .mm-frame { position: absolute; background: var(--line); border-radius: 1px; }
+  .minimap .mm-frame.seen { background: var(--blue); opacity: .55; }
+  .minimap .mm-view { position: absolute; border: 1.5px solid var(--blue); border-radius: 2px; background: rgba(17,85,204,.06); }
+
+  .toast { position: fixed; z-index: 20; left: 50%; top: 80px; transform: translate(-50%, -20px); opacity: 0; pointer-events: none; background: var(--ink); color: var(--canvas); padding: 12px 18px; border-radius: 12px; font-size: 14px; display: flex; gap: 12px; align-items: center; transition: all .4s cubic-bezier(.22,1,.36,1); }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+  .toast a { color: inherit; font-weight: 600; }
+
+  /* List view: plain, accessible alternative to the canvas */
+  .listview { position: fixed; inset: 72px 12px 12px; z-index: 15; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: auto; padding: 28px clamp(20px, 4vw, 48px); display: none; }
+  .listview.open { display: block; }
+  .listview h2 { font-family: var(--serif); font-weight: 400; margin: 0 0 18px; }
+  .listview ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .listview li a { display: block; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; }
+  .listview li a:hover { border-color: var(--blue); }
+  .listview li b { font-family: var(--serif); font-weight: 400; font-size: 20px; display: block; }
+  .listview li span { font-size: 14px; color: var(--ink-2); }
+
+  .mock-tag { position: fixed; z-index: 30; left: 12px; bottom: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: .1em; background: var(--ink); color: var(--canvas); padding: 5px 9px; border-radius: 999px; }
+
+  @media (max-width: 900px) { .layers, .minimap, .crumb { display: none; } .visits .label { display: none; } }
+  .tools button { white-space: nowrap; }
+  @media (max-width: 560px) {
+    .topbar { gap: 8px; padding: 0 6px 0 12px; } .topbar .logo { font-size: 17px; }
+    .tb-btn { padding: 6px 9px; font-size: 12px; } .topbar .tb-btn.resume { display: none; }
+    .tools .zoom, #zoom-in, #zoom-out { display: none; } .meter { width: 44px; }
+  }
+  @media (prefers-reduced-motion: reduce) { #world.animating { transition: none; } .toast { transition: none; } }
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <span class="logo">Swetha Thanabalan</span>
+    <span class="crumb">Portfolio / <b id="crumb">Overview</b></span>
+    <span class="spacer"></span>
+    <span class="visits" aria-live="polite"><span class="label">Frames visited</span><span class="meter"><i id="meter"></i></span><span id="visit-count">0/8</span></span>
+    <button class="tb-btn" id="list-toggle" type="button" aria-expanded="false">List view</button>
+    <a class="tb-btn primary resume" href="/Swetha_Thanabalan_Resume.pdf">Resume</a>
+  </header>
+
+  <nav class="layers" aria-label="Frames"><h4>Layers</h4><div id="layer-list"></div></nav>
+
+  <main id="viewport" aria-label="Portfolio canvas. Drag to pan, pinch or Ctrl and scroll to zoom, Tab through frames.">
+    <div id="world">
+      <svg class="links" id="links" aria-hidden="true"></svg>
+    </div>
+  </main>
+
+  <div class="tools" role="toolbar" aria-label="Canvas tools">
+    <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+    <span class="zoom" id="zoom-label">100%</span>
+    <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+    <button type="button" id="fit" aria-label="Fit everything on screen">⤢ Overview</button>
+    <button type="button" id="tour" class="tour">▶ Take the tour</button>
+  </div>
+
+  <div class="minimap" id="minimap" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status"><span>You've seen every frame. Let's talk.</span><a href="mailto:tys.swetha@gmail.com">Email me</a></div>
+  <section class="listview" id="listview" aria-label="List view of the portfolio"><h2>Swetha Thanabalan · Product designer</h2><ul id="list-items"></ul></section>
+  <span class="mock-tag">MOCKUP</span>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+  const $ = s => document.querySelector(s)
+  const viewport = $('#viewport'), world = $('#world'), links = $('#links')
+
+  // ─── Content: frames placed on the canvas (world px) ───
+  const FRAMES = [
+    { id: 'intro', label: 'Intro', x: -360, y: -230, w: 720, h: 460, kind: 'intro' },
+    { id: 'sahay', label: 'Sahay · Case study', x: -1300, y: -1000, w: 560, h: 440, kind: 'proj', href: '/project/sahay-home-companion',
+      img: '/SAHAY(3).png', kicker: 'AI-assisted home maintenance · 2025', title: 'Sahay: Confidence before contractors',
+      text: 'Research moved the product from a marketplace to AI guidance, and user testing supported the change.' },
+    { id: 'adultyou', label: 'Adult You · Case study', x: -280, y: -1000, w: 560, h: 440, kind: 'proj', href: '/project/adult-you-platform',
+      img: '/AdultYouLogLight.png', kicker: 'Gamified learning · 2024', title: 'Adult You: a life skills platform, from 0 to 1',
+      text: 'Design system in use in the Unity alpha build. 75% of test participants said they would use the app.' },
+    { id: 'talofa', label: 'Monster Walk · Case study', x: 740, y: -1000, w: 560, h: 440, kind: 'proj', href: '/project/talofa-games-retention',
+      img: '/MonsterWalkCover.png', kicker: 'Mobile game · 2024', title: 'Monster Walk re-engagement strategy',
+      text: '4 recommendations shipped in the live product.' },
+    { id: 'septa', label: 'SEPTA · Case study', x: 740, y: -220, w: 560, h: 440, kind: 'proj', href: '/project/septa-mobile-redesign',
+      img: '/NextStopBetterSEPTAExperience.png', kicker: 'Mobile transit app · 2024', title: 'SEPTA mobile app redesign',
+      text: 'SEPTA later shipped the same features: map integration, biometric login, predictive search.' },
+    { id: 'skills', label: 'Skills · Components', x: -1300, y: -220, w: 560, h: 440, kind: 'skills' },
+    { id: 'photo', label: 'Photography', x: -1300, y: 560, w: 560, h: 440, kind: 'photo' },
+    { id: 'more', label: 'More work · Amazon teardown', x: -280, y: 560, w: 560, h: 440, kind: 'proj', href: '/project/amazon-cancellation-teardown',
+      img: '/portfolioamazoncasestudy.jpg', kicker: 'UX teardown · 2024', title: "A UX teardown of Amazon's order cancellation flow",
+      text: 'How the flow handles a customer mistake during a time-sensitive checkout.' },
+    { id: 'contact', label: 'Contact', x: 740, y: 560, w: 560, h: 440, kind: 'contact' },
+  ]
+  // Process notes: facts from the case studies, placed near their projects
+  const STICKIES = [
+    { x: -720, y: -980, c: 's-y', r: -2, t: 'Research flipped the brief: from a contractor marketplace to AI guidance.', who: 'SAHAY' },
+    { x: -660, y: -760, c: 's-b', r: 2, t: 'I argued to keep DIY guidance. Usability testing later supported it.', who: 'SAHAY' },
+    { x: 300, y: -980, c: 's-p', r: 1.5, t: 'Built a custom design system for the Unity build.', who: 'ADULT YOU' },
+    { x: 1320, y: -980, c: 's-g', r: -1.5, t: 'Chose concept testing over A/B testing to learn why lapsed players hesitated.', who: 'MONSTER WALK' },
+    { x: 1320, y: -200, c: 's-y', r: 2, t: 'Ticket purchase: 7 steps → 3. Task success 45% → 92%.', who: 'SEPTA' },
+    { x: -720, y: -200, c: 's-b', r: -1, t: 'MS in HCI, Drexel University.', who: 'BACKGROUND' },
+    { x: -720, y: 580, c: 's-p', r: 1.5, t: 'Corporate headshots, events, and product campaigns for paying clients.', who: 'PHOTOGRAPHY' },
+    { x: 300, y: 580, c: 's-g', r: -2, t: 'Marketing and SEO work at RATESDOTCA, Beauty First Spa, and Big Brothers Big Sisters.', who: 'MARKETING' },
+  ]
+  const SKILLS = [
+    ['Research', ['User Interviews', 'Usability Testing', 'Competitive Analysis', 'Research Synthesis', 'Qualitative Research']],
+    ['Product Design', ['Product Strategy', 'User Flows', 'Information Architecture', 'Interaction Design', 'Prototyping']],
+    ['Systems', ['Design Systems', 'Accessibility', 'Responsive Design', 'Design Handoff']],
+    ['AI & Prototyping', ['AI-Assisted Design', 'Rapid Prototyping', 'Vibe Coding', 'Multi-Agent Workflows']],
+  ]
+  const PHOTOS = ['Portraits 20.jpg', 'Thai curry final.jpg', 'DSC08218.jpg', 'DSC02825.jpg', 'Grilled Provimi Veal Chop.jpg', 'Abstract.jpg']
+
+  const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+  function body(f) {
+    if (f.kind === 'intro') return `<div class="intro"><span class="name">Swetha Thanabalan</span>
+      <h1>Good products aren't built on <em>assumptions</em></h1>
+      <p>Product designer working across user research, interaction design, and rapid prototyping, with a background in photography, graphic design, marketing, and social content. This page is my canvas: explore it the way you'd explore a design file.</p>
+      <div class="hints"><span>Drag to pan</span><span>Pinch or ⌘/Ctrl + scroll to zoom</span><span>Click a frame</span><span>Tab through frames</span></div></div>`
+    if (f.kind === 'proj') return `<div class="proj"><div class="img" style="background-image:url('${f.img}')"></div><div class="txt">
+      <span class="kicker">${esc(f.kicker)}</span><h3>${esc(f.title)}</h3><p>${esc(f.text)}</p><a class="open" href="${f.href}">Open case study →</a></div></div>`
+    if (f.kind === 'skills') return `<div class="comp"><h3>Skills</h3><p class="sub">The components I build products with.</p>${SKILLS.map(([g, items]) => `<div class="group"><div class="glabel">${g}</div><div class="chips">${items.map(i => `<span>${i}</span>`).join('')}</div></div>`).join('')}</div>`
+    if (f.kind === 'photo') return `<div class="photos"><h3>Photography</h3>${PHOTOS.map(p => `<div style="background-image:url('/Photography/${encodeURIComponent(p)}')"></div>`).join('')}</div>`
+    if (f.kind === 'contact') return `<div class="contact"><h3>Let's work together</h3><p>I'm looking for product, UX, or visual design roles.</p>
+      <div class="btns"><a class="btn primary" href="mailto:tys.swetha@gmail.com">tys.swetha@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/swethathanabalan/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="/Swetha_Thanabalan_Resume.pdf">Resume</a></div></div>`
+  }
+
+  // Build frames
+  FRAMES.forEach(f => {
+    const el = document.createElement('section')
+    el.className = 'frame'; el.id = 'f-' + f.id
+    Object.assign(el.style, { left: f.x + 'px', top: f.y + 'px', width: f.w + 'px', height: f.h + 'px' })
+    el.setAttribute('aria-label', f.label)
+    el.innerHTML = `<div class="frame-label"><span>#</span><b>${f.label}</b></div><div class="frame-body" tabindex="0" role="button" aria-label="Zoom to ${f.label}">${body(f)}</div>`
+    world.appendChild(el); f.el = el
+  })
+  STICKIES.forEach(s => {
+    const el = document.createElement('div'); el.className = 'sticky ' + s.c
+    Object.assign(el.style, { left: s.x + 'px', top: s.y + 'px' }); el.style.setProperty('--r', s.r + 'deg')
+    el.innerHTML = `${esc(s.t)}<span class="who">${s.who}</span>`; world.appendChild(el)
+  })
+  // Connectors from the intro to each frame (FigJam-style dashed curves)
+  const cx = f => f.x + f.w / 2, cy = f => f.y + f.h / 2
+  const intro = FRAMES[0]
+  links.innerHTML = FRAMES.slice(1).map(f => {
+    const x1 = cx(intro), y1 = cy(intro), x2 = cx(f), y2 = cy(f), mx = (x1 + x2) / 2
+    return `<path d="M${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}" />`
+  }).join('')
+  world.insertBefore(links, world.firstChild)
+
+  // ─── Camera: pan + zoom ───
+  let tx = 0, ty = 0, z = 1
+  const ZMIN = .12, ZMAX = 2.5
+  function apply(animate) {
+    world.classList.toggle('animating', !!animate && !reduce)
+    world.style.transform = `translate(${tx}px, ${ty}px) scale(${z})`
+    const g = 24 * z
+    viewport.style.setProperty('--grid', g + 'px'); viewport.style.setProperty('--gx', tx + 'px'); viewport.style.setProperty('--gy', ty + 'px')
+    viewport.style.setProperty('--dotr', Math.max(.6, Math.min(1.6, 1.2 * z)) + 'px')
+    $('#zoom-label').textContent = Math.round(z * 100) + '%'
+    drawMinimap()
+  }
+  function zoomAt(px, py, nz, animate) {
+    nz = Math.max(ZMIN, Math.min(ZMAX, nz))
+    const wx = (px - tx) / z, wy = (py - ty) / z
+    z = nz; tx = px - wx * z; ty = py - wy * z; apply(animate)
+  }
+  function fitRect(x, y, w, h, pad = .82, animate = true) {
+    const vw = innerWidth, vh = innerHeight - 140
+    z = Math.max(ZMIN, Math.min(ZMAX, Math.min(vw * pad / w, vh * pad / h)))
+    tx = vw / 2 - (x + w / 2) * z; ty = 70 + vh / 2 - (y + h / 2) * z; apply(animate)
+  }
+  const bounds = () => {
+    const xs = FRAMES.map(f => f.x), ys = FRAMES.map(f => f.y), xe = FRAMES.map(f => f.x + f.w), ye = FRAMES.map(f => f.y + f.h)
+    const x = Math.min(...xs) - 60, y = Math.min(...ys) - 60; return { x, y, w: Math.max(...xe) + 60 - x, h: Math.max(...ye) + 60 - y }
+  }
+  const fitAll = (a = true) => { const b = bounds(); fitRect(b.x, b.y, b.w, b.h, .92, a) }
+
+  // ─── Visiting frames (the one game element) ───
+  const visited = new Set()
+  let current = null
+  function focusFrame(f, opts = {}) {
+    current = f
+    FRAMES.forEach(o => o.el.classList.toggle('focused', o === f))
+    fitRect(f.x, f.y, f.w, f.h, f.kind === 'intro' ? .7 : .8, true)
+    $('#crumb').textContent = f.label
+    if (f.kind !== 'intro' && !visited.has(f.id)) {
+      visited.add(f.id); f.el.classList.add('visited')
+      const n = visited.size, total = FRAMES.length - 1
+      $('#visit-count').textContent = `${n}/${total}`; $('#meter').style.width = (n / total * 100) + '%'
+      if (n === total) { const t = $('#toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 6000) }
+    }
+    renderLayers()
+    if (opts.focus) f.el.querySelector('.frame-body').focus({ preventScroll: true })
+  }
+
+  // Pointer: drag to pan; a click (no drag) on a frame zooms to it
+  let drag = null, pointers = new Map(), pinch = null
+  viewport.addEventListener('pointerdown', e => {
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+    if (pointers.size === 2) { const [a, b] = [...pointers.values()]; pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), z }; drag = null; return }
+    drag = { x: e.clientX, y: e.clientY, tx, ty, moved: false, target: e.target }
+    viewport.setPointerCapture(e.pointerId)
+  })
+  viewport.addEventListener('pointermove', e => {
+    if (!pointers.has(e.pointerId)) return
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+    if (pinch && pointers.size === 2) {
+      const [a, b] = [...pointers.values()], d = Math.hypot(a.x - b.x, a.y - b.y)
+      zoomAt((a.x + b.x) / 2, (a.y + b.y) / 2, pinch.z * d / pinch.d); return
+    }
+    if (!drag) return
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y
+    if (!drag.moved && Math.hypot(dx, dy) > 4) { drag.moved = true; viewport.classList.add('dragging') }
+    if (drag.moved) { tx = drag.tx + dx; ty = drag.ty + dy; apply(false) }
+  })
+  function endPointer(e) {
+    pointers.delete(e.pointerId)
+    if (pointers.size < 2) pinch = null
+    if (!drag) return
+    viewport.classList.remove('dragging')
+    if (!drag.moved) {
+      const link = drag.target.closest('a')
+      const fe = drag.target.closest('.frame')
+      if (!link && fe) focusFrame(FRAMES.find(f => f.el === fe))
+    }
+    drag = null
+  }
+  viewport.addEventListener('pointerup', endPointer); viewport.addEventListener('pointercancel', endPointer)
+  // Wheel: trackpad scroll pans, pinch (ctrlKey) or ⌘/Ctrl + wheel zooms
+  viewport.addEventListener('wheel', e => {
+    e.preventDefault()
+    if (e.ctrlKey || e.metaKey) zoomAt(e.clientX, e.clientY, z * Math.exp(-Math.max(-60, Math.min(60, e.deltaY)) * .006))
+    else { tx -= e.deltaX; ty -= e.deltaY; apply(false) }
+  }, { passive: false })
+  // Keyboard: Tab focuses frames (camera follows), Enter on a frame zooms, +/- zoom, 0 overview, arrows pan
+  world.addEventListener('focusin', e => { const fe = e.target.closest('.frame'); if (fe && e.target.classList.contains('frame-body')) focusFrame(FRAMES.find(f => f.el === fe)) })
+  addEventListener('keydown', e => {
+    if (e.target.closest && e.target.closest('.listview')) return
+    if (e.key === '+' || e.key === '=') zoomAt(innerWidth / 2, innerHeight / 2, z * 1.25, true)
+    else if (e.key === '-') zoomAt(innerWidth / 2, innerHeight / 2, z / 1.25, true)
+    else if (e.key === '0') fitAll()
+    else if (e.key.startsWith('Arrow') && !e.target.closest('.layers')) {
+      const s = 80; tx += e.key === 'ArrowLeft' ? s : e.key === 'ArrowRight' ? -s : 0; ty += e.key === 'ArrowUp' ? s : e.key === 'ArrowDown' ? -s : 0; apply(true)
+    } else if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('frame-body')) {
+      const f = FRAMES.find(o => o.el.contains(e.target)); if (f && f.href) location.href = f.href
+    }
+  })
+
+  // Tools
+  $('#zoom-in').onclick = () => zoomAt(innerWidth / 2, innerHeight / 2, z * 1.25, true)
+  $('#zoom-out').onclick = () => zoomAt(innerWidth / 2, innerHeight / 2, z / 1.25, true)
+  $('#fit').onclick = () => { FRAMES.forEach(o => o.el.classList.remove('focused')); $('#crumb').textContent = 'Overview'; fitAll() }
+  let touring = null
+  $('#tour').onclick = () => {
+    if (touring) { clearInterval(touring); touring = null; $('#tour').textContent = '▶ Take the tour'; return }
+    const order = ['intro', 'sahay', 'adultyou', 'talofa', 'septa', 'skills', 'photo', 'more', 'contact']
+    let i = 0; focusFrame(FRAMES.find(f => f.id === order[i]))
+    $('#tour').textContent = '■ Stop tour'
+    touring = setInterval(() => {
+      i++; if (i >= order.length) { clearInterval(touring); touring = null; $('#tour').textContent = '▶ Take the tour'; return }
+      focusFrame(FRAMES.find(f => f.id === order[i]))
+    }, reduce ? 3500 : 2600)
+  }
+
+  // Layers panel + list view
+  function renderLayers() {
+    $('#layer-list').innerHTML = FRAMES.map(f => `<button type="button" data-id="${f.id}" class="${current === f ? 'on' : ''} ${visited.has(f.id) ? 'seen' : ''}"><span class="hash">#</span>${f.label.split(' · ')[0]}<span class="dot"></span></button>`).join('')
+  }
+  $('#layer-list').addEventListener('click', e => { const b = e.target.closest('button'); if (b) focusFrame(FRAMES.find(f => f.id === b.dataset.id)) })
+  $('#list-items').innerHTML = FRAMES.filter(f => f.href).map(f => `<li><a href="${f.href}"><b>${esc(f.title)}</b><span>${esc(f.text)}</span></a></li>`).join('') +
+    `<li><a href="mailto:tys.swetha@gmail.com"><b>Contact</b><span>tys.swetha@gmail.com</span></a></li>`
+  $('#list-toggle').onclick = () => { const lv = $('#listview'), open = !lv.classList.contains('open'); lv.classList.toggle('open', open); $('#list-toggle').setAttribute('aria-expanded', open); $('#list-toggle').textContent = open ? 'Canvas view' : 'List view' }
+
+  // Minimap
+  const mm = $('#minimap')
+  function drawMinimap() {
+    const b = bounds(), W = mm.clientWidth, H = mm.clientHeight, s = Math.min(W / b.w, H / b.h), ox = (W - b.w * s) / 2, oy = (H - b.h * s) / 2
+    mm.innerHTML = FRAMES.map(f => `<div class="mm-frame ${visited.has(f.id) ? 'seen' : ''}" style="left:${ox + (f.x - b.x) * s}px;top:${oy + (f.y - b.y) * s}px;width:${f.w * s}px;height:${f.h * s}px"></div>`).join('')
+    const vx = (-tx / z - b.x) * s + ox, vy = (-ty / z - b.y) * s + oy
+    mm.insertAdjacentHTML('beforeend', `<div class="mm-view" style="left:${vx}px;top:${vy}px;width:${innerWidth / z * s}px;height:${innerHeight / z * s}px"></div>`)
+    mm._map = { b, s, ox, oy }
+  }
+  mm.addEventListener('click', e => {
+    const { b, s, ox, oy } = mm._map, r = mm.getBoundingClientRect()
+    const wx = (e.clientX - r.left - ox) / s + b.x, wy = (e.clientY - r.top - oy) / s + b.y
+    tx = innerWidth / 2 - wx * z; ty = innerHeight / 2 - wy * z; apply(true)
+  })
+
+  addEventListener('resize', () => apply(false))
+  renderLayers()
+  // Arrive: see the whole canvas for a beat, then fly to the intro
+  fitAll(false)
+  setTimeout(() => focusFrame(intro), reduce ? 0 : 900)
+})()
+</script>
+</body>
+</html>
