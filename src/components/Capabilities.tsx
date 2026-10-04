@@ -37,7 +37,7 @@ const Capabilities = () => {
             <h3 className="type-eyebrow mb-4">
               {group.label}
             </h3>
-            <ul className="space-y-2">
+            <ul className="list-flow">
               {group.items.map((item) => (
                 <li key={item} className="type-body-sm">
                   {item}

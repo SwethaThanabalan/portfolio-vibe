@@ -131,11 +131,11 @@ export function BeforeAfter({ before, after, label }: {
         {label && <p className="section-label mb-4">{label}</p>}
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <p className="text-xs font-medium text-[var(--muted)] uppercase tracking-wide mb-2">Before</p>
+            <p className="type-meta-label">Before</p>
             <p className="text-[15px] leading-relaxed text-[var(--text-secondary)]">{before}</p>
           </div>
           <div>
-            <p className="text-xs font-medium text-[var(--accent)] uppercase tracking-wide mb-2">After</p>
+            <p className="type-meta-label text-[var(--accent)]">After</p>
             <p className="text-[15px] leading-relaxed text-[var(--text)]">{after}</p>
           </div>
         </div>
@@ -162,7 +162,7 @@ export function PullQuote({ children }: { children: React.ReactNode }) {
       style={{ transitionDuration: 'var(--duration-reveal)' }}>
       <blockquote
         className="font-editorial font-normal text-[var(--text)]"
-        style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2rem)', lineHeight: '1.35', maxWidth: '28ch', letterSpacing: '-0.015em' }}
+        style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2rem)', lineHeight: '1.35', letterSpacing: '-0.015em' }}
       >
         {children}
       </blockquote>
@@ -191,7 +191,7 @@ export function MetadataGrid({ items }: {
 /* ─── Context note (e.g. "Academic project") ─── */
 export function ContextNote({ children }: { children: React.ReactNode }) {
   return (
-    <div className="text-sm text-[var(--muted)] border-l-2 border-[var(--border)] pl-4 my-6">
+    <div className="type-body-sm text-[var(--muted)] border-l-2 border-[var(--border)] pl-4 my-6">
       {children}
     </div>
   )

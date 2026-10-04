@@ -47,27 +47,26 @@ const Deck = () => {
 
       {/* ══════════ TITLE ══════════ */}
       <Slide variant="bg">
-        <Eyebrow>Product Design Case Studies</Eyebrow>
+        <Eyebrow>Product design case studies</Eyebrow>
         <h1 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
-          A designer who covers the whole funnel.
+          A product designer who has worked on how products get noticed, understood, and chosen.
         </h1>
         <p className="type-lead mb-10">
-          Swetha Thanabalan, Product Designer. I research it, design it, make it look right, and
-          understand how it gets adopted, drawing on professional photography, marketing, and an
+          Swetha Thanabalan, Product Designer. I research, design, and build products, drawing on professional photography, marketing, and an
           HCI master's.
         </p>
         <div className="grid grid-cols-3 gap-6" style={{ maxWidth: '640px' }}>
           <div className="border-t-2 pt-3" style={{ borderTopColor: 'var(--accent)' }}>
             <p className="type-meta-label mb-1" style={{ color: 'var(--accent)' }}>01</p>
-            <p className="type-body font-medium">SEPTA Transit Redesign</p>
+            <p className="type-body font-medium">SEPTA transit redesign</p>
           </div>
           <div className="border-t-2 pt-3" style={{ borderTopColor: 'var(--accent)' }}>
             <p className="type-meta-label mb-1" style={{ color: 'var(--accent)' }}>02</p>
-            <p className="type-body font-medium">Sahay AI Home Companion</p>
+            <p className="type-body font-medium">Sahay AI home companion</p>
           </div>
           <div className="border-t-2 pt-3" style={{ borderTopColor: 'var(--accent)' }}>
             <p className="type-meta-label mb-1" style={{ color: 'var(--accent)' }}>03</p>
-            <p className="type-body font-medium">Monster Walk Re-entry</p>
+            <p className="type-body font-medium">Monster Walk re-entry</p>
           </div>
         </div>
       </Slide>
@@ -78,18 +77,14 @@ const Deck = () => {
           <div className="md:col-span-3">
             <Eyebrow>About</Eyebrow>
             <h2 className="type-h1 mb-6" style={{ maxWidth: '18ch' }}>
-              A designer who covers more of the product than most.
+              My background
             </h2>
             <div className="space-y-4 type-body-lg">
               <p>
-                I shot professionally for paying clients, ran marketing and SEO at real companies,
-                and trained in HCI at Drexel. Visual craft, interaction design, user research, and
-                a marketer's read on adoption, all in one designer.
+                I shot professionally for paying clients, worked in marketing and SEO, and trained in HCI at Drexel.
               </p>
               <p>
-                Most early-career designers own one part of how a product gets found, understood,
-                and chosen. I have worked across all of it, and I still shoot and freelance to keep
-                each skill sharp.
+                That means I've worked on each step of how people find a product, understand it, and decide to use it. I still shoot and freelance.
               </p>
             </div>
           </div>
@@ -114,12 +109,12 @@ const Deck = () => {
 
       {/* Cover */}
       <Slide variant="dark">
-        <Eyebrow>Case Study 01 · Mobile Transit Experience Redesign</Eyebrow>
+        <Eyebrow>Case Study 01 · Mobile transit app redesign</Eyebrow>
         <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
-          SEPTA: rebuilding trust in a transit app people depend on.
+          SEPTA: a transit app riders could trust again
         </h2>
         <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)' }}>
-          A rider-first redesign of SEPTA's mobile app, centered on how people actually plan trips.
+          A redesign of SEPTA's mobile app built around how riders actually plan trips.
         </p>
         <p className="type-caption mt-8" style={{ color: 'rgba(255,255,255,0.45)' }}>
           Context: Academic project. No backend access. Research and design only.
@@ -130,7 +125,7 @@ const Deck = () => {
       <Slide variant="bg">
         <Eyebrow>Snapshot</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '22ch' }}>
-          Riders were forced to use Google Maps alongside SEPTA.
+          Riders had to use Google Maps alongside SEPTA.
         </h2>
         <div className="grid md:grid-cols-4 gap-8 mb-10">
           <div>
@@ -152,8 +147,7 @@ const Deck = () => {
         </div>
         <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#4a8c5c' }}>
           <p className="type-body font-medium">
-            SEPTA later launched a revamped app with the same features I identified: map
-            integration, biometric login, and predictive search.
+            SEPTA later launched a revamped app with the features I had identified: map integration, biometric login, and predictive search.
           </p>
         </div>
       </Slide>
@@ -162,7 +156,7 @@ const Deck = () => {
       <Slide variant="surface">
         <Eyebrow>User research</Eyebrow>
         <h2 className="type-h1 mb-10" style={{ maxWidth: '20ch' }}>
-          Interviews surfaced a trust problem underneath the usability issues.
+          Interviews showed that, beyond usability issues, riders didn't trust the app.
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#c9a96e' }}>
@@ -171,11 +165,11 @@ const Deck = () => {
           </div>
           <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#c9a96e' }}>
             <p className="type-metric mb-1">6 / 8</p>
-            <p className="type-body-sm">test sessions hit login failures, breaking trust in the app's reliability.</p>
+            <p className="type-body-sm">test sessions hit login failures, which made riders doubt the app.</p>
           </div>
           <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#c9a96e' }}>
             <p className="type-metric mb-1">4+ taps</p>
-            <p className="type-body-sm">to find a route, and users still couldn't locate it. Navigation reflected the org chart, not user mental models.</p>
+            <p className="type-body-sm">to find a route, and users still couldn't locate it. Navigation followed SEPTA's internal categories instead of how riders think about trips.</p>
           </div>
         </div>
       </Slide>
@@ -186,16 +180,16 @@ const Deck = () => {
           <div>
             <Eyebrow>Product decision</Eyebrow>
             <h2 className="type-h1 mb-6" style={{ maxWidth: '18ch' }}>
-              Make the map the core interaction layer.
+              Make the map the main way to use the app.
             </h2>
             <div className="space-y-5">
               <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#c9a96e' }}>
                 <p className="type-meta-label mb-1">Finding</p>
-                <p className="type-body">Even "quick lookup" users thought spatially first, they wanted to see where they were going.</p>
+                <p className="type-body">Even users who wanted a quick lookup thought about the trip on a map first: they wanted to see where they were going.</p>
               </div>
               <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: 'var(--accent)' }}>
                 <p className="type-meta-label mb-1">Decision</p>
-                <p className="type-body">Map as the primary layer. Routes, stops, and real-time updates overlaid, not siloed in tabs.</p>
+                <p className="type-body">The map is the main screen, with routes, stops, and real-time updates shown on it instead of in separate tabs.</p>
               </div>
               <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#4a8c5c' }}>
                 <p className="type-meta-label mb-1">Result</p>
@@ -213,11 +207,11 @@ const Deck = () => {
       <Slide variant="dark">
         <Eyebrow>Outcome</Eyebrow>
         <h2 className="type-display mb-8" style={{ maxWidth: '20ch' }}>
-          The redesign matched how riders actually plan trips.
+          The redesign follows how riders actually plan trips.
         </h2>
         <div className="grid md:grid-cols-2 gap-6" style={{ maxWidth: '760px' }}>
-          <p className="type-body">Map-first navigation replaced the buried tab. Biometric login and persistent sessions removed the trust-breaking logout loops.</p>
-          <p className="type-body">Schedule search dropped from 4+ taps to 2. Accessibility was built into the system, not bolted on.</p>
+          <p className="type-body">Map-first navigation replaced the buried tab, and biometric login with persistent sessions ended the logout loops.</p>
+          <p className="type-body">Schedule search dropped from 4+ taps to 2, and accessibility was built into the design system from the start.</p>
         </div>
       </Slide>
 
@@ -228,9 +222,9 @@ const Deck = () => {
       <Slide variant="dark">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <Eyebrow>Case Study 02 · AI-Assisted Home Maintenance Product</Eyebrow>
+            <Eyebrow>Case Study 02 · AI-assisted home maintenance product</Eyebrow>
             <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
-              Sahay: confidence before contractors.
+              Sahay: confidence before contractors
             </h2>
             <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)' }}>
               An AI home maintenance companion that helps homeowners understand problems before
@@ -274,8 +268,7 @@ const Deck = () => {
         </div>
         <div className="border-l-4 pl-5 py-2" style={{ borderLeftColor: '#4a8c5c' }}>
           <p className="type-body font-medium">
-            Research-driven pivot from service marketplace to AI guidance product. Validated
-            through information architecture and user flow testing.
+            Research moved the product from a service marketplace to AI guidance, and information architecture and user flow testing supported the change.
           </p>
         </div>
       </Slide>
@@ -308,7 +301,7 @@ const Deck = () => {
       <Slide variant="bg">
         <Eyebrow>The pivot</Eyebrow>
         <h2 className="type-h1 mb-10" style={{ maxWidth: '20ch' }}>
-          From transactional marketplace to intelligent companion.
+          From a marketplace to a guidance companion
         </h2>
         <div className="grid md:grid-cols-2 gap-px border border-[var(--border)]">
           <div className="p-8" style={{ backgroundColor: 'var(--finding)' }}>
@@ -318,7 +311,7 @@ const Deck = () => {
           </div>
           <div className="p-8" style={{ backgroundColor: 'var(--outcome)' }}>
             <p className="type-meta-label mb-3">What research revealed</p>
-            <p className="type-h3 mb-2">AI-Powered Home Companion</p>
+            <p className="type-h3 mb-2">AI-powered home companion</p>
             <p className="type-body-sm">Help people understand problems and make informed decisions before spending money.</p>
           </div>
         </div>
@@ -353,9 +346,7 @@ const Deck = () => {
           In testing, users described Sahay as a home partner.
         </h2>
         <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)', maxWidth: '52ch' }}>
-          That language signaled the product felt different from existing solutions. I advocated
-          for keeping DIY guidance when there was internal pressure to cut it, and usability
-          testing validated it as one of the strongest features.
+          That suggested it felt different from existing products. I argued for keeping DIY guidance when the team wanted to cut it, and usability testing showed it was one of the strongest features.
         </p>
       </Slide>
 
@@ -364,9 +355,9 @@ const Deck = () => {
       ══════════════════════════════════════════ */}
 
       <Slide variant="dark">
-        <Eyebrow>Case Study 03 · Mobile Game Product Experience</Eyebrow>
+        <Eyebrow>Case Study 03 · Mobile game product design</Eyebrow>
         <h2 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
-          Monster Walk: redesigning the emotional re-entry moment.
+          Monster Walk: redesigning how lapsed players return
         </h2>
         <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)' }}>
           A behavioral re-entry strategy for a fitness game losing lapsed users after 7 days of
@@ -408,7 +399,7 @@ const Deck = () => {
       <Slide variant="surface">
         <Eyebrow>Before</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '22ch' }}>
-          The return moment felt fragmented.
+          The return experience felt disjointed.
         </h2>
         <div className="grid grid-cols-4 gap-4">
           {[
@@ -429,7 +420,7 @@ const Deck = () => {
       <Slide variant="bg">
         <Eyebrow>Product decision</Eyebrow>
         <h2 className="type-h1 mb-10" style={{ maxWidth: '22ch' }}>
-          Concept testing over A/B testing.
+          Concept testing instead of A/B testing
         </h2>
         <div className="grid md:grid-cols-2 gap-10">
           <p className="type-body-lg">
@@ -439,10 +430,10 @@ const Deck = () => {
           </p>
           <div className="space-y-4">
             <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#c9a96e' }}>
-              <p className="type-body-sm">A/B testing measures clicks, not emotional readiness.</p>
+              <p className="type-body-sm">A/B testing measures clicks but can't show whether users feel ready to return.</p>
             </div>
             <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#4a8c5c' }}>
-              <p className="type-body-sm">Concept testing surfaces emotional reactions in real time, which is what this problem needed.</p>
+              <p className="type-body-sm">Concept testing shows emotional reactions as they happen, which is what this problem needed.</p>
             </div>
           </div>
         </div>
@@ -452,7 +443,7 @@ const Deck = () => {
       <Slide variant="bg">
         <Eyebrow>Shipped in live product</Eyebrow>
         <h2 className="type-h1 mb-8" style={{ maxWidth: '22ch' }}>
-          From concept to live game.
+          From concept to live game
         </h2>
         <div className="grid grid-cols-3 gap-4">
           {[
@@ -475,8 +466,7 @@ const Deck = () => {
           4 recommendations shipped in the live product.
         </h2>
         <p className="type-lead" style={{ color: 'rgba(255,255,255,0.82)', maxWidth: '52ch' }}>
-          In a 3-month beta internship with no post-launch access and no live metrics, I built the
-          behavioral framework that shaped how Monster Walk welcomes users back.
+          During a 3-month beta internship, with no post-launch access or live metrics, I designed the approach that shaped how Monster Walk welcomes users back.
         </p>
       </Slide>
 
@@ -484,10 +474,10 @@ const Deck = () => {
       <Slide variant="bg">
         <Eyebrow>Contact</Eyebrow>
         <h2 className="type-display mb-6" style={{ maxWidth: '22ch' }}>
-          Research, interaction, visual, and a read on adoption, in one designer.
+          Research, interaction design, visual design, and marketing experience.
         </h2>
         <p className="type-lead mb-10" style={{ maxWidth: '48ch' }}>
-          If you want a designer who can cover more of the product than most, let's talk.
+          If you're hiring a product designer, I'd like to hear from you.
         </p>
         <div className="flex flex-col gap-3">
           <a href="mailto:tys.swetha@gmail.com" className="type-h3 text-[var(--text)] hover:text-[var(--accent)] transition-colors">tys.swetha@gmail.com</a>

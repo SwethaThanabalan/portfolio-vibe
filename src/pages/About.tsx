@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEO from '../components/SEO'
 import AnimatedSection from '../components/AnimatedSection'
+import ImageStack from '../components/ImageStack'
 
 /* ═══════════════════════════════════════════════════════════════
    ABOUT — editorial system matching case studies
@@ -12,12 +13,12 @@ const skills = [
   {
     label: 'Communication & Photography',
     status: 'BSc Communication · Advanced Photography, 2016–2020',
-    text: 'Studied communication in Chennai, then advanced photography at Fanshawe. Photography taught me to observe closely and understand how framing, light, and composition change what people notice.',
+    text: 'Studied communication in Chennai, then advanced photography at Fanshawe. Photography taught me to look closely and to see how framing, light, and composition change what people notice.',
   },
   {
     label: 'Public Relations & Marketing',
     status: 'PR postgrad + marketing/SEO roles, 2021–2022',
-    text: 'A PR postgrad, then marketing and SEO work at Big Brothers Big Sisters, Beauty First Spa, and RATESDOTCA. I learned how people find, judge, and decide, and how messages shape impressions.',
+    text: 'A PR postgrad, then marketing and SEO work at Big Brothers Big Sisters, Beauty First Spa, and RATESDOTCA. I learned how people find things, judge them, and make decisions, and how wording shapes first impressions.',
   },
   {
     label: 'Freelance Photography',
@@ -27,12 +28,12 @@ const skills = [
   {
     label: 'HCI at Drexel University',
     status: "Master's, 2024–present",
-    text: 'The formal design foundation: research methods, problem framing, validation, and the understanding that design is about decisions, not screens.',
+    text: 'My formal design training: research methods, problem framing, and validation. It also taught me that design is mostly about decisions rather than screens.',
   },
   {
     label: 'Product Design',
-    status: 'Talofa, Adult You · where it converges',
-    text: 'Product design at Talofa and Adult You is where everything meets. I connect research to strategy to interface to outcome, drawing on observation, audience thinking, and craft from everything else I do.',
+    status: 'Talofa, Adult You',
+    text: 'At Talofa and Adult You I used all of it: research fed strategy, strategy shaped the interface, and my photography and marketing background helped along the way.',
   },
 ]
 
@@ -51,7 +52,7 @@ const faqs = [
   },
   {
     q: 'How do you work with AI?',
-    a: 'Two ways. I design products that use AI, and I use AI to build them. GPT helps me think through prompts, Kiro takes me from design to a working build, and Claude MCP inside Figma helps me stand up design systems. When a design needs another pass, AI helps me get there quicker.',
+    a: 'I design products that use AI, and I use AI to build them. GPT helps me think through prompts, Kiro takes me from design to a working build, and Claude MCP inside Figma helps me stand up design systems. When a design needs another pass, AI helps me get there quicker.',
   },
   {
     q: 'What is your background?',
@@ -81,49 +82,35 @@ const photos: { file: string; alt: string }[] = [
   { file: 'Hair dryer0389.jpg', alt: 'Black hair dryer on a dark background, product photography' },
 ]
 
-// Strategic mosaic rhythm: a repeating 8-tile pattern where a couple of tiles are
-// promoted to larger spans, so the grid is intentionally uneven but still balanced.
-// grid-auto-flow: dense (in CSS) backfills gaps so it stays seamless.
-const photoSpan = (i: number): string => {
-  const p = i % 8
-  if (p === 0) return 'mosaic-wide'   // 2 cols wide
-  if (p === 3) return 'mosaic-tall'   // 2 rows tall
-  if (p === 5) return 'mosaic-big'    // 2x2 feature
-  return ''
-}
-
-// Graphic design: files live in /public/Graphic. Images render inline; PDFs open in a new tab.
-const graphics: { file: string; title: string; type: 'image' | 'pdf' }[] = [
-  { file: 'Poster sahana.jpg', title: 'Yoga classes poster', type: 'image' },
-  { file: 'welcome.jpg', title: 'Baby shower welcome sign', type: 'image' },
-  { file: 'posterize and invert.jpg', title: 'Posterize and invert photo treatment of a vintage car', type: 'image' },
-  { file: 'Thanabalan_editorial _Page_1.jpg', title: 'Editorial cover: Spring 2021 community events', type: 'image' },
-  { file: 'Thanabalan_editorial _Page_2.jpg', title: 'Editorial spread: library events listing', type: 'image' },
-  { file: 'Thanabalan_Newsads_Page_1.jpg', title: 'News ad: Invest in Canada\'s Future, donation appeal', type: 'image' },
-  { file: 'Thanabalan_Newsads_Page_2.jpg', title: 'News ad: Invest in Canada\'s Future, alternate layout', type: 'image' },
-  { file: 'Thanabalan_digitalmailpostcard_Page_1.jpg', title: 'Postcard front: COVID-19 vaccine', type: 'image' },
-  { file: 'Thanabalan_digitalmailpostcard_Page_2.jpg', title: 'Postcard back: immunization clinic details', type: 'image' },
-  { file: 'Branded INSTAGRAM POSTS.pdf', title: 'Branded Instagram posts', type: 'pdf' },
-  { file: 'Never apologize for your growth. (20 x 30 in).pdf', title: 'Never Apologize for Your Growth (poster)', type: 'pdf' },
-  { file: 'Varum vandhu tholayum to Yuvan\'s 1st.pdf', title: 'Event invite', type: 'pdf' },
+// Graphic design: images live in /public/Graphic and render inline.
+const graphics: { file: string; title: string }[] = [
+  { file: 'Poster sahana.jpg', title: 'Yoga classes poster' },
+  { file: 'welcome.jpg', title: 'Baby shower welcome sign' },
+  { file: 'posterize and invert.jpg', title: 'Posterize and invert photo treatment of a vintage car' },
+  { file: 'Thanabalan_editorial _Page_1.jpg', title: 'Editorial cover: Spring 2021 community events' },
+  { file: 'Thanabalan_editorial _Page_2.jpg', title: 'Editorial spread: library events listing' },
+  { file: 'Thanabalan_Newsads_Page_1.jpg', title: 'News ad: Invest in Canada\'s Future, donation appeal' },
+  { file: 'Thanabalan_Newsads_Page_2.jpg', title: 'News ad: Invest in Canada\'s Future, alternate layout' },
+  { file: 'Thanabalan_digitalmailpostcard_Page_1.jpg', title: 'Postcard front: COVID-19 vaccine' },
+  { file: 'Thanabalan_digitalmailpostcard_Page_2.jpg', title: 'Postcard back: immunization clinic details' },
 ]
 
 const principles = [
   {
     title: 'Structure before polish',
-    text: 'I focus on defining the right problem, validating assumptions, and building foundations before refining surfaces.',
+    text: 'I define the problem and test my assumptions before I polish the visuals.',
   },
   {
-    title: 'Research is a decision-making tool',
-    text: 'I research to reduce risk, challenge assumptions, and make defensible recommendations, not to check a box.',
+    title: 'Research is for making decisions',
+    text: 'I do research to lower risk, test assumptions, and make recommendations I can defend.',
   },
   {
-    title: 'AI accelerates, it doesn\'t replace thinking',
-    text: 'I use AI tools to explore faster and reduce friction. But the judgment, framing, and strategic decisions are mine.',
+    title: 'AI speeds up the work; the thinking is mine',
+    text: 'I use AI tools to explore faster. The judgment and the decisions stay with me.',
   },
   {
-    title: 'Empathy is a skill, not a buzzword',
-    text: 'Understanding users means asking uncomfortable questions, sitting with ambiguity, and challenging your own assumptions.',
+    title: 'Empathy takes practice',
+    text: 'Understanding users means asking uncomfortable questions and questioning your own assumptions.',
   },
 ]
 
@@ -153,15 +140,15 @@ const About = () => {
           <div className="grid md:grid-cols-5 gap-10 items-start">
             <div className="md:col-span-3">
               <p className={`type-eyebrow mb-4 transition-all duration-700 ${heroVisible ? 'opacity-100' : 'opacity-0'}`}>
-                About — Swetha Thanabalan
+                About Swetha Thanabalan
               </p>
               <h1
                 className={`type-h1 mb-6 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-                A product designer who covers the whole funnel: attention, perception, and decision.
+                A product designer who has worked on how products get noticed, understood, and chosen.
               </h1>
               <p className={`type-lead transition-all duration-1000 delay-200 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                I shoot professionally, ran marketing and SEO at real companies, and trained in HCI. Most designers own one part of how a product gets found, understood, and chosen. I have worked across all of it.
+                I shoot professionally, worked in marketing and SEO, and trained in HCI, so I've worked on each step of how people find a product, understand it, and decide to use it.
               </p>
             </div>
             <div className={`md:col-span-2 transition-all duration-1000 delay-300 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
@@ -183,12 +170,11 @@ const About = () => {
         {/* THE THROUGH-LINE */}
         <section className="layout-content mb-20">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Why the range matters</h2>
-            <div className="space-y-5 type-body-lg">
-              <p>Visual design is not a skill I picked up on the side. I shot professionally for paying clients, corporate headshots, events, and product campaigns, delivering to brand guidelines under real deadlines. I know how to make something look intentional and hold up in front of a stakeholder.</p>
-              <p>I also ran marketing and SEO at real companies, including RATESDOTCA and Beauty First Spa. That means I understand the part of the product most designers never touch: how it gets found, how people compare it, and what makes them decide. I design with adoption in mind, not just usability.</p>
-              <p>My HCI master's at Drexel gave me the research rigor to back those instincts, and I have applied it shipping product design at Talofa and Adult You.</p>
-              <p>Put together, I cover more of the product than a typical early-career designer. Visual craft, interaction design, user research, and a marketer's read on how things actually get adopted, all in one person.</p>
+            <h2 className="type-h2 mb-6">My background</h2>
+            <div className="text-flow type-body-lg">
+              <p>I shot professionally for paying clients, including corporate headshots, events, and product campaigns, working to brand guidelines and deadlines. That's where my visual design comes from.</p>
+              <p>I also ran marketing and SEO at companies including RATESDOTCA and Beauty First Spa, so I know how people find a product, compare it with others, and decide. I keep adoption in mind alongside usability.</p>
+              <p>My HCI master's at Drexel gave me research methods to test those instincts, and I've used them in product design work at Talofa and Adult You.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -197,8 +183,8 @@ const About = () => {
         {/* SKILLS THAT CONVERGE */}
         <section className="layout-content mb-20">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-3">The range I bring</h2>
-            <p className="type-body-lg mb-8">Real experience across each area, not a list of courses. This is what I draw on as a product designer.</p>
+            <h2 className="type-h2 mb-3">Experience</h2>
+            <p className="type-body-lg mb-8">Work I've done in each area, which I draw on as a product designer.</p>
           </AnimatedSection>
 
           <div className="space-y-6">
@@ -220,72 +206,35 @@ const About = () => {
 
 
         {/* PHOTOGRAPHY */}
-        <section className="layout-wide mb-20" aria-labelledby="photography-heading">
+        <section className="layout-content mb-20" aria-labelledby="photography-heading">
           <AnimatedSection animation="fade-up">
             <h2 id="photography-heading" className="type-h2 mb-3">Photography</h2>
-            <p className="type-body-lg mb-8" style={{ maxWidth: '60ch' }}>
-              Commercial and personal work. When I shoot, I ask the same question I ask of a product: is it impactful, and does it evoke what I intend?
+            <p className="type-body-lg mb-8">
+              Commercial and personal work. When I shoot, I ask what I ask of a product: does it have the effect I intended?
             </p>
           </AnimatedSection>
           <AnimatedSection animation="fade-up" delay={80}>
-            <div className="mosaic">
-              {photos.map((p, i) => (
-                <figure key={p.file} className={`mosaic-item ${photoSpan(i)} overflow-hidden border border-[var(--border)]`}>
-                  <img
-                    src={`/Photography/${encodeURIComponent(p.file)}`}
-                    alt={p.alt}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover"
-                  />
-                </figure>
-              ))}
-            </div>
+            <ImageStack
+              label="Photography work"
+              images={photos.map((p) => ({ src: `/Photography/${encodeURIComponent(p.file)}`, title: p.alt }))}
+            />
           </AnimatedSection>
         </section>
 
 
         {/* GRAPHIC DESIGN */}
-        <section className="layout-wide mb-20" aria-labelledby="graphic-design-heading">
+        <section className="layout-content mb-20" aria-labelledby="graphic-design-heading">
           <AnimatedSection animation="fade-up">
-            <h2 id="graphic-design-heading" className="type-h2 mb-3">Graphic Design</h2>
-            <p className="type-body-lg mb-8" style={{ maxWidth: '60ch' }}>
-              Posters, editorial layouts, ads, and brand assets, work from my communication and marketing background.
+            <h2 id="graphic-design-heading" className="type-h2 mb-3">Graphic design</h2>
+            <p className="type-body-lg mb-8">
+              Posters, editorial layouts, ads, and brand assets from my communication and marketing work.
             </p>
           </AnimatedSection>
           <AnimatedSection animation="fade-up" delay={80}>
-            <div className="masonry">
-              {graphics.map((g) => (
-                g.type === 'image' ? (
-                  <figure key={g.file} className="masonry-item border border-[var(--border)]">
-                    <img
-                      src={`/Graphic/${encodeURIComponent(g.file)}`}
-                      alt={g.title}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                ) : (
-                  <a
-                    key={g.file}
-                    href={`/Graphic/${encodeURIComponent(g.file)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${g.title} (PDF, opens in a new tab)`}
-                    className="group masonry-item flex flex-col justify-between gap-10 border border-[var(--border)] bg-[var(--surface)] p-5 transition-colors hover:border-[var(--accent)]"
-                  >
-                    <span className="type-meta-label">PDF</span>
-                    <span>
-                      <span className="type-body font-medium block mb-1 group-hover:text-[var(--accent)] transition-colors">{g.title}</span>
-                      <span className="type-caption inline-flex items-center gap-1">
-                        View PDF
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                      </span>
-                    </span>
-                  </a>
-                )
-              ))}
-            </div>
+            <ImageStack
+              label="Graphic design work"
+              images={graphics.map((g) => ({ src: `/Graphic/${encodeURIComponent(g.file)}`, title: g.title }))}
+            />
           </AnimatedSection>
         </section>
 
@@ -295,10 +244,10 @@ const About = () => {
           <div className="layout-content">
             <AnimatedSection animation="fade-up">
               <h2 className="type-h2 mb-6">How I think</h2>
-              <div className="space-y-5 type-body-lg">
-                <p>During an internship, my mentor encouraged me to talk about the rough patches, what failed, what changed, and why decisions were made, instead of focusing only on polished outcomes. That reframed how I present work.</p>
-                <p>Empathy is one of my biggest strengths as a designer. I ask probing questions, look for patterns in behavior, and try to get to the root of problems instead of settling for surface-level answers.</p>
-                <p>Having worked across India, Canada, and the United States, I've become especially interested in how people from different backgrounds experience products differently. Context shapes everything.</p>
+              <div className="text-flow type-body-lg">
+                <p>During an internship, my mentor encouraged me to talk about the rough patches, what failed, what changed, and why decisions were made, instead of focusing only on polished outcomes. That changed how I present my work.</p>
+                <p>Empathy is one of my strengths as a designer. I ask a lot of follow-up questions, look for patterns in behavior, and try to find the cause of a problem.</p>
+                <p>Having worked in India, Canada, and the United States, I'm interested in how people from different backgrounds experience the same product differently.</p>
               </div>
             </AnimatedSection>
           </div>
@@ -328,7 +277,7 @@ const About = () => {
         <section className="layout-content mb-20">
           <AnimatedSection animation="fade-up">
             <blockquote className="type-quote">
-              Hire me and you get a designer who can research it, design it, make it look right, and understand how it gets adopted.
+              I can research a product, design it, make it look good, and think about how people will come to use it.
             </blockquote>
           </AnimatedSection>
         </section>
@@ -341,7 +290,7 @@ const About = () => {
             <div className="md:col-span-2">
               <AnimatedSection animation="fade-up">
                 <h2 className="type-h2 mb-3">Quick answers</h2>
-                <p className="type-body">The short version, for recruiters and hiring managers. Tap a question to expand.</p>
+                <p className="type-body">Short answers for recruiters and hiring managers. Tap a question to expand it.</p>
               </AnimatedSection>
             </div>
 
@@ -377,7 +326,7 @@ const About = () => {
                         className="overflow-hidden transition-all duration-300 ease-out"
                         style={{ maxHeight: isOpen ? '260px' : '0', opacity: isOpen ? 1 : 0 }}
                       >
-                        <p className="type-body pb-5" style={{ maxWidth: '60ch' }}>{f.a}</p>
+                        <p className="type-body pb-5">{f.a}</p>
                       </div>
                     </div>
                   </AnimatedSection>
@@ -393,7 +342,7 @@ const About = () => {
           <AnimatedSection animation="fade-up">
             <div className="border-t border-[var(--border)] pt-12">
               <p className="type-body-lg mb-8">
-                If you're looking for a designer who thinks in systems, asks hard questions, and brings structure to ambiguity, let's talk.
+                If you're hiring a product designer, I'd like to hear from you.
               </p>
               <a
                 href="mailto:tys.swetha@gmail.com"

@@ -25,7 +25,7 @@ const ProjectDetail = () => {
     return (
       <div className="min-h-screen bg-white dark:bg-[var(--bg)] flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">Project not found</h1>
+          <h1 className="type-h1">Project not found</h1>
           <Link to="/" className="text-blue-600 hover:text-blue-700">
             Back to home
           </Link>
@@ -48,7 +48,7 @@ const ProjectDetail = () => {
       
       <main id="main-content" className="pt-24 pb-20">
         {/* Hero Section */}
-        <section className="max-w-7xl mx-auto px-6 py-12">
+        <section className="max-w-none mx-auto px-[var(--gutter)] py-12">
           <AnimatedSection animation="fade-in">
             <Link to="/#work" className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 mb-8 transition-colors group">
               <svg className="w-5 h-5 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,25 +61,25 @@ const ProjectDetail = () => {
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             <div className="md:col-span-2">
               <AnimatedSection animation="fade-up">
-                <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">{project.title}</h1>
+                <h1 className="type-h1">{project.title}</h1>
               </AnimatedSection>
               <AnimatedSection animation="fade-up" delay={100}>
-                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
+                <p className="type-lead">{project.description}</p>
               </AnimatedSection>
             </div>
             
             <AnimatedSection animation="slide-left" delay={200}>
               <div className="space-y-6 bg-gray-50 dark:bg-[var(--surface)] p-6 rounded-xl">
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Role</h3>
+                  <h3 className="type-meta-label">Role</h3>
                   <p className="text-gray-600 dark:text-gray-300">{project.role}</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Duration</h3>
+                  <h3 className="type-meta-label">Duration</h3>
                   <p className="text-gray-600 dark:text-gray-300">{project.duration}</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Tools</h3>
+                  <h3 className="type-meta-label">Tools</h3>
                   <div className="flex flex-wrap gap-2">
                     {project.tools.map((tool) => (
                       <span key={tool} className="px-3 py-1 bg-white dark:bg-[var(--bg)] text-gray-700 dark:text-gray-200 rounded-full text-sm shadow-sm">
@@ -104,33 +104,33 @@ const ProjectDetail = () => {
         </section>
 
         {/* Overview */}
-        <section className="max-w-4xl mx-auto px-6 py-12">
+        <section className="max-w-none mx-auto px-[var(--gutter)] py-12">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Overview</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-16">
+            <h2 className="type-h2">Overview</h2>
+            <p className="type-body-lg mb-16">
               {project.overview}
             </p>
           </AnimatedSection>
 
           {/* Challenge */}
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">The Challenge</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-16">
+            <h2 className="type-h2">The Challenge</h2>
+            <p className="type-body-lg mb-16">
               {project.challenge}
             </p>
           </AnimatedSection>
 
           {/* Solution */}
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">The Solution</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-16">
+            <h2 className="type-h2">The Solution</h2>
+            <p className="type-body-lg mb-16">
               {project.solution}
             </p>
           </AnimatedSection>
         </section>
 
         {/* Additional Images */}
-        <section className="max-w-7xl mx-auto px-6 py-12">
+        <section className="max-w-none mx-auto px-[var(--gutter)] py-12">
           <div className="grid md:grid-cols-2 gap-8">
             {project.images.slice(1).map((image, index) => (
               <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
@@ -147,7 +147,7 @@ const ProjectDetail = () => {
         </section>
 
         {/* Next Project */}
-        <section className="max-w-7xl mx-auto px-6 py-20">
+        <section className="max-w-none mx-auto px-[var(--gutter)] py-20">
           <div className="border-t border-gray-200 dark:border-[var(--border)] pt-12">
             <Link 
               to="/#work"

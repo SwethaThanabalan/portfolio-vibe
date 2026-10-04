@@ -9,7 +9,7 @@ const WorkGrid = () => {
     <section
       id="work"
       aria-labelledby="work-heading"
-      className="py-20 md:py-28 layout-wide"
+      className="py-20 md:py-28 layout-content"
     >
       {/* Section Heading — editorial serif */}
       <h2

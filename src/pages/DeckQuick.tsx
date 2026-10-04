@@ -88,11 +88,10 @@ const DeckQuick = () => {
       <Slide variant="bg">
         <Eyebrow>Product Designer · Overview</Eyebrow>
         <h1 className="type-display mb-6" style={{ maxWidth: '20ch' }}>
-          A designer who covers the whole funnel.
+          A product designer who has worked on how products get noticed, understood, and chosen.
         </h1>
         <p className="type-lead mb-8">
-          Swetha Thanabalan. I research it, design it, make it look right, and understand how it
-          gets adopted, drawing on professional photography, marketing, and an HCI master's.
+          Swetha Thanabalan. I research, design, and build products, drawing on professional photography, marketing, and an HCI master's.
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
           <a href="mailto:tys.swetha@gmail.com" className="accent-text type-body text-[var(--accent)] hover:underline">tys.swetha@gmail.com</a>
@@ -104,7 +103,7 @@ const DeckQuick = () => {
       <Slide variant="surface">
         <Eyebrow>At a glance</Eyebrow>
         <h2 className="type-h1 mb-10" style={{ maxWidth: '22ch' }}>
-          Range across research, design, visual craft, and adoption.
+          Skills and education
         </h2>
         <div className="grid md:grid-cols-4 gap-8">
           <div>
@@ -150,38 +149,38 @@ const DeckQuick = () => {
 
       {/* 03 — SEPTA */}
       <ProjectSlide
-        eyebrow="01 · Mobile Transit Experience Redesign"
-        title="SEPTA: rebuilding trust in a transit app people depend on."
+        eyebrow="01 · Mobile transit app redesign"
+        title="SEPTA: a transit app riders could trust again"
         image="/NextStopBetterSEPTAExperience.png"
         imageAlt="SEPTA redesign: map-first experience"
-        problem="Riders were forced to use Google Maps alongside SEPTA. Login loops and buried navigation eroded trust."
+        problem="Riders had to use Google Maps alongside SEPTA, and login loops and buried navigation made them stop trusting the app."
         role="Product Designer. Research, IA, and interaction design. Academic project."
-        did="Made the map the core interaction layer, added biometric login, and cut schedule search from 4+ taps to 2."
-        outcome="SEPTA later shipped an app with the same features I identified: map integration, biometric login, predictive search."
+        did="Made the map the main way to use the app, added biometric login, and cut schedule search from 4+ taps to 2."
+        outcome="SEPTA later shipped an app with the features I had identified: map integration, biometric login, predictive search."
         outcomeLabel="Market validation"
       />
 
       {/* 04 — SAHAY */}
       <ProjectSlide
-        eyebrow="02 · AI-Assisted Home Maintenance Product"
-        title="Sahay: confidence before contractors."
+        eyebrow="02 · AI-assisted home maintenance product"
+        title="Sahay: confidence before contractors"
         image="/SAHAY(3).png"
         imageAlt="Sahay: diagnose home issues, learn to fix them, or hire a trusted pro"
-        problem="Homeowners piece together fixes across YouTube, Google, Reddit, and family, unable to judge urgency or cost."
+        problem="Homeowners piece together fixes from YouTube, Google, Reddit, and family, and can't judge urgency or cost."
         role="Product Designer & Researcher. Initiated the project and led research and design direction across a 3-person team."
-        did="Ran interviews and synthesis, then pivoted the product from a service marketplace to AI-assisted issue guidance."
-        outcome="Research-driven pivot validated through IA and user-flow testing. Users described it as a home partner, not a maintenance app."
+        did="Ran interviews and synthesis, then moved the product from a service marketplace to AI-assisted issue guidance."
+        outcome="IA and user-flow testing supported the change, and users described Sahay as a home partner rather than a maintenance app."
       />
 
       {/* 05 — MONSTER WALK */}
       <ProjectSlide
-        eyebrow="03 · Mobile Game Product Experience"
-        title="Monster Walk: redesigning the emotional re-entry moment."
+        eyebrow="03 · Mobile game product design"
+        title="Monster Walk: redesigning how lapsed players return"
         image="/IMG_9275.PNG"
         imageAlt="Live Monster Walk Daily Quests implementation"
-        problem="A fitness game was losing lapsed users after 7 days. The return moment felt fragmented and discouraging."
+        problem="A fitness game was losing lapsed users after 7 days. The return experience felt disjointed and discouraging."
         role="Product Designer (Research → Strategy → Testing). 3-month beta internship at Talofa."
-        did="Ran concept testing over A/B testing to read emotional readiness, then designed a reassuring re-entry flow."
+        did="Ran concept testing instead of A/B testing to see whether users felt ready to return, then designed a reassuring return flow."
         outcome="4 recommendations shipped in the live product, including daily quests and contextual monster interactions."
         outcomeLabel="Shipped"
       />
@@ -190,7 +189,7 @@ const DeckQuick = () => {
       <Slide variant="dark">
         <Eyebrow>Let's talk</Eyebrow>
         <h2 className="type-display mb-6" style={{ maxWidth: '22ch' }}>
-          Research, interaction, visual, and a read on adoption, in one designer.
+          Research, interaction design, visual design, and marketing experience.
         </h2>
         <div className="flex flex-col gap-3 mt-8">
           <a href="mailto:tys.swetha@gmail.com" className="type-h3" style={{ color: '#fff' }}>tys.swetha@gmail.com</a>

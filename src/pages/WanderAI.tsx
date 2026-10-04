@@ -82,13 +82,13 @@ const WanderAI = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <p className="type-lead mb-8">
-              A project I am actively building. I am putting it on my portfolio not as a finished case study, but to show how I am learning to work closer to implementation and use AI-assisted development as part of my design process.
+              A project I'm building right now. It isn't a finished case study; I'm including it to show how I'm learning to work closer to implementation and use AI-assisted development in my design process.
             </p>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={150}>
             <div className="decision-block">
-              <p className="type-body-sm font-semibold mb-1">A note on where this stands</p>
+              <p className="type-body-sm font-semibold mb-1">Where this stands</p>
               <p className="type-body">This is a work in progress. The direction, screens, and workflow below reflect the current state and will keep changing as I build. I am a product designer building closer to implementation, not a software engineer.</p>
             </div>
           </AnimatedSection>
@@ -107,9 +107,9 @@ const WanderAI = () => {
               </p>
             </AnimatedSection>
             <AnimatedSection animation="fade-up" delay={100}>
-              <h2 className="type-h3 mb-4">Why I'm building it</h2>
+              <h2 className="type-h3 mb-4">Building it myself</h2>
               <p className="type-body">
-                I wanted to close the gap between design and implementation. Building it myself lets me feel how design decisions hold up in real code, and where they need to change once they meet a working product.
+                I wanted to work closer to implementation. Building it myself shows me how design decisions hold up in real code and where they have to change.
               </p>
             </AnimatedSection>
           </div>
@@ -124,7 +124,7 @@ const WanderAI = () => {
             <AnimatedSection animation="fade-up">
               <h2 className="type-h2 mb-6">Current product direction</h2>
               <p className="type-body-lg mb-6">
-                The current direction centers on helping someone go from a rough travel idea to a plan they can act on, with AI assisting along the way. This is the working direction today and is likely to shift as I keep building and testing.
+                The current direction is to help someone turn a rough travel idea into a plan they can act on, with AI helping along the way. This is the working direction today and is likely to shift as I keep building and testing.
               </p>
             </AnimatedSection>
           </div>
@@ -163,7 +163,7 @@ const WanderAI = () => {
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Learning to design with an AI coding assistant</h2>
-            <div className="space-y-6 type-body-lg">
+            <div className="text-flow type-body-lg">
               <p>
                 When I first started prompting changes in Kiro, I noticed that asking it to modify one area could sometimes affect other parts of the product. In Figma Make, I could select a specific part of the interface and work mainly within that area. With Kiro, I had to be much more explicit about scope.
               </p>
@@ -171,7 +171,7 @@ const WanderAI = () => {
                 At first I kept adding instructions like "do not change anything else." I realized I did not want to repeat that constraint every time. So I started creating Markdown files that documented the rules and expectations for the project. I also created separate Markdown files for different phases of the build, and used a steering document to keep the assistant aligned with the product and design decisions that had already been made.
               </p>
               <p>
-                The point was not the prompt itself. It was that I recognized a pattern of repeated unwanted changes and built a more structured workflow to reduce them.
+                What mattered was noticing a pattern of repeated unwanted changes and setting up a more structured workflow to reduce them.
               </p>
             </div>
           </AnimatedSection>
@@ -207,7 +207,7 @@ const WanderAI = () => {
               <AnimatedSection animation="fade-up" delay={50}>
                 <div className="space-y-3">
                   <h3 className="type-h3">What I'm learning</h3>
-                  <ul className="space-y-3 text-[var(--text-secondary)]">
+                  <ul className="list-flow text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">→</span> Design decisions read differently once they exist in working code.</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">→</span> Being explicit about scope matters as much as the design itself.</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">→</span> Writing decisions down keeps the build aligned over time.</li>
@@ -217,7 +217,7 @@ const WanderAI = () => {
               <AnimatedSection animation="fade-up" delay={100}>
                 <div className="space-y-3">
                   <h3 className="type-h3">Moving between design and implementation</h3>
-                  <ul className="space-y-3 text-[var(--text-secondary)]">
+                  <ul className="list-flow text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">→</span> I move between designing a screen and building it in the same session.</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">→</span> I document product and design decisions so they carry into the build.</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">→</span> I iterate in smaller, scoped steps to keep changes predictable.</li>

@@ -106,7 +106,7 @@ const StrategicCaseStudy = () => {
     return (
       <div className="min-h-screen bg-white dark:bg-[var(--bg)] flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">Project not found</h1>
+          <h1 className="type-h1">Project not found</h1>
           <Link to="/" className="text-indigo-600 hover:text-indigo-700">Back to home</Link>
         </div>
       </div>
@@ -142,7 +142,7 @@ const StrategicCaseStudy = () => {
       
       <main id="main-content" className="pt-32 pb-32">
         {/* 1. OPENING HOOK */}
-        <section className="max-w-4xl mx-auto px-6 mb-6">
+        <section className="layout-content mb-6">
           <AnimatedSection animation="fade-in">
             <Link to="/#work" className="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 mb-12 transition-colors group">
               <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,14 +158,14 @@ const StrategicCaseStudy = () => {
             </h1>
             {/* Context note for academic projects */}
             {project.id === 'septa-mobile-redesign' && (
-              <p className="text-sm text-[var(--muted)] border-l-2 border-[var(--border)] pl-4 mb-8">
+              <p className="type-body-sm text-[var(--muted)] border-l-2 border-[var(--border)] pl-4 mb-8">
                 Context: Academic project. No backend access. Research and design only.
               </p>
             )}
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="type-lead space-y-6 mb-16">
+            <div className="type-lead text-flow mb-16">
               {project.openingHook?.split('\n\n').map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
@@ -232,8 +232,8 @@ const StrategicCaseStudy = () => {
               }}
             >
               <div style={{ paddingBottom: '32px' }}>
-                <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed" style={{ maxWidth: '65ch' }}>
-                  SEPTA's mobile app was widely used for ticketing and trip planning, yet purchasing a ticket required seven steps and reflected internal navigation categories rather than rider intent, creating confusion and reduced trust. Research showed that 68% of sessions involved ticketing, but usability testing revealed only a 45% task success rate. To address the structural misalignment, I reduced primary navigation from five tabs to three, merged overlapping trip functions, elevated ticketing as a persistent primary action, introduced biometric login with persistent sessions, and integrated a map first interaction model. These prioritization decisions reduced ticket steps by 57%, improved task success from 45% to 92%, and resulted in all eight usability participants completing ticket purchase unassisted. Reframing the information architecture around rider intent rebuilt trust and reduced cognitive load in a system people depend on daily.
+                <p className="type-body">
+                  SEPTA's mobile app was widely used for ticketing and trip planning, yet purchasing a ticket required seven steps and reflected internal navigation categories rather than rider intent, creating confusion and reduced trust. Research showed that 68% of sessions involved ticketing, but usability testing revealed only a 45% task success rate. To fix this, I reduced primary navigation from five tabs to three, merged overlapping trip functions, elevated ticketing as a persistent primary action, introduced biometric login with persistent sessions, and integrated a map first interaction model. These prioritization decisions reduced ticket steps by 57%, improved task success from 45% to 92%, and resulted in all eight usability participants completing ticket purchase unassisted. Organizing the app around what riders were trying to do made it easier to use and more trustworthy for people who rely on it every day.
                 </p>
               </div>
             </div>
@@ -311,7 +311,7 @@ const StrategicCaseStudy = () => {
                   <summary className="text-sm text-indigo-700 cursor-pointer hover:underline">
                     Read transcript
                   </summary>
-                  <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed mt-3" style={{ maxWidth: '65ch' }}>
+                  <p className="type-body-sm mt-3">
                     SEPTA's mobile app was widely used for ticketing and trip planning, yet
                     purchasing a ticket required seven steps and reflected internal navigation
                     categories rather than rider intent, creating confusion and reduced trust.
@@ -332,19 +332,19 @@ const StrategicCaseStudy = () => {
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-gray-200 dark:border-[var(--border)]">
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Role</div>
+                <div className="type-meta-label">Role</div>
                 <div className="text-gray-900 dark:text-gray-100">{project.role}</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Scope</div>
+                <div className="type-meta-label">Scope</div>
                 <div className="text-gray-900 dark:text-gray-100">{project.scope}</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Methods</div>
+                <div className="type-meta-label">Methods</div>
                 <div className="text-gray-900 dark:text-gray-100">{project.methods}</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Impact</div>
+                <div className="type-meta-label">Impact</div>
                 <div className="text-gray-900 dark:text-gray-100">{project.impact}</div>
               </div>
             </div>
@@ -353,22 +353,22 @@ const StrategicCaseStudy = () => {
 
         {/* 2. THE PROBLEM / TRUST GAP */}
         {project.problem && (
-          <section className="max-w-4xl mx-auto px-6 mb-6">
+          <section className="layout-content mb-6">
             <AnimatedSection animation="fade-up">
               <div className="prose prose-lg max-w-none">
                 {quickSummaryMode ? (
                   // SMART Quick Summary
                   <div className="space-y-8">
                     <div>
-                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Situation</div>
-                      <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed">
+                      <div className="type-meta-label text-[var(--text)]">Situation</div>
+                      <p className="type-body">
                         SEPTA's mobile app was widely used for ticketing and trip planning but required seven steps to complete a ticket purchase. Navigation reflected internal categories rather than rider intent, leading to confusion and reduced trust.
                       </p>
                     </div>
 
                     <div>
-                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Measurable Problem</div>
-                      <ul className="text-base text-gray-700 dark:text-gray-200 leading-relaxed space-y-2">
+                      <div className="type-meta-label text-[var(--text)]">Measurable Problem</div>
+                      <ul className="type-body list-flow">
                         <li>• 68% of sessions involved ticketing</li>
                         <li>• Ticket purchase required 7 screens</li>
                         <li>• Task success rate was 45% in usability testing</li>
@@ -376,8 +376,8 @@ const StrategicCaseStudy = () => {
                     </div>
 
                     <div>
-                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Action</div>
-                      <ul className="text-base text-gray-700 dark:text-gray-200 leading-relaxed space-y-2">
+                      <div className="type-meta-label text-[var(--text)]">Action</div>
+                      <ul className="type-body list-flow">
                         <li>• Reduced navigation from 5 tabs to 3</li>
                         <li>• Merged overlapping trip functions</li>
                         <li>• Elevated ticketing as a persistent primary action</li>
@@ -387,8 +387,8 @@ const StrategicCaseStudy = () => {
                     </div>
 
                     <div>
-                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Results</div>
-                      <ul className="text-base text-gray-700 dark:text-gray-200 leading-relaxed space-y-2">
+                      <div className="type-meta-label text-[var(--text)]">Results</div>
+                      <ul className="type-body list-flow">
                         <li>• 57% reduction in ticket steps (7 → 3)</li>
                         <li>• Task success improved from 45% to 92%</li>
                         <li>• 8/8 participants completed ticket purchase unassisted</li>
@@ -396,9 +396,9 @@ const StrategicCaseStudy = () => {
                     </div>
 
                     <div>
-                      <div className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3">Takeaway</div>
-                      <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                        Reframing information architecture around rider intent rebuilt trust and reduced cognitive load in a high-dependency system.
+                      <div className="type-meta-label text-[var(--text)]">Takeaway</div>
+                      <p className="type-body">
+                        Organizing the app around what riders were trying to do made it easier to use and more trustworthy for people who rely on it every day.
                       </p>
                     </div>
                   </div>
@@ -407,7 +407,7 @@ const StrategicCaseStudy = () => {
                   <div>
                     <h2 className="type-h2 mb-6">Problems</h2>
                     <p className="type-body-lg mb-8">
-                      Through user interviews and testing, I uncovered something deeper than usability issues. People didn't just find the app frustrating. They didn't trust it.
+                      User interviews and testing showed that people found the app frustrating and, beyond that, didn't trust it.
                     </p>
 
                     {/* Flip Cards Grid */}
@@ -418,7 +418,7 @@ const StrategicCaseStudy = () => {
                       />
                       <FlipCard
                         title="Broken real-time tracking"
-                        description="Real-time tracking wasn't real-time. Buses showed up late or not at all, with no explanation."
+                        description="Tracking information was out of date. Buses showed up late or not at all, with no explanation."
                       />
                       <FlipCard
                         title="Confusing navigation"
@@ -431,8 +431,8 @@ const StrategicCaseStudy = () => {
                     </div>
 
                     <p className="type-body-lg mb-6">
-                      <b>The insight that hit hardest: </b>Every single user used Google Maps alongside SEPTA. Not by choice, by necessity. The app didn't have an integrated map, so planning a trip meant bouncing between two apps.
-                        <i>This wasn't just a missing feature. It was a signal that the app wasn't designed around how people actually plan trips.</i>
+                      <b>The most important finding: </b>every user we spoke to used Google Maps alongside SEPTA because the app had no integrated map, so planning a trip meant switching between two apps.
+                        <i> It showed that the app wasn't designed around how people actually plan trips.</i>
                     </p>
                   </div>
                 )}
@@ -443,23 +443,23 @@ const StrategicCaseStudy = () => {
 
         {/* 3. RESEARCH → INSIGHTS */}
         {!quickSummaryMode && project.researchInsights && (
-          <section className="max-w-4xl mx-auto px-6 mb-6">
+          <section className="layout-content mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="type-h2 mb-6">Research → Insights</h2>
+              <h2 className="type-h2 mb-6">Research and insights</h2>
             </AnimatedSection>
             
             <div className="space-y-8">
               {project.researchInsights.map((insight, index) => (
                 <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
                   <div className="border-l-4 border-indigo-600 pl-6">
-                    <div className="text-sm font-semibold text-indigo-600 mb-2">
+                    <div className="type-meta-label text-indigo-600">
                       {insight.activity}
                     </div>
                     <div className="type-h3 mb-2">
                       → {insight.insight}
                     </div>
                     <div className="text-gray-600 dark:text-gray-300">
-                      <span className="font-semibold">Why it matters:</span> {insight.why}
+                      <span className="font-semibold">Why it matters</span> {insight.why}
                     </div>
                   </div>
                 </AnimatedSection>
@@ -470,7 +470,7 @@ const StrategicCaseStudy = () => {
 
         {/* 4. STRATEGIC DECISION 01 */}
         {!quickSummaryMode && project.strategicDecision && (
-          <section className="max-w-4xl mx-auto px-6 mb-6">
+          <section className="layout-content mb-6">
             <AnimatedSection animation="fade-up">
               <h2 className="type-h2 mb-6">{project.strategicDecision.title}</h2>
               <p className="type-body-lg mb-6">{project.strategicDecision.context}</p>
@@ -479,7 +479,7 @@ const StrategicCaseStudy = () => {
             <AnimatedSection animation="fade-up" delay={100}>
               <div className="bg-gray-50 dark:bg-[var(--surface)] rounded-xl p-6 mb-6">
                 <div className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Options considered:</div>
-                <ul className="space-y-2">
+                <ul className="list-flow">
                   {project.strategicDecision.options.map((option, index) => (
                     <li key={index} className="flex items-start">
                       <span className="text-indigo-600 mr-2">•</span>
@@ -522,7 +522,7 @@ const StrategicCaseStudy = () => {
 
         {/* 5. ADDITIONAL STRATEGIC DECISIONS */}
         {!quickSummaryMode && project.additionalDecisions && project.additionalDecisions.map((decision, index) => (
-          <section key={index} className="max-w-4xl mx-auto px-6 mb-6">
+          <section key={index} className="layout-content mb-6">
             <AnimatedSection animation="fade-up">
               <h2 className="type-h2 mb-6">{decision.title}</h2>
               <p className="type-body-lg mb-6">{decision.context}</p>
@@ -546,9 +546,9 @@ const StrategicCaseStudy = () => {
 
         {/* 6. DESIGN EXECUTION */}
         {!quickSummaryMode && project.designExecution && (
-          <section className="max-w-4xl mx-auto px-6 mb-6">
+          <section className="layout-content mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="type-h2 mb-6">Design Execution</h2>
+              <h2 className="type-h2 mb-6">Design execution</h2>
             </AnimatedSection>
 
             <div className="space-y-10">
@@ -558,11 +558,11 @@ const StrategicCaseStudy = () => {
                     <h3 className="type-h3 mb-4">{change.title}</h3>
                     <div className="grid md:grid-cols-2 gap-6 mb-4">
                       <div className="bg-red-50 dark:bg-red-950/30 rounded-lg p-4">
-                        <div className="text-sm font-semibold text-red-700 dark:text-red-300 mb-2">Before</div>
+                        <div className="type-meta-label text-red-700 dark:text-red-300">Before</div>
                         <div className="text-gray-700 dark:text-gray-200">{change.before}</div>
                       </div>
                       <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-4">
-                        <div className="text-sm font-semibold text-green-700 dark:text-green-300 mb-2">After</div>
+                        <div className="type-meta-label text-green-700 dark:text-green-300">After</div>
                         <div className="text-gray-700 dark:text-gray-200">{change.after}</div>
                       </div>
                     </div>
@@ -577,8 +577,8 @@ const StrategicCaseStudy = () => {
             {project.designExecution.removed.length > 0 && (
               <AnimatedSection animation="fade-up" delay={400}>
                 <div className="mt-10 bg-gray-50 dark:bg-[var(--surface)] rounded-xl p-6">
-                  <div className="font-semibold text-gray-900 dark:text-gray-100 mb-3">What we removed:</div>
-                  <ul className="space-y-2">
+                  <div className="font-semibold text-gray-900 dark:text-gray-100 mb-3">What we removed</div>
+                  <ul className="list-flow">
                     {project.designExecution.removed.map((item, index) => (
                       <li key={index} className="flex items-start">
                         <span className="text-gray-400 dark:text-gray-500 mr-2">×</span>
@@ -594,9 +594,9 @@ const StrategicCaseStudy = () => {
 
         {/* 7. FIGMA PROTOTYPE */}
         {!quickSummaryMode && project.figmaPrototype && (
-          <section className="max-w-6xl mx-auto px-6 mb-6">
+          <section className="layout-content mb-6">
             <AnimatedSection animation="fade-up">
-              <div className="rounded-xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-[var(--surface)]" style={{ height: '600px' }}>
+              <div className="media-frame rounded-xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-[var(--surface)]" style={{ height: '600px' }}>
                 <iframe
                   src={project.figmaPrototype}
                   allowFullScreen
@@ -625,9 +625,9 @@ const StrategicCaseStudy = () => {
 
         {/* 8. OUTCOME & IMPACT */}
         {project.outcome && (
-          <section className="max-w-4xl mx-auto px-6 mb-6">
+          <section className="layout-content mb-6">
             <AnimatedSection animation="fade-up">
-              <h2 className="type-h2 mb-6">Outcome & Impact</h2>
+              <h2 className="type-h2 mb-6">Outcome and impact</h2>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={100}>
@@ -646,7 +646,7 @@ const StrategicCaseStudy = () => {
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="mb-6">
                 <div className="font-semibold text-gray-900 dark:text-gray-100 mb-4">Validation:</div>
-                <ul className="space-y-3">
+                <ul className="list-flow">
                   {project.outcome.validation.map((item, index) => (
                     <li key={index} className="flex items-start">
                       <span className="text-green-600 dark:text-green-400 mr-2 mt-1">✓</span>
@@ -660,7 +660,7 @@ const StrategicCaseStudy = () => {
             {project.outcome.marketValidation && (
               <AnimatedSection animation="fade-up" delay={300}>
                 <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-xl p-8 mb-6">
-                  <h3 className="type-h3 mb-4">Market Validation</h3>
+                  <h3 className="type-h3 mb-4">Market validation</h3>
                   <p className="type-body-lg">{project.outcome.marketValidation}</p>
                 </div>
               </AnimatedSection>
@@ -677,7 +677,7 @@ const StrategicCaseStudy = () => {
 
         {/* 9. REFLECTION */}
         {project.reflection && (
-          <section className="max-w-4xl mx-auto px-6 mb-6">
+          <section className="layout-content mb-6">
             <AnimatedSection animation="fade-up">
               <h2 className="type-h2 mb-6">
                 {project.reflection.title}
@@ -691,7 +691,7 @@ const StrategicCaseStudy = () => {
                     {project.reflection.learned.split('\n\n').map((paragraph, i) => {
                       if (paragraph.startsWith('- **')) {
                         return (
-                          <ul key={i} className="space-y-3 mb-6">
+                          <ul key={i} className="list-flow mb-6">
                             {paragraph.split('\n').map((line, j) => {
                               const match = line.match(/- \*\*(.*?)\*\*(.*)/)
                               if (match) {
@@ -719,7 +719,7 @@ const StrategicCaseStudy = () => {
         )}
 
         {/* Back to projects */}
-        <section className="max-w-4xl mx-auto px-6">
+        <section className="layout-content">
           <div className="border-t border-gray-200 dark:border-[var(--border)] pt-12">
             <Link 
               to="/#work"

@@ -29,7 +29,7 @@ const Hero = () => {
 
   return (
     <section 
-      className="relative overflow-hidden min-h-[86vh] md:min-h-[88vh] flex flex-col bg-transparent"
+      className="relative overflow-hidden min-h-svh flex flex-col bg-transparent"
       style={{ width: '100%', maxWidth: '100vw' }}
     >
       {/* Painterly canvas background - z-0 */}
@@ -44,7 +44,7 @@ const Hero = () => {
       
       {/* Hero content - z-10, centered, pointer-events-none on wrapper */}
       <div className="relative z-10 w-full flex-1 flex items-center pointer-events-none">
-        <div className="max-w-[1200px] xl:max-w-[1320px] 2xl:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-20 w-full">
+        <div className="mx-auto px-[var(--gutter)] py-16 sm:py-20 w-full">
           <div className="text-center mx-auto" style={{ paddingTop: '80px' }}>
             {/* Crawlable identity — visually hidden but readable by search engines and screen readers */}
             <p className="sr-only">Swetha Thanabalan — Product Designer</p>
@@ -60,7 +60,7 @@ const Hero = () => {
             
             {/* Subline — recruiter and crawler readable */}
             <p className="type-lead mb-10 sm:mb-12 mx-auto text-center">
-              Product Designer designing digital products through user research, interaction design, and rapid prototyping.
+              Product designer working across user research, interaction design, and rapid prototyping.
             </p>
             
             {/* CTAs - restore pointer events */}
@@ -76,7 +76,7 @@ const Hero = () => {
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3730a3'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4338ca'}
               >
-                View Selected Work
+                View selected work
               </a>
 
               <a
@@ -124,7 +124,7 @@ const Hero = () => {
             {/* Micro-proof with stroke count and pen mode controls */}
             <div className="mb-6 pointer-events-auto">
               <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mb-3">
-                MS in HCI, Drexel University. Professional photographer and former marketer, so I research it, design it, and know how it gets adopted.
+                MS in HCI, Drexel University. Also a professional photographer and former marketer, which helps me think about how a product gets noticed and adopted.
               </p>
               
               {/* Touch device helper text */}

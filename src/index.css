@@ -34,37 +34,37 @@
   */
 
   /* Display: hero headline only */
-  --type-display-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  --type-display-size: clamp(2.5rem, 1.9rem + 2.6vw, 4.5rem);
   --type-display-weight: 400;
   --type-display-lh: 1.08;
   --type-display-ls: -0.025em;
 
   /* H1: case study title */
-  --type-h1-size: clamp(2rem, 4vw, 2.75rem);
+  --type-h1-size: clamp(2rem, 1.7rem + 1.3vw, 2.75rem);
   --type-h1-weight: 400;
   --type-h1-lh: 1.15;
   --type-h1-ls: -0.02em;
 
   /* H2: major section heading */
-  --type-h2-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  --type-h2-size: clamp(1.5rem, 1.35rem + 0.65vw, 1.875rem);
   --type-h2-weight: 400;
   --type-h2-lh: 1.2;
   --type-h2-ls: -0.015em;
 
   /* H3: subsection heading */
-  --type-h3-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  --type-h3-size: clamp(1.125rem, 1.07rem + 0.25vw, 1.25rem);
   --type-h3-weight: 600;
   --type-h3-lh: 1.3;
   --type-h3-ls: -0.01em;
 
   /* Eyebrow: contextual label above a heading */
-  --type-eyebrow-size: 0.6875rem;
+  --type-eyebrow-size: 0.75rem;
   --type-eyebrow-weight: 600;
   --type-eyebrow-lh: 1.4;
   --type-eyebrow-ls: 0.1em;
 
   /* Lead: short intro paragraph */
-  --type-lead-size: clamp(1.125rem, 1.4vw, 1.25rem);
+  --type-lead-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
   --type-lead-weight: 400;
   --type-lead-lh: 1.6;
   --type-lead-ls: -0.005em;
@@ -72,12 +72,12 @@
   /* Body large: important explanatory text */
   --type-body-lg-size: 1.0625rem;
   --type-body-lg-weight: 400;
-  --type-body-lg-lh: 1.7;
+  --type-body-lg-lh: 1.6;
 
   /* Body: default */
-  --type-body-size: 0.9375rem;
+  --type-body-size: 1rem;
   --type-body-weight: 400;
-  --type-body-lh: 1.7;
+  --type-body-lh: 1.6;
 
   /* Body small: supporting */
   --type-body-sm-size: 0.875rem;
@@ -85,42 +85,55 @@
   --type-body-sm-lh: 1.6;
 
   /* Metadata: role, timeline, team */
-  --type-meta-size: 0.8125rem;
+  --type-meta-size: 0.875rem;
   --type-meta-weight: 400;
   --type-meta-lh: 1.5;
 
   /* Metadata label */
-  --type-meta-label-size: 0.6875rem;
+  --type-meta-label-size: 0.75rem;
   --type-meta-label-weight: 600;
   --type-meta-label-lh: 1.4;
   --type-meta-label-ls: 0.08em;
 
   /* Caption */
-  --type-caption-size: 0.75rem;
+  --type-caption-size: 0.8125rem;
   --type-caption-weight: 400;
   --type-caption-lh: 1.5;
 
   /* Annotation */
-  --type-annotation-size: 0.6875rem;
+  --type-annotation-size: 0.75rem;
   --type-annotation-weight: 500;
   --type-annotation-lh: 1.45;
 
   /* Metric number */
-  --type-metric-size: clamp(2rem, 3vw, 2.5rem);
+  --type-metric-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
   --type-metric-weight: 400;
   --type-metric-lh: 1;
   --type-metric-ls: -0.02em;
 
   /* Quote */
-  --type-quote-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  --type-quote-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
   --type-quote-weight: 400;
   --type-quote-lh: 1.35;
   --type-quote-ls: -0.01em;
 
   /* Tag */
-  --type-tag-size: 0.6875rem;
+  --type-tag-size: 0.75rem;
   --type-tag-weight: 400;
   --type-tag-lh: 1.4;
+
+  /* ─── Text rhythm ───
+     One set of gaps for all text, applied by the "Text rhythm" rules at the end
+     of this file. Change spacing here, not with mb-* / space-y-* on elements. */
+  --after-display: 1.5rem;
+  --after-h1: 1.5rem;
+  --after-h2: 1.25rem;
+  --after-h3: 0.75rem;
+  --after-eyebrow: 0.75rem;
+  --after-label: 0.5rem;
+  --after-lead: 2rem;
+  --gap-paragraph: 1.25rem;  /* between paragraphs */
+  --gap-list: 0.75rem;       /* between bullet points */
 
   /* ─── Spacing ─── */
   --space-1: 0.25rem;
@@ -147,8 +160,9 @@
 
   /* ─── Layout ─── */
   --w-reading: 640px;
-  --w-content: 820px;
-  --w-wide: 1080px;
+  --w-content: 72rem; /* project pages and About: centered, so content isn't pinned to the screen edge */
+  --w-wide: 100%;
+  --gutter: clamp(1.5rem, 4vw, 5rem);
   --w-max: 1200px;
 
   /* ─── Radius ─── */
@@ -201,45 +215,68 @@ html.theme-transition * {
               color var(--duration-base) ease;
 }
 
-/* ─── Mosaic gallery grid (About: Photography, Graphic Design) ───
-   Intentionally uneven but balanced: fixed columns + fixed row height, with a few
-   tiles promoted to larger spans. grid-auto-flow: dense backfills gaps so it stays
-   seamless. Collapses to a simple 2-column grid on small screens. */
-.mosaic {
-  display: grid;
-  gap: 12px;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 46vw;
+/* ─── Image pile (About: Graphic Design, ImageStack) ───
+   Design pieces are shown whole, never cropped. The top card slides down and
+   tucks to the back of the pile, revealing the next one. */
+.image-stack { outline: none; }
+.image-stack:focus-visible .image-stack__pile { outline: 2px solid var(--accent); outline-offset: 8px; }
+.image-stack__pile {
+  position: relative;
+  height: clamp(360px, 65vh, 760px);
+  width: min(100%, 760px);
+  margin: 3rem auto 0;
 }
-.mosaic-item { grid-column: span 1; grid-row: span 1; margin: 0; }
-.mosaic-item > img { display: block; }
-
-@media (min-width: 768px) {
-  .mosaic {
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 220px;
-  }
-  .mosaic-wide { grid-column: span 2; }
-  .mosaic-tall { grid-row: span 2; }
-  .mosaic-big { grid-column: span 2; grid-row: span 2; }
+.image-stack__card {
+  position: absolute;
+  /* Inset leaves room for the scattered cards underneath to show around the top one */
+  inset: 4% 9%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1), opacity 550ms ease;
+  user-select: none;
 }
-
-/* ─── Masonry gallery (About: Graphic Design) ───
-   Design pieces are shown whole, never cropped: each keeps its own aspect ratio and
-   columns flow top-to-bottom. */
-.masonry {
-  column-count: 2;
-  column-gap: 12px;
+@media (max-width: 640px) {
+  .image-stack__card { inset: 6% 12%; }
 }
-.masonry-item {
-  break-inside: avoid;
-  margin: 0 0 12px;
+/* The image itself is the card: no matte, the shadow sits on the artwork */
+.image-stack__card > img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 14px 34px rgba(0, 0, 0, 0.18);
 }
-.masonry-item > img { display: block; width: 100%; height: auto; }
-
-@media (min-width: 768px) {
-  .masonry { column-count: 3; }
+.image-stack__card.is-top > img { pointer-events: auto; cursor: pointer; }
+.image-stack__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  position: relative;
+  z-index: 1;
+}
+.image-stack__caption { text-align: center; min-width: 0; flex: 0 1 32rem; margin: 0; }
+.image-stack__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color 150ms ease, color 150ms ease;
+}
+.image-stack__btn:hover { border-color: var(--accent); color: var(--accent); }
+@media (prefers-reduced-motion: reduce) {
+  .image-stack__card { transition: none; }
 }
 
 /* In dark mode, keep the brand indigo logo but add a subtle light edge so it
@@ -370,7 +407,8 @@ html.theme-transition * {
 }
 
 /* ─── Typography utility classes ─── */
-@layer utilities {
+/* Components layer (not utilities) so color/weight utilities on an element win */
+@layer components {
   /* Role-based type classes */
   .type-display {
     font-family: var(--font-heading);
@@ -424,7 +462,6 @@ html.theme-transition * {
     line-height: var(--type-lead-lh);
     letter-spacing: var(--type-lead-ls);
     color: var(--text-secondary);
-    max-width: 58ch;
   }
 
   .type-body-lg {
@@ -432,7 +469,6 @@ html.theme-transition * {
     font-weight: var(--type-body-lg-weight);
     line-height: var(--type-body-lg-lh);
     color: var(--text-secondary);
-    max-width: 65ch;
   }
 
   .type-body {
@@ -440,7 +476,6 @@ html.theme-transition * {
     font-weight: var(--type-body-weight);
     line-height: var(--type-body-lh);
     color: var(--text-secondary);
-    max-width: 65ch;
   }
 
   .type-body-sm {
@@ -497,7 +532,6 @@ html.theme-transition * {
     line-height: var(--type-quote-lh);
     letter-spacing: var(--type-quote-ls);
     color: var(--text);
-    max-width: 28ch;
   }
 
   .type-tag {
@@ -525,16 +559,16 @@ html.theme-transition * {
     max-width: var(--w-content);
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
 
   .layout-wide {
     max-width: var(--w-wide);
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
 
   .layout-full {
@@ -854,4 +888,41 @@ html.theme-transition * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
+}
+
+/* ─── Text rhythm ───
+   Even spacing for all page text, driven by the --after-* / --gap-* tokens.
+   Scoped to #main-content (site pages; the slide decks keep their own layout)
+   and written outside @layer so it wins over per-element mb-* / space-y-* classes. */
+#main-content :is(h1, h2, h3, h4, p, div).type-display { margin-bottom: var(--after-display); }
+#main-content :is(h1, h2, h3, h4, p, div).type-h1 { margin-bottom: var(--after-h1); }
+#main-content :is(h1, h2, h3, h4, p, div).type-h2 { margin-bottom: var(--after-h2); }
+#main-content :is(h1, h2, h3, h4, p, div).type-h3 { margin-bottom: var(--after-h3); }
+#main-content :is(p, span, div).type-eyebrow { margin-bottom: var(--after-eyebrow); }
+#main-content :is(p, div, h3, h4, dt).type-meta-label { margin-bottom: var(--after-label); }
+#main-content p.type-lead { margin-bottom: var(--after-lead); }
+
+/* Paragraph stacks and bullet lists */
+#main-content .text-flow > * + * { margin-top: var(--gap-paragraph); }
+#main-content .list-flow > * + * { margin-top: var(--gap-list); }
+#main-content :is(.text-flow, .list-flow) > * { margin-bottom: 0; }
+#main-content .text-flow > p.type-lead { margin-bottom: 0; }
+
+/* Back-to-back paragraphs outside a stack get the same paragraph gap */
+#main-content p:is(.type-body, .type-body-lg, .type-body-sm):has(+ p:is(.type-body, .type-body-lg, .type-body-sm)) {
+  margin-bottom: var(--gap-paragraph);
+}
+
+/* Whatever follows a heading or label starts right at that gap (kept last so it
+   beats the stack rules above when a heading sits inside a stack) */
+#main-content :is(.type-display, .type-h1, .type-h2, .type-h3, .type-eyebrow, .type-meta-label) + * { margin-top: 0; }
+
+/* ─── Standalone media size ───
+   Case-study images, diagrams, videos and prototypes share one width, centered.
+   Images inside grids and cards keep their own sizing. */
+.media-frame {
+  width: 100%;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
 }

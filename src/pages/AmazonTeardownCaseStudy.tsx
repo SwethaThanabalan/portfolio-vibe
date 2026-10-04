@@ -64,28 +64,28 @@ const AmazonTeardownCaseStudy = () => {
           
           <AnimatedSection animation="fade-up">
             <h1 className="type-h1 mb-8 leading-tight">
-              When Recovery Fails: A UX Teardown of Amazon's Order Cancellation Flow
+              A UX teardown of Amazon's order cancellation flow
             </h1>
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up" delay={100}>
             <p className="type-lead mb-12">
-              An analysis of error recovery during high-stakes checkout
+              How Amazon handles a mistake during a time-sensitive checkout
             </p>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200 dark:border-[var(--border)]">
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Role</div>
+                <div className="type-meta-label">Role</div>
                 <div className="text-gray-900 dark:text-gray-100">UX Designer (Independent Analysis)</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Focus Areas</div>
+                <div className="type-meta-label">Focus Areas</div>
                 <div className="text-gray-900 dark:text-gray-100">Interaction Design, Error Recovery, Customer Experience</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Reading Time</div>
+                <div className="type-meta-label">Reading Time</div>
                 <div className="text-gray-900 dark:text-gray-100">3 min</div>
               </div>
             </div>
@@ -97,7 +97,7 @@ const AmazonTeardownCaseStudy = () => {
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Context</h2>
             <div className="bg-gray-50 dark:bg-[var(--surface)] rounded-subtle p-8">
-              <ul className="space-y-3 type-body-lg">
+              <ul className="list-flow type-body-lg">
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-3 mt-1">•</span>
                   <span>Prime Day lightning deal</span>
@@ -112,7 +112,7 @@ const AmazonTeardownCaseStudy = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-3 mt-1">•</span>
-                  <span>Emotional state: urgency + pressure</span>
+                  <span>Emotional state: rushed and under pressure</span>
                 </li>
               </ul>
             </div>
@@ -122,19 +122,17 @@ const AmazonTeardownCaseStudy = () => {
         {/* 3. THE CORE PROBLEM */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">The Core Problem</h2>
-            <div className="space-y-6 type-body-lg">
-              <p>Address cannot be edited post-order.</p>
-              <p>Only option: cancel and rebuild.</p>
-              <p>Cancellation reason does not trigger contextual system response.</p>
-              <p>Lightning deal constraint increases stress.</p>
+            <h2 className="type-h2 mb-6">The core problem</h2>
+            <div className="text-flow type-body-lg">
+              <p>The address can't be edited after the order is placed, so the only option is to cancel and rebuild the order.</p>
+              <p>Choosing a cancellation reason doesn't change what the system does next, and the lightning deal timer adds stress.</p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-600 rounded-r-xl p-6">
-              <p className="text-lg text-gray-900 dark:text-gray-100 font-semibold">
-                This is a breakdown in recovery design, not a functional bug.
+              <p className="type-body-lg font-semibold text-[var(--text)]">
+                Nothing here is broken in the technical sense. The problem is how the flow helps a user recover from a mistake.
               </p>
             </div>
           </AnimatedSection>
@@ -143,15 +141,15 @@ const AmazonTeardownCaseStudy = () => {
         {/* 4. CURRENT FLOW BREAKDOWN */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Current Flow Breakdown</h2>
-            <div className="space-y-6 type-body-lg mb-12">
-              <p>The user must navigate through a multi-step cancellation process that fails to recognize their stated intent.</p>
+            <h2 className="type-h2 mb-6">The current flow</h2>
+            <div className="text-flow type-body-lg mb-12">
+              <p>The user goes through a multi-step cancellation process that ignores the reason they gave for cancelling.</p>
             </div>
           </AnimatedSection>
 
           {/* Visual Diagram */}
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mb-4">
+            <div className="media-frame mb-4">
               <img 
                 src="/portfolioamazoncasestudy.jpg" 
                 alt="Amazon cancellation flow analysis diagram."
@@ -165,11 +163,11 @@ const AmazonTeardownCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 space-y-4">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-xl">Key Issues:</h3>
-              <ul className="space-y-3 type-body-lg">
+              <h3 className="type-h3">Key issues</h3>
+              <ul className="list-flow type-body-lg">
                 <li className="flex items-start">
                   <span className="text-red-600 dark:text-red-400 mr-3 mt-1">×</span>
-                  <span>Redundant cognitive load</span>
+                  <span>Repeated, unnecessary effort</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-red-600 dark:text-red-400 mr-3 mt-1">×</span>
@@ -187,19 +185,18 @@ const AmazonTeardownCaseStudy = () => {
         {/* 5. UX ANALYSIS */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">UX Analysis</h2>
-            <div className="space-y-6 type-body-lg">
+            <h2 className="type-h2 mb-6">UX analysis</h2>
+            <div className="text-flow type-body-lg">
               <p>Applying Norman's Action Cycle reveals a breakdown at the <span className="font-semibold text-gray-900 dark:text-gray-100">Interpretation stage</span>.</p>
               
-              <p className="font-semibold text-gray-900 dark:text-gray-100">The system ignores user intent despite explicitly asking for it.</p>
-              <p>There is no meaningful feedback loop.</p>
+              <p className="font-semibold text-gray-900 dark:text-gray-100">The system asks the user why they're cancelling, then ignores the answer, so there's no useful feedback.</p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-600 rounded-r-xl p-6">
-              <p className="text-lg text-gray-900 dark:text-gray-100">
-                The system collects data but doesn't act on it. This is a missed opportunity to close the recovery loop.
+              <p className="type-body-lg text-[var(--text)]">
+                If the system acted on the reason, it could help the user fix the order instead of starting over.
               </p>
             </div>
           </AnimatedSection>
@@ -208,14 +205,14 @@ const AmazonTeardownCaseStudy = () => {
         {/* 6. ATTENTION TO DETAIL OBSERVATIONS */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Attention to Detail Observations</h2>
-            <p className="type-body-lg mb-8">Micro-interaction gaps that impact macro-level trust.</p>
+            <h2 className="type-h2 mb-6">Detailed observations</h2>
+            <p className="type-body-lg mb-8">Small interaction gaps that add up to a loss of trust.</p>
           </AnimatedSection>
 
           <div className="space-y-6">
             <AnimatedSection animation="fade-up" delay={100}>
               <div className="bg-white dark:bg-[var(--bg)] border-l-4 border-indigo-600 p-6 rounded-r-lg">
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 text-lg">Observation 1: Reason Selection Theater</h3>
+                <h3 className="type-h3">Observation 1: the cancellation reason does nothing</h3>
                 <p className="text-gray-700 dark:text-gray-200 mb-3">
                   Cancellation reason includes "Need to change shipping address" as an option.
                 </p>
@@ -223,14 +220,14 @@ const AmazonTeardownCaseStudy = () => {
                   But the system does nothing with that input.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mt-3 italic">
-                  Why ask if you won't respond? This creates false expectations and erodes trust.
+                  Asking for a reason and then ignoring it sets an expectation the system doesn't meet, which costs trust.
                 </p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="bg-white dark:bg-[var(--bg)] border-l-4 border-indigo-600 p-6 rounded-r-lg">
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 text-lg">Observation 2: No Lightning Deal Safeguard</h3>
+                <h3 className="type-h3">Observation 2: no warning about the lightning deal</h3>
                 <p className="text-gray-700 dark:text-gray-200 mb-3">
                   No warning that canceling may result in losing time-sensitive pricing.
                 </p>
@@ -245,7 +242,7 @@ const AmazonTeardownCaseStudy = () => {
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div className="bg-white dark:bg-[var(--bg)] border-l-4 border-indigo-600 p-6 rounded-r-lg">
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 text-lg">Observation 3: No Cart Preservation</h3>
+                <h3 className="type-h3">Observation 3: the cart isn't saved</h3>
                 <p className="text-gray-700 dark:text-gray-200 mb-3">
                   After cancellation, the 15-item cart is gone.
                 </p>
@@ -260,15 +257,15 @@ const AmazonTeardownCaseStudy = () => {
 
             <AnimatedSection animation="fade-up" delay={400}>
               <div className="bg-white dark:bg-[var(--bg)] border-l-4 border-indigo-600 p-6 rounded-r-lg">
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 text-lg">Observation 4: Emotional Friction Increases Abandonment Risk</h3>
+                <h3 className="type-h3">Observation 4: stress makes abandoning more likely</h3>
                 <p className="text-gray-700 dark:text-gray-200 mb-3">
-                  The combination of urgency, manual effort, and uncertainty creates decision paralysis.
+                  Time pressure, manual effort, and uncertainty together make it hard to decide what to do.
                 </p>
                 <p className="text-gray-700 dark:text-gray-200 font-semibold">
                   Users may abandon the purchase entirely rather than rebuild.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mt-3 italic">
-                  Recovery friction directly impacts conversion.
+                  Friction during recovery can cost a sale.
                 </p>
               </div>
             </AnimatedSection>
@@ -278,15 +275,15 @@ const AmazonTeardownCaseStudy = () => {
         {/* 7. CUSTOMER-FIRST REFLECTION */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Customer-First Reflection</h2>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-subtle p-8 space-y-6 type-body-lg">
-              <p className="text-xl text-gray-900 dark:text-gray-100 font-semibold">
-                Strong systems should anticipate mistakes, not penalize them.
+            <h2 className="type-h2 mb-6">Reflection</h2>
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-subtle p-8 text-flow type-body-lg">
+              <p className="type-h3 text-[var(--text)]">
+                Good systems expect mistakes and make them easy to fix.
               </p>
               
               <p>Designing for human error means:</p>
               
-              <ul className="space-y-3 ml-6">
+              <ul className="list-flow ml-6">
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-3 mt-1">•</span>
                   <span>Supporting recovery without punishment</span>
@@ -301,16 +298,16 @@ const AmazonTeardownCaseStudy = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-3 mt-1">•</span>
-                  <span>Closing the feedback loop when you ask for input</span>
+                  <span>Acting on input after asking for it</span>
                 </li>
               </ul>
 
               <p className="pt-6 border-t border-indigo-200 dark:border-indigo-800">
-                This teardown isn't about criticizing Amazon. It's about recognizing that even mature systems have recovery gaps.
+                I wrote this teardown to look at recovery design, which even mature products like Amazon can get wrong.
               </p>
               
               <p className="font-semibold text-gray-900 dark:text-gray-100">
-                The best opportunities for UX improvement often live in the moments when things go wrong.
+                Some of the most useful UX improvements are in the moments when something goes wrong.
               </p>
             </div>
           </AnimatedSection>

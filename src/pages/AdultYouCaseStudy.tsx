@@ -137,13 +137,13 @@ const AdultYouCaseStudy = () => {
           
           <AnimatedSection animation="fade-up">
             <h1 className="type-h1 mb-8 leading-tight">
-              Designing Adult You: Building a Gamified Life Skills Platform from 0 → 1
+              Designing Adult You: a gamified life skills platform, from 0 to 1
             </h1>
           </AnimatedSection>
           
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="type-lead space-y-6 mb-16">
-              <p>Adult You is a gamified learning platform that helps adults build real-world life skills through interactive, game-like modules. I joined as the sole designer during its earliest stage to bring structure, validation, and system thinking to an ambitious 0→1 product. What began as "just start wireframing" evolved into defining the product foundation itself.</p>
+            <div className="type-lead text-flow mb-16">
+              <p>Adult You is a gamified learning platform that helps adults build real-world life skills through interactive, game-like modules. I joined as the sole designer at its earliest stage. The brief was "just start wireframing," and the work grew into defining the product's foundation: its structure, design system, and how we tested it.</p>
             </div>
           </AnimatedSection>
 
@@ -207,11 +207,11 @@ const AdultYouCaseStudy = () => {
               }}
             >
               <div style={{ paddingBottom: '32px' }}>
-                <ul className="text-base text-gray-700 dark:text-gray-200 leading-relaxed space-y-2" style={{ maxWidth: '65ch' }}>
+                <ul className="type-body list-flow">
                   <li>• Led 0→1 cross-platform product design as sole designer</li>
                   <li>• Built a scalable design system integrated with Unity</li>
-                  <li>• Reduced text-heavy modules into structured interactive flows</li>
-                  <li>• Designed and ran testing with 20 participants (75% validation signal)</li>
+                  <li>• Turned text-heavy modules into structured interactive flows</li>
+                  <li>• Designed and ran testing with 20 participants (75% said they would use it)</li>
                   <li>• Established research-backed direction before beta</li>
                 </ul>
               </div>
@@ -291,25 +291,25 @@ const AdultYouCaseStudy = () => {
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-gray-200 dark:border-[var(--border)]">
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Role</div>
+                <div className="type-meta-label">Role</div>
                 <div className="text-gray-900 dark:text-gray-100">Product Designer (End-to-End)</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Scope</div>
-                <div className="text-gray-900 dark:text-gray-100">Research → System Design → Module Design → Testing → Iteration</div>
+                <div className="type-meta-label">Scope</div>
+                <div className="text-gray-900 dark:text-gray-100">Research → system design → module design → testing → iteration</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Stakeholders</div>
+                <div className="type-meta-label">Stakeholders</div>
                 <div className="text-gray-900 dark:text-gray-100">CEO, Unity Developers, Internal Team, Student Test Users</div>
               </div>
               <div>
-                <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Focus Areas</div>
+                <div className="type-meta-label">Focus Areas</div>
                 <div className="text-gray-900 dark:text-gray-100">Gamification, Instructional UX, Design Systems, Testing Strategy</div>
               </div>
             </div>
             <div className="mt-6 pt-6 border-t border-gray-200 dark:border-[var(--border)]">
-              <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Stage</div>
-              <div className="text-gray-900 dark:text-gray-100">Alpha → Preparing for Beta</div>
+              <div className="type-meta-label">Stage</div>
+              <div className="text-gray-900 dark:text-gray-100">Alpha, preparing for beta</div>
             </div>
           </AnimatedSection>
         </section>
@@ -317,13 +317,11 @@ const AdultYouCaseStudy = () => {
         {/* 2. BUSINESS CONTEXT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Business Context</h2>
-            <div className="type-body-lg space-y-6">
-              <p>Adult You is a 0→1 gamified learning platform designed to teach adults essential life skills — from filing taxes to understanding home ownership — through interactive modules.</p>
-              <p>There was no existing product. No design system. No documentation. No structured UX foundation.</p>
-              <p>The CEO had deep experience in educational content but no designer.</p>
-              <p>I was brought in to provide a critical lens and transform ideas into a scalable product direction.</p>
-              <p className="font-semibold text-gray-900 dark:text-gray-100">This wasn't iteration. This was defining the fundamentals.</p>
+            <h2 className="type-h2 mb-6">Business context</h2>
+            <div className="type-body-lg text-flow">
+              <p>Adult You is a new gamified learning platform that teaches adults life skills such as filing taxes and understanding home ownership through interactive modules.</p>
+              <p>When I joined there was no product, design system, documentation, or UX foundation. The CEO had deep experience in educational content but no designer.</p>
+              <p>I was brought in to question the ideas on the table and turn them into a product direction that could grow.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -332,11 +330,9 @@ const AdultYouCaseStudy = () => {
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Problem framing</h2>
-            <div className="type-body-lg space-y-6">
-              <p>The biggest ambiguity wasn't visual.</p>
-              <p className="font-semibold text-gray-900 dark:text-gray-100">It was structural.</p>
-              <p>I was initially asked to "just start wireframing" without:</p>
-              <ul className="space-y-2 ml-6">
+            <div className="type-body-lg text-flow">
+              <p>The biggest open questions were about structure rather than visuals. I was initially asked to "just start wireframing" without:</p>
+              <ul className="list-flow ml-6">
                 <li>• Finalized content</li>
                 <li>• Defined modules</li>
                 <li>• UX principles</li>
@@ -348,8 +344,8 @@ const AdultYouCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 bg-red-50 dark:bg-red-950/30 rounded-subtle p-6">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">Without intervention, the product would have:</h3>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-200">
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">Risks if we had gone straight to wireframes</h3>
+              <ul className="list-flow text-gray-700 dark:text-gray-200">
                 <li className="flex items-start">
                   <span className="text-red-600 dark:text-red-400 mr-2">×</span>
                   <span>Shipped without system consistency</span>
@@ -372,8 +368,7 @@ const AdultYouCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="mt-8 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-600 rounded-r-xl p-6">
-              <p className="text-lg text-gray-900 dark:text-gray-100">This required ownership beyond screens.</p>
-              <p className="text-lg text-gray-900 dark:text-gray-100 font-semibold mt-2">It required building the foundation.</p>
+              <p className="type-body-lg font-semibold text-[var(--text)]">So the job went beyond screens: the product needed a foundation first.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -381,9 +376,9 @@ const AdultYouCaseStudy = () => {
         {/* 4. DESIGNING UNDER AMBIGUITY */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Product discovery under ambiguity</h2>
-            <div className="type-body-lg space-y-6">
-              <p>With no documentation to reference, I began by:</p>
+            <h2 className="type-h2 mb-6">Product discovery</h2>
+            <div className="type-body-lg text-flow">
+              <p>With no documentation to work from, I started by:</p>
             </div>
           </AnimatedSection>
 
@@ -405,15 +400,14 @@ const AdultYouCaseStudy = () => {
             <AnimatedSection animation="fade-up" delay={300}>
               <div className="border-l-4 border-indigo-600 pl-6">
                 <h3 className="type-h3 mb-2">Building example flows to demonstrate vision</h3>
-                <p className="text-gray-700 dark:text-gray-200">Translated abstract concepts into tangible user journeys the team could evaluate and iterate on.</p>
+                <p className="text-gray-700 dark:text-gray-200">Turned abstract ideas into user journeys the team could review and refine.</p>
               </div>
             </AnimatedSection>
           </div>
 
           <AnimatedSection animation="fade-up" delay={400}>
             <div className="mt-8 type-body-lg">
-              <p>This helped the team move from abstract discussion to tangible product direction.</p>
-              <p className="mt-4 font-semibold text-gray-900 dark:text-gray-100">Ambiguity became structured exploration.</p>
+              <p>This moved the team from abstract discussion to a concrete product direction.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -422,21 +416,21 @@ const AdultYouCaseStudy = () => {
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">AI-assisted design exploration</h2>
-            <div className="type-body-lg space-y-6">
-              <p>During early module confusion — particularly around interaction patterns and call-to-action structure — I used Figma Make to rapidly explore:</p>
-              <ul className="space-y-2 ml-6">
+            <div className="type-body-lg text-flow">
+              <p>Early on, when the team was unsure about interaction patterns and call-to-action structure in the modules, I used Figma Make to quickly explore:</p>
+              <ul className="list-flow ml-6">
                 <li>• Button hierarchy</li>
                 <li>• Interactive module layouts</li>
                 <li>• Gamified learning structures</li>
               </ul>
-              <p>AI accelerated visual direction when the team lacked precedent for gamified adult education.</p>
+              <p>It sped up visual direction at a point when the team had no examples of gamified adult education to work from.</p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 bg-gray-50 dark:bg-[var(--surface)] rounded-subtle p-6">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">It helped us:</h3>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-200">
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">It helped us</h3>
+              <ul className="list-flow text-gray-700 dark:text-gray-200">
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-2">•</span>
                   <span>See possibilities quickly</span>
@@ -447,7 +441,7 @@ const AdultYouCaseStudy = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-2">•</span>
-                  <span>Iterate rapidly before committing</span>
+                  <span>Iterate quickly before committing</span>
                 </li>
               </ul>
             </div>
@@ -455,7 +449,7 @@ const AdultYouCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="mt-8 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-600 rounded-r-xl p-6">
-              <p className="text-lg text-gray-900 dark:text-gray-100">However, I maintained design judgment. AI outputs were refined, prompted, and evaluated critically before adoption.</p>
+              <p className="type-body-lg text-[var(--text)]">I reviewed and refined every AI output before we used it.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -464,7 +458,7 @@ const AdultYouCaseStudy = () => {
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Design system</h2>
-            <div className="type-body-lg space-y-6">
+            <div className="type-body-lg text-flow">
               <p>Given the interactive nature of the modules and Unity integration, I proposed building a custom design system instead of adopting a generic one.</p>
             </div>
           </AnimatedSection>
@@ -472,7 +466,7 @@ const AdultYouCaseStudy = () => {
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 bg-gray-50 dark:bg-[var(--surface)] rounded-subtle p-6">
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">The system included:</h3>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-200">
+              <ul className="list-flow text-gray-700 dark:text-gray-200">
                 <li className="flex items-start">
                   <span className="text-indigo-600 mr-2">•</span>
                   <span>Reusable components</span>
@@ -502,10 +496,9 @@ const AdultYouCaseStudy = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={200}>
-            <div className="mt-8 space-y-4 type-body-lg">
+            <div className="mt-8 text-flow type-body-lg">
               <p className="font-semibold text-gray-900 dark:text-gray-100">This system is currently being used in the Unity alpha build.</p>
-              <p>It allowed developers to build in parallel with clarity.</p>
-              <p className="font-semibold text-gray-900 dark:text-gray-100">This was not aesthetic polish. It was infrastructure.</p>
+              <p>It let developers build in parallel with a clear reference.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -513,10 +506,10 @@ const AdultYouCaseStudy = () => {
         {/* 7. INSTRUCTIONAL MODULE DESIGN */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Instructional Module Design</h2>
-            <div className="type-body-lg space-y-6">
+            <h2 className="type-h2 mb-6">Instructional module design</h2>
+            <div className="type-body-lg text-flow">
               <p>The modules teach real-world life skills such as:</p>
-              <ul className="space-y-2 ml-6">
+              <ul className="list-flow ml-6">
                 <li>• Filing taxes</li>
                 <li>• Renting an apartment</li>
                 <li>• Understanding home ownership</li>
@@ -526,7 +519,7 @@ const AdultYouCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 bg-yellow-50 dark:bg-yellow-950/30 rounded-subtle p-6 border-l-4 border-yellow-500 dark:border-yellow-600">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">The biggest UX challenge:</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">The biggest UX challenge</h3>
               <p className="type-body-lg">The CEO's initial vision was text-heavy.</p>
             </div>
           </AnimatedSection>
@@ -537,11 +530,11 @@ const AdultYouCaseStudy = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 dark:bg-green-950/30 rounded-subtle p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Reduce cognitive load</h4>
-                  <p className="text-gray-700 dark:text-gray-200">Break down complex information into digestible chunks</p>
+                  <p className="text-gray-700 dark:text-gray-200">Break complex information into smaller pieces</p>
                 </div>
                 <div className="bg-green-50 dark:bg-green-950/30 rounded-subtle p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Break information into interactive segments</h4>
-                  <p className="text-gray-700 dark:text-gray-200">Transform passive reading into active engagement</p>
+                  <p className="text-gray-700 dark:text-gray-200">Have users do something instead of only reading</p>
                 </div>
                 <div className="bg-green-50 dark:bg-green-950/30 rounded-subtle p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Introduce gamified progression</h4>
@@ -549,15 +542,15 @@ const AdultYouCaseStudy = () => {
                 </div>
                 <div className="bg-green-50 dark:bg-green-950/30 rounded-subtle p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Structure modules like playable experiences</h4>
-                  <p className="text-gray-700 dark:text-gray-200">Design learning as an interactive journey, not a document</p>
+                  <p className="text-gray-700 dark:text-gray-200">Design each module as something to play through rather than read</p>
                 </div>
               </div>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={300}>
-            <div className="mt-8 text-lg text-gray-900 dark:text-gray-100 font-semibold">
-              <p>This required active pushback and iteration.</p>
+            <div className="mt-8 type-body-lg font-semibold text-[var(--text)]">
+              <p>Getting there took a lot of pushback and iteration.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -566,15 +559,15 @@ const AdultYouCaseStudy = () => {
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Interactive Prototype</h2>
-            <div className="type-body-lg space-y-6">
-              <p>To demonstrate the interaction model for the learning modules, I created a working prototype that simulates the core flow of the experience.</p>
-              <p>Explore the prototype below to see how users progress through modules, interact with content, and receive feedback.</p>
+            <div className="type-body-lg text-flow">
+              <p>I built a working prototype of the module interaction model that simulates the core flow.</p>
+              <p>Try it below to see how users move through modules, interact with content, and get feedback.</p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <div className="mt-8 w-full">
-              <div className="relative w-full rounded-subtle overflow-hidden shadow-lg border border-gray-200 dark:border-[var(--border)]" style={{ paddingBottom: '56.25%' }}>
+            <div className="media-frame mt-8 w-full">
+              <div className="relative aspect-video w-full rounded-subtle overflow-hidden shadow-lg border border-gray-200 dark:border-[var(--border)]">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
                   src="https://embed.figma.com/proto/RyfAu7aSShQ8trzu60ALNq/Adult-you?node-id=1893-1491&page-id=1%3A3&starting-point-node-id=1893%3A1491&scaling=scale-down&content-scaling=fixed&embed-host=share"
@@ -589,10 +582,10 @@ const AdultYouCaseStudy = () => {
         {/* 9. TESTING & CEO COLLABORATION */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Testing & CEO Collaboration</h2>
-            <div className="type-body-lg space-y-6">
-              <p>We ran two testing rounds:</p>
-              <ul className="space-y-2 ml-6">
+            <h2 className="type-h2 mb-6">Testing and working with the CEO</h2>
+            <div className="type-body-lg text-flow">
+              <p>We ran testing in two rounds:</p>
+              <ul className="list-flow ml-6">
                 <li>• Internal team testing</li>
                 <li>• 20 college student participants</li>
               </ul>
@@ -601,14 +594,14 @@ const AdultYouCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="mt-8 bg-indigo-50 dark:bg-indigo-950/30 rounded-subtle p-6">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">Key finding:</h3>
-              <p className="text-lg text-gray-900 dark:text-gray-100">75% of participants said they would use an app like this.</p>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">Key finding</h3>
+              <p className="type-body-lg text-[var(--text)]">75% of participants said they would use an app like this.</p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="mt-8">
-              <p className="type-body-lg mb-4">More importantly, the sessions surfaced:</p>
+              <p className="type-body-lg mb-4">The sessions also surfaced:</p>
               <div className="space-y-4">
                 <div className="border-l-4 border-indigo-600 pl-6">
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Concerns around privacy and policy</h4>
@@ -628,14 +621,14 @@ const AdultYouCaseStudy = () => {
 
           <AnimatedSection animation="fade-up" delay={300}>
             <div className="mt-8 bg-green-50 dark:bg-green-950/30 rounded-subtle p-6">
-              <p className="text-lg text-gray-900 dark:text-gray-100 font-semibold mb-4">Testing directly influenced direction:</p>
+              <p className="type-body-lg font-semibold text-[var(--text)] mb-4">What changed after testing</p>
               <p className="text-gray-700 dark:text-gray-200">We reduced text and shifted toward interaction-first learning.</p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={400}>
             <div className="mt-8 type-body-lg">
-              <p>The CEO was highly hands-on, and I frequently challenged design and testing decisions. These discussions strengthened product clarity.</p>
+              <p>The CEO was very hands-on, and I often challenged design and testing decisions. Those discussions made the product clearer.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -643,9 +636,9 @@ const AdultYouCaseStudy = () => {
         {/* 10. STRATEGIC IMPACT */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">Strategic Impact</h2>
-            <div className="type-body-lg space-y-6">
-              <p>This project:</p>
+            <h2 className="type-h2 mb-6">Impact</h2>
+            <div className="type-body-lg text-flow">
+              <p>What this work changed:</p>
             </div>
           </AnimatedSection>
 
@@ -653,30 +646,30 @@ const AdultYouCaseStudy = () => {
             <div className="mt-8 grid md:grid-cols-2 gap-6">
               <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-subtle p-6">
                 <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Shifted modules from text-heavy to interaction-driven</h3>
-                <p className="text-gray-700 dark:text-gray-200">Transformed passive content into engaging, playable learning experiences</p>
+                <p className="text-gray-700 dark:text-gray-200">Turned reading-based content into modules users play through</p>
               </div>
               <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-subtle p-6">
                 <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Introduced a scalable system integrated with Unity</h3>
-                <p className="text-gray-700 dark:text-gray-200">Created infrastructure that supports consistent development and future growth</p>
+                <p className="text-gray-700 dark:text-gray-200">Gave developers a consistent system to build with as the product grows</p>
               </div>
               <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-subtle p-6">
                 <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Established research-backed validation before beta</h3>
-                <p className="text-gray-700 dark:text-gray-200">Provided evidence-based direction through structured user testing</p>
+                <p className="text-gray-700 dark:text-gray-200">Grounded product direction in structured user testing</p>
               </div>
               <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-subtle p-6">
                 <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Reduced ambiguity in early-stage product decisions</h3>
-                <p className="text-gray-700 dark:text-gray-200">Brought clarity and structure to undefined product territory</p>
+                <p className="text-gray-700 dark:text-gray-200">Gave structure to decisions that had no clear owner or process</p>
               </div>
               <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-subtle p-6">
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Strengthened CEO pitch clarity through visual prototypes</h3>
-                <p className="text-gray-700 dark:text-gray-200">Enabled stakeholder communication with tangible product demonstrations</p>
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Made the CEO's pitch clearer with visual prototypes</h3>
+                <p className="text-gray-700 dark:text-gray-200">Gave stakeholders something concrete to react to</p>
               </div>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-subtle p-8">
-              <p className="text-xl text-gray-900 dark:text-gray-100 font-semibold">This was foundation work that shaped the alpha build.</p>
+              <p className="type-h3 text-[var(--text)]">This foundation work shaped the alpha build.</p>
             </div>
           </AnimatedSection>
         </section>
@@ -684,49 +677,49 @@ const AdultYouCaseStudy = () => {
         {/* 11. HOW THIS PROJECT ELEVATED MY PRODUCT THINKING */}
         <section className="layout-content mb-16">
           <AnimatedSection animation="fade-up">
-            <h2 className="type-h2 mb-6">How This Project Elevated My Product Thinking</h2>
+            <h2 className="type-h2 mb-6">What I learned</h2>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-subtle p-8">
-              <div className="space-y-6 type-body-lg">
-                <p className="text-xl text-gray-900 dark:text-gray-100 font-semibold">Adult You forced me into full ownership.</p>
+              <div className="text-flow type-body-lg">
+                <p className="type-h3 text-[var(--text)]">On Adult You, I owned the whole product.</p>
                 
-                <p>Unlike Talofa, where I joined an existing ecosystem, here I built structure where none existed.</p>
+                <p>At Talofa I joined an existing product. Here I had to build the structure from scratch.</p>
                 
                 <div className="space-y-4 mt-8">
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">System building before screen design</h3>
-                    <p>I learned that defining the foundation—components, patterns, principles—matters more than jumping into high-fidelity mockups.</p>
+                    <p>Defining components, patterns, and principles first mattered more than jumping into high-fidelity mockups.</p>
                   </div>
                   
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Prioritizing clarity over speed</h3>
-                    <p>Taking time to write sample content and build example flows prevented costly misalignment later.</p>
+                    <p>Writing sample content and building example flows early kept the team aligned later.</p>
                   </div>
                   
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Navigating ambiguity without a design mentor</h3>
-                    <p>As the sole designer, I had to trust my judgment and advocate for structural decisions without external validation.</p>
+                    <p>As the only designer, I had to trust my own judgment and argue for structural decisions without anyone to check them with.</p>
                   </div>
                   
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Pushing back constructively</h3>
-                    <p>Challenging the CEO's text-heavy vision required evidence, empathy, and clear alternatives—not just critique.</p>
+                    <p>Challenging the CEO's text-heavy vision took evidence and clear alternatives, not only critique.</p>
                   </div>
                   
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Creating documentation before execution</h3>
-                    <p>Building the design system and UX principles upfront enabled parallel development and reduced confusion.</p>
+                    <p>Building the design system and UX principles up front let development run in parallel with less confusion.</p>
                   </div>
                 </div>
                 
                 <div className="mt-8 bg-yellow-50 dark:bg-yellow-950/30 rounded-subtle p-6 border-l-4 border-yellow-500 dark:border-yellow-600">
-                  <p className="text-gray-900 dark:text-gray-100 font-semibold mb-2">If I were to start again:</p>
-                  <p className="text-gray-700 dark:text-gray-200">I would formalize a PRD earlier to align scope before design. This would have reduced early-stage ambiguity and set clearer expectations.</p>
+                  <p className="text-gray-900 dark:text-gray-100 font-semibold mb-2">If I started again</p>
+                  <p className="text-gray-700 dark:text-gray-200">I would write a PRD earlier to agree on scope before design, which would have cleared up early questions and set clearer expectations.</p>
                 </div>
                 
-                <p className="mt-8 text-xl text-gray-900 dark:text-gray-100 font-semibold">This project strengthened my ability to define foundations, not just refine features.</p>
+                <p className="mt-8 type-h3 text-[var(--text)]">This project taught me to define a product's foundations, beyond refining features.</p>
               </div>
             </div>
           </AnimatedSection>

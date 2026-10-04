@@ -16,7 +16,7 @@ const WorkCard = ({ project }: WorkCardProps) => {
       <div className="relative w-full aspect-[4/3] overflow-hidden mb-5 border border-[var(--border)]">
         <img
           src={project.thumbnail}
-          alt={`${project.title}${project.descriptor ? ' — ' + project.descriptor : ''}`}
+          alt={`${project.title}${project.descriptor ? ': ' + project.descriptor : ''}`}
           className="w-full h-full object-cover object-bottom transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
         {isBuilding && (

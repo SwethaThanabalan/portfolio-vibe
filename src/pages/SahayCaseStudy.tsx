@@ -194,12 +194,12 @@ const SahayCaseStudy = () => {
 
           <Reveal>
             <h2 className="type-h2 mb-6">
-              Homeowners don't need another marketplace. They need confidence.
+              Homeowners wanted to understand a problem before hiring anyone.
             </h2>
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-6 type-body mb-8">
+            <div className="text-flow type-body mb-8">
               <p>
                 This project started from lived experience. Whenever something went wrong at home, I found myself bouncing between Google, YouTube, Reddit, and contractor sites with no way to know what was actually wrong, how serious it was, or who to trust.
               </p>
@@ -251,7 +251,7 @@ const SahayCaseStudy = () => {
               <Reveal delay={50}>
                 <div>
                   <h3 className="type-h3 mb-4">Primary research</h3>
-                  <ul className="space-y-3 text-[var(--text-secondary)]">
+                  <ul className="list-flow text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Homeowner interviews</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Renter interviews</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Shared housing participants</li>
@@ -262,7 +262,7 @@ const SahayCaseStudy = () => {
               <Reveal delay={100}>
                 <div>
                   <h3 className="type-h3 mb-4">Secondary research</h3>
-                  <ul className="space-y-3 text-[var(--text-secondary)]">
+                  <ul className="list-flow text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Competitive analysis of service platforms</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> DIY resource ecosystem mapping</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600 mt-0.5">•</span> Existing marketplace evaluation</li>
@@ -309,7 +309,7 @@ const SahayCaseStudy = () => {
 
           {/* Overview */}
           <AnimatedSection animation="fade-up" delay={100}>
-            <figure className="mb-16">
+            <figure className="media-frame mb-16">
               <img
                 src="/Overview of Sahay.png"
                 alt="Overview of four research synthesis themes: home maintenance experiences, desired features, attitudes toward apps, and DIY approach"
@@ -323,10 +323,10 @@ const SahayCaseStudy = () => {
           {/* Finding 1 -> Decision -> Response */}
           <AnimatedSection animation="fade-up" delay={150}>
             <div className="mb-16">
-              <figure className="mb-8">
+              <figure className="media-frame mb-8">
                 <img
                   src="/Research(1).jpg"
-                  alt="FigJam board: Desired Features in Home Repair App — notes grouped by urgency, trust, feature requests, and dealbreakers"
+                  alt="FigJam board: Desired Features in Home Repair App: notes grouped by urgency, trust, feature requests, and dealbreakers"
                   className="w-full border border-[var(--border)]"
                   loading="lazy"
                 />
@@ -353,10 +353,10 @@ const SahayCaseStudy = () => {
           {/* Finding 2 -> Decision -> Response */}
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="mb-12">
-              <figure className="mb-8">
+              <figure className="media-frame mb-8">
                 <img
                   src="/Research(2).jpg"
-                  alt="FigJam board: DIY Approach to Home Repairs — notes showing how users research problems across YouTube, Google, Reddit, and family"
+                  alt="FigJam board: DIY Approach to Home Repairs: notes showing how users research problems across YouTube, Google, Reddit, and family"
                   className="w-full border border-[var(--border)]"
                   loading="lazy"
                 />
@@ -388,22 +388,19 @@ const SahayCaseStudy = () => {
         <section className="layout-content mb-16">
 
           <PullQuote>
-            People don't need a better way to find contractors. They need confidence before deciding whether they need one.
+            People wanted to know what was wrong before deciding whether to call a contractor.
           </PullQuote>
 
           <Reveal>
-            <div className="space-y-6 type-body-lg">
+            <div className="text-flow type-body-lg">
               <p>
-                Initially, we believed the problem was: <em>"People need a better way to find service providers."</em>
-              </p>
-              <p>
-                Research proved that assumption wrong.
+                We started out assuming people needed a better way to find service providers.
               </p>
               <p className="type-lead font-medium">
-                The real problem: "People need confidence before deciding whether they need a service provider at all."
+                Research showed that was wrong. People needed confidence before deciding whether they needed a service provider at all.
               </p>
               <p>
-                This became the pivotal moment of the project. It fundamentally changed what we were building.
+                That finding changed what we were building.
               </p>
             </div>
           </Reveal>
@@ -411,20 +408,20 @@ const SahayCaseStudy = () => {
           <Reveal delay={100}>
             <div className="grid md:grid-cols-2 gap-px mt-12 border border-[var(--border)]">
               <div className="bg-[var(--finding)] p-8">
-                <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-3">What we assumed</p>
-                <p className="font-editorial text-xl text-[var(--text)]">Service Marketplace</p>
+                <p className="type-meta-label">What we assumed</p>
+                <p className="type-h3 text-[var(--text)]">Service marketplace</p>
                 <p className="type-body-sm mt-2">Help people find and book contractors faster</p>
               </div>
               <div className="bg-[var(--outcome)] p-8">
-                <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-3">What research revealed</p>
-                <p className="font-editorial text-xl text-[var(--text)]">AI-Powered Home Companion</p>
+                <p className="type-meta-label">What research revealed</p>
+                <p className="type-h3 text-[var(--text)]">AI-powered home companion</p>
                 <p className="type-body-sm mt-2">Help people understand problems and make informed decisions</p>
               </div>
             </div>
           </Reveal>
 
           <Callout variant="shift">
-            The original concept was closer to helping users connect with services. Research showed people often needed help understanding the problem before they were ready to decide what to do. That moved us toward an issue-first experience, and it defined every product decision that followed.
+            The original concept focused on connecting users with services. Because people needed to understand a problem before deciding what to do, we moved to an issue-first experience, and the product decisions below follow from that.
           </Callout>
         </section>
 
@@ -436,17 +433,17 @@ const SahayCaseStudy = () => {
 
           <Reveal>
             <h2 className="type-h2 mb-8">
-              What if homeowners could describe a problem and immediately receive guidance?
+              Homeowners describe a problem and get guidance right away
             </h2>
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-6 type-body-lg">
+            <div className="text-flow type-body-lg">
               <p>
-                As the project progressed, AI became increasingly central to how people solved problems in everyday life. Our team members were also working with AI in professional contexts, which informed our thinking about what was possible.
+                During the project, more people were turning to AI for everyday problems. Teammates also used AI at work, which shaped our sense of what was possible.
               </p>
               <p>
-                We began exploring a conversational AI model where homeowners could describe their issue naturally and receive structured, actionable guidance.
+                We began exploring a conversational AI model where homeowners could describe their issue naturally and get structured, step-by-step guidance.
               </p>
             </div>
           </Reveal>
@@ -470,8 +467,8 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={150}>
-            <p className="text-base text-gray-500 dark:text-gray-400 mt-8 italic">
-              We used Figma Make to rapidly prototype AI-driven interactions and test them with real users.
+            <p className="type-body text-[var(--muted)] mt-8 italic">
+              We used Figma Make to quickly prototype AI-driven interactions and test them with real users.
             </p>
           </Reveal>
         </section>
@@ -484,10 +481,10 @@ const SahayCaseStudy = () => {
 
           <Reveal>
             <h2 className="type-h2 mb-6">
-              How the AI experience was designed to work
+              Designing the AI experience
             </h2>
             <p className="type-body-lg mb-8">
-              I designed the AI interaction around a single idea: help people understand the problem before asking them to decide what to do about it. The flow moves from description, to understanding, to a recommended path the user chooses to follow.
+              I designed the AI interaction around a single idea: help people understand the problem before asking them to decide what to do about it. The user describes the problem, Sahay explains what is likely going on, and then it suggests a path the user can choose to follow.
             </p>
           </Reveal>
 
@@ -514,7 +511,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Callout variant="shift">
-            The AI itself was not functional in the prototype. This case study uses an example scenario to demonstrate how the interaction would work. It is not a working AI system.
+            The AI was not functional in the prototype. This case study walks through an example scenario to show how the interaction would work.
           </Callout>
         </section>
 
@@ -541,7 +538,7 @@ const SahayCaseStudy = () => {
               </div>
               <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: 'var(--accent)' }}>
                 <p className="type-meta-label mb-2">User's role</p>
-                <p className="type-body">Decide whether to follow the DIY path or seek professional help. The recommendation is a starting point, not a verdict.</p>
+                <p className="type-body">Decide whether to follow the DIY path or seek professional help. The recommendation is only a suggestion.</p>
               </div>
               <div className="border-l-4 pl-5 py-1" style={{ borderLeftColor: '#4a8c5c' }}>
                 <p className="type-meta-label mb-2">Personalization</p>
@@ -564,29 +561,29 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-6 type-body-lg">
+            <div className="text-flow type-body-lg">
               <p>
-                Because we planned to prototype AI-driven experiences, validating the information architecture and user flows before building became essential. We created detailed end-to-end flows and tested them with participants.
+                Because we planned to prototype AI-driven experiences, we validated the information architecture and user flows first. We created detailed end-to-end flows and tested them with participants.
               </p>
-              <p>Participants strongly validated:</p>
+              <p>Participants clearly supported:</p>
             </div>
           </Reveal>
 
           <Reveal delay={100}>
-            <ul className="mt-4 mb-8 space-y-3 ml-1 type-body-lg">
-              <li className="flex items-start gap-3"><span className="text-green-600 dark:text-green-400 mt-1">✓</span> Problem-first navigation: start with "what's wrong," not "find a pro"</li>
+            <ul className="mt-4 mb-8 list-flow ml-1 type-body-lg">
+              <li className="flex items-start gap-3"><span className="text-green-600 dark:text-green-400 mt-1">✓</span> Problem-first navigation: start with "what's wrong" instead of "find a pro"</li>
               <li className="flex items-start gap-3"><span className="text-green-600 dark:text-green-400 mt-1">✓</span> Understanding before booking: diagnosis precedes action</li>
-              <li className="flex items-start gap-3"><span className="text-green-600 dark:text-green-400 mt-1">✓</span> Guided decision making: the system helps users decide, not just presents options</li>
+              <li className="flex items-start gap-3"><span className="text-green-600 dark:text-green-400 mt-1">✓</span> Guided decision making: the system helps users decide instead of only listing options</li>
             </ul>
           </Reveal>
 
           <Callout>
-            Feedback from flow testing helped us refine the experience before any high-fidelity design work began. This saved significant design and development time.
+            Feedback from flow testing let us refine the experience before high-fidelity design began, which saved design and development time.
           </Callout>
 
           {/* IA diagram — wider for readability */}
           <Reveal delay={150}>
-            <div className="mt-10 -mx-6 md:mx-0">
+            <div className="media-frame mt-10">
               <img
                 src="/Research(5).png"
                 alt="Information architecture diagram and user flow validation"
@@ -606,7 +603,7 @@ const SahayCaseStudy = () => {
 
             <Reveal>
               <h2 className="type-h2 mb-6">
-                Every design decision was guided by three principles.
+                Design principles
               </h2>
             </Reveal>
 
@@ -615,21 +612,21 @@ const SahayCaseStudy = () => {
                 <div className="bg-white dark:bg-[var(--bg)] rounded-subtle p-6 border border-gray-200 dark:border-[var(--border)] h-full">
                   <div className="text-2xl mb-3">🧭</div>
                   <h3 className="type-h3 mb-2">Confidence first</h3>
-                  <p className="type-body-sm">Every interaction should increase the user's understanding and reduce anxiety before asking them to take action or spend money.</p>
+                  <p className="type-body-sm">Help the user understand the problem and feel less anxious before asking them to act or spend money.</p>
                 </div>
               </Reveal>
               <Reveal delay={100}>
                 <div className="bg-white dark:bg-[var(--bg)] rounded-subtle p-6 border border-gray-200 dark:border-[var(--border)] h-full">
                   <div className="text-2xl mb-3">🤝</div>
-                  <h3 className="type-h3 mb-2">Companion, not tool</h3>
-                  <p className="type-body-sm">The product should feel like a knowledgeable friend, conversational, empathetic, and always oriented toward the user's best interest.</p>
+                  <h3 className="type-h3 mb-2">Feels like a companion</h3>
+                  <p className="type-body-sm">The product should feel like a knowledgeable friend who talks things through and is on the user's side.</p>
                 </div>
               </Reveal>
               <Reveal delay={150}>
                 <div className="bg-white dark:bg-[var(--bg)] rounded-subtle p-6 border border-gray-200 dark:border-[var(--border)] h-full">
                   <div className="text-2xl mb-3">⚖️</div>
-                  <h3 className="type-h3 mb-2">DIY + Pro, not either/or</h3>
-                  <p className="type-body-sm">Never force a user down one path. Present both options with clear guidance on when each makes sense.</p>
+                  <h3 className="type-h3 mb-2">Offer DIY and professional help</h3>
+                  <p className="type-body-sm">Don't force one path. Show both options and explain when each makes sense.</p>
                 </div>
               </Reveal>
             </div>
@@ -644,15 +641,15 @@ const SahayCaseStudy = () => {
 
           <Reveal>
             <h2 className="type-h2 mb-6">
-              Final Solution
+              Final solution
             </h2>
             <p className="type-body-lg mb-8">
-              The interactive prototype demonstrates the full Sahay experience, from onboarding through AI diagnosis, DIY guidance, and professional booking.
+              The interactive prototype covers onboarding, AI diagnosis, DIY guidance, and professional booking.
             </p>
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="w-full rounded-subtle overflow-hidden border border-gray-200 dark:border-[var(--border)] shadow-sm" style={{ paddingBottom: '56.25%', position: 'relative' }}>
+            <div className="media-frame relative aspect-video w-full rounded-subtle overflow-hidden border border-gray-200 dark:border-[var(--border)] shadow-sm">
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/O67w4i0cTFg?si=AbfgtsdcDOJDs7TI"
@@ -673,21 +670,21 @@ const SahayCaseStudy = () => {
           <Reveal>
             <div className="mb-6">
               <h3 className="type-h3 mb-4">Decision 01: Rethinking onboarding</h3>
-              <div className="space-y-6 type-body-lg">
+              <div className="text-flow type-body-lg">
                 <p>
                   Originally, we wanted to collect extensive homeowner information upfront, including home age, systems, past repairs, and appliance inventory. Testing revealed this created too much friction. Users abandoned or rushed through it.
                 </p>
                 <p>
-                  I helped rethink this approach. Instead of overwhelming users with questions, I designed a lightweight onboarding that feeds into a MyHome experience. AI summarizes important information after onboarding, reducing effort while preserving personalization.
+                  I helped rethink this. Instead of a long list of questions, I designed a short onboarding that feeds into a MyHome experience. AI then summarizes the important information, so users do less work and still get a personalized experience.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-8">
                 <div className="bg-red-50 dark:bg-red-950/30 rounded-subtle p-5">
-                  <p className="text-xs font-semibold text-red-700 dark:text-red-300 mb-2">Before</p>
+                  <p className="type-meta-label text-red-700 dark:text-red-300">Before</p>
                   <p className="type-body-sm">Long questionnaire upfront → high drop-off</p>
                 </div>
                 <div className="bg-green-50 dark:bg-green-950/30 rounded-subtle p-5">
-                  <p className="text-xs font-semibold text-green-700 dark:text-green-300 mb-2">After</p>
+                  <p className="type-meta-label text-green-700 dark:text-green-300">After</p>
                   <p className="type-body-sm">Minimal input → AI-generated home summary → progressive detail</p>
                 </div>
               </div>
@@ -698,9 +695,9 @@ const SahayCaseStudy = () => {
           <Reveal>
             <div className="mb-6">
               <h3 className="type-h3 mb-4">Decision 02: MyHome dashboard</h3>
-              <div className="space-y-6 type-body-lg">
+              <div className="text-flow type-body-lg">
                 <p>
-                  I designed the MyHome experience as a central hub that felt useful immediately, not a static profile page, but a personalized home companion. The dashboard surfaces relevant maintenance reminders, AI-generated insights about the home, and quick access to diagnosis.
+                  I designed MyHome as a central hub that is useful from the first visit, rather than a static profile page. The dashboard shows maintenance reminders, AI-generated insights about the home, and quick access to diagnosis.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2 mt-6">
@@ -715,12 +712,12 @@ const SahayCaseStudy = () => {
           <Reveal>
             <div className="mb-6">
               <h3 className="type-h3 mb-4">Decision 03: AI-generated home summary</h3>
-              <div className="space-y-6 type-body-lg">
+              <div className="text-flow type-body-lg">
                 <p>
-                  One of my key design contributions was introducing AI-generated home summaries. Instead of asking users to manually document everything, the system synthesizes onboarding data, past interactions, and home details into an intelligent overview.
+                  I introduced AI-generated home summaries. Instead of asking users to document everything by hand, the system combines onboarding data, past interactions, and home details into one overview.
                 </p>
                 <p>
-                  Users consistently responded positively. Many participants identified this as one of the most valuable parts of the entire experience.
+                  Participants responded well to it, and many named it as one of the most valuable parts of the experience.
                 </p>
               </div>
               <Callout variant="insight">
@@ -733,26 +730,23 @@ const SahayCaseStudy = () => {
           <Reveal>
             <div className="mb-8">
               <h3 className="type-h3 mb-4">Decision 04: Advocating for DIY guidance</h3>
-              <div className="space-y-6 type-body-lg">
-                <p>
-                  This became one of the most important stories in the project.
-                </p>
+              <div className="text-flow type-body-lg">
                 <p>
                   Some team members questioned whether DIY support should remain in the product. During early user flow testing, participants initially focused more on diagnosis and service booking. There was internal pressure to simplify by removing it.
                 </p>
                 <p>
-                  However, I believed DIY guidance was critical because it directly aligned with our core research findings: users want to understand and attempt simple fixes before hiring professionals. This wasn't a nice-to-have, it was foundational to the product's value proposition.
+                  I believed DIY guidance was essential because it came straight from our core research finding: users want to understand and try simple fixes before hiring a professional.
                 </p>
                 <p className="text-[var(--text)] font-medium">
-                  I advocated for keeping the feature. I designed the DIY experience. And I was right.
+                  I argued for keeping the feature and designed the DIY experience.
                 </p>
                 <p>
-                  Later usability testing validated the decision. Participants consistently highlighted DIY support as one of the strongest and most differentiated features in the product.
+                  Later usability testing supported the decision: participants often pointed to DIY support as one of the strongest and most distinctive features.
                 </p>
               </div>
 
               <Callout variant="shift">
-                This is an example of product judgment and research-driven decision making, trusting the data even when internal opinion pushed in a different direction.
+                I stuck with the research findings even when the team leaned the other way.
               </Callout>
             </div>
           </Reveal>
@@ -767,7 +761,7 @@ const SahayCaseStudy = () => {
 
             <Reveal>
               <h2 className="type-h2 mb-6">
-                What I personally owned and drove.
+                My contributions
               </h2>
             </Reveal>
 
@@ -775,7 +769,7 @@ const SahayCaseStudy = () => {
               <Reveal delay={50}>
                 <div className="space-y-6">
                   <h3 className="type-h3">Strategy & Research</h3>
-                  <ul className="space-y-3 text-[var(--text-secondary)]">
+                  <ul className="list-flow text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Initiated the project from personal insight</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Recruited and assembled the team</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Defined the research strategy</li>
@@ -787,7 +781,7 @@ const SahayCaseStudy = () => {
               <Reveal delay={100}>
                 <div className="space-y-6">
                   <h3 className="type-h3">Design & Validation</h3>
-                  <ul className="space-y-3 text-[var(--text-secondary)]">
+                  <ul className="list-flow text-[var(--text-secondary)]">
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Designed the onboarding experience</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Designed the MyHome dashboard</li>
                     <li className="flex items-start gap-2"><span className="text-indigo-600">→</span> Designed the AI home summary experience</li>
@@ -809,18 +803,17 @@ const SahayCaseStudy = () => {
 
           <Reveal>
             <h2 className="type-h2 mb-8">
-              Users didn't call it a maintenance app.<br/>
-              They called it a home partner.
+              Participants described Sahay as a home partner
             </h2>
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-6 type-body-lg mb-6">
+            <div className="text-flow type-body-lg mb-6">
               <p>
                 Across testing sessions, participants responded positively to AI document summaries, the home maintenance log, conversational AI, and the integrated DIY + professional support model.
               </p>
               <p>
-                But the most telling signal was language. Users consistently described Sahay as <strong>"a smart home partner"</strong> instead of "a home maintenance app." That shift in language indicated we'd succeeded in creating something that felt genuinely different from existing solutions.
+                Participants also described Sahay as <strong>"a smart home partner"</strong> rather than "a home maintenance app," which suggested it felt different from existing products.
               </p>
             </div>
           </Reveal>
@@ -844,7 +837,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <PullQuote>
-            Users weren't responding to what the AI could do. They were responding to what the product promised to be.
+            Participants were reacting to what the product promised more than to what the AI could actually do.
           </PullQuote>
         </section>
 
@@ -856,23 +849,23 @@ const SahayCaseStudy = () => {
 
           <Reveal>
             <h2 className="type-h2 mb-8">
-              What I learned about AI product design.
+              Lessons for AI product design
             </h2>
           </Reveal>
 
           <Reveal delay={50}>
-            <div className="space-y-6 type-body-lg">
+            <div className="text-flow type-body-lg">
               <p>
-                One of the most surprising learnings was that users perceived Sahay as a home companion, not a maintenance platform. They were responding to the broader vision of the product rather than the actual AI capabilities.
+                Participants saw Sahay as a home companion and responded to the overall vision more than to the actual AI capabilities.
               </p>
               <p>
-                Since we were building a prototype, we couldn't create a fully functional AI model. As a result, the AI experience didn't fully deliver on the intelligence implied by the concept. This taught me something critical:
+                Because this was a prototype, we couldn't build a working AI model, so the AI experience didn't deliver the intelligence the concept implied.
               </p>
             </div>
           </Reveal>
 
           <Callout variant="insight">
-            AI products are evaluated based on the quality of the AI interaction itself, not just the surrounding interface. The promise must match the delivery.
+            People judge an AI product mainly on the quality of the AI interaction itself, so what the product promises has to match what it delivers.
           </Callout>
         </section>
 
@@ -884,10 +877,10 @@ const SahayCaseStudy = () => {
 
           <Reveal>
             <h2 className="type-h2 mb-6">
-              Where I would take this next
+              Next steps
             </h2>
             <p className="type-body-lg mb-8">
-              I did not design detailed uncertainty or failure states during this project. If it continued, these are the questions I would work through next. They are future design considerations, not features that existed in the original prototype.
+              I did not design detailed uncertainty or failure states during this project. These are the questions I would work through next; none of them were part of the prototype.
             </p>
           </Reveal>
 
@@ -909,7 +902,7 @@ const SahayCaseStudy = () => {
           </Reveal>
 
           <Callout>
-            These are the design problems I would tackle if the project moved past the prototype stage, especially around how an AI-assisted product behaves when it is uncertain or wrong.
+            Most of them come down to how an AI-assisted product should behave when it is uncertain or wrong.
           </Callout>
         </section>
 
@@ -920,26 +913,26 @@ const SahayCaseStudy = () => {
         <section className="layout-content mb-16">
           <Reveal>
             <div className="bg-gray-900 p-10 md:p-14">
-              <h2 className="font-editorial text-2xl font-normal text-white mb-8">Why this project matters</h2>
+              <h2 className="type-h2 text-white">Takeaways</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div>
-                    <p className="text-sm font-semibold text-indigo-400 mb-2">Product thinking</p>
-                    <p className="text-gray-300 dark:text-gray-600 text-sm leading-relaxed">Reframed the entire product direction based on research, from marketplace to companion. Didn't just execute, challenged the brief.</p>
+                    <p className="type-body-sm font-semibold text-indigo-400">Product thinking</p>
+                    <p className="type-body-sm text-gray-300 dark:text-gray-600">Changed the product direction from marketplace to companion based on research, and questioned the original brief.</p>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-indigo-400 mb-2">Research-driven decisions</p>
-                    <p className="text-gray-300 dark:text-gray-600 text-sm leading-relaxed">Advocated for DIY guidance against internal pressure. Was later validated by usability testing. Trusted the data over opinions.</p>
+                    <p className="type-body-sm font-semibold text-indigo-400">Research-driven decisions</p>
+                    <p className="type-body-sm text-gray-300 dark:text-gray-600">Argued for keeping DIY guidance when the team wanted to cut it; usability testing later supported the decision.</p>
                   </div>
                 </div>
                 <div className="space-y-6">
                   <div>
-                    <p className="text-sm font-semibold text-indigo-400 mb-2">AI product design</p>
-                    <p className="text-gray-300 dark:text-gray-600 text-sm leading-relaxed">Explored conversational AI as a core interaction model. Learned that AI products are judged by the quality of the intelligence, not just the UI.</p>
+                    <p className="type-body-sm font-semibold text-indigo-400">AI product design</p>
+                    <p className="type-body-sm text-gray-300 dark:text-gray-600">Explored conversational AI as the core interaction and learned that people judge AI products mainly on the quality of the AI.</p>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-indigo-400 mb-2">Strategic initiative</p>
-                    <p className="text-gray-300 dark:text-gray-600 text-sm leading-relaxed">Identified the opportunity, recruited the team, drove research, and designed key experiences. Ownership from concept to validation.</p>
+                    <p className="type-body-sm font-semibold text-indigo-400">Strategic initiative</p>
+                    <p className="type-body-sm text-gray-300 dark:text-gray-600">Identified the opportunity, recruited the team, led research, and designed key experiences, from concept through validation.</p>
                   </div>
                 </div>
               </div>
