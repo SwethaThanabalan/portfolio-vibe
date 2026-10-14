@@ -45,7 +45,7 @@ export const projects: Project[] = [
     id: 'talofa-games-retention',
     title: 'Monster Walk re-engagement strategy',
     category: 'Product Design',
-    descriptor: 'Mobile game product design',
+    descriptor: 'Mobile game product design, a16z speedrun-backed',
     keywords: ['Product Design', 'User Research', 'A/B Testing', 'Interaction Design', 'Prototyping', 'Mobile UX'],
     result: '4 recommendations shipped in the live product.',
     year: '2024',

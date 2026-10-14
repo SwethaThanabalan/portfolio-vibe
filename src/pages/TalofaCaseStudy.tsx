@@ -288,7 +288,11 @@ const TalofaCaseStudy = () => {
 
           {/* Metadata */}
           <AnimatedSection animation="fade-up" delay={200}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 mt-8 border-t border-[var(--border)]">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 pt-8 mt-8 border-t border-[var(--border)]">
+              <div>
+                <p className="type-meta-label">Company</p>
+                <p className="type-meta">Talofa Games, a16z speedrun Cohort 001</p>
+              </div>
               <div>
                 <p className="type-meta-label">Role</p>
                 <p className="type-meta">Product Designer (Research → Strategy → Testing)</p>
@@ -314,6 +318,7 @@ const TalofaCaseStudy = () => {
           <AnimatedSection animation="fade-up">
             <h2 className="type-h2 mb-6">Business Context</h2>
             <div className="type-body-lg text-flow">
+              <p>Talofa Games is an a16z speedrun-backed studio (Cohort 001) whose team includes veterans of EA, 2K, and Riot Games. I joined during Monster Walk's closed beta, before its public launch.</p>
               <p>Talofa Games built Monster Walk to gamify walking. Real steps power character growth, quests, and progression. Early engagement was strong, but users who lapsed for 7+ days weren't coming back.</p>
             </div>
           </AnimatedSection>
