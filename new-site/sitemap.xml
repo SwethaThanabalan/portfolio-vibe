@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://swethathanabalan.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://swethathanabalan.com/project/sahay/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://swethathanabalan.com/project/monster-walk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://swethathanabalan.com/project/septa/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://swethathanabalan.com/project/adult-you/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://swethathanabalan.com/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://swethathanabalan.com/photography/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/ridge-green.jpg</image:loc>
+      <image:caption>Green ridged mountains under a blue sky, landscape photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/headshot-teal.jpg</image:loc>
+      <image:caption>Studio headshot of a smiling woman against a teal backdrop</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/portrait-suit.jpg</image:loc>
+      <image:caption>Studio portrait of a man in glasses and a dark suit, arms crossed</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/thai-curry.jpg</image:loc>
+      <image:caption>Thai curry served in a coconut shell, food photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/lawn-mountains.jpg</image:loc>
+      <image:caption>Lawn and low building at the foot of green mountains, landscape photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/canyon-walls.jpg</image:loc>
+      <image:caption>Abstract close-up of red and purple sandstone canyon walls</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/portrait-turtleneck.jpg</image:loc>
+      <image:caption>Studio portrait of a man in a black jacket and grey turtleneck</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/veal-chop.jpg</image:loc>
+      <image:caption>Grilled veal chop plated with sauce and garnish, food photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/headshot-blazer.jpg</image:loc>
+      <image:caption>Professional headshot of a woman in a grey blazer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/ridge-sunlit.jpg</image:loc>
+      <image:caption>Sunlit green mountain ridgeline with clouds, landscape photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/ohio-farmland.jpg</image:loc>
+      <image:caption>Rolling green farmland with a wooden fence in Ohio, landscape photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/paneer.jpg</image:loc>
+      <image:caption>Paneer curry in a silver bowl with naan, styled food photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/fritters.jpg</image:loc>
+      <image:caption>Crispy fritters beside fresh green chilies on a dark surface, food photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/trout.jpg</image:loc>
+      <image:caption>Rainbow trout fillet plated in a golden sauce, food photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/cookies.jpg</image:loc>
+      <image:caption>Stack of jam-topped cookies beside a pitcher of milk, food photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/sushi.jpg</image:loc>
+      <image:caption>Sushi rolls on a wooden board with chopsticks, food photography</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/photography/hair-dryer.jpg</image:loc>
+      <image:caption>Black hair dryer on a dark background, product photography</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://swethathanabalan.com/graphic-design/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/graphic/poster-yoga.jpg</image:loc>
+      <image:caption>Yoga classes poster</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/graphic/welcome-sign.jpg</image:loc>
+      <image:caption>Baby shower welcome sign</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/graphic/posterize-car.jpg</image:loc>
+      <image:caption>Posterize and invert photo treatment of a vintage car</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/graphic/editorial-cover.jpg</image:loc>
+      <image:caption>Editorial cover: Spring 2021 community events</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/graphic/editorial-spread.jpg</image:loc>
+      <image:caption>Editorial spread: library events listing</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/graphic/news-ad-1.jpg</image:loc>
+      <image:caption>News ad: Invest in Canada’s Future, donation appeal</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/graphic/news-ad-2.jpg</image:loc>
+      <image:caption>News ad: Invest in Canada’s Future, alternate layout</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/graphic/postcard-front.jpg</image:loc>
+      <image:caption>Postcard front: COVID-19 vaccine</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://swethathanabalan.com/assets/graphic/postcard-back.jpg</image:loc>
+      <image:caption>Postcard back: immunization clinic details</image:caption>
+    </image:image>
+  </url>
+</urlset>
