@@ -2149,6 +2149,53 @@ p.eyebrow, .cs-meta dt, .stop-count, .deck-label, .cs-tldr .eyebrow, .cs-page .c
 .phone-fig .phone-screen { background: #1a1a1f center / cover no-repeat; }
 .phone-fig iframe { position: absolute; left: 50%; top: 50%; border: 0; opacity: 0; transition: opacity .6s ease; transform-origin: center; transform: translate(-50%, -50%) scale(var(--fs, 0.7)); }
 .phone-fig.is-ready iframe { opacity: 1; }
+
+/* photography and graphic design pages, the home links to them, and the About synopsis */
+.beyond { padding-block: 24px 8px; }
+.beyond-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+.beyond-card { display: grid; gap: 8px; align-content: start; text-decoration: none; color: inherit; }
+.beyond-pic { display: block; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 10px; background: var(--accent-soft); box-shadow: 0 0 0 1px var(--hairline); }
+.beyond-pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s cubic-bezier(.16, 1, .3, 1); }
+.beyond-card:hover .beyond-pic img, .beyond-card:focus-visible .beyond-pic img { transform: scale(1.04); }
+.beyond-card .eyebrow { margin: 10px 0 0; }
+.beyond-title { font-family: var(--font-display); font-weight: 500; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.15; }
+.beyond-text { font-family: var(--font-ui); font-size: 15px; line-height: 1.55; color: var(--ink-muted); max-width: 44ch; }
+.beyond-go { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--accent); }
+.beyond-card:focus-visible, .about-snap-link:focus-visible, .g-item:focus-visible, .g-chip:focus-visible, .lb-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 8px; }
+
+.about-snap { display: grid; grid-template-columns: minmax(180px, 280px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; max-width: 980px; margin: 0 auto; padding-block: 72px 48px; }
+.about-snap-pic { position: relative; margin: 0; padding: 10px 10px 34px; background: var(--paper); border-radius: 4px; box-shadow: 0 0 0 1px var(--hairline), 0 18px 36px -22px rgba(20, 14, 8, 0.5); transform: rotate(-2deg); }
+.about-snap-pic img { display: block; width: 100%; height: auto; border-radius: 2px; }
+.about-snap-text h2 { margin: 0 0 14px; font-family: var(--font-display); font-weight: 500; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.15; letter-spacing: -0.01em; text-wrap: balance; }
+.about-snap-text p { margin: 0 0 12px; font-family: var(--font-ui); font-size: 16px; line-height: 1.65; max-width: 56ch; }
+.about-snap-text .eyebrow { margin-bottom: 10px; }
+.about-snap-link { display: inline-flex; gap: 8px; margin-top: 6px; padding: 10px 0; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--hairline); }
+@media (max-width: 720px) { .about-snap { grid-template-columns: 1fr; } .about-snap-pic { max-width: 240px; } }
+
+.gallery-page .g-head { max-width: 720px; margin-bottom: 28px; }
+.gallery-page .g-intro { margin: 14px 0 0; font-family: var(--font-ui); font-size: 17px; line-height: 1.6; color: var(--ink-muted); }
+.g-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
+.g-chip { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--hairline); background: none; color: var(--ink); font-family: var(--font-ui); font-size: 13px; font-weight: 600; cursor: pointer; }
+.g-chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.gallery { list-style: none; margin: 0; padding: 0; columns: 3 260px; column-gap: 16px; }
+.gallery li { break-inside: avoid; margin: 0 0 16px; }
+.gallery li[hidden] { display: none; }
+.g-item { display: block; width: 100%; padding: 0; border: 0; background: var(--accent-soft); border-radius: 6px; overflow: hidden; cursor: zoom-in; box-shadow: 0 0 0 1px var(--hairline); }
+.g-item img { display: block; width: 100%; height: auto; transition: transform .6s cubic-bezier(.16, 1, .3, 1), filter .3s; }
+.g-item:hover img { transform: scale(1.03); }
+.g-cap { display: block; margin-top: 8px; font-family: var(--font-ui); font-size: 13px; line-height: 1.4; color: var(--ink-muted); }
+
+dialog.lightbox { border: 0; padding: 0; background: transparent; color: #fff; width: 100vw; max-width: 100vw; height: 100vh; max-height: 100vh; }
+dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
+.lb { height: 100%; display: grid; grid-template-rows: 1fr auto; place-items: center; padding: 56px 64px 24px; }
+.lb img { max-width: 100%; max-height: calc(100vh - 150px); object-fit: contain; border-radius: 4px; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7); }
+.lb-cap { margin: 14px 0 0; max-width: 70ch; text-align: center; font-family: var(--font-ui); font-size: 14px; line-height: 1.5; color: rgba(255, 255, 255, 0.85); }
+.lb-btn { position: absolute; width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 50%; background: rgba(16, 12, 8, 0.4); color: #fff; font-size: 20px; cursor: pointer; }
+.lb-btn:hover { background: rgba(255, 255, 255, 0.16); }
+.lb-close { top: 16px; right: 16px; } .lb-prev { left: 14px; top: 50%; margin-top: -23px; } .lb-next { right: 14px; top: 50%; margin-top: -23px; }
+@media (max-width: 640px) { .lb { padding: 64px 12px 16px; } .lb-prev, .lb-next { top: auto; bottom: 14px; margin-top: 0; } .lb-prev { left: 14px; } .lb-next { right: 14px; } }
+@media (prefers-reduced-motion: reduce) { .beyond-pic img, .g-item img { transition: none; } }
+.about-more { margin: 36px 0 0; font-family: var(--font-ui); font-size: 15px; color: var(--ink-muted); } .about-more a { color: var(--accent); font-weight: 600; }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -2384,6 +2431,42 @@ p.eyebrow, .cs-meta dt, .stop-count, .deck-label, .cs-tldr .eyebrow, .cs-page .c
   </div>
 </section>
 
+<section id="beyond" class="beyond gutter" data-home-only aria-labelledby="beyond-h">
+  <h2 id="beyond-h" class="visually-hidden">Beyond product design</h2>
+  <span class="also-head" aria-hidden="true">beyond product design</span>
+  <div class="hairline"></div>
+  <div class="beyond-grid">
+    <a class="beyond-card" href="#photography">
+      <span class="beyond-pic"><img src="assets/photography/ridge-sunlit.jpg" alt="" width="2000" height="1333" loading="lazy" decoding="async"></span>
+      <span class="eyebrow">Photography</span>
+      <span class="beyond-title">Commercial and personal work</span>
+      <span class="beyond-text">When I shoot, I ask what I ask of a product: does it have the effect I intended?</span>
+      <span class="beyond-go">See the photos <span aria-hidden="true">&rarr;</span></span>
+    </a>
+    <a class="beyond-card" href="#graphic-design">
+      <span class="beyond-pic"><img src="assets/graphic/editorial-spread.jpg" alt="" width="2000" height="1325" loading="lazy" decoding="async"></span>
+      <span class="eyebrow">Graphic design</span>
+      <span class="beyond-title">Posters, layouts and ads</span>
+      <span class="beyond-text">Posters, editorial layouts, ads, and brand assets from my communication and marketing work.</span>
+      <span class="beyond-go">See the design work <span aria-hidden="true">&rarr;</span></span>
+    </a>
+  </div>
+</section>
+
+<section id="about-me" class="about-snap gutter" data-home-only aria-labelledby="about-snap-h">
+  <figure class="about-snap-pic">
+    <div class="polaroid-tape" aria-hidden="true"></div>
+    <img src="assets/about/me-grad.jpg" alt="Swetha in her graduation gown and cap in a stadium" width="640" height="800" loading="lazy" decoding="async">
+  </figure>
+  <div class="about-snap-text">
+    <p class="eyebrow">About me</p>
+    <h2 id="about-snap-h">Big family, busy city, and a calling I found by <em>building things</em>.</h2>
+    <p>I grew up in a busy city, in a big extended family. We traveled a lot, so I changed schools often and learned early how to walk into a new room and make friends.</p>
+    <p>Moving to Canada and getting into project-based work is where I found my calling: building things that make life easier for people.</p>
+    <a class="about-snap-link" href="#about">More about me <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>
+
 <section id="about" class="about-page gutter" hidden aria-labelledby="about-title">
   <a href="#" class="about-back" data-home><span class="arr" aria-hidden="true">&larr;</span> Back to my work</a>
   <div class="about-grid sb">
@@ -2500,6 +2583,70 @@ p.eyebrow, .cs-meta dt, .stop-count, .deck-label, .cs-tldr .eyebrow, .cs-page .c
     </section>
 
   </div>
+  <p class="about-more">More of what I make: <a href="#photography">Photography</a> and <a href="#graphic-design">Graphic design</a>.</p>
+</section>
+
+<section id="photography" class="about-page gallery-page gutter" data-page hidden aria-labelledby="photography-title">
+  <a href="#" class="about-back" data-home><span class="arr" aria-hidden="true">&larr;</span> Back to my work</a>
+  <header class="g-head">
+    <p class="eyebrow">Photography</p>
+    <h1 id="photography-title" class="sb-title">Commercial and personal work.</h1>
+    <p class="g-intro">When I shoot, I ask what I ask of a product: does it have the effect I intended?</p>
+  </header>
+  <div class="g-filters" role="group" aria-label="Filter photos">
+    <button type="button" class="g-chip" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" class="g-chip" data-filter="landscape" aria-pressed="false">Landscape</button>
+    <button type="button" class="g-chip" data-filter="food" aria-pressed="false">Food</button>
+    <button type="button" class="g-chip" data-filter="portraits" aria-pressed="false">Portraits</button>
+    <button type="button" class="g-chip" data-filter="product" aria-pressed="false">Product</button>
+  </div>
+  <ul class="gallery" data-gallery aria-label="Photography work">
+    <li data-g="landscape"><button type="button" class="g-item" data-full="assets/photography/ridge-green.jpg" data-alt="Green ridged mountains under a blue sky, landscape photography"><img src="assets/photography/ridge-green.jpg" alt="Green ridged mountains under a blue sky, landscape photography" width="2000" height="1333" loading="lazy" decoding="async"></button></li>
+<li data-g="portraits"><button type="button" class="g-item" data-full="assets/photography/headshot-teal.jpg" data-alt="Studio headshot of a smiling woman against a teal backdrop"><img src="assets/photography/headshot-teal.jpg" alt="Studio headshot of a smiling woman against a teal backdrop" width="1333" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="portraits"><button type="button" class="g-item" data-full="assets/photography/portrait-suit.jpg" data-alt="Studio portrait of a man in glasses and a dark suit, arms crossed"><img src="assets/photography/portrait-suit.jpg" alt="Studio portrait of a man in glasses and a dark suit, arms crossed" width="1333" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="food"><button type="button" class="g-item" data-full="assets/photography/thai-curry.jpg" data-alt="Thai curry served in a coconut shell, food photography"><img src="assets/photography/thai-curry.jpg" alt="Thai curry served in a coconut shell, food photography" width="1362" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="landscape"><button type="button" class="g-item" data-full="assets/photography/lawn-mountains.jpg" data-alt="Lawn and low building at the foot of green mountains, landscape photography"><img src="assets/photography/lawn-mountains.jpg" alt="Lawn and low building at the foot of green mountains, landscape photography" width="2000" height="1333" loading="lazy" decoding="async"></button></li>
+<li data-g="landscape"><button type="button" class="g-item" data-full="assets/photography/canyon-walls.jpg" data-alt="Abstract close-up of red and purple sandstone canyon walls"><img src="assets/photography/canyon-walls.jpg" alt="Abstract close-up of red and purple sandstone canyon walls" width="1333" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="portraits"><button type="button" class="g-item" data-full="assets/photography/portrait-turtleneck.jpg" data-alt="Studio portrait of a man in a black jacket and grey turtleneck"><img src="assets/photography/portrait-turtleneck.jpg" alt="Studio portrait of a man in a black jacket and grey turtleneck" width="1333" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="food"><button type="button" class="g-item" data-full="assets/photography/veal-chop.jpg" data-alt="Grilled veal chop plated with sauce and garnish, food photography"><img src="assets/photography/veal-chop.jpg" alt="Grilled veal chop plated with sauce and garnish, food photography" width="1377" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="portraits"><button type="button" class="g-item" data-full="assets/photography/headshot-blazer.jpg" data-alt="Professional headshot of a woman in a grey blazer"><img src="assets/photography/headshot-blazer.jpg" alt="Professional headshot of a woman in a grey blazer" width="1333" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="landscape"><button type="button" class="g-item" data-full="assets/photography/ridge-sunlit.jpg" data-alt="Sunlit green mountain ridgeline with clouds, landscape photography"><img src="assets/photography/ridge-sunlit.jpg" alt="Sunlit green mountain ridgeline with clouds, landscape photography" width="2000" height="1333" loading="lazy" decoding="async"></button></li>
+<li data-g="landscape"><button type="button" class="g-item" data-full="assets/photography/ohio-farmland.jpg" data-alt="Rolling green farmland with a wooden fence in Ohio, landscape photography"><img src="assets/photography/ohio-farmland.jpg" alt="Rolling green farmland with a wooden fence in Ohio, landscape photography" width="2000" height="1333" loading="lazy" decoding="async"></button></li>
+<li data-g="food"><button type="button" class="g-item" data-full="assets/photography/paneer.jpg" data-alt="Paneer curry in a silver bowl with naan, styled food photography"><img src="assets/photography/paneer.jpg" alt="Paneer curry in a silver bowl with naan, styled food photography" width="1554" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="food"><button type="button" class="g-item" data-full="assets/photography/fritters.jpg" data-alt="Crispy fritters beside fresh green chilies on a dark surface, food photography"><img src="assets/photography/fritters.jpg" alt="Crispy fritters beside fresh green chilies on a dark surface, food photography" width="2000" height="1125" loading="lazy" decoding="async"></button></li>
+<li data-g="food"><button type="button" class="g-item" data-full="assets/photography/trout.jpg" data-alt="Rainbow trout fillet plated in a golden sauce, food photography"><img src="assets/photography/trout.jpg" alt="Rainbow trout fillet plated in a golden sauce, food photography" width="2000" height="1356" loading="lazy" decoding="async"></button></li>
+<li data-g="food"><button type="button" class="g-item" data-full="assets/photography/cookies.jpg" data-alt="Stack of jam-topped cookies beside a pitcher of milk, food photography"><img src="assets/photography/cookies.jpg" alt="Stack of jam-topped cookies beside a pitcher of milk, food photography" width="1500" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="food"><button type="button" class="g-item" data-full="assets/photography/sushi.jpg" data-alt="Sushi rolls on a wooden board with chopsticks, food photography"><img src="assets/photography/sushi.jpg" alt="Sushi rolls on a wooden board with chopsticks, food photography" width="1125" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="product"><button type="button" class="g-item" data-full="assets/photography/hair-dryer.jpg" data-alt="Black hair dryer on a dark background, product photography"><img src="assets/photography/hair-dryer.jpg" alt="Black hair dryer on a dark background, product photography" width="2000" height="1151" loading="lazy" decoding="async"></button></li>
+  </ul>
+  <nav class="cs-foot" aria-label="More">
+    <a href="#" data-home>&larr; Back to my work</a>
+    <a href="#graphic-design">Graphic design &rarr;</a>
+  </nav>
+</section>
+
+<section id="graphic-design" class="about-page gallery-page gutter" data-page hidden aria-labelledby="graphic-design-title">
+  <a href="#" class="about-back" data-home><span class="arr" aria-hidden="true">&larr;</span> Back to my work</a>
+  <header class="g-head">
+    <p class="eyebrow">Graphic design</p>
+    <h1 id="graphic-design-title" class="sb-title">Posters, layouts and ads.</h1>
+    <p class="g-intro">Posters, editorial layouts, ads, and brand assets from my communication and marketing work.</p>
+  </header>
+  <ul class="gallery" data-gallery aria-label="Graphic design work">
+    <li><button type="button" class="g-item" data-full="assets/graphic/poster-yoga.jpg" data-alt="Yoga classes poster"><img src="assets/graphic/poster-yoga.jpg" alt="Yoga classes poster" width="1500" height="2000" loading="lazy" decoding="async"></button><span class="g-cap">Yoga classes poster</span></li>
+<li><button type="button" class="g-item" data-full="assets/graphic/welcome-sign.jpg" data-alt="Baby shower welcome sign"><img src="assets/graphic/welcome-sign.jpg" alt="Baby shower welcome sign" width="1333" height="2000" loading="lazy" decoding="async"></button><span class="g-cap">Baby shower welcome sign</span></li>
+<li><button type="button" class="g-item" data-full="assets/graphic/posterize-car.jpg" data-alt="Posterize and invert photo treatment of a vintage car"><img src="assets/graphic/posterize-car.jpg" alt="Posterize and invert photo treatment of a vintage car" width="1600" height="2000" loading="lazy" decoding="async"></button><span class="g-cap">Posterize and invert photo treatment of a vintage car</span></li>
+<li><button type="button" class="g-item" data-full="assets/graphic/editorial-cover.jpg" data-alt="Editorial cover: Spring 2021 community events"><img src="assets/graphic/editorial-cover.jpg" alt="Editorial cover: Spring 2021 community events" width="990" height="1364" loading="lazy" decoding="async"></button><span class="g-cap">Editorial cover: Spring 2021 community events</span></li>
+<li><button type="button" class="g-item" data-full="assets/graphic/editorial-spread.jpg" data-alt="Editorial spread: library events listing"><img src="assets/graphic/editorial-spread.jpg" alt="Editorial spread: library events listing" width="2000" height="1325" loading="lazy" decoding="async"></button><span class="g-cap">Editorial spread: library events listing</span></li>
+<li><button type="button" class="g-item" data-full="assets/graphic/news-ad-1.jpg" data-alt="News ad: Invest in Canada&rsquo;s Future, donation appeal"><img src="assets/graphic/news-ad-1.jpg" alt="News ad: Invest in Canada&rsquo;s Future, donation appeal" width="1459" height="1500" loading="lazy" decoding="async"></button><span class="g-cap">News ad: Invest in Canada&rsquo;s Future, donation appeal</span></li>
+<li><button type="button" class="g-item" data-full="assets/graphic/news-ad-2.jpg" data-alt="News ad: Invest in Canada&rsquo;s Future, alternate layout"><img src="assets/graphic/news-ad-2.jpg" alt="News ad: Invest in Canada&rsquo;s Future, alternate layout" width="1459" height="1500" loading="lazy" decoding="async"></button><span class="g-cap">News ad: Invest in Canada&rsquo;s Future, alternate layout</span></li>
+<li><button type="button" class="g-item" data-full="assets/graphic/postcard-front.jpg" data-alt="Postcard front: COVID-19 vaccine"><img src="assets/graphic/postcard-front.jpg" alt="Postcard front: COVID-19 vaccine" width="1726" height="2326" loading="lazy" decoding="async"></button><span class="g-cap">Postcard front: COVID-19 vaccine</span></li>
+<li><button type="button" class="g-item" data-full="assets/graphic/postcard-back.jpg" data-alt="Postcard back: immunization clinic details"><img src="assets/graphic/postcard-back.jpg" alt="Postcard back: immunization clinic details" width="1151" height="1551" loading="lazy" decoding="async"></button><span class="g-cap">Postcard back: immunization clinic details</span></li>
+  </ul>
+  <nav class="cs-foot" aria-label="More">
+    <a href="#photography">&larr; Photography</a>
+    <a href="#" data-home>Back to my work &rarr;</a>
+  </nav>
 </section>
 
 <section id="sahay" class="cs-page gutter" data-page hidden aria-labelledby="sahay-title">
@@ -3053,6 +3200,14 @@ p.eyebrow, .cs-meta dt, .stop-count, .deck-label, .cs-tldr .eyebrow, .cs-page .c
 </section>
 
 
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <div class="lb">
+    <figure style="margin:0;display:grid;justify-items:center"><img id="lb-img" alt=""><figcaption class="lb-cap" id="lb-cap"></figcaption></figure>
+    <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Close">&times;</button>
+    <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Previous">&larr;</button>
+    <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Next">&rarr;</button>
+  </div>
+</dialog>
 <footer id="site-footer" class="site-footer gutter">
   <div class="footer-contact">
     <div class="contact-col" id="contact">
@@ -3731,7 +3886,7 @@ p.eyebrow, .cs-meta dt, .stop-count, .deck-label, .cs-tldr .eyebrow, .cs-page .c
   var pages = Array.prototype.slice.call(document.querySelectorAll('#about, [data-page]'));
   if (!pages.length) return;
   var baseTitle = document.title;
-  var titles = { about: 'About', sahay: 'Sahay', 'monster-walk': 'Monster Walk', septa: 'SEPTA', 'adult-you': 'Adult You' };
+  var titles = { about: 'About', photography: 'Photography', 'graphic-design': 'Graphic design', sahay: 'Sahay', 'monster-walk': 'Monster Walk', septa: 'SEPTA', 'adult-you': 'Adult You' };
   var lastHome = 0;
   function show() {
     var id = location.hash.slice(1), match = null;
@@ -3936,6 +4091,36 @@ p.eyebrow, .cs-meta dt, .stop-count, .deck-label, .cs-tldr .eyebrow, .cs-page .c
     btn.addEventListener('click', function () {
       var box = btn.closest('.cs-proto'), ph = box && box.querySelector('.phone-fig'), fr = ph && ph.querySelector('iframe');
       if (fr) { arm(ph); fr.src = fr.src; }
+    });
+  });
+})();
+</script>
+<script>
+/* galleries: filter the photos and view any image large, with arrow keys and Escape */
+(function () {
+  var dlg = document.getElementById('lightbox'); if (!dlg) return;
+  var img = document.getElementById('lb-img'), cap = document.getElementById('lb-cap'), items = [], at = 0, opener = null;
+  function visible(list) { return Array.prototype.filter.call(list.querySelectorAll('.g-item'), function (b) { return !b.closest('li').hidden; }); }
+  function paint() { var b = items[at]; img.src = b.dataset.full; img.alt = b.dataset.alt; cap.textContent = b.dataset.alt; }
+  function step(d) { at = (at + d + items.length) % items.length; paint(); }
+  document.querySelectorAll('[data-gallery]').forEach(function (list) {
+    list.addEventListener('click', function (e) {
+      var b = e.target.closest('.g-item'); if (!b) return;
+      items = visible(list); at = items.indexOf(b); opener = b; paint(); dlg.showModal();
+    });
+  });
+  document.getElementById('lb-close').onclick = function () { dlg.close(); };
+  document.getElementById('lb-prev').onclick = function () { step(-1); };
+  document.getElementById('lb-next').onclick = function () { step(1); };
+  dlg.addEventListener('click', function (e) { if (e.target === dlg || e.target.classList.contains('lb')) dlg.close(); });
+  dlg.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+  dlg.addEventListener('close', function () { if (opener) opener.focus(); });
+  var chips = document.querySelectorAll('.g-chip');
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      chips.forEach(function (o) { o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
+      var f = c.dataset.filter;
+      document.querySelectorAll('#photography .gallery li').forEach(function (li) { li.hidden = f !== 'all' && li.dataset.g !== f; });
     });
   });
 })();

@@ -18,9 +18,12 @@ python3 -m http.server 8000
   - `#septa`
   - `#adult-you`
   - `#about`
+  - `#photography`
+  - `#graphic-design`
 - Each page is a `<section data-page hidden>`. A small router shows the section that matches `location.hash` and sets the page title.
 - Fonts load from Google Fonts: Fraunces (headings), Inter (body), Caveat (handwritten notes).
 - `assets/sahay-app/` is a built, working Sahay prototype. The Sahay page embeds it in an iframe.
+- `assets/photography/` and `assets/graphic/` hold the two gallery pages' images. Every image needs alt text; the gallery lightbox reads it.
 - `assets/about/` holds the About page's photos and the dance video. They appear as photo stacks you tap to flip through (`[data-deck]`).
 - Theme: light, dark and high-contrast, through CSS variables on `:root` and the theme menu in the nav.
 
