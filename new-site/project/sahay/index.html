@@ -2277,7 +2277,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
     <a href="#hero" class="wordmark" aria-label="Swetha Thanabalan, home">Swetha<span class="wm-last"> Thanabalan</span></a>
     <nav class="nav">
       <a href="#climb">Work</a>
-      <a href="#about">About</a>
+      <a href="/about/" data-spa="about">About</a>
       <a href="#contact" class="nav-cta">Contact</a>
       <details class="theme-menu" id="theme-menu">
         <summary class="theme-toggle" aria-label="Display settings: theme and contrast">
@@ -2499,14 +2499,14 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
   <span class="also-head" aria-hidden="true">beyond product design</span>
   <div class="hairline"></div>
   <div class="beyond-grid">
-    <a class="beyond-card" href="#photography">
+    <a class="beyond-card" href="/photography/" data-spa="photography">
       <span class="beyond-pic"><img src="assets/photography/ridge-sunlit.jpg" alt="" width="2000" height="1333" loading="lazy" decoding="async"></span>
       <span class="eyebrow">Photography</span>
       <span class="beyond-title">Commercial and personal work</span>
       <span class="beyond-text">When I shoot, I ask what I ask of a product: does it have the effect I intended?</span>
       <span class="beyond-go">See the photos <span aria-hidden="true">&rarr;</span></span>
     </a>
-    <a class="beyond-card" href="#graphic-design">
+    <a class="beyond-card" href="/graphic-design/" data-spa="graphic-design">
       <span class="beyond-pic"><img src="assets/graphic/editorial-spread.jpg" alt="" width="2000" height="1325" loading="lazy" decoding="async"></span>
       <span class="eyebrow">Graphic design</span>
       <span class="beyond-title">Posters, layouts and ads</span>
@@ -2526,7 +2526,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
     <h2 id="about-snap-h">Big family, busy city, and a calling I found by <em>building things</em>.</h2>
     <p>I grew up in a busy city, in a big extended family. We traveled a lot, so I changed schools often and learned early how to walk into a new room and make friends.</p>
     <p>Moving to Canada and getting into project-based work is where I found my calling: building things that make life easier for people.</p>
-    <a class="about-snap-link" href="#about">More about me <span aria-hidden="true">&rarr;</span></a>
+    <a class="about-snap-link" href="/about/" data-spa="about">More about me <span aria-hidden="true">&rarr;</span></a>
   </div>
 </section>
 
@@ -3573,7 +3573,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 </script>
 <script>
 (function(){
-  function mark(){ var on=location.hash==='#about'; var a=document.querySelector('.nav a[href="#about"]'); if(!a) return; if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); }
+  function mark(){ var on=location.hash==='#about' || window.__PAGE__==='about'; var a=document.querySelector('.nav a[data-spa="about"]'); if(!a) return; if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); }
   window.addEventListener('hashchange', mark); mark();
 })();
 </script>

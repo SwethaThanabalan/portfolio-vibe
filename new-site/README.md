@@ -58,16 +58,18 @@ The new design doesn't have these yet. The old React site did:
    Decide whether to drop them or bring them back later as a "More work" section.
 7. **Large files.** `assets/hero-hike.mp4` (~6.6 MB) and `assets/about/dance.mp4` (~6 MB) could be compressed further if load speed matters.
 
-## Project pages for search engines
-`index.html` shows each project by hash route (`/#sahay`), which search engines treat as the home page.
-So each project also has a real address, generated from `index.html`:
+## Real pages for search engines
+`index.html` shows each page by hash route (`/#sahay`), which search engines treat as the home page.
+So each page also has a real address, generated from `index.html`:
 
 - `/project/sahay/`, `/project/monster-walk/`, `/project/septa/`, `/project/adult-you/`
-- each has its own title, description, canonical link, social tags and structured data, and appears in `sitemap.xml`
+- `/about/`, `/photography/`, `/graphic-design/`
+- each has its own title, description, canonical link, social tags and structured data, and appears in `sitemap.xml` (gallery images are listed for image search)
+- links on the site point to these addresses, and a click still switches pages smoothly without a reload
 - the old `/project/<old-name>/` addresses redirect to them
 
 After editing `index.html`, regenerate them (the deploy workflow also does this):
 ```
 python3 scripts/build-project-pages.py
 ```
-About, Photography and Graphic design are still hash routes. Add them to `PROJECTS`/`OTHER_PAGES` in the script if they should get their own addresses too.
+To add a page, add an entry to `PAGES` in the script.
