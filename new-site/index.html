@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Swetha Thanabalan | Product Designer &amp; UX Designer</title>
+<meta name="author" content="Swetha Thanabalan">
 <meta name="description" content="Swetha Thanabalan is a product designer and UX designer with a background in photography, marketing and public relations, and a master's in Human-Computer Interaction at Drexel. Selected work: Sahay, Monster Walk, SEPTA and Adult You.">
 <link rel="canonical" href="https://swethathanabalan.com/">
 <meta property="og:type" content="website">
@@ -30,7 +31,7 @@
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "Drexel University" },
       "knowsAbout": ["Product Design", "UX Design", "User Research", "Prototyping", "Human-Computer Interaction"]
     },
-    { "@type": "WebSite", "name": "Swetha Thanabalan Portfolio", "url": "https://swethathanabalan.com" }
+    { "@type": "WebSite", "name": "Swetha Thanabalan Portfolio", "url": "https://swethathanabalan.com", "copyrightHolder": { "@type": "Person", "name": "Swetha Thanabalan" }, "copyrightYear": 2026 }
   ]
 }
 </script>
@@ -2196,6 +2197,10 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 @media (max-width: 640px) { .lb { padding: 64px 12px 16px; } .lb-prev, .lb-next { top: auto; bottom: 14px; margin-top: 0; } .lb-prev { left: 14px; } .lb-next { right: 14px; } }
 @media (prefers-reduced-motion: reduce) { .beyond-pic img, .g-item img { transition: none; } }
 .about-more { margin: 36px 0 0; font-family: var(--font-ui); font-size: 15px; color: var(--ink-muted); } .about-more a { color: var(--accent); font-weight: 600; }
+.footer-legal { margin: 36px 0 0; padding-top: 20px; border-top: 1px dashed var(--hairline); max-width: 70ch; font-family: var(--font-ui); font-size: 12.5px; line-height: 1.6; color: var(--ink-muted); }
+.footer-legal a { color: var(--accent); font-weight: 600; }
+.gallery-page .g-note { margin: 8px 0 0; font-family: var(--font-ui); font-size: 13px; color: var(--ink-muted); }
+.lb-credit { margin-top: 6px; font-family: var(--font-ui); font-size: 12px; letter-spacing: 0.06em; color: rgba(255, 255, 255, 0.6); }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -2592,6 +2597,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
     <p class="eyebrow">Photography</p>
     <h1 id="photography-title" class="sb-title">Commercial and personal work.</h1>
     <p class="g-intro">When I shoot, I ask what I ask of a product: does it have the effect I intended?</p>
+    <p class="g-note">Photographs &copy; Swetha Thanabalan. Please ask before using or sharing them.</p>
   </header>
   <div class="g-filters" role="group" aria-label="Filter photos">
     <button type="button" class="g-chip" data-filter="all" aria-pressed="true">All</button>
@@ -2631,6 +2637,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
     <p class="eyebrow">Graphic design</p>
     <h1 id="graphic-design-title" class="sb-title">Posters, layouts and ads.</h1>
     <p class="g-intro">Posters, editorial layouts, ads, and brand assets from my communication and marketing work.</p>
+    <p class="g-note">Designs &copy; Swetha Thanabalan. Client names and logos belong to their owners.</p>
   </header>
   <ul class="gallery" data-gallery aria-label="Graphic design work">
     <li><button type="button" class="g-item" data-full="assets/graphic/poster-yoga.jpg" data-alt="Yoga classes poster"><img src="assets/graphic/poster-yoga.jpg" alt="Yoga classes poster" width="1500" height="2000" loading="lazy" decoding="async"></button><span class="g-cap">Yoga classes poster</span></li>
@@ -3202,7 +3209,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
 <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
   <div class="lb">
-    <figure style="margin:0;display:grid;justify-items:center"><img id="lb-img" alt=""><figcaption class="lb-cap" id="lb-cap"></figcaption></figure>
+    <figure style="margin:0;display:grid;justify-items:center"><img id="lb-img" alt=""><figcaption class="lb-cap" id="lb-cap"></figcaption><span class="lb-credit">&copy; Swetha Thanabalan</span></figure>
     <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Close">&times;</button>
     <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Previous">&larr;</button>
     <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Next">&rarr;</button>
@@ -3221,6 +3228,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
     </div>
   </div>
+  <p class="footer-legal">&copy; <span id="copy-year">2026</span> Swetha Thanabalan. All rights reserved. The photographs, graphic design and writing on this site are mine and may not be reused without permission. <a href="mailto:tys.swetha@gmail.com?subject=Permission%20to%20use%20your%20work">Ask first</a>. Product names, logos and game art belong to their owners.</p>
 </footer>
 
 <script>
@@ -4124,4 +4132,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
     });
   });
 })();
+</script>
+<script>
+document.getElementById('copy-year').textContent = new Date().getFullYear();
 </script>
