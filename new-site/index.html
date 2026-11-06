@@ -2293,7 +2293,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
           <p class="eyebrow">AI &middot; home companion</p>
           <h3>Sahay</h3>
           <p class="stop-brief">An AI home companion, from problem framing to a working prototype.</p>
-          <a class="soon cs-link" href="#sahay">See the project &rarr;</a>
+          <a class="soon cs-link" href="/project/sahay/" data-spa="sahay">See the project &rarr;</a>
           </div>
         </article>
         <article class="stop-card has-phone" data-card="1">
@@ -2328,7 +2328,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
           <p class="eyebrow">Games &middot; retention</p>
           <h3>Monster Walk</h3>
           <p class="stop-brief">A retention-focused redesign built for Talofa Games.</p>
-          <a class="soon cs-link" href="#monster-walk">See the project &rarr;</a>
+          <a class="soon cs-link" href="/project/monster-walk/" data-spa="monster-walk">See the project &rarr;</a>
         </div>
         </article>
         <article class="stop-card has-phone" data-card="2">
@@ -2358,7 +2358,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
           <p class="eyebrow">Transit &middot; mobile</p>
           <h3>SEPTA</h3>
           <p class="stop-brief">A mobile redesign for Philadelphia's transit app.</p>
-          <a class="soon cs-link" href="#septa">See the project &rarr;</a>
+          <a class="soon cs-link" href="/project/septa/" data-spa="septa">See the project &rarr;</a>
         </div>
         </article>
         <article class="stop-card has-phone" data-card="3">
@@ -2393,7 +2393,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
           <p class="eyebrow">Platform</p>
           <h3>Adult You</h3>
           <p class="stop-brief">A gamified life skills platform, designed from 0 to 1.</p>
-          <a class="soon cs-link" href="#adult-you">See the project &rarr;</a>
+          <a class="soon cs-link" href="/project/adult-you/" data-spa="adult-you">See the project &rarr;</a>
         </div>
         </article>
         </div>
@@ -2820,7 +2820,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
   <nav class="cs-foot" aria-label="Project navigation">
     <a href="#" data-home><span class="arr" aria-hidden="true">&larr;</span> All Projects</a>
-    <a href="#monster-walk">Next: Monster Walk <span class="arr" aria-hidden="true">&rarr;</span></a>
+    <a href="/project/monster-walk/" data-spa="monster-walk">Next: Monster Walk <span class="arr" aria-hidden="true">&rarr;</span></a>
   </nav>
 </section>
 
@@ -2967,7 +2967,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
   <nav class="cs-foot" aria-label="Project navigation">
     <a href="#" data-home><span class="arr" aria-hidden="true">&larr;</span> All Projects</a>
-    <a href="#septa">Next: SEPTA <span class="arr" aria-hidden="true">&rarr;</span></a>
+    <a href="/project/septa/" data-spa="septa">Next: SEPTA <span class="arr" aria-hidden="true">&rarr;</span></a>
   </nav>
 </section>
 
@@ -3080,7 +3080,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
   <nav class="cs-foot" aria-label="Project navigation">
     <a href="#" data-home><span class="arr" aria-hidden="true">&larr;</span> All Projects</a>
-    <a href="#adult-you">Next: Adult You <span class="arr" aria-hidden="true">&rarr;</span></a>
+    <a href="/project/adult-you/" data-spa="adult-you">Next: Adult You <span class="arr" aria-hidden="true">&rarr;</span></a>
   </nav>
 </section>
 
@@ -3202,7 +3202,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
   <nav class="cs-foot" aria-label="Project navigation">
     <a href="#" data-home><span class="arr" aria-hidden="true">&larr;</span> All Projects</a>
-    <a href="#sahay">Next: Sahay <span class="arr" aria-hidden="true">&rarr;</span></a>
+    <a href="/project/sahay/" data-spa="sahay">Next: Sahay <span class="arr" aria-hidden="true">&rarr;</span></a>
   </nav>
 </section>
 
@@ -3915,6 +3915,13 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
     if (a.hasAttribute('data-home')) { e.preventDefault(); goHome(true); }
     else if (a.classList.contains('wordmark')) { e.preventDefault(); goHome(false); }
     else { goHome(false); }
+  }, true);
+  /* project links are real addresses for search engines and for opening in a new tab;
+     a plain click still switches pages in place */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-spa]');
+    if (!a || window.__PAGE__ || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault(); location.hash = '#' + a.getAttribute('data-spa');
   }, true);
 })();
 </script>

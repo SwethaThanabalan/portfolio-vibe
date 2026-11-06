@@ -25,6 +25,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Each project gets its own indexable page; regenerate them from index.html.
+      - name: Build project pages
+        run: python3 scripts/build-project-pages.py
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
