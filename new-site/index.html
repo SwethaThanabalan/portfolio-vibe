@@ -39,7 +39,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%234338ca%27/%3E%3Ctext x=%2732%27 y=%2734%27 font-family=%27Georgia,serif%27 font-size=%2740%27 font-weight=%27700%27 fill=%27%23fff%27 text-anchor=%27middle%27 dominant-baseline=%27central%27%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Caveat:wght@600&family=Cedarville+Cursive&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Caveat:wght@600&family=Mrs+Saint+Delafield&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 
 <script>
 // display settings: theme (auto/light/soft/dim/dark), high contrast, reduce motion - remembered per visitor
@@ -857,9 +857,6 @@ section[id], footer[id], [id="contact"] { scroll-margin-top: 76px; }
 }
 
 /* ---------- also / work ---------- */
-.also {
-  padding-block: 64px 56px;
-}
 .also-head {
   font-family: var(--font-hand);
   font-size: 26px;
@@ -874,12 +871,6 @@ section[id], footer[id], [id="contact"] { scroll-margin-top: 76px; }
   background-size: 14px 2px;
   position: relative;
 }
-.also-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 36px;
-}
-.also-grid article.muted { opacity: 0.6; }
 .eyebrow {
   font-family: var(--font-ui);
   font-size: 11px;
@@ -888,20 +879,6 @@ section[id], footer[id], [id="contact"] { scroll-margin-top: 76px; }
   text-transform: uppercase;
   color: var(--gold);
   margin: 0 0 8px;
-}
-.also-grid h3 {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 600;
-  font-size: clamp(22px, 3vw, 28px);
-  margin: 0 0 10px;
-}
-.also-grid p {
-  font-family: var(--font-ui);
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--ink-muted);
-  margin: 0;
 }
 
 /* ---------- footer ---------- */
@@ -1333,19 +1310,19 @@ section[id], footer[id], [id="contact"] { scroll-margin-top: 76px; }
 :root[data-motion="reduce"] .pill-note, :root[data-motion="reduce"] .pill-x::after { transition: none; }
 @media (prefers-reduced-motion: reduce) { .pill-note, .pill-x::after { transition: none; } }
 
-/* logo carried over from the previous portfolio: Cedarville Cursive in brand indigo */
+/* logo: flowing signature in brand indigo (Mrs Saint Delafield) */
 .site-header .wordmark {
-  font-family: 'Cedarville Cursive', cursive;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 2.6rem;
+  line-height: 1;
+  font-weight: 400;
   color: #4338ca;
   white-space: nowrap;
   transition: opacity 150ms ease;
 }
 .site-header .wordmark:hover { opacity: 0.7; }
 :root:is([data-theme="dim"], [data-theme="dark"]) .site-header .wordmark { text-shadow: 0 0 4px rgba(180, 192, 255, 0.35); }
-@media (max-width: 600px) { .site-header .wordmark .wm-last { display: none; } }
-@media (max-width: 380px) { .site-header .wordmark { font-size: 1.3rem; } }
+@media (max-width: 380px) { .site-header .wordmark { font-size: 2.2rem; } }
 
 /* a breeze through the leaves: gusts push the near branches, a softer far layer drifts on its own
    rhythm, and the leaves themselves flutter slightly (desktop only) */
@@ -2011,7 +1988,7 @@ body.on-about [data-home-only] { display: none !important; }
   .nav { gap: 8px; }
   .nav a { font-size: 11px; letter-spacing: 0.04em; }
   .nav a.nav-cta { padding: 8px 10px; }
-  .wordmark, .site-header .wordmark { font-size: 1.15rem; }
+  .wordmark, .site-header .wordmark { font-size: 2rem; }
 }
 
 /* About: one column, wide media, readable text */
@@ -2216,7 +2193,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 </div>
 <header class="site-header">
   <div class="header-inner gutter">
-    <a href="#hero" class="wordmark" aria-label="Swetha Thanabalan, home">Swetha<span class="wm-last"> Thanabalan</span></a>
+    <a href="#hero" class="wordmark" aria-label="Swetha Thanabalan, home">Swetha</a>
     <nav class="nav">
       <a href="#climb">Work</a>
       <a href="/about/" data-spa="about">About</a>
@@ -2410,29 +2387,6 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
         <div class="stop-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="work" class="also gutter" data-home-only>
-  <h2 class="visually-hidden">More work</h2>
-  <span class="also-head" aria-hidden="true">also</span>
-  <div class="hairline"></div>
-  <div class="also-grid">
-    <article>
-      <p class="eyebrow">Currently building</p>
-      <h3>WanderAI</h3>
-      <p>A work in progress, building closer to code, with the design decisions documented as I go.</p>
-    </article>
-    <article>
-      <p class="eyebrow">Solo, hackathon</p>
-      <h3>The Tunnel Bus App</h3>
-      <p>A redesign of the Detroit-Windsor tunnel bus app I actually rode for four years.</p>
-    </article>
-    <article class="muted">
-      <p class="eyebrow">Maybe, eventually</p>
-      <h3>Notes</h3>
-      <p>Shorter write-ups between projects, still deciding if this belongs here.</p>
-    </article>
   </div>
 </section>
 
