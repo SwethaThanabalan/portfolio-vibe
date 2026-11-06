@@ -1192,6 +1192,46 @@ section[id], footer[id], [id="contact"] { scroll-margin-top: 76px; }
   --glass-ink: #FFF; --glass-muted: #E6E6EA; --glass-line: rgba(255,255,255,0.5); --glass-edge: rgba(255,255,255,0.6); --glass-accent: #C9C5FF;
 }
 :root[data-contrast="more"] a:focus-visible, :root[data-contrast="more"] button:focus-visible, :root[data-contrast="more"] summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- Let's talk (footer) ---------- */
+:root { --on-accent: #fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]):not([data-theme="soft"]) { --on-accent: #12121A; } }
+:root:is([data-theme="dim"], [data-theme="dark"]) { --on-accent: #12121A; }
+.site-footer .footer-contact { max-width: 660px; }
+.lt .eyebrow { margin-bottom: 12px; }
+.lt-title { margin: 0 0 16px; font-family: var(--font-display); font-style: italic; font-weight: 600; font-size: clamp(26px, 4.4vw, 38px); line-height: 1.15; color: var(--ink); text-wrap: balance; }
+.lt-body { margin: 0 0 22px; max-width: 58ch; font-family: var(--font-ui); font-size: 15px; line-height: 1.65; color: var(--ink-muted); }
+.lt-email { flex-wrap: wrap; margin-bottom: 18px; }
+.lt-email .addr { overflow-wrap: anywhere; }
+.lt .copy-btn { min-height: 44px; min-width: 64px; padding: 8px 16px; font-size: 11px; }
+.lt-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.lt-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 0 22px; border-radius: 999px; border: 2px solid var(--accent); font-family: var(--font-ui); font-size: 14px; font-weight: 600; text-decoration: none; }
+.lt-btn-primary { background: var(--accent); color: var(--on-accent); }
+.lt-btn-secondary { background: transparent; color: var(--gold); }
+.lt-btn-primary:hover { background: color-mix(in srgb, var(--accent) 86%, var(--ink)); }
+.lt-btn-secondary:hover { background: var(--accent-soft); }
+.lt-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); text-decoration: none; border-bottom: 0; }
+.lt-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.lt .arr { display: inline-block; transition: transform 150ms ease; }
+.lt-link:hover .arr, .lt-btn:hover .arr { transform: translateX(3px); }
+.lt-biz { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--hairline); }
+.lt-biz h3 { margin: 0 0 8px; font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--ink); }
+.lt-biz p { margin: 0 0 4px; max-width: 58ch; font-family: var(--font-ui); font-size: 13px; line-height: 1.6; color: var(--ink-muted); }
+.lt-link-quiet { font-size: 13px; }
+.lt a:focus-visible, .lt button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 999px; }
+.lt-link:focus-visible { border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { .lt .arr { transition: none; } .lt-link:hover .arr, .lt-btn:hover .arr { transform: none; } }
+:root[data-motion="reduce"] .lt .arr { transition: none; }
+:root[data-motion="reduce"] .lt-link:hover .arr, :root[data-motion="reduce"] .lt-btn:hover .arr { transform: none; }
+@media (max-width: 420px) { .lt-btn { flex: 1 1 100%; } }
+@media (min-width: 960px) {
+  .site-footer .footer-contact { display: block; max-width: none; }
+  .lt { display: grid; width: 100%; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); column-gap: clamp(48px, 7vw, 120px); align-items: start; }
+  .lt > * { grid-column: 1; }
+  .lt > .lt-actions, .lt > .lt-email { justify-self: start; }
+  .lt > .lt-link:not(.lt-link-quiet) { justify-self: start; }
+  .lt > .lt-biz { grid-column: 2; grid-row: 2 / span 6; margin-top: 8px; padding-top: 0; padding-left: clamp(32px, 4vw, 56px); border-top: 0; border-left: 1px solid var(--hairline); align-self: start; }
+}
 :root[data-motion="reduce"] *, :root[data-motion="reduce"] *::before, :root[data-motion="reduce"] *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 
 /* the control */
@@ -2685,15 +2725,26 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 </dialog>
 <footer id="site-footer" class="site-footer gutter">
   <div class="footer-contact">
-    <div class="contact-col" id="contact">
-      <p class="eyebrow">Say hello</p>
-      <div class="contact-row">
+    <div class="contact-col lt" id="contact">
+      <p class="eyebrow">Let&rsquo;s talk</p>
+      <h2 class="lt-title">Hiring a product designer? I&rsquo;d love to hear what you&rsquo;re building.</h2>
+      <p class="lt-body">I&rsquo;m looking for my next full-time role as a product or UX designer, ideally on a team that moves at a medium-to-fast pace and builds things people actually need. If that sounds like your team, reach out. I usually reply within a day.</p>
+      <div class="contact-row lt-email">
         <span class="addr" id="emailText">tys.swetha@gmail.com</span>
-        <button class="copy-btn" id="copyEmail" type="button">Copy</button>
+        <button class="copy-btn" id="copyEmail" type="button" aria-label="Copy email address">Copy</button>
+        <span class="sr-only" role="status" aria-live="polite" id="copyStatus"></span>
       </div>
-      <div class="contact-row"><a href="https://www.linkedin.com/in/swethathanabalan/" target="_blank" rel="noopener me">LinkedIn &#8599;</a></div>
-      <div class="contact-row"><a href="https://drive.google.com/drive/folders/1ahMz1AD7szPw6Zfb4AHAPVY_V9U8f9Ex" target="_blank" rel="noopener">R&eacute;sum&eacute; &#8599;</a></div>
+      <div class="lt-actions">
+        <a class="lt-btn lt-btn-primary" href="mailto:tys.swetha@gmail.com">Email me</a>
+        <a class="lt-btn lt-btn-secondary" href="https://drive.google.com/drive/folders/1ahMz1AD7szPw6Zfb4AHAPVY_V9U8f9Ex" target="_blank" rel="noopener">View r&eacute;sum&eacute; <span class="arr" aria-hidden="true">&#8599;</span></a>
+      </div>
+      <a class="lt-link" href="https://www.linkedin.com/in/swethathanabalan/" target="_blank" rel="noopener me">Connect on LinkedIn <span class="arr" aria-hidden="true">&rarr;</span></a>
 
+      <div class="lt-biz">
+        <h3>Have a project for your business?</h3>
+        <p>I also take on select creative consulting projects, bringing brand, photography and web together for business owners who want one creative partner instead of three vendors.</p>
+        <a class="lt-link lt-link-quiet" href="mailto:tys.swetha@gmail.com?subject=Creative%20consulting%20inquiry">See how I work with clients <span class="arr" aria-hidden="true">&rarr;</span></a>
+      </div>
     </div>
   </div>
   <p class="footer-legal">&copy; <span id="copy-year">2026</span> Swetha Thanabalan. All rights reserved. The photographs, graphic design and writing on this site are mine and may not be reused without permission. <a href="mailto:tys.swetha@gmail.com?subject=Permission%20to%20use%20your%20work">Ask first</a>. Product names, logos and game art belong to their owners.</p>
@@ -2715,8 +2766,10 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function () {
+          var st = document.getElementById('copyStatus');
           copyBtn.textContent = 'Copied';
-          setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1500);
+          if (st) st.textContent = 'Copied';
+          setTimeout(function () { copyBtn.textContent = 'Copy'; if (st) st.textContent = ''; }, 1500);
         }).catch(fallback);
       } else {
         fallback();
