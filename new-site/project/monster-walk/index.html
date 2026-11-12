@@ -769,6 +769,19 @@ section[id], footer[id], [id="contact"] { scroll-margin-top: 76px; }
 }
 
 /* ---------- the climb (3D projects showcase) ---------- */
+.wg { padding-block: 8px 40px; }
+.wg-grid { display: grid; grid-template-columns: 1fr; gap: 28px; max-width: 1200px; margin-inline: auto; }
+@media (min-width: 760px) { .wg-grid { grid-template-columns: 1fr 1fr; gap: 36px 32px; } }
+.wg-card { display: block; color: inherit; text-decoration: none; }
+.wg-card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; border-radius: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 18px 40px -22px rgba(0,0,0,0.3); transition: transform .25s ease, box-shadow .25s ease; }
+.wg-card:hover img, .wg-card:focus-visible img { transform: translateY(-3px); }
+.wg-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 18px; }
+.wg-text { display: grid; gap: 4px; padding: 14px 4px 0; }
+.wg-text .eyebrow { margin: 0; }
+.wg-title { font-family: var(--font-display); font-size: clamp(20px, 2vw, 24px); color: var(--ink); letter-spacing: -0.02em; }
+.wg-brief { font-family: var(--font-ui); font-size: 15px; line-height: 1.5; color: var(--ink-muted); }
+.wg-link { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold); }
+@media (prefers-reduced-motion: reduce) { .wg-card img { transition: none; } .wg-card:hover img { transform: none; } }
 .climb-section { padding-top: 56px; }
 .climb-head { padding-bottom: 8px; }
 .climb-head .eyebrow {
@@ -2297,7 +2310,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
   <div class="header-inner gutter">
     <a href="#hero" class="wordmark" aria-label="Swetha Thanabalan, home">Shwey<i aria-hidden="true"></i></a>
     <nav class="nav">
-      <a href="#climb">Work</a>
+      <a href="#work">Work</a>
       <a href="/about/" data-spa="about">About</a>
       <a href="#contact" class="nav-cta">Contact</a>
       <details class="theme-menu" id="theme-menu">
@@ -2332,8 +2345,30 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
     <div class="pill-note" id="pill-note" role="tooltip" hidden></div>
   </div>
 
-  <a href="#climb" class="trail-cta hero-fade"><span class="trail-cta-arrow" aria-hidden="true">&darr;</span>See what I&rsquo;ve designed</a>
+  <a href="#work" class="trail-cta hero-fade"><span class="trail-cta-arrow" aria-hidden="true">&darr;</span>See what I&rsquo;ve designed</a>
 
+</section>
+
+<section id="work" class="wg gutter" data-home-only aria-labelledby="wg-h">
+  <h2 id="wg-h" class="visually-hidden">Selected work</h2>
+  <div class="wg-grid">
+    <a class="wg-card" href="/project/adult-you/" data-spa="adult-you">
+      <img src="assets/adult-you/cover.webp" srcset="assets/adult-you/cover.webp 1x, assets/adult-you/cover@2x.webp 2x" alt="Three phone screens from Adult You: a welcome screen with a sprouting plant, a result screen showing that new habits take a median of 66 days to form, and a completion screen with a flowering stem and a checklist of updated beliefs." width="1600" height="1000" loading="lazy">
+      <span class="wg-text"><span class="eyebrow">Platform</span><span class="wg-title">Adult You</span><span class="wg-brief">A gamified life skills platform, designed from 0 to 1.</span><span class="wg-link">See the project <span aria-hidden="true">&rarr;</span></span></span>
+    </a>
+    <a class="wg-card" href="/project/sahay/" data-spa="sahay">
+      <img src="assets/sahay/cover.webp" srcset="assets/sahay/cover.webp 1x, assets/sahay/cover@2x.webp 2x" alt="Three phone screens from Sahay: a home screen asking what&#39;s going on at home with quick options like sink leaking and no power, an AI diagnosis of a leaking sink with a medium urgency rating and a button to log the issue, and a list of trusted local vendors with ratings and distances." width="1600" height="1000" loading="lazy">
+      <span class="wg-text"><span class="eyebrow">AI &middot; home companion</span><span class="wg-title">Sahay</span><span class="wg-brief">An AI home companion, from problem framing to a working prototype.</span><span class="wg-link">See the project <span aria-hidden="true">&rarr;</span></span></span>
+    </a>
+    <a class="wg-card" href="/project/septa/" data-spa="septa">
+      <img src="assets/septa/cover.webp" srcset="assets/septa/cover.webp 1x, assets/septa/cover@2x.webp 2x" alt="Three phone screens from the SEPTA app redesign: a trip results list with colour-coded bus, trolley and subway badges, a map showing a Market-Frankford Line route from Drexel to Fishtown, and a live trip view with stop-by-stop steps and crowding information." width="1600" height="1000" loading="lazy">
+      <span class="wg-text"><span class="eyebrow">Transit &middot; mobile</span><span class="wg-title">SEPTA</span><span class="wg-brief">A mobile redesign for Philadelphia&rsquo;s transit app.</span><span class="wg-link">See the project <span aria-hidden="true">&rarr;</span></span></span>
+    </a>
+    <a class="wg-card" href="/project/monster-walk/" data-spa="monster-walk">
+      <img src="assets/monster-walk/cover.webp" srcset="assets/monster-walk/cover.webp 1x, assets/monster-walk/cover@2x.webp 2x" alt="Three phone screens from the Monster Walk return flow: a welcome-back screen showing 1500 steps collected since the last visit, a daily streak card on day 3 of 7 with a milestone bonus, and a daily quests screen with three quests and progress bars." width="1600" height="1000" loading="lazy">
+      <span class="wg-text"><span class="eyebrow">Games &middot; retention</span><span class="wg-title">Monster Walk</span><span class="wg-brief">A retention-focused redesign built for Talofa Games.</span><span class="wg-link">See the project <span aria-hidden="true">&rarr;</span></span></span>
+    </a>
+  </div>
 </section>
 
 <section id="climb" class="climb-section" data-home-only>
@@ -3355,14 +3390,14 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 /* Work / "See what I've designed": the intro lifts away like mist, then the page glides down to the mountain.
    Scrolling back up to the top brings the intro back. */
 (function () {
-  var hero = document.getElementById('hero'), target = document.getElementById('climb');
+  var hero = document.getElementById('hero'), target = document.getElementById('work');
   if (!hero || !target) return;
   function reduced() {
     return document.documentElement.getAttribute('data-motion') === 'reduce' ||
       (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   }
   var leaving = false;
-  document.querySelectorAll('a[href="#climb"]').forEach(function (a) {
+  document.querySelectorAll('a[href="#work"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
       e.preventDefault();
       if (reduced()) { target.scrollIntoView(); return; }
@@ -3372,7 +3407,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         setTimeout(function () { leaving = false; }, 1200);
       }, 520);
-      try { history.replaceState(null, '', '#climb'); } catch (err) {}
+      try { history.replaceState(null, '', '#work'); } catch (err) {}
     });
   });
   window.addEventListener('scroll', function () {
@@ -3404,7 +3439,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
     show(); window.scrollTo(0, restore ? lastHome : 0);
   }
   document.addEventListener('click', function (e) {
-    var a = e.target.closest && e.target.closest('[data-home], .wordmark, a[href="#climb"]');
+    var a = e.target.closest && e.target.closest('[data-home], .wordmark, a[href="#work"]');
     if (!a || window.__PAGE__ || !document.body.classList.contains('on-about')) return;
     if (a.hasAttribute('data-home')) { e.preventDefault(); goHome(true); }
     else if (a.classList.contains('wordmark')) { e.preventDefault(); goHome(false); }
