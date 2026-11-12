@@ -1922,6 +1922,16 @@ section[id], footer[id], [id="contact"] { scroll-margin-top: 76px; }
 .site-header { border-bottom: none; -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); }
 :root[data-theme="light"] .site-header { background: linear-gradient(180deg, rgba(184, 199, 224, 0.55) 0%, rgba(184, 199, 224, 0.25) 100%); }
 :root[data-theme="dark"] .site-header { background: linear-gradient(180deg, rgba(11, 16, 32, 0.6) 0%, rgba(11, 16, 32, 0.3) 100%); }
+/* the frosted header fades out at its lower edge instead of ending in a hard line (all pages) */
+.site-header, :root[data-theme] .site-header { background: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: none; }
+.site-header::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: -40px; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 72%, transparent) 0%, color-mix(in srgb, var(--paper) 30%, transparent) 60%, transparent 100%);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2); backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%);
+}
+:root[data-theme="light"] .site-header::before { background: linear-gradient(180deg, rgba(184, 199, 224, 0.6) 0%, rgba(184, 199, 224, 0.25) 60%, rgba(184, 199, 224, 0) 100%); }
+:root[data-theme="dark"] .site-header::before { background: linear-gradient(180deg, rgba(11, 16, 32, 0.65) 0%, rgba(11, 16, 32, 0.3) 60%, rgba(11, 16, 32, 0) 100%); }
 
 /* pressing Work: the intro lifts away like mist, then the page glides down to the mountain */
 .hero .intro, .hero .trail-cta {
