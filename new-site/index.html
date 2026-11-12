@@ -1632,7 +1632,7 @@ body.on-about [data-home-only] { display: none !important; }
 .cs-figure { margin: 36px auto; }
 .cs-figure img { display: block; width: 100%; height: auto; border-radius: 18px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 18px 40px -22px rgba(0,0,0,0.25); }
 .cs-cover img { aspect-ratio: 16 / 10; object-fit: cover; }
-.cs-page > .cs-cover { margin: 20px auto 36px 0; }
+.cs-page > .cs-cover { margin: 20px auto 36px; }
 .cs-figure figcaption { margin-top: 12px; font-family: var(--font-ui); font-size: 13px; line-height: 1.5; color: var(--ink-muted); text-align: left; }
 .cs-tldr { margin: 8px auto 48px; padding: 22px 26px; border-radius: 20px; background: color-mix(in srgb, var(--paper) 72%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gold) 22%, transparent); }
 .cs-tldr ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
@@ -1682,11 +1682,10 @@ body.on-about [data-home-only] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { .cs-hero-m[data-reveal] { opacity: 1; transform: none; transition: none; } }
 :root[data-motion="reduce"] .cs-hero-m[data-reveal] { opacity: 1; transform: none; transition: none; }
 @media (min-width: 1100px) {
-  .cs-head.cs-head > .cs-cover { grid-column: 1; grid-row: 1 / span 5; margin: 6px 0 0; align-self: start; }
+  .cs-head.cs-head > .cs-cover { grid-column: 1 / -1; margin: 36px auto 0; max-width: 1080px; width: 100%; }
   .cs-head > .cs-cover img { border-radius: 16px; }
   .cs-head > .cs-tldr { max-width: 820px; margin: 32px 0 0; }
-  .cs-head:has(> .cs-cover) > .eyebrow { grid-column: 2; grid-row: auto; margin-top: 0; }
-}
+  }
 .about-wants { margin: 4px 0 22px; padding: 0; list-style: none; display: grid; gap: 10px; }
 .about-wants li { position: relative; padding: 12px 16px 12px 40px; border-radius: 12px; background: color-mix(in srgb, var(--paper) 70%, transparent); box-shadow: inset 0 0 0 1px var(--hairline); font-family: var(--font-ui); font-size: 15.5px; line-height: 1.5; color: var(--ink-muted); }
 .about-wants li::before { content: ""; position: absolute; left: 16px; top: 19px; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
@@ -1957,6 +1956,19 @@ body.on-about [data-home-only] { display: none !important; }
   .stop-cards { width: 50%; }
   .stop-dots { left: calc(50% + clamp(32px, 4vw, 64px)); }
 }
+
+/* project page head: one centred column */
+.cs-page.cs-page > .cs-head { display: block; max-width: min(1240px, 100%); margin-left: auto; margin-right: auto; text-align: center; }
+.cs-page .cs-head > .eyebrow { grid-column: auto; grid-row: auto; margin: 0 0 6px; }
+.cs-page .cs-head .cs-lede { margin-left: auto; margin-right: auto; max-width: 78ch; }
+.cs-page .cs-head .cs-meta { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px 40px; }
+.cs-page .cs-head .cs-meta { text-align: center; }
+.cs-page.cs-page .cs-head > .cs-tldr { margin: 32px auto 0; max-width: 1040px; text-align: left; }
+.cs-page .cs-head > .cs-tldr .eyebrow { text-align: left; }
+.cs-page.cs-page .cs-head > .cs-cover { max-width: none; width: 100%; margin: 36px 0 0; background: none; }
+.cs-page .cs-head > .cs-cover img { border-radius: 0; box-shadow: none; background: transparent; width: min(100%, calc(70vh * 1.108)); width: min(100%, calc(70svh * 1.108)); height: auto; aspect-ratio: 1986 / 1792; margin: 0 auto; object-fit: contain; }
+.cs-credit { margin: 14px 0 0; text-align: center; font-family: var(--font-ui); font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
+.cs-page .cs-head > .cs-cover figcaption { text-align: center; padding: 10px 24px; margin: 0; }
 
 /* About: scrapbook */
 .about-grid.sb { max-width: 1040px; display: grid; gap: clamp(56px, 8vw, 96px); }
@@ -2538,6 +2550,11 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 <li data-g="food"><button type="button" class="g-item" data-full="assets/photography/cookies.jpg" data-alt="Stack of jam-topped cookies beside a pitcher of milk, food photography"><img src="assets/photography/cookies.jpg" alt="Stack of jam-topped cookies beside a pitcher of milk, food photography" width="1500" height="2000" loading="lazy" decoding="async"></button></li>
 <li data-g="food"><button type="button" class="g-item" data-full="assets/photography/sushi.jpg" data-alt="Sushi rolls on a wooden board with chopsticks, food photography"><img src="assets/photography/sushi.jpg" alt="Sushi rolls on a wooden board with chopsticks, food photography" width="1125" height="2000" loading="lazy" decoding="async"></button></li>
 <li data-g="product"><button type="button" class="g-item" data-full="assets/photography/hair-dryer.jpg" data-alt="Black hair dryer on a dark background, product photography"><img src="assets/photography/hair-dryer.jpg" alt="Black hair dryer on a dark background, product photography" width="2000" height="1151" loading="lazy" decoding="async"></button></li>
+<li data-g="landscape"><button type="button" class="g-item" data-full="assets/photography/goat-bridge-sign.jpg" data-alt="A black goat looking over a wire fence above a hand-painted sign that reads Billy Goat Bridge"><img src="assets/photography/goat-bridge-sign.jpg" alt="A black goat looking over a wire fence above a hand-painted sign that reads Billy Goat Bridge" width="2000" height="1314" loading="lazy" decoding="async"></button></li>
+<li data-g="landscape"><button type="button" class="g-item" data-full="assets/photography/goats-tower.jpg" data-alt="Two goats standing on a weathered wooden platform and tower against a pale sky"><img src="assets/photography/goats-tower.jpg" alt="Two goats standing on a weathered wooden platform and tower against a pale sky" width="2000" height="1288" loading="lazy" decoding="async"></button></li>
+<li data-g="portraits"><button type="button" class="g-item" data-full="assets/photography/family-stairs.jpg" data-alt="Outdoor portrait of three people sitting on rust-coloured steps in autumn: a teenage boy in a mustard sweater, a woman in a camel coat, and a girl behind them"><img src="assets/photography/family-stairs.jpg" alt="Outdoor portrait of three people sitting on rust-coloured steps in autumn: a teenage boy in a mustard sweater, a woman in a camel coat, and a girl behind them" width="1364" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="portraits"><button type="button" class="g-item" data-full="assets/photography/sisters-bridge.jpg" data-alt="Two women in coats posing close together on a wooden bridge with autumn trees behind them"><img src="assets/photography/sisters-bridge.jpg" alt="Two women in coats posing close together on a wooden bridge with autumn trees behind them" width="1333" height="2000" loading="lazy" decoding="async"></button></li>
+<li data-g="portraits"><button type="button" class="g-item" data-full="assets/photography/boy-railing.jpg" data-alt="A smiling teenage boy in a mustard sweater leaning on a wooden railing with autumn trees behind him"><img src="assets/photography/boy-railing.jpg" alt="A smiling teenage boy in a mustard sweater leaning on a wooden railing with autumn trees behind him" width="1333" height="2000" loading="lazy" decoding="async"></button></li>
   </ul>
   <nav class="cs-foot" aria-label="More">
     <a href="#" data-home>&larr; Back to my work</a>
@@ -2575,7 +2592,6 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
 
   <header class="cs-head">
-    <figure class="cs-figure cs-cover"><img src="assets/sahay/cover.webp" srcset="assets/sahay/cover.webp 1x, assets/sahay/cover@2x.webp 2x" alt="Three phone screens from Sahay: a home screen asking what&#39;s going on at home with quick options like sink leaking and no power, an AI diagnosis of a leaking sink with a medium urgency rating and a button to log the issue, and a list of trusted local vendors with ratings and distances." width="1600" height="1000" loading="lazy"></figure>
     <p class="eyebrow">AI product design</p>
     <h1 id="sahay-title" class="cs-title">Sahay: Confidence before contractors</h1>
     <p class="cs-lede">An AI home maintenance companion that helps homeowners understand a problem before deciding what to do next.</p>
@@ -2592,6 +2608,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
         <li>Participants called it "a smart home partner," and testing backed keeping the DIY guidance.</li>
       </ul>
     </aside>
+    <figure class="cs-figure cs-cover"><img src="assets/sahay/screens.webp" srcset="assets/sahay/screens.webp 1x, assets/sahay/screens@2x.webp 2x" alt="Three phone screens from Sahay: a home screen asking what&#39;s going on at home with quick options like sink leaking and no power, an AI diagnosis of a leaking sink with a medium urgency rating and a button to log the issue, and a list of trusted local vendors with ratings and distances." width="1986" height="1792" loading="lazy"></figure>
   </header>
 
 
@@ -2743,7 +2760,6 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
 
   <header class="cs-head">
-    <figure class="cs-figure cs-cover"><img src="assets/monster-walk/cover.webp" srcset="assets/monster-walk/cover.webp 1x, assets/monster-walk/cover@2x.webp 2x" alt="Three phone screens from the Monster Walk return flow: a welcome-back screen showing 1500 steps collected since the last visit, a daily streak card on day 3 of 7 with a milestone bonus, and a daily quests screen with three quests and progress bars." width="1600" height="1000" loading="lazy"><figcaption>Game art by Talofa Games. Return flow and UI by Swetha.</figcaption></figure>
     <p class="eyebrow">Mobile game product design</p>
     <h1 id="monster-walk-title" class="cs-title">Monster Walk: Welcoming players back</h1>
     <p class="cs-lede">A redesign of the return experience in a walking game, for players who had been away for a week or more.</p>
@@ -2760,6 +2776,8 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
         <li>Four recommendations from this work were in the game at launch.</li>
       </ul>
     </aside>
+    <figure class="cs-figure cs-cover"><img src="assets/monster-walk/screens.webp" srcset="assets/monster-walk/screens.webp 1x, assets/monster-walk/screens@2x.webp 2x" alt="Three phone screens from the Monster Walk return flow: a welcome-back screen showing 1500 steps collected since the last visit, a daily streak card on day 3 of 7 with a milestone bonus, and a daily quests screen with three quests and progress bars." width="1986" height="1792" loading="lazy"></figure>
+    <p class="cs-credit">Game art by Talofa Games. Return flow and UI by Swetha.</p>
   </header>
 
 
@@ -2890,7 +2908,6 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
 
   <header class="cs-head">
-    <figure class="cs-figure cs-cover"><img src="assets/septa/cover.webp" srcset="assets/septa/cover.webp 1x, assets/septa/cover@2x.webp 2x" alt="Three phone screens from the SEPTA app redesign: a trip results list with colour-coded bus, trolley and subway badges, a map showing a Market-Frankford Line route from Drexel to Fishtown, and a live trip view with stop-by-stop steps and crowding information." width="1600" height="1000" loading="lazy"></figure>
     <p class="eyebrow">Mobile UX</p>
     <h1 id="septa-title" class="cs-title">SEPTA: Planning a trip without a second app</h1>
     <p class="cs-lede">A redesign of Philadelphia's transit app around what riders do most: buy a ticket, plan a trip and follow it live.</p>
@@ -2907,6 +2924,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
         <li>Ticket steps dropped from 7 to 3, task success rose to 92%, and all 8 participants bought a ticket unassisted.</li>
       </ul>
     </aside>
+    <figure class="cs-figure cs-cover"><img src="assets/septa/screens.webp" srcset="assets/septa/screens.webp 1x, assets/septa/screens@2x.webp 2x" alt="Three phone screens from the SEPTA app redesign: a trip results list with colour-coded bus, trolley and subway badges, a map showing a Market-Frankford Line route from Drexel to Fishtown, and a live trip view with stop-by-stop steps and crowding information." width="1986" height="1792" loading="lazy"></figure>
   </header>
 
 
@@ -3003,7 +3021,6 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
 
 
   <header class="cs-head">
-    <figure class="cs-figure cs-cover"><img src="assets/adult-you/cover.webp" srcset="assets/adult-you/cover.webp 1x, assets/adult-you/cover@2x.webp 2x" alt="Three phone screens from Adult You: a welcome screen with a sprouting plant, a result screen showing that new habits take a median of 66 days to form, and a completion screen with a flowering stem and a checklist of updated beliefs." width="1600" height="1000" loading="lazy"></figure>
     <p class="eyebrow">Product design, 0 to 1</p>
     <h1 id="adult-you-title" class="cs-title">Adult You: Life skills people play through</h1>
     <p class="cs-lede">A gamified learning platform that teaches adults life skills like filing taxes and renting an apartment through interactive modules.</p>
@@ -3020,6 +3037,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
         <li>In testing with 20 college students, 75% said they would use an app like this.</li>
       </ul>
     </aside>
+    <figure class="cs-figure cs-cover"><img src="assets/adult-you/screens.webp" srcset="assets/adult-you/screens.webp 1x, assets/adult-you/screens@2x.webp 2x" alt="Three phone screens from Adult You: a welcome screen with a sprouting plant, a result screen showing that new habits take a median of 66 days to form, and a completion screen with a flowering stem and a checklist of updated beliefs." width="1986" height="1792" loading="lazy"></figure>
   </header>
 
 
