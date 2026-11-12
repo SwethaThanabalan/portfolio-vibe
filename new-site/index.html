@@ -1962,8 +1962,14 @@ body.on-about [data-home-only] { display: none !important; }
 .stop-card.has-phone .stop-brief { margin-bottom: 10px; }
 @media (max-width: 760px) { .stop-card.has-phone { grid-template-columns: auto minmax(0,1fr); column-gap: 16px; align-items: center; } .stop-card.has-phone .phone { --pw: 104px; } .stop-card.has-phone h3 { font-size: 22px; } }
 
-.stop-card.has-phone .stop-screens { display: block; width: min(100%, 440px); height: auto; aspect-ratio: 1986 / 1792; }
+.stop-card.has-phone .stop-screens { display: block; width: min(100%, 600px, 50vh); height: auto; aspect-ratio: 1986 / 1792; }
 @media (max-width: 760px) { .stop-card.has-phone:has(.stop-screens) { grid-template-columns: minmax(0, 1fr); row-gap: 8px; } .stop-card.has-phone .stop-screens { width: min(100%, 300px); } }
+
+@media (min-width: 761px) {
+  .climb-mtn { width: 50%; }
+  .stop-cards { width: 50%; }
+  .stop-dots { left: calc(50% + clamp(32px, 4vw, 64px)); }
+}
 
 /* About: scrapbook */
 .about-grid.sb { max-width: 1040px; display: grid; gap: clamp(56px, 8vw, 96px); }
