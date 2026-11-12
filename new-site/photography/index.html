@@ -2312,8 +2312,9 @@ body.on-about [data-home-only] { display: none !important; }
 .cs-page .cs-head .cs-meta { text-align: center; }
 .cs-page.cs-page .cs-head > .cs-tldr { margin: 32px auto 0; max-width: 820px; text-align: left; }
 .cs-page .cs-head > .cs-tldr .eyebrow { text-align: left; }
-.cs-page.cs-page .cs-head > .cs-cover { max-width: 1080px; width: 100vw; position: relative; left: 50%; transform: translateX(-50%); margin: 40px 0 0; }
-@media (max-width: 1160px) { .cs-page.cs-page .cs-head > .cs-cover { width: 100%; left: auto; transform: none; margin-left: auto; margin-right: auto; } }
+.cs-page.cs-page .cs-head > .cs-cover { max-width: none; width: 100vw; position: relative; left: 50%; transform: translateX(-50%); margin: 40px 0 0; }
+.cs-page .cs-head > .cs-cover img { border-radius: 0; box-shadow: none; }
+.cs-page .cs-head > .cs-cover figcaption { text-align: center; padding: 0 24px; }
 
 /* About: scrapbook */
 .about-grid.sb { max-width: 1040px; display: grid; gap: clamp(56px, 8vw, 96px); }
