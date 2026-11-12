@@ -2023,8 +2023,13 @@ body.on-about [data-home-only] { display: none !important; }
 .cs-page.cs-page .cs-head > .cs-tldr { margin: 32px auto 0; max-width: 820px; text-align: left; }
 .cs-page .cs-head > .cs-tldr .eyebrow { text-align: left; }
 .cs-page.cs-page .cs-head > .cs-cover { max-width: none; width: 100vw; position: relative; left: 50%; transform: translateX(-50%); margin: 40px 0 0; }
-.cs-page .cs-head > .cs-cover img { border-radius: 0; box-shadow: none; }
-.cs-page .cs-head > .cs-cover figcaption { text-align: center; padding: 0 24px; }
+.cs-page .cs-head > .cs-cover img { border-radius: 0; box-shadow: none; width: min(100%, calc((100vh - 72px) * 1.6)); width: min(100%, calc((100svh - 72px) * 1.6)); height: auto; margin: 0 auto; background: transparent; }
+#adult-you .cs-head > .cs-cover { background: rgb(229,234,227); }
+#sahay .cs-head > .cs-cover { background: rgb(241,237,226); }
+#septa .cs-head > .cs-cover { background: rgb(5,60,140); }
+#monster-walk .cs-head > .cs-cover { background: rgb(17,28,24); }
+#monster-walk .cs-head > .cs-cover figcaption { color: rgba(255,255,255,0.7); padding-block: 0 14px; }
+.cs-page .cs-head > .cs-cover figcaption { text-align: center; padding: 10px 24px; margin: 0; }
 
 /* About: scrapbook */
 .about-grid.sb { max-width: 1040px; display: grid; gap: clamp(56px, 8vw, 96px); }
