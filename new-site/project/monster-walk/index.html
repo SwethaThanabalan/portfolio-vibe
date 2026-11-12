@@ -2023,12 +2023,12 @@ body.on-about [data-home-only] { display: none !important; }
 .cs-page.cs-page .cs-head > .cs-tldr { margin: 32px auto 0; max-width: 820px; text-align: left; }
 .cs-page .cs-head > .cs-tldr .eyebrow { text-align: left; }
 .cs-page.cs-page .cs-head > .cs-cover { max-width: none; width: 100vw; position: relative; left: 50%; transform: translateX(-50%); margin: 40px 0 0; }
-.cs-page .cs-head > .cs-cover img { border-radius: 0; box-shadow: none; width: min(100%, calc((100vh - 72px) * 1.6)); width: min(100%, calc((100svh - 72px) * 1.6)); height: auto; margin: 0 auto; background: transparent; }
-#adult-you .cs-head > .cs-cover { background: rgb(229,234,227); }
-#sahay .cs-head > .cs-cover { background: rgb(241,237,226); }
-#septa .cs-head > .cs-cover { background: rgb(5,60,140); }
-#monster-walk .cs-head > .cs-cover { background: rgb(17,28,24); }
-#monster-walk .cs-head > .cs-cover figcaption { color: rgba(255,255,255,0.7); padding-block: 0 14px; }
+.cs-page .cs-head > .cs-cover img { border-radius: 0; box-shadow: none; width: min(100%, calc((100vh - 72px) * 1.232)); width: min(100%, calc((100svh - 72px) * 1.232)); height: auto; aspect-ratio: 1232 / 1000; object-fit: cover; object-position: 50% 50%; margin: 0 auto; background: transparent; }
+#adult-you .cs-head > .cs-cover { background: linear-gradient(to bottom, rgb(229, 234, 227) 0, rgb(229, 234, 227) 94%, rgb(216, 219, 212) 94%, rgb(216, 219, 212) 100%); }
+#sahay .cs-head > .cs-cover { background: linear-gradient(to bottom, rgb(241, 237, 226) 0, rgb(241, 237, 226) 94%, rgb(226, 222, 213) 94%, rgb(226, 222, 213) 100%); }
+#septa .cs-head > .cs-cover { background: linear-gradient(to bottom, rgb(5, 60, 140) 0, rgb(5, 60, 140) 94%, rgb(4, 48, 111) 94%, rgb(4, 48, 111) 100%); }
+#monster-walk .cs-head > .cs-cover { background: linear-gradient(to bottom, rgb(17, 28, 24) 0, rgb(17, 28, 24) 94%, rgb(21, 33, 31) 94%, rgb(21, 33, 31) 100%); }
+.cs-credit { margin: 14px 0 0; text-align: center; font-family: var(--font-ui); font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
 .cs-page .cs-head > .cs-cover figcaption { text-align: center; padding: 10px 24px; margin: 0; }
 
 /* About: scrapbook */
@@ -2488,7 +2488,8 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
         <li>Four recommendations from this work were in the game at launch.</li>
       </ul>
     </aside>
-    <figure class="cs-figure cs-cover"><img src="assets/monster-walk/cover.webp" srcset="assets/monster-walk/cover.webp 1x, assets/monster-walk/cover@2x.webp 2x" alt="Three phone screens from the Monster Walk return flow: a welcome-back screen showing 1500 steps collected since the last visit, a daily streak card on day 3 of 7 with a milestone bonus, and a daily quests screen with three quests and progress bars." width="1600" height="1000" loading="lazy"><figcaption>Game art by Talofa Games. Return flow and UI by Swetha.</figcaption></figure>
+    <figure class="cs-figure cs-cover"><img src="assets/monster-walk/cover.webp" srcset="assets/monster-walk/cover.webp 1x, assets/monster-walk/cover@2x.webp 2x" alt="Three phone screens from the Monster Walk return flow: a welcome-back screen showing 1500 steps collected since the last visit, a daily streak card on day 3 of 7 with a milestone bonus, and a daily quests screen with three quests and progress bars." width="1600" height="1000" loading="lazy"></figure>
+    <p class="cs-credit">Game art by Talofa Games. Return flow and UI by Swetha.</p>
   </header>
 
 
