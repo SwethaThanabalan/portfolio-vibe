@@ -1979,9 +1979,8 @@ body.on-about [data-home-only] { display: none !important; }
 .cs-meta dd { margin: 0; font-family: var(--font-ui); font-size: 14px; line-height: 1.5; color: var(--ink-muted); }
 .cs-figure { margin: 36px auto; }
 .cs-figure img { display: block; width: 100%; height: auto; border-radius: 18px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 18px 40px -22px rgba(0,0,0,0.25); }
-.cs-cover img { aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 50%; }
+.cs-cover img { aspect-ratio: 16 / 10; object-fit: cover; }
 .cs-page > .cs-cover { margin: 20px auto 36px 0; }
-#sahay .cs-cover img { object-position: 50% 100%; }
 .cs-figure figcaption { margin-top: 12px; font-family: var(--font-ui); font-size: 13px; line-height: 1.5; color: var(--ink-muted); text-align: left; }
 .cs-tldr { margin: 8px auto 48px; padding: 22px 26px; border-radius: 20px; background: color-mix(in srgb, var(--paper) 72%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gold) 22%, transparent); }
 .cs-tldr ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
@@ -2031,14 +2030,9 @@ body.on-about [data-home-only] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { .cs-hero-m[data-reveal] { opacity: 1; transform: none; transition: none; } }
 :root[data-motion="reduce"] .cs-hero-m[data-reveal] { opacity: 1; transform: none; transition: none; }
 @media (min-width: 1100px) {
-  .cs-head.cs-head > .cs-cover { grid-column: 1; grid-row: 1 / span 5; margin: 6px 0 0; align-self: stretch; position: relative; min-height: 240px; }
-  .cs-head > .cs-cover img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; border-radius: 16px; }
+  .cs-head.cs-head > .cs-cover { grid-column: 1; grid-row: 1 / span 5; margin: 6px 0 0; align-self: start; }
+  .cs-head > .cs-cover img { border-radius: 16px; }
   .cs-head > .cs-tldr { max-width: 820px; margin: 32px 0 0; }
-  #adult-you .cs-head > .cs-cover { overflow: hidden; border-radius: 16px; background: #232323; }
-  #adult-you .cs-head > .cs-cover img { object-fit: contain; background: #232323; transform: scale(2.1); }
-  #septa .cs-head > .cs-cover img { object-position: 6% 50%; }
-  #sahay .cs-head > .cs-cover img { object-fit: contain; object-position: 50% 50%; background: rgb(255,251,242); }
-  #sahay .cs-head > .cs-cover { background: rgb(255,251,242); border-radius: 16px; }
   .cs-head:has(> .cs-cover) > .eyebrow { grid-column: 2; grid-row: auto; margin-top: 0; }
 }
 .about-wants { margin: 4px 0 22px; padding: 0; list-style: none; display: grid; gap: 10px; }
@@ -2302,6 +2296,15 @@ body.on-about [data-home-only] { display: none !important; }
 .stop-card.has-phone h3 { font-size: clamp(26px, 2.6vw, 36px); margin-bottom: 8px; }
 .stop-card.has-phone .stop-brief { margin-bottom: 10px; }
 @media (max-width: 760px) { .stop-card.has-phone { grid-template-columns: auto minmax(0,1fr); column-gap: 16px; align-items: center; } .stop-card.has-phone .phone { --pw: 104px; } .stop-card.has-phone h3 { font-size: 22px; } }
+
+.stop-card.has-phone .stop-screens { display: block; width: min(100%, 600px, 50vh); height: auto; aspect-ratio: 1986 / 1792; }
+@media (max-width: 760px) { .stop-card.has-phone:has(.stop-screens) { grid-template-columns: minmax(0, 1fr); row-gap: 8px; } .stop-card.has-phone .stop-screens { width: min(100%, 300px); } }
+
+@media (min-width: 761px) {
+  .climb-mtn { width: 50%; }
+  .stop-cards { width: 50%; }
+  .stop-dots { left: calc(50% + clamp(32px, 4vw, 64px)); }
+}
 
 /* About: scrapbook */
 .about-grid.sb { max-width: 1040px; display: grid; gap: clamp(56px, 8vw, 96px); }
@@ -2639,30 +2642,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
       <div class="climb-card" id="climb-card">
         <div class="stop-cards" id="stop-cards" aria-live="polite">
         <article class="stop-card has-phone is-active" data-card="0">
-          <figure class="prob-fig"><div class="prob" role="img" aria-label="Animation: a leaking pipe drips while search, videos, forums, family and pro listings light up one by one, and each gives a different answer."><svg class="prob-svg" viewBox="0 0 240 180" aria-hidden="true">
-  <g class="p-chips">
-    <g class="p-chip" style="--d:0s"><rect x="8" y="10" width="66" height="22" rx="11"/><text x="41" y="25">Search</text></g>
-    <g class="p-chip" style="--d:1.2s"><rect x="166" y="10" width="66" height="22" rx="11"/><text x="199" y="25">Videos</text></g>
-    <g class="p-chip" style="--d:2.4s"><rect x="166" y="50" width="66" height="22" rx="11"/><text x="199" y="65">Forums</text></g>
-    <g class="p-chip" style="--d:3.6s"><rect x="8" y="50" width="66" height="22" rx="11"/><text x="41" y="65">Ask family</text></g>
-    <g class="p-chip" style="--d:4.8s"><rect x="8" y="90" width="66" height="22" rx="11"/><text x="41" y="105">Find a pro</text></g>
-  </g>
-  <g class="p-count"><text x="199" y="98">sources</text><text class="p-n" x="199" y="116" style="--d:0s">1 of 5</text><text class="p-n" x="199" y="116" style="--d:1.2s">2 of 5</text><text class="p-n" x="199" y="116" style="--d:2.4s">3 of 5</text><text class="p-n" x="199" y="116" style="--d:3.6s">4 of 5</text><text class="p-n" x="199" y="116" style="--d:4.8s">5 of 5</text></g>
-  <path class="p-pipe" d="M92 22 H112 a8 8 0 0 1 8 8 V50"/>
-  <rect class="p-pipe-cap" x="113" y="48" width="14" height="8" rx="2"/>
-  <circle class="p-drop" cx="120" cy="62" r="3.2"/>
-  <circle class="p-drop" cx="120" cy="62" r="3.2" style="animation-delay:-0.75s"/>
-  <ellipse class="p-puddle" cx="120" cy="108" rx="20" ry="4.5"/>
-  <text class="p-q" x="148" y="104">?</text>
-  <g class="p-advice">
-    <rect x="20" y="130" width="200" height="38" rx="12"/>
-    <text class="p-a" x="120" y="153" style="--d:0s">&ldquo;Could be a loose valve&rdquo;</text>
-    <text class="p-a" x="120" y="153" style="--d:1.2s">&ldquo;Just tighten it yourself&rdquo;</text>
-    <text class="p-a" x="120" y="153" style="--d:2.4s">&ldquo;Sounds like mold to me&rdquo;</text>
-    <text class="p-a" x="120" y="153" style="--d:3.6s">&ldquo;Call someone right away&rdquo;</text>
-    <text class="p-a" x="120" y="153" style="--d:4.8s">&ldquo;Which pro can I trust?&rdquo;</text>
-  </g>
-</svg></div><figcaption class="prob-cap">One leak, five places to look</figcaption></figure>
+          <img class="stop-screens" src="assets/sahay/screens.webp" srcset="assets/sahay/screens.webp 1x, assets/sahay/screens@2x.webp 2x" alt="Three phone screens from Sahay: a home screen asking what&#39;s going on at home with quick options like sink leaking and no power, an AI diagnosis of a leaking sink with a medium urgency rating and a button to log the issue, and a list of trusted local vendors with ratings and distances." width="1986" height="1792" loading="lazy">
           <div class="stop-text">
           <p class="stop-count">01 <span>/ 04</span></p>
           <p class="eyebrow">AI &middot; home companion</p>
@@ -2672,32 +2652,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
           </div>
         </article>
         <article class="stop-card has-phone" data-card="1">
-          <figure class="prob-fig"><div class="prob" role="img" aria-label="Animation: a returning player clicks through four flat screens, tasks, steps, a reward and play, with no celebration, and says it did not feel like a moment."><svg class="prob-svg" viewBox="0 0 240 180" aria-hidden="true">
-  <text class="p-mt" x="12" y="16">Back after a week away</text>
-  <g class="p-scr p-scr1"><rect x="10" y="26" width="46" height="68" rx="7"/>
-    <rect class="p-g" x="17" y="36" width="6" height="6" rx="1.5"/><rect class="p-g" x="26" y="38" width="22" height="3" rx="1.5"/>
-    <rect class="p-g" x="17" y="50" width="6" height="6" rx="1.5"/><rect class="p-g" x="26" y="52" width="22" height="3" rx="1.5"/>
-    <rect class="p-g" x="17" y="64" width="6" height="6" rx="1.5"/><rect class="p-g" x="26" y="66" width="22" height="3" rx="1.5"/></g>
-  <g class="p-scr p-scr2"><rect x="68" y="26" width="46" height="68" rx="7"/>
-    <text class="p-big" x="91" y="58">1,138</text><text class="p-small" x="91" y="70">steps</text></g>
-  <g class="p-scr p-scr3"><rect x="126" y="26" width="46" height="68" rx="7"/>
-    <rect class="p-g" x="139" y="52" width="20" height="16" rx="2"/><rect class="p-g" x="137" y="46" width="24" height="7" rx="2"/><path class="p-gl" d="M149 46 v22"/></g>
-  <g class="p-scr p-scr4"><rect x="184" y="26" width="46" height="68" rx="7"/>
-    <path class="p-g2" d="M207 40 l16 8 l-16 8 l-16 -8 z M207 56 l16 8 l-16 8 l-16 -8 z"/></g>
-  <g class="p-arrows"><path d="M58 60 h8 M116 60 h8 M174 60 h8"/></g>
-  <g class="p-lbl"><text x="33" y="106">Tasks</text><text x="91" y="106">Steps</text><text x="149" y="106">Reward</text><text x="207" y="106">Play</text></g>
-  <g class="p-mon2">
-    <path class="p-horn" d="M34 132 l-5 -10 M58 132 l5 -10"/>
-    <path class="p-mon-body" d="M20 176 c0 -24 11 -44 26 -44 s26 20 26 44 z"/>
-    <circle class="p-eye" cx="40" cy="152" r="3"/><circle class="p-eye" cx="54" cy="152" r="3"/>
-    <path class="p-mouth" d="M40 164 h14"/>
-  </g>
-  <g class="p-bubble2">
-    <rect x="84" y="128" width="148" height="40" rx="12"/>
-    <path d="M86 156 l-12 10 l18 -4 z"/>
-    <text x="158" y="145">&ldquo;It didn&rsquo;t feel like</text><text x="158" y="159">a moment&rdquo;</text>
-  </g>
-</svg></div><figcaption class="prob-cap">Coming back felt like a loading screen, not a reward</figcaption></figure>
+          <img class="stop-screens" src="assets/monster-walk/screens.webp" srcset="assets/monster-walk/screens.webp 1x, assets/monster-walk/screens@2x.webp 2x" alt="Three phone screens from the Monster Walk return flow: a welcome-back screen showing 1500 steps collected since the last visit, a daily streak card on day 3 of 7 with a milestone bonus, and a daily quests screen with three quests and progress bars." width="1986" height="1792" loading="lazy">
           <div class="stop-text">
           <p class="stop-count">02 <span>/ 04</span></p>
           <p class="eyebrow">Games &middot; retention</p>
@@ -2707,27 +2662,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
         </div>
         </article>
         <article class="stop-card has-phone" data-card="2">
-          <figure class="prob-fig"><div class="prob" role="img" aria-label="Animation: a rider switches between the transit app and maps while buying a ticket, gets to step five of seven, then the session expires and the train leaves."><svg class="prob-svg" viewBox="0 0 240 180" aria-hidden="true">
-  <g class="p-apps">
-    <g class="p-app p-app-a"><rect x="40" y="8" width="64" height="24" rx="8"/><text x="72" y="24">Transit app</text></g>
-    <path class="p-swap" d="M110 16 h18 l-4 -4 M128 24 h-18 l4 4"/>
-    <g class="p-app p-app-b"><rect x="136" y="8" width="64" height="24" rx="8"/><text x="168" y="24">Maps</text></g>
-  </g>
-  <text class="p-title" x="24" y="58">Buy a ticket</text>
-  <text class="p-train p-train1" x="216" y="58">Train in 2 min</text><text class="p-train p-train2" x="216" y="58">Train left</text>
-  <line class="p-track" x1="24" y1="78" x2="216" y2="78"/>
-  <line class="p-fill" x1="24" y1="78" x2="216" y2="78"/>
-  <g class="p-steps">
-    <circle cx="24" cy="78" r="8"/><circle cx="56" cy="78" r="8"/><circle cx="88" cy="78" r="8"/><circle cx="120" cy="78" r="8"/><circle cx="152" cy="78" r="8"/><circle cx="184" cy="78" r="8"/><circle cx="216" cy="78" r="8"/>
-  </g>
-  <g class="p-nums"><text x="24" y="102">1</text><text x="56" y="102">2</text><text x="88" y="102">3</text><text x="120" y="102">4</text><text x="152" y="102">5</text><text x="184" y="102">6</text><text x="216" y="102">7</text></g>
-  <g class="p-toast">
-    <rect x="34" y="124" width="172" height="40" rx="10"/>
-    <circle cx="54" cy="144" r="7"/><path d="M54 140 v5 M54 148 v0.5"/>
-    <text x="128" y="141">Session expired</text>
-    <text class="p-toast-s" x="128" y="155">Log in again to continue</text>
-  </g>
-</svg></div><figcaption class="prob-cap">Seven steps to a ticket, then logged out</figcaption></figure>
+          <img class="stop-screens" src="assets/septa/screens.webp" srcset="assets/septa/screens.webp 1x, assets/septa/screens@2x.webp 2x" alt="Three phone screens from the SEPTA app redesign: a trip results list with colour-coded bus, trolley and subway badges, a map showing a Market-Frankford Line route from Drexel to Fishtown, and a live trip view with stop-by-stop steps and crowding information." width="1986" height="1792" loading="lazy">
           <div class="stop-text">
           <p class="stop-count">03 <span>/ 04</span></p>
           <p class="eyebrow">Transit &middot; mobile</p>
@@ -2737,32 +2672,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
         </div>
         </article>
         <article class="stop-card has-phone" data-card="3">
-          <figure class="prob-fig"><div class="prob" role="img" aria-label="Animation: a new graduate faces filing a tax return, reading a rental lease and understanding a mortgage, and each one is marked never taught."><svg class="prob-svg" viewBox="0 0 240 180" aria-hidden="true">
-  <g class="p-grad">
-    <path class="p-body" d="M20 170 c0 -26 12 -40 28 -40 s28 14 28 40 z"/>
-    <circle class="p-head" cx="48" cy="106" r="20"/>
-    <path class="p-cap" d="M48 76 l26 10 l-26 10 l-26 -10 z"/>
-    <path class="p-tassel" d="M70 87 v14"/>
-    <circle class="p-eyes" cx="41" cy="108" r="2.4"/><circle class="p-eyes" cx="55" cy="108" r="2.4"/>
-    <path class="p-gmouth" d="M42 118 q6 -4 12 0"/>
-  </g>
-  <g class="p-qs"><text x="30" y="62">?</text><text x="50" y="54">?</text><text x="70" y="62">?</text></g>
-  <g class="p-task p-task1">
-    <rect x="88" y="14" width="146" height="44" rx="10"/>
-    <text class="p-tt" x="100" y="32">File a tax return</text>
-    <g class="p-never"><path d="M102 42 l6 6 M108 42 l-6 6"/><text x="114" y="48">Never taught</text></g>
-  </g>
-  <g class="p-task p-task2">
-    <rect x="88" y="66" width="146" height="44" rx="10"/>
-    <text class="p-tt" x="100" y="84">Read a rental lease</text>
-    <g class="p-never"><path d="M102 94 l6 6 M108 94 l-6 6"/><text x="114" y="100">Never taught</text></g>
-  </g>
-  <g class="p-task p-task3">
-    <rect x="88" y="118" width="146" height="44" rx="10"/>
-    <text class="p-tt" x="100" y="136">Understand a mortgage</text>
-    <g class="p-never"><path d="M102 146 l6 6 M108 146 l-6 6"/><text x="114" y="152">Never taught</text></g>
-  </g>
-</svg></div><figcaption class="prob-cap">Life skills most adults were never taught</figcaption></figure>
+          <img class="stop-screens" src="assets/adult-you/screens.webp" srcset="assets/adult-you/screens.webp 1x, assets/adult-you/screens@2x.webp 2x" alt="Three phone screens from Adult You: a welcome screen with a sprouting plant, a result screen showing that new habits take a median of 66 days to form, and a completion screen with a flowering stem and a checklist of updated beliefs." width="1986" height="1792" loading="lazy">
           <div class="stop-text">
           <p class="stop-count">04 <span>/ 04</span></p>
           <p class="eyebrow">Platform</p>
