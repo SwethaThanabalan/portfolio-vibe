@@ -1648,13 +1648,13 @@ body.on-about [data-home-only] { display: none !important; }
   .stop-dots { opacity: 1; left: 28px; bottom: 26px; }
 }
 
-/* phones: no scroll-jacking. The four projects are a plain list you scroll through. */
-@media (max-width: 760px) {
+/* phones and small tablets: no scroll-jacking. The four projects are a plain centred list. */
+@media (max-width: 1000px) {
   .climb-scroll { height: auto; }
   .climb-sticky { position: static; height: auto; display: block; padding-block: 8px 0; }
   .climb-card { height: auto; overflow: visible; background: none; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-radius: 0; }
   .climb-mtn, .stop-dots { display: none !important; }
-  .stop-cards { position: static; width: 100%; opacity: 1 !important; transform: none !important; display: grid; gap: 28px; }
+  .stop-cards { position: static; width: 100% !important; max-width: 640px; margin-inline: auto; opacity: 1 !important; transform: none !important; display: grid; gap: 28px; }
   .stop-card, .stop-card.is-active, .stop-card.is-past { position: static; left: auto; right: auto; top: auto; opacity: 1 !important; transform: none !important; pointer-events: auto !important; transition: none; padding: 22px 20px 24px; border-radius: 24px; background: color-mix(in srgb, var(--paper) 72%, transparent); box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 14px 30px -14px rgba(0,0,0,0.2); }
   .stop-card.has-phone { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 14px; justify-items: center; align-items: start; }
   .stop-card.has-phone .stop-screens { width: min(100%, 340px); }
