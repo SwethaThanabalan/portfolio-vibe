@@ -2797,8 +2797,8 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
   <aside class="cs-tldr"><p class="eyebrow">In short</p>
       <ul>
         <li>Players who lapsed for 7+ days weren't coming back, and every lapsed user worried their progress was gone.</li>
-        <li>A/B testing showed drop-off but not why, so testing moved to concept sessions with power users.</li>
-        <li>Four recommendations from this work were in the game at launch.</li>
+        <li>An A/B test showed drop-off but not why, so testing moved to concept sessions with power users.</li>
+        <li>Four recommendations from this work shipped in the launched game, including squad leader greetings.</li>
       </ul>
     </aside>
     <figure class="cs-figure cs-cover"><img src="assets/monster-walk/screens.webp" srcset="assets/monster-walk/screens.webp 1x, assets/monster-walk/screens@2x.webp 2x" alt="Three phone screens from the Monster Walk return flow: a welcome-back screen showing 1500 steps collected since the last visit, a daily streak card on day 3 of 7 with a milestone bonus, and a daily quests screen with three quests and progress bars." width="1986" height="1792" loading="lazy"></figure>
@@ -2809,30 +2809,29 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
   <section class="cs-sec">
     <p class="eyebrow">The problem</p>
     <h2>Players who stopped for a week rarely came back.</h2>
-    <p>Monster Walk turns real steps into character growth, quests and progression. Early engagement in the beta was strong, but players who lapsed for 7+ days weren't returning. The Welcome Back screen was the only way back in, and it wasn't designed for someone who felt guilty or worried their progress was gone.</p>
-    <ul class="cs-chips"><li>No reminder of where they left off</li><li>Nothing addressed guilt or hesitation</li></ul>
+    <p>Monster Walk turns real steps into character growth, quests and progression. Engagement early in the beta was strong, but players who lapsed for 7+ days weren't returning.</p>
+    <p>The return flow showed a daily task panel first. Next came steps and stamina, with no clear link to rewards, and then a reward in a separate overlay. By the time players reached the game world, the next action was unclear. Nothing in the flow addressed the worry that their progress was gone.</p>
   </section>
-
-  <section class="cs-sec">
-    <p class="eyebrow">Audit</p>
-    <h2>How the app handled a returning player.</h2>
-    <p>Players saw a daily task panel before any sign of their progress, then steps and stamina with no clear sense of what they turned into, then a reward in a separate overlay. By the time they reached the game world, the next action was unclear.</p>
-  </section>
-  <figure class="cs-figure cs-wide"><img src="assets/monster-walk/old-screens.jpg" alt="Original return sequence: Daily Tasks panel, Welcome Back screen with steps and stamina, Item Received overlay, and the gameplay screen" loading="lazy"><figcaption>The original return sequence, four separate states before gameplay.</figcaption></figure>
   <figure class="cs-figure cs-wide"><img src="assets/monster-walk/current-flow.jpg" alt="Diagram of the existing return flow, with user quotes marking where clarity, motivation and reward feedback broke down" loading="lazy"><figcaption>The existing return flow, with friction points at each stage.</figcaption></figure>
 
   <section class="cs-sec">
     <p class="eyebrow">Research</p>
     <h2>Talking to lapsed players, the team and the competition.</h2>
-    <p>Research included interviews with the founder, coaches and a gaming advisor, conversations with lapsed power users, a review of Duolingo, Pok&eacute;mon GO and Habitica, and input from gaming psychology experts on re-engagement.</p>
+    <p>The research covered:</p>
+    <ul class="cs-list">
+      <li>interviews with the founder, coaches and a gaming advisor</li>
+      <li>conversations with lapsed power users</li>
+      <li>a review of Duolingo, Pok&eacute;mon GO and Habitica</li>
+      <li>input from gaming psychology experts</li>
+    </ul>
     <div class="cs-finding"><h3>Finding 01</h3><p>Every lapsed user worried their progress was gone. None of them had checked, and that worry was the main thing stopping them from returning.</p></div>
-    <div class="cs-finding"><h3>Finding 02</h3><p>Returning players needed to feel welcome before anything else. The competing apps all showed saved progress before new features.</p></div>
+    <div class="cs-finding"><h3>Finding 02</h3><p>Returning players needed to feel welcome before anything else. Every competing app showed saved progress before new features.</p></div>
   </section>
 
   <section class="cs-sec">
     <p class="eyebrow">Concepts</p>
     <h2>Three ways back in.</h2>
-    <p>All three use elements already in the game. Each squad leader speaks in their own tone, Mystery Monster adds surprise, and streaks encourage coming back.</p>
+    <p>All three are built from elements already in the game.</p>
 <div class="cs-concepts">
       <figure class="cs-concept">
         <div class="phone phone-clip"><div class="phone-screen"><video poster="assets/monster-walk/clips/streak.jpg" muted loop playsinline preload="none" aria-label="Clip of the Daily Streak concept: a returning player sees their streak history and a milestone celebration"><source src="assets/monster-walk/clips/streak.webm" type="video/webm"><source src="assets/monster-walk/clips/streak.mp4" type="video/mp4"></video></div></div>
@@ -2840,7 +2839,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
       </figure>
       <figure class="cs-concept">
         <div class="phone phone-clip"><div class="phone-screen"><video poster="assets/monster-walk/clips/squad-leader.jpg" muted loop playsinline preload="none" aria-label="Clip of the Squad Leader Greeting concept: Welcome back, Jenny, I've missed you, with steps since the last visit and a Collect Stamina button"><source src="assets/monster-walk/clips/squad-leader.webm" type="video/webm"><source src="assets/monster-walk/clips/squad-leader.mp4" type="video/mp4"></video></div></div>
-        <figcaption><strong>Squad Leader Greeting</strong>A personal message from a social accountability partner, so returning feels like rejoining a team.</figcaption>
+        <figcaption><strong>Squad Leader Greeting</strong>A message from a squad leader, so returning feels like rejoining a team. This became encouraging return messaging, in each leader's own voice.</figcaption>
       </figure>
       <figure class="cs-concept">
         <div class="phone phone-clip"><div class="phone-screen"><video poster="assets/monster-walk/clips/mystery-monster.jpg" muted loop playsinline preload="none" aria-label="Clip of the Mystery Monster concept: a hidden monster silhouette teases a new encounter"><source src="assets/monster-walk/clips/mystery-monster.webm" type="video/webm"><source src="assets/monster-walk/clips/mystery-monster.mp4" type="video/mp4"></video></div></div>
@@ -2851,35 +2850,24 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
   </section>
 
   <section class="cs-sec">
-    <p class="eyebrow">The pivot</p>
-    <h2>From A/B testing to concept testing.</h2>
-    <p>The first round was an A/B test. It mostly showed drop-off rates, with little insight into why. Testing with non-gamers didn't work either: the game was hard to explain, and people dropped off in the first few screens. So testing shifted to concept sessions with power users, which showed what players liked and wanted, well beyond the welcome screen. The CEO valued the same insight.</p>
-    <div class="cs-pivot">
-      <div class="cs-before"><span>Before</span>A/B test: drop-off rates, little insight into why</div>
-      <div class="cs-arrow" aria-hidden="true">&rarr;</div>
-      <div class="cs-after"><span>After</span>Concept sessions with power users: what they liked, and why</div>
-    </div>
-  </section>
-
-  <section class="cs-sec">
     <p class="eyebrow">Testing</p>
     <h2>Mystery Monster reduced hesitation fastest in every session.</h2>
-    <p>Moderated sessions with lapsed users included follow-up questions about their reactions. The testing was qualitative, so the concepts weren't scored. The patterns were consistent:</p>
+    <p>The concepts were tested in moderated sessions with lapsed users, with follow-up questions about each reaction. The testing was qualitative, so the concepts weren't scored. The patterns were consistent:</p>
     <ul class="cs-list">
-      <li>Concepts that acknowledged the absence without judgment worked every time. Ones that ignored it felt empty.</li>
+      <li>Concepts that acknowledged the absence without judgment worked. Concepts that ignored it felt empty.</li>
       <li>Every participant brought up saved progress without being asked.</li>
+          <li>Mystery Monster worked because players wanted to find out which monster they might free to join their squad. That fits the game's own levelling mechanics.</li>
     </ul>
-    <p>Mystery Monster's pull came from the thrill of finding out who players might set free to join their squad, which helps them level up. It works with the game's own mechanics.</p>
   </section>
 
 
   <section class="cs-sec">
-    <p class="eyebrow">Final solution</p>
+    <p class="eyebrow">Prototype</p>
     <h2>The prototype follows a player coming back.</h2>
     <div class="cs-proto">
       <div class="phone phone-fig phone-fig-mw" data-fw="458" data-fh="815" data-poster="assets/screens/monster-walk/01-welcome-back.jpg"><div class="phone-screen"><iframe src="https://embed.figma.com/proto/8tgWUX07X8n5GsiZauji9b/Monster-Walk-Hand-off---Swetha?node-id=7-6266&amp;starting-point-node-id=7%3A6266&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;device-frame=false&amp;hide-ui=1&amp;embed-host=share" title="Monster Walk interactive prototype" loading="lazy" allowfullscreen width="458" height="815"></iframe></div></div>
       <div class="cs-proto-text">
-        <p>This is the interactive prototype. Tap through a player's return, from collecting stamina to the in-game map.</p>
+        <p>Tap through a player's return, from collecting stamina to the in-game map.</p>
         <button type="button" class="cs-restart" data-restart-live>&#8634; Restart prototype</button>
         <a class="cs-watch" href="https://www.figma.com/proto/8tgWUX07X8n5GsiZauji9b/Monster-Walk-Hand-off---Swetha?node-id=7-6266&amp;starting-point-node-id=7%3A6266" target="_blank" rel="noopener"><span aria-hidden="true">&#9654;</span> Open it in Figma</a>
         <a class="cs-watch" href="https://www.youtube.com/watch?v=pJc8rHhbcgk" target="_blank" rel="noopener"><span aria-hidden="true">&#9654;</span> Watch the public game trailer</a>
@@ -2891,33 +2879,27 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
     <p class="eyebrow">Key decisions</p>
     <article class="cs-decision">
       <h3>Decision 1: Auditing the return flow first</h3>
-      <p>I mapped every screen a returning player saw, so I knew where the friction was before drawing any new concepts.</p>
+      <p>I mapped every screen a returning player saw, so I knew where the friction was before drawing any concepts.</p>
     </article>
     <article class="cs-decision">
-      <h3>Decision 2: Switching to concept testing with power users</h3>
-      <p>The A/B test only showed drop-off, and non-gamers struggled to understand the game. I moved to concept sessions with power users, which showed what players liked and why, well beyond the welcome screen.</p>
+      <h3>Decision 2: Switching to concept testing</h3>
+      <p>The A/B test only showed drop-off. Testing with non-gamers failed too, because the game was hard to explain and they dropped off in the first few screens. I moved to concept sessions with power users, which showed what players liked and why, well beyond the welcome screen. The CEO valued the same insight.</p>
     </article>
     <article class="cs-decision">
       <h3>Decision 3: Squad leaders who greet players in their own voice</h3>
-      <p>I built the squad leader greeting concept from characters already in the game, so it felt native to the game. I gave each leader a distinct tone for welcoming players back, and built an inventory of welcome-back lines in each leader's tone for the welcome page. It was the concept I pushed for hardest, and it's live in the launched game.</p>
+      <p>I gave each existing squad leader a distinct tone and wrote a set of welcome-back lines for each one. I pushed for this concept hardest, and it's live in the launched game.</p>
     </article>
   </section>
-
-  <figure class="cs-hero-m" data-reveal>
-    <p class="hm-label">What made it into the game</p>
-    <blockquote class="hm-big">Squad leaders now greet players in their own voice.</blockquote>
-    <figcaption class="hm-sub">Each leader has a distinct tone. It was the recommendation pushed for hardest, and it's live in the launched game.</figcaption>
-  </figure>
 
   <section class="cs-sec">
     <p class="eyebrow">Outcome</p>
     <h2>Four recommendations shipped in the launched game.</h2>
-    <p>Monster Walk launched two months after the internship ended. These recommendations were in the live product:</p>
+    <p>Monster Walk launched two months after the internship ended. Four recommendations from this work were in the live product:</p>
     <ul class="cs-list">
-      <li>Monster interaction moments</li>
-      <li>Encouraging return messaging</li>
-      <li>Daily quests</li>
-      <li>Daily rewards</li>
+      <li>monster interaction moments</li>
+      <li>encouraging return messaging</li>
+      <li>daily quests</li>
+      <li>daily rewards</li>
     </ul>
     <p class="cs-note">There was no access after launch, so there are no live retention metrics to report.</p>
   </section>
