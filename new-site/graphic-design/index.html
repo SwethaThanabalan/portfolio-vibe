@@ -1701,6 +1701,16 @@ section[id], footer[id], [id="contact"] { scroll-margin-top: 76px; }
 .site-header { border-bottom: none; -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); }
 :root[data-theme="light"] .site-header { background: linear-gradient(180deg, rgba(184, 199, 224, 0.55) 0%, rgba(184, 199, 224, 0.25) 100%); }
 :root[data-theme="dark"] .site-header { background: linear-gradient(180deg, rgba(11, 16, 32, 0.6) 0%, rgba(11, 16, 32, 0.3) 100%); }
+/* the frosted header fades out at its lower edge instead of ending in a hard line (all pages) */
+.site-header, :root[data-theme] .site-header { background: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: none; }
+.site-header::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: -40px; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 72%, transparent) 0%, color-mix(in srgb, var(--paper) 30%, transparent) 60%, transparent 100%);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2); backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%);
+}
+:root[data-theme="light"] .site-header::before { background: linear-gradient(180deg, rgba(184, 199, 224, 0.6) 0%, rgba(184, 199, 224, 0.25) 60%, rgba(184, 199, 224, 0) 100%); }
+:root[data-theme="dark"] .site-header::before { background: linear-gradient(180deg, rgba(11, 16, 32, 0.65) 0%, rgba(11, 16, 32, 0.3) 60%, rgba(11, 16, 32, 0) 100%); }
 
 /* pressing Work: the intro lifts away like mist, then the page glides down to the mountain */
 .hero .intro, .hero .trail-cta {
@@ -2538,7 +2548,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
           <p class="stop-count">01 <span>/ 04</span></p>
           <p class="eyebrow">AI &middot; home companion</p>
           <h3>Sahay</h3>
-          <p class="stop-brief">An AI home companion, from problem framing to a working prototype.</p>
+          <p class="stop-brief">An AI home maintenance companion that helps homeowners understand a problem before deciding what to do.</p>
           <a class="soon cs-link" href="/project/sahay/" data-spa="sahay">See the project &rarr;</a>
           </div>
         </article>
@@ -2548,7 +2558,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
           <p class="stop-count">02 <span>/ 04</span></p>
           <p class="eyebrow">Games &middot; retention</p>
           <h3>Monster Walk</h3>
-          <p class="stop-brief">A retention-focused redesign built for Talofa Games.</p>
+          <p class="stop-brief">A redesign of the return experience in a walking game, for players who had been away a week or more.</p>
           <a class="soon cs-link" href="/project/monster-walk/" data-spa="monster-walk">See the project &rarr;</a>
         </div>
         </article>
@@ -2558,7 +2568,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
           <p class="stop-count">03 <span>/ 04</span></p>
           <p class="eyebrow">Transit &middot; mobile</p>
           <h3>SEPTA</h3>
-          <p class="stop-brief">A mobile redesign for Philadelphia's transit app.</p>
+          <p class="stop-brief">A redesign of Philadelphia&rsquo;s transit app around buying a ticket, planning a trip and following it live.</p>
           <a class="soon cs-link" href="/project/septa/" data-spa="septa">See the project &rarr;</a>
         </div>
         </article>
@@ -2568,7 +2578,7 @@ dialog.lightbox::backdrop { background: rgba(16, 12, 8, 0.9); }
           <p class="stop-count">04 <span>/ 04</span></p>
           <p class="eyebrow">Platform</p>
           <h3>Adult You</h3>
-          <p class="stop-brief">A gamified life skills platform, designed from 0 to 1.</p>
+          <p class="stop-brief">A learning platform that teaches adults life skills like filing taxes and renting an apartment.</p>
           <a class="soon cs-link" href="/project/adult-you/" data-spa="adult-you">See the project &rarr;</a>
         </div>
         </article>
